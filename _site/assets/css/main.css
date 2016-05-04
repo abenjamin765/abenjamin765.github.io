@@ -508,6 +508,13 @@ dl {
       text-transform: uppercase;
       letter-spacing: 0.1em; }
 
+.center {
+  text-align: center; }
+
+.dark {
+  background: #333;
+  color: white; }
+
 .crumbs {
   font-size: 12px;
   color: #333;
@@ -533,7 +540,7 @@ dl {
     width: 100%; }
 
 .snippet {
-  padding: 100px 20px;
+  padding: 100px 30px;
   max-width: 600px;
   margin: 0 auto; }
   .snippet h2 {
@@ -573,3 +580,32 @@ dl {
 img {
   width: 100%;
   height: auto; }
+
+.cell-space:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.cell {
+  width: 50%;
+  float: left; }
+  .cell .cell-frame {
+    margin: 10px 10px 20px; }
+    .cell .cell-frame .pic {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+      font-size: 50px;
+      color: #333; }
+    .cell .cell-frame .title {
+      font-size: 20px;
+      padding: 20px 20px 10px;
+      text-align: center; }
+    .cell .cell-frame .info {
+      font-size: 16px;
+      text-align: center;
+      padding: 0 20px; }
+  @media screen and (max-width: 600px) {
+    .cell {
+      width: 100%;
+      float: none; } }
