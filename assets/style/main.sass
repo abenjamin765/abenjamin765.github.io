@@ -1,0 +1,163 @@
+// Tools
+@import 'reset.scss'
+@import 'animation.scss'
+
+.gradient
+	padding: 50px 0
+	border-bottom: solid 1px #eee
+	border-top: solid 1px #eee
+	background: #f2f2f2
+	background: -moz-linear-gradient(45deg, #f2f2f2 1%, #ffffff 100%)
+	background: -webkit-linear-gradient(45deg, #f2f2f2 1%,#ffffff 100%)
+	background: linear-gradient(45deg, #f2f2f2 1%,#ffffff 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=1 )
+	position: relative
+
+.dark
+	background: #333
+	padding: 50px 0
+	h2,p
+		color: white
+	a
+		color: #F36C55
+
+
+// Global
+body
+	font-family: helvetica, arial, sans-serif
+a
+	color: #0072FF
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+h2 
+	font-size: 2rem
+	color: #333		
+#wrapper
+	max-width: 800px
+	margin: 0 auto
+	
+// Header
+.page-header
+	h1
+		font-size: 0.8rem
+		text-align: center
+		padding: 1.5em
+		text-transform: uppercase
+		color: #999
+		small
+			font-size: 1.5rem
+			display: block
+			padding: 0.25em
+			color: #333
+// Hero
+.hero
+	text-align: center
+	position: relative
+	padding: 20px
+
+	img
+		width: 100%
+		height: auto
+		box-shadow: 0 10px 40px 0 rgba(0,0,0,0.4)
+		border-radius: 15px
+		margin-bottom: 3em
+
+	.big
+		font-size: 8rem
+		font-weight: 900
+	.little
+		font-size: 1.5rem
+		font-weight: 200
+		color: #F36C55
+	.social
+		margin: 2em auto
+		// border: solid 1px #eee
+		box-sizing: border-box
+		display: block
+		// background: white
+		text-align: center
+		li
+			display: inline-block
+			margin: 10px 0
+			// flex: 1
+			a
+				display: block
+				padding: 4px 30px 
+				color: #999
+				&:hover
+					i
+						color: #333
+			+ li
+				border-left: solid 1px #e6e6e6
+// Showcase
+.showcase
+	padding: 50px 0	
+	overflow: hidden
+	text-align: center
+	position: relative
+
+	.lead
+		font-size: 1rem
+		color: #666
+		max-width: 400px
+		margin: 0 auto
+		padding: 20px
+		line-height: 1.4rem
+	.action
+		background: #F36C55
+		color: white
+		padding: 10px 30px
+		display: inline-block
+		border-radius: 2px
+		text-decoration: none
+		transition: all 0.5s ease
+		font-weight: 200
+		&:hover
+			background: #D9614C
+			padding: 10px 50px
+
+
+	.screen-block 
+		padding: 20px
+		display: block
+		img
+			box-shadow: 0 10px 40px 0 rgba(0,0,0,0.2)
+			border-radius: 15px
+			height: auto
+			max-width: 100%
+			margin: 30px 0 
+	
+	+ .showcase
+		border-top: solid 1px #eee
+
+.pad-block
+	padding: 50px
+	p
+		line-height: 1.4
+		margin-top: 20px	
+
+
+.card
+	display: inline-block
+	margin-bottom: 20px
+	background: white	
+	border-radius: 5px
+	box-sizing: border-box
+	overflow: hidden
+	box-shadow: 0 10px 40px 0 rgba(0,0,0,0.2)
+	img
+		width: 100% 
+		height: auto	
+.video-box
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 25px
+	height: 0
+	overflow: hidden
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
