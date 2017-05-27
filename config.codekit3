@@ -505,6 +505,50 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/assets\/img\/creative-cloud.png": {
+		"ft": 32768,
+		"iS": 5995,
+		"oA": 0,
+		"oAP": "\/assets\/img\/creative-cloud.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/framer.png": {
+		"ft": 32768,
+		"iS": 7492,
+		"oA": 0,
+		"oAP": "\/assets\/img\/framer.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/html5.png": {
+		"ft": 32768,
+		"iS": 4783,
+		"oA": 0,
+		"oAP": "\/assets\/img\/html5.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/invision.png": {
+		"ft": 32768,
+		"iS": 4291,
+		"oA": 0,
+		"oAP": "\/assets\/img\/invision.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/logo-dummi.png": {
 		"ft": 32768,
 		"iS": 3019,
@@ -516,11 +560,33 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/principle.png": {
+		"ft": 32768,
+		"iS": 5129,
+		"oA": 0,
+		"oAP": "\/assets\/img\/principle.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/screen-dummi.png": {
 		"ft": 32768,
 		"iS": 36139,
 		"oA": 0,
 		"oAP": "\/assets\/img\/screen-dummi.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/sketch.png": {
+		"ft": 32768,
+		"iS": 6686,
+		"oA": 0,
+		"oAP": "\/assets\/img\/sketch.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
