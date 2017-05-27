@@ -100,6 +100,9 @@ h2 {
   padding: 10px;
   max-width: 1280px;
   margin: 0 auto; }
+  @media screen and (max-width: 800px) {
+    .flex {
+      flex-direction: column; } }
 
 .page-header h1 {
   font-size: 0.8rem;
@@ -126,10 +129,17 @@ h2 {
   .hero .big {
     font-size: 8rem;
     font-weight: 900; }
+    @media screen and (max-width: 800px) {
+      .hero .big {
+        font-size: 5rem; } }
   .hero .little {
     font-size: 1.5rem;
     font-weight: 200;
     color: #F36C55; }
+    @media screen and (max-width: 800px) {
+      .hero .little {
+        font-size: 1rem;
+        line-height: 1.5em; } }
   .hero .social {
     margin: 2em auto;
     box-sizing: border-box;
@@ -192,12 +202,13 @@ h2 {
 .card {
   flex: 50% 0 0;
   box-sizing: border-box;
-  overflow: hidden;
-  padding: 10px;
-  min-width: 400px; }
+  padding: 10px; }
   .card img {
     width: 100%;
     height: auto; }
+  @media screen and (max-width: 800px) {
+    .card {
+      flex: 1; } }
 
 .video-box {
   position: relative;
