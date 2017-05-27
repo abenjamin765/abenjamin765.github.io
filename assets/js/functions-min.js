@@ -1,1 +1,0 @@
-function isScrolledIntoView(o){var i=$(window).scrollTop(),n=i+$(window).height(),t=$(o).offset().top;return t+$(o).height()<=n&&t>=i}$(window).on("scroll",function(){$(".card").each(function(){isScrolledIntoView($(this))&&$(this).find(".card").addClass("pop")})});

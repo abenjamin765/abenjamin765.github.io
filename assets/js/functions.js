@@ -20,21 +20,21 @@
 // 	);
 // 	}
 // });
-function isScrolledIntoView(elem) {
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
+// function isScrolledIntoView(elem) {
+//   var docViewTop = $(window).scrollTop();
+//   var docViewBottom = docViewTop + $(window).height();
 
-  var elemTop = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
+//   var elemTop = $(elem).offset().top;
+//   var elemBottom = elemTop + $(elem).height();
 
-  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+//   return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+// }
 
-$(window).on('scroll', function() {
-  $(".card").each(function() {
-    if (isScrolledIntoView($(this))) {
-      $(this).find(".card").addClass("pop");
-    }
-  });
-});
+// $(window).on('scroll', function() {
+//   $(".card").each(function() {
+//     if (isScrolledIntoView($(this))) {
+//       $(this).find(".card").addClass("pop");
+//     }
+//   });
+// });
 
