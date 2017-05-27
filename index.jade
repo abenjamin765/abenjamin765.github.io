@@ -3,6 +3,8 @@ html
 		meta(charset="UTF-8")
 		title Aaron Benjamin - Seattle UX Designer
 		script(src="https://use.fontawesome.com/9774ccd0e0.js")
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
+		script(src="assets/js/functions-min.js")
 		link(rel="stylesheet", href="assets/style/main.css")
 	body
 		section.gradient
@@ -29,10 +31,6 @@ html
 				p.lead <a href="http://www.dummi.io" target="_blank">Dummi</a> helps designers and developers bring their work to life with placeholder data.
 				a.action(href="https://medium.com/@aBenjamin765/designing-dummi-62673a1a8b50", target="_blank") See how Dummi was made
 				.screen-block: img(src="assets/img/screen-dummi.png", alt="")
-				
-
-
-
 
 		section.dark
 			#wrapper
@@ -42,30 +40,20 @@ html
 				.video-box
 					iframe(width="560", height="315", src="https://www.youtube.com/embed/MOcREye6wjk" frameborder="0", allowfullscreen)
 
-		section.gradient
-			#wrapper
-				h2 Shots...shots...shots
-				.card
-					img(src="https://cdn.dribbble.com/users/195429/screenshots/2927705/header-withicons.gif", alt="")
-					header Title
-					p Hello...
-					a(href="#") Hello World
-				.card
-					img(src="https://cdn.dribbble.com/users/195429/screenshots/2465152/girl-app.gif", alt="")
-					header Title
-					p Hello...
-					a(href="#") Hello World
-				.card
-					img(src="https://cdn.dribbble.com/users/195429/screenshots/2349396/workflow2.gif", alt="")
-					header Title
-					p Hello...
-					a(href="#") Hello World
-				.card
-					img(src="https://cdn.dribbble.com/users/195429/screenshots/2347149/login.gif", alt="")
-					header Title
-					p Hello...
-					a(href="#") Hello World
-						
+		section.flex
+			//- #wrapper
+			//- h2 Shots...shots...shots
+			.card
+				img(src="https://cdn.dribbble.com/users/195429/screenshots/2927705/header-withicons.gif", alt="")
+
+			.card
+				img(src="https://cdn.dribbble.com/users/195429/screenshots/2465152/girl-app.gif", alt="")
+			.card
+				img(src="https://cdn.dribbble.com/users/195429/screenshots/2347149/login.gif", alt="")
+			.card
+				img(src="https://cdn.dribbble.com/users/195429/screenshots/2349396/workflow2.gif", alt="")
+
+
 
 
 

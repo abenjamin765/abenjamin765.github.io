@@ -12,6 +12,7 @@
 	background: linear-gradient(45deg, #f2f2f2 1%,#ffffff 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=1 )
 	position: relative
+	box-sizing: border-box
 
 .dark
 	background: #333
@@ -20,7 +21,8 @@
 		color: white
 	a
 		color: #F36C55
-
+.pop
+	animation: pop 0.5s ease
 
 // Global
 body
@@ -36,6 +38,10 @@ h2
 #wrapper
 	max-width: 800px
 	margin: 0 auto
+.flex
+	display: flex	
+	flex-wrap: wrap
+	padding: 10px
 	
 // Header
 .page-header
@@ -139,15 +145,13 @@ h2
 
 
 .card
-	display: inline-block
-	margin-bottom: 20px
-	background: white	
-	border-radius: 5px
+	flex: 50% 0 0
 	box-sizing: border-box
 	overflow: hidden
-	box-shadow: 0 10px 40px 0 rgba(0,0,0,0.2)
+	padding: 10px
+	min-width: 400px
 	img
-		width: 100% 
+		width: 100%
 		height: auto	
 .video-box
 	position: relative
