@@ -679,6 +679,261 @@
 		"oAP": "\/index.html",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/secret-project\/css\/normalize.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/secret-project\/css\/normalize-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/secret-project\/css\/reset.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/secret-project\/css\/reset-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/secret-project\/css\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/secret-project\/css\/style-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/secret-project\/img\/aaron-benjamin-critter-app.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/secret-project\/img\/aaron-benjamin-critter-app.pdf",
+		"oF": 0
+		},
+	"\/secret-project\/img\/android_vote-final.jpg": {
+		"ft": 16384,
+		"iS": 260197,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/android_vote-final.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/android_vote-final.png": {
+		"ft": 32768,
+		"iS": 173920,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/android_vote-final.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/secret-project\/img\/checkers.jpg": {
+		"ft": 16384,
+		"iS": 1478,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/checkers.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/color.png": {
+		"ft": 32768,
+		"iS": 18997,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/color.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/secret-project\/img\/components.jpg": {
+		"ft": 16384,
+		"iS": 143348,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/components.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/design-study.jpg": {
+		"ft": 16384,
+		"iS": 556263,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/design-study.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/design-study2.jpg": {
+		"ft": 16384,
+		"iS": 1969406,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/design-study2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/drawing-video.mp4": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/secret-project\/img\/drawing-video.mp4",
+		"oF": 0
+		},
+	"\/secret-project\/img\/flow.jpg": {
+		"ft": 16384,
+		"iS": 65628,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/flow.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/journey-map.jpg": {
+		"ft": 16384,
+		"iS": 393501,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/journey-map.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/menu-animation.gif": {
+		"ft": 4194304,
+		"iS": 1861088,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/menu-animation.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/secret-project\/img\/mocks.jpg": {
+		"ft": 16384,
+		"iS": 637577,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/mocks.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/questionnaire.jpg": {
+		"ft": 16384,
+		"iS": 212643,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/questionnaire.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/splash.png": {
+		"ft": 32768,
+		"iS": 227148,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/splash.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/secret-project\/img\/testing.jpg": {
+		"ft": 16384,
+		"iS": 465569,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/testing.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/vote-animation.gif": {
+		"ft": 4194304,
+		"iS": 2609523,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/vote-animation.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/secret-project\/img\/wire-hifi1.jpg": {
+		"ft": 16384,
+		"iS": 83145,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/wire-hifi1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/wire-hifi2.jpg": {
+		"ft": 16384,
+		"iS": 47615,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/wire-hifi2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/wire-hifi3.jpg": {
+		"ft": 16384,
+		"iS": 56552,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/wire-hifi3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/img\/wires.jpg": {
+		"ft": 16384,
+		"iS": 67328,
+		"oA": 0,
+		"oAP": "\/secret-project\/img\/wires.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/secret-project\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/secret-project\/index.html",
+		"oF": 0
+		},
+	"\/secret-project\/pet-questions.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/secret-project\/pet-questions.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		}
 	},
 "hooks": [
