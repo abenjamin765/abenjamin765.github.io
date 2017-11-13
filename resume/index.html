@@ -1,0 +1,360 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Résumé: Aaron Benjamin - UX Designer</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		/* RESET */
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+			Font-Family: 'Source Sans Pro', Sans-Serif;
+			color: #333;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		a{
+			color: #333;
+			text-decoration: none;
+			font-weight: 200;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		/* end RESET */
+
+		.heading{
+			Font-Family: 'Playfair Display', Serif;
+		}
+		h1{
+			Font-Size: 1.2rem;			
+		}
+		h2{
+			Font-Size: 1.9rem;		
+			line-height: 1.3em;	
+		}
+		h3{
+			color: #E0107D;
+			Font-Size: 0.8rem;
+			font-weight: 900;		
+			line-height: 1.3em;
+			margin-bottom: 10px	
+		}
+		h3::first-letter{
+			border-bottom: solid 0.5px;
+		}
+		h4{
+			margin-bottom: 0.5em;
+	
+
+
+		}
+		.light-text{
+			color: #666;
+			font-size: 0.75rem;
+			display: block;
+			margin-top: 5px;
+		}
+		#wrapper{
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 40px;
+			display: flex;
+		}
+			
+		header{
+			color: #E0107D;
+			font-weight: 900;		
+		}
+		header div{
+		}
+
+		header img{
+		}
+
+		#side-bar{
+			/*background: #f4f4f4;*/
+			padding-right: 30px;
+			border-right: solid 2px #eee;
+
+		}
+		.block{
+			/*border-top: solid 1px #e6e6e6;*/
+			/*margin-top: 20px;*/
+			padding-top: 20px;
+		}
+		.block p, li{
+			font-size: 1rem;
+			line-height: 1.4em;
+		}
+		.block li img{
+			height:0.7em;
+			padding-right: 0.5em;
+		}
+		.block .date{
+			font-size: 0.75rem;
+			line-height: 2em;
+			text-transform: uppercase;
+		}
+		.block li + li{
+			margin-top: 5px;
+		}
+
+		#content{
+			flex: 2;
+			margin-left: 30px;
+		}
+		.job{
+			display: flex;
+		}
+		.job + .job{
+			border-top: solid 1px #eee;
+			margin-top: 20px;
+		}
+		.job img{
+			height: 50px;
+			width: 50px;
+			margin-right: 10px;
+			border: solid 1px #eee;
+		}
+		.wave-box{
+			text-align: center;
+			padding: 80px 20px;
+			background: #f4f4f4;
+			border-top: solid 5px #eee;
+			border-top: solid 5px #eee;
+	
+		}
+		.wave-box a{
+			background-color: #F8D957;
+			padding: 7px 15px;
+			margin-left: 10px;
+		}
+		.hand{
+			animation: 100ms 10 alternate wave;
+			display: inline-block;
+			width: 30px;
+		}
+
+
+		/* PRINTING */
+		@media print{
+			#wrapper{
+				padding: 60px;
+			}
+			.no-print{display: none;}
+		}
+		/* end PRINTING*/
+
+		/* MOBILE */
+		@media only screen and (max-width: 600px){
+			#wrapper{ 
+				flex-direction: column;
+				padding: 0; 
+				text-align: center;
+			}
+			#side-bar{
+				padding: 0 0 20px 0;
+				border: none;
+			}
+			header{
+				padding-top: 20px; 
+			}
+			header a{
+				color: #006699;
+				display: block;
+				padding-top: 10px;
+			}
+			#content{
+				margin: 0;
+			}
+			h3{
+				display: block;
+				border-top: solid 5px #eee;
+				padding-top: 20px;
+			}
+			.block ul{
+				padding: 0 20px;
+			}
+			.block li{
+				display: inline-block;
+				padding: 7px 15px;
+				border: solid 1px #333;
+				margin: 5px;
+
+			}
+			.job{
+				flex-direction: column;
+				padding: 50px!important;
+			}
+			.job img{
+				margin: 0 auto 20px;
+			}
+			.wave-box a{
+				background-color: #F8D957;
+				display: block;
+				padding: 7px 15px;
+				margin-left: 0px;
+				margin-top: 20px;
+			}
+
+		}
+		/* end MOBILE*/
+
+		/* ANIMATION */
+		@keyframes wave {
+			from {
+				transform: translateX(-2px) rotate(-3deg);
+			}
+
+			to {
+				transform: translateX(2px) rotate(3deg);
+
+			}
+		}
+		/* end ANIMATION*/
+
+
+	</style>
+
+
+    <script language="javascript">
+        function emailCurrentPage(){
+            window.location.href="mailto:?subject=Résumé: Aaron Benjamin - UX Designer&body=Check out Aaron's résumé here: "+escape(window.location.href);
+        }
+    </script>
+
+        
+
+
+
+
+</head>
+<body>
+	<div id="wrapper">
+		<aside id="side-bar">
+			<header>
+				<!-- <img src="img/aaron-logo.png" alt="" height="50px" style="margin-bottom: 10px"> -->
+				<div>
+					<h1 class="heading">Aaron Benjamin</h1>
+					<h2 class="heading">UX Designer</h2>
+				</div>
+			
+			<div class="block" id="contact">
+				<p><a href="http://aaronbenjamin.design">aaronbenjamin.design</a></p>
+				<p><a href="mailto:abenjamin765@gmail.com">abenjamin765@gmail.com</a></p>
+				<p><a href="tel:7703805566">770 380 5566</a></p>				
+			</div>
+			</header>
+
+			<div class="block" id="education">
+				<h3 class="heading">Education</h3>
+				<h4>A.S. Graphic Design <span class="light-text">Full Sail University / 2009 Salutatorian</span></h4>
+			</div>
+
+			<div class="block" id="skills">
+				<h3 class="heading">Skills</h3>
+				<ul>
+					<li>Leadership</li>
+					<li>Interaction design</li>
+					<li>Visual Design</li>
+					<li>User research</li>
+					<li>Animation</li>
+					<li>Prototyping</li>
+					<li>HTML / CSS</li>
+					<li>Basic Javascript</li>
+				</ul>
+			</div>
+
+			<div class="block" id="tools">
+				<h3 class="heading">Tools</h3>
+				<ul>
+					<li><img src="img/icn_framer.png" alt="Framer icon">Framer</li>
+					<li><img src="img/icn_sketch.png" alt="Sketch icon">Sketch</li>
+					<li><img src="img/icn_illustrator.png" alt="Illustrator icon">Illustrator</li>
+					<li><img src="img/icn_photoshop.png" alt="Photoshop icon">Photoshop</li>
+					<li><img src="img/icn_axure.png" alt="Axure icon">Axure</li>
+				</ul>
+			</div>
+
+		</aside>
+		<main id="content">
+			<h3 class="heading">Experience</h3>
+
+			<div class="block job" style="padding: 0">
+				<img src="img/logo-amazon.png" alt="">
+				<div>
+					<h4>UX Designer II <span class="light-text">Amazon / 2016 - Present (1 year)</span></h4>
+					<p>I design tools and services that help Amazon sellers manage and grow their businesses.</p>
+				</div>
+			</div>
+			<div class="block job">
+				<img src="img/logo-hp.png" alt="">
+				<div>
+					<h4>UX Lead<span class="light-text">HP Inc. / 2015 - 2016 (1 year)</span></h4>
+					<p>I lead a design team responsible for creating and sustaining products offered by HP Software.</p>	
+				</div>
+			</div>	
+			<div class="block job">
+				<img src="img/logo-att.png" alt="">
+				<div>
+					<h4>Sr. UX Designer <span class="light-text">AT&amp;T / 2011 - 2015 (4 years)</span></h4>
+					<p>I design tools and products that make it easier for customers to manage their accounts on att.com.</p>
+				</div>	
+			</div>	
+			<div class="block job">
+				<img src="img/logo-pyramid.png" alt="">
+				<div>
+					<h4>Graphic Designer <span class="light-text">Pyramid Consulting Inc. / 2010 - 2011 (1 year)</span></h4>
+					<p>I design promotional graphics for new products and services on att.com.</p>
+				</div>	
+			</div>							
+		</main>
+
+
+
+	</div>
+	<div class="wave-box no-print"><span class="hand">👋</span> <span>Hello. Need to email this page to someone?</span> <a href="javascript:emailCurrentPage()">Click here.</a></div>
+
+	
+</body>
+</html>

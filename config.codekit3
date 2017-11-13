@@ -7,7 +7,7 @@
 		"uuidString": "4B7A2D18-0F62-46CD-9962-26C42098BD86"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -679,6 +679,133 @@
 		"oAP": "\/index.html",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/resume\/img\/aaron-logo.png": {
+		"ft": 32768,
+		"iS": 14464,
+		"oA": 0,
+		"oAP": "\/resume\/img\/aaron-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/aaron-logo2.png": {
+		"ft": 32768,
+		"iS": 12369,
+		"oA": 0,
+		"oAP": "\/resume\/img\/aaron-logo2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/icn_axure.png": {
+		"ft": 32768,
+		"iS": 2478,
+		"oA": 0,
+		"oAP": "\/resume\/img\/icn_axure.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/icn_framer.png": {
+		"ft": 32768,
+		"iS": 8278,
+		"oA": 0,
+		"oAP": "\/resume\/img\/icn_framer.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/icn_illustrator.png": {
+		"ft": 32768,
+		"iS": 8504,
+		"oA": 0,
+		"oAP": "\/resume\/img\/icn_illustrator.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/icn_photoshop.png": {
+		"ft": 32768,
+		"iS": 3915,
+		"oA": 0,
+		"oAP": "\/resume\/img\/icn_photoshop.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/icn_sketch.png": {
+		"ft": 32768,
+		"iS": 8033,
+		"oA": 0,
+		"oAP": "\/resume\/img\/icn_sketch.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/logo-amazon.png": {
+		"ft": 32768,
+		"iS": 3510,
+		"oA": 0,
+		"oAP": "\/resume\/img\/logo-amazon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/logo-att.png": {
+		"ft": 32768,
+		"iS": 4736,
+		"oA": 0,
+		"oAP": "\/resume\/img\/logo-att.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/logo-hp.png": {
+		"ft": 32768,
+		"iS": 11814,
+		"oA": 0,
+		"oAP": "\/resume\/img\/logo-hp.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/img\/logo-pyramid.png": {
+		"ft": 32768,
+		"iS": 3353,
+		"oA": 0,
+		"oAP": "\/resume\/img\/logo-pyramid.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resume\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/resume\/index.html",
+		"oF": 0
 		},
 	"\/secret-project\/css\/normalize.css": {
 		"aP": 1,
@@ -2880,6 +3007,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
