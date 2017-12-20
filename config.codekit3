@@ -632,7 +632,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/style\/main-min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 3
 		},
 	"\/assets\/style\/main.sass": {
 		"aP": 0,
@@ -664,6 +664,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/CNAME",
+		"oF": 0
+		},
+	"\/folio\/aaron-folio-11-4-17.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/folio\/aaron-folio-11-4-17.pdf",
 		"oF": 0
 		},
 	"\/index.html": {
@@ -815,7 +821,7 @@
 		"oA": 0,
 		"oAP": "\/secret-project\/css\/normalize-min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 3
 		},
 	"\/secret-project\/css\/reset.css": {
 		"aP": 1,
@@ -825,7 +831,7 @@
 		"oA": 0,
 		"oAP": "\/secret-project\/css\/reset-min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 3
 		},
 	"\/secret-project\/css\/style.css": {
 		"aP": 1,
@@ -835,7 +841,7 @@
 		"oA": 0,
 		"oAP": "\/secret-project\/css\/style-min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 3
 		},
 	"\/secret-project\/img\/aaron-benjamin-critter-app.pdf": {
 		"ft": 8192,
