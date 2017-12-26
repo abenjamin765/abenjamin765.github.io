@@ -84,10 +84,15 @@
 		}
 		h4{
 			margin-bottom: 0.5em;
-	
-
 
 		}
+		h5{
+			font-size: 0.8rem;
+			margin: 20px 0 5px;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		
 		.light-text{
 			color: #666;
 			font-size: 0.75rem;
@@ -100,7 +105,11 @@
 			padding: 40px;
 			display: flex;
 		}
-			
+		.list{
+			list-style: disc;
+			margin-left: 20px;
+		}
+
 		header{
 			color: #E0107D;
 			font-weight: 900;		
@@ -138,6 +147,12 @@
 		.block li + li{
 			margin-top: 5px;
 		}
+		.lead{
+			font-size: 1.3rem;
+			line-height: 1.4em;
+			padding-bottom: 30px;
+		}
+
 
 		#content{
 			flex: 2;
@@ -294,9 +309,9 @@
 			<div class="block" id="skills">
 				<h3 class="heading">Skills</h3>
 				<ul>
-					<li>Leadership</li>
+					<li>Design leadership</li>
 					<li>Interaction design</li>
-					<li>Visual Design</li>
+					<li>Visual design</li>
 					<li>User research</li>
 					<li>Animation</li>
 					<li>Prototyping</li>
@@ -318,34 +333,65 @@
 
 		</aside>
 		<main id="content">
+
+			<p class="heading lead">Seattle based UX designer. More than 7 years of experience creating products for customers around the world at companies including AT&amp;T, HP, and Amazon. Skilled at visualizing complex, technical concepts as concrete mockups and prototypes. Exceptional design leadership skills. Able to lead broad-ranging initiatives and projects. Excels at translating customer and business needs into solutions with long-term value.</p>
+
 			<h3 class="heading">Experience</h3>
 
 			<div class="block job" style="padding: 0">
 				<img src="img/logo-amazon.png" alt="">
 				<div>
 					<h4>UX Designer II <span class="light-text">Amazon / 2016 - Present (1 year)</span></h4>
-					<p>I design tools and services that help Amazon sellers manage and grow their businesses.</p>
+					<p>Lead the design of customer-facing tools from concept to delivery. Areas of focus are workflow automation for Amazon sellers and seller communication.  and student groups. Collaborates with cross-functional teams to improve the selling experience on the Amazon Marketplace. Partners with program management and editorial team to better inform and build trust with Amazon sellers. Mentors junior team members. Supports the student mentorship program in partnership with The University of Washington.</p>
+					
+					<h5>Key achievements</h5>
+					<ul class="list">
+						<li>Responsible for the end-to-end design and launch of the Amazon Seller Newsletter; reaching more than 1 million sellers in 6 different languages across 12 global markets with an open rate consistently above 32% over 6 months.</li>
+						<li>Led the design of automated workflows that resulted in an increase in seller trust and a decrease in contact volume.</li>
+					</ul>
+
 				</div>
 			</div>
 			<div class="block job">
 				<img src="img/logo-hp.png" alt="">
 				<div>
 					<h4>UX Lead<span class="light-text">HP Inc. / 2015 - 2016 (1 year)</span></h4>
-					<p>I lead a design team responsible for creating and sustaining products offered by HP Software.</p>	
+					<p>Lead design team responsible for HP Software UX design. Managed resourcing, road-map, and design direction for HP Aurasma, an Augmented Reality (AR) product for marketers and consumers. Interfaced with white-label customers to define customization requirements. Contributor to the Grommet web and native application design system. Oversaw design direction, concepts, and implementations while supporting and developing 3 direct reports. Lead application modeling sessions to visualize product requirements. Maintain and prioritize backlogs for feature enhancements and new products. Conduct user research studies to inform product direction. Organize workshops for team development. Define design tool-set and workflow.</p>
+
+					<h5>Key achievements</h5>
+					<ul class="list">
+						<li>Redefined intake process, team tool-set, and workflow resulting in a 45% decrease in production time.</li>
+						<li>Drove adoption of Grommet design system across all HP Software products to support company goals around product consistency, accessibility, and performance.</li>
+					</ul>
+
 				</div>
 			</div>	
 			<div class="block job">
 				<img src="img/logo-att.png" alt="">
 				<div>
 					<h4>Sr. UX Designer <span class="light-text">AT&amp;T / 2011 - 2015 (4 years)</span></h4>
-					<p>I design tools and products that make it easier for customers to manage their accounts on att.com.</p>
+					<p>Provide UX design support and direction for customer-facing projects. Lead the mobile-first design effort company-wide. Develop, maintain, and drive adoption for responsive design system. Define UX pattern libraries for iOS, Windows Phone 7, Android, Blackberry, and mobile web. Contribute to the AT&amp; Connected Car in-car UI design system. Develop and executed marketing campaigns for new devices, features, and services. Lead the redesign of att.com search, contact us, and home page. Lead the bi-weekly “design round-table” meeting to open design communication  across the company. Redesign the AT&amp;T Community forums.</p>
+					<h5>Key achievements</h5>
+					<ul class="list">
+						<li>Successfully launched campaign elements for the iPhone 4, iPhone 4s, and iPhone 5, resulting in record breaking sales.</li>
+						<li>Designed the mobile bill-pay experience for customers resulting in more than $1 billion in new revenue through the mobile app.</li>
+						<li>Redesigned the att.com search UI and taxonomy resulting in higher accuracy of search results.</li>
+						<li>Developed a responsive design system that eliminated the need for separate support for native applications.</li>
+						<li>Redesign of AT&amp;T Community forums increased Community Health Index (CHI) score and won an award for “Game Changing UX” from Lithium</li>
+					</ul>
 				</div>	
 			</div>	
 			<div class="block job">
 				<img src="img/logo-pyramid.png" alt="">
 				<div>
 					<h4>Graphic Designer <span class="light-text">Pyramid Consulting Inc. / 2010 - 2011 (1 year)</span></h4>
-					<p>I design promotional graphics for new products and services on att.com.</p>
+					<p>Design collateral for digital marketing campaigns including landing pages, email templates, and graphics. Create HTML prototypes of landing pages. Define templates and patterns for modular campaigns. Develop strategic style guides to support product life-cycle events.</p>
+					<h5>Key achievements</h5>
+					<ul class="list">
+						<li>Automated the production of web-ready device images resulting in the elimination of more than 240 tickets per year.</li>
+						<li>Advocated for the replacement of graphic buttons with CSS buttons across all digital properties. Eliminated more than 1000 tickets per year.</li>
+						
+					</ul>
 				</div>	
 			</div>							
 		</main>
@@ -358,3 +404,5 @@
 	
 </body>
 </html>
+
+
