@@ -73,15 +73,15 @@
 			line-height: 1.3em;	
 		}
 		h3{
-			color: #E0107D;
-			Font-Size: 0.8rem;
-			font-weight: 900;		
-			line-height: 1.3em;
-			margin-bottom: 10px	
+			font-weight: normal;		
+			margin-bottom: 10px;
+			font-size: 13px;
+			padding-bottom: 10px;
+			border-bottom: solid 1px #ccc;
+
+
 		}
-		h3::first-letter{
-			border-bottom: solid 0.5px;
-		}
+		
 		h4{
 			margin-bottom: 0.5em;
 
@@ -122,8 +122,8 @@
 
 		#side-bar{
 			/*background: #f4f4f4;*/
-			padding-right: 30px;
 			border-right: solid 2px #eee;
+			margin-bottom: 20px;
 
 		}
 		.block{
@@ -132,7 +132,7 @@
 			padding-top: 20px;
 		}
 		.block p, li{
-			font-size: 1rem;
+			font-size: 13px;
 			line-height: 1.4em;
 		}
 		.block li img{
@@ -149,7 +149,10 @@
 		}
 		.lead{
 			line-height: 1.5em;
-			padding-bottom: 30px;
+			padding-top: 20px;
+			color: #333;
+			font-weight: normal;
+
 		}
 
 
@@ -158,10 +161,12 @@
 			margin-left: 30px;
 		}
 		.job{
-			display: flex;
+			display: block;
+			margin-bottom: 10px;
+
 		}
 		.job + .job{
-			border-top: solid 1px #eee;
+			border-top: solid 5px #eee;
 			margin-top: 20px;
 		}
 		.job img{
@@ -174,7 +179,6 @@
 			text-align: center;
 			padding: 80px 20px;
 			background: #f4f4f4;
-			border-top: solid 5px #eee;
 			border-top: solid 5px #eee;
 	
 		}
@@ -190,29 +194,42 @@
 		}
 
 
-		/* PRINTING */
-		@media print{
-			#wrapper{
-				padding: 10px;
-				flex-direction: column;
-			}
-			.job img{display: none;}
-			.no-print{display: none;}
-			#side-bar{
-				border: none;
-			}
-			#content{
-					padding: 0;
-					margin: 0;
-			}
-			.listy li{
-				display: inline-block;
-				background-color: #f4f4f4;
-				padding: 5px 10px;
-				margin: 0 5px 5px 0;
-			}
-			/*.break {page-break-after: always;}*/
+		#wrapper{
+			padding: 10px;
+			flex-direction: column;
 		}
+		.job img{display: none;}
+		.no-print{display: none;}
+		#side-bar{
+			border: none;
+		}
+		#content{
+				padding: 0;
+				margin: 0;
+		}
+		.listy li{
+			display: inline-block;
+			background-color: #f4f4f4;
+			padding: 5px 10px;
+			margin: 0 5px 5px 0;
+			font-size: 13px;
+		}
+
+		#contact p{
+			display: inline-block;
+			margin-right: 10px;
+		}
+		#contact p:before{
+			content: '//';
+			padding-right: 10px;
+			color: #ccc;
+		}
+		.job h4{
+				font-size: 18px;
+				/*margin-top:20px;*/
+
+			}
+
 		/* end PRINTING*/
 
 		/* MOBILE */
@@ -241,6 +258,7 @@
 			h3{
 				display: block;
 				border-top: solid 5px #eee;
+
 				padding-top: 20px;
 			}
 			.block ul{
@@ -253,16 +271,9 @@
 				margin: 5px;
 
 			}
-			.job{
-				flex-direction: column;
-				padding: 50px!important;
-			}
-			.job img{
-				margin: 0 auto 20px;
-			}
-			.job h4{
-				font-weight: bold;
-			}
+			
+			
+			
 			.wave-box a{
 				background-color: #F8D957;
 				display: block;
@@ -275,6 +286,7 @@
 
 		}
 		/* end MOBILE*/
+
 
 		/* ANIMATION */
 		@keyframes wave {
@@ -314,21 +326,23 @@
 					<h1 class="heading">Aaron Benjamin</h1>
 					<h2 class="heading">UX Designer</h2>
 				</div>
+				<div class="block" id="contact">
+					<p><a href="http://aaronbenjamin.design">aaronbenjamin.design</a></p>
+					<p><a href="mailto:abenjamin765@gmail.com">abenjamin765@gmail.com</a></p>
+					<p><a href="tel:7703805566">770 380 5566</a></p>				
+				</div>
+				<p class="lead">Seattle based UX designer. More than 7 years of experience creating products for customers around the world at companies including AT&amp;T, HP, and Amazon. Skilled at visualizing complex, technical concepts as concrete mockups and prototypes. Exceptional design leadership skills. Able to lead broad-ranging initiatives and projects. Excels at translating customer and business needs into solutions with long-term value.</p>
 			
-			<div class="block" id="contact">
-				<p><a href="http://aaronbenjamin.design">aaronbenjamin.design</a></p>
-				<p><a href="mailto:abenjamin765@gmail.com">abenjamin765@gmail.com</a></p>
-				<p><a href="tel:7703805566">770 380 5566</a></p>				
-			</div>
+			
 			</header>
 
 			<div class="block" id="education">
-				<h3 class="heading">Education</h3>
+				<h3 >Education</h3>
 				<h4>A.S. Graphic Design <span class="light-text">Full Sail University / 2009 Salutatorian</span></h4>
 			</div>
 
 			<div class="block" id="skills">
-				<h3 class="heading">Skills</h3>
+				<h3 >Skills</h3>
 				<ul class="listy">
 					<li>Design leadership</li>
 					<li>Interaction design</li>
@@ -342,7 +356,7 @@
 			</div>
 
 			<div class="block" id="tools">
-				<h3 class="heading">Tools</h3>
+				<h3 >Tools</h3>
 				<ul class="listy">
 					<li><img src="img/icn_framer.png" alt="Framer icon">Framer</li>
 					<li><img src="img/icn_sketch.png" alt="Sketch icon">Sketch</li>
@@ -355,15 +369,15 @@
 		</aside>
 		<main id="content">
 
-			<p class="heading lead">Seattle based UX designer. More than 7 years of experience creating products for customers around the world at companies including AT&amp;T, HP, and Amazon. Skilled at visualizing complex, technical concepts as concrete mockups and prototypes. Exceptional design leadership skills. Able to lead broad-ranging initiatives and projects. Excels at translating customer and business needs into solutions with long-term value.</p>
+			
 
-			<h3 class="heading">Experience</h3>
+			<h3 >Experience</h3>
 
-			<div class="block job" style="padding: 0">
+			<div class="block job" >
 				<img src="img/logo-amazon.png" alt="">
 				<div>
 					<h4>UX Designer II <span class="light-text">Amazon / 2016 - Present (1 year)</span></h4>
-					<p>Lead the design of customer-facing tools from concept to delivery. Areas of focus include workflow automation for Amazon sellers and seller communication. Collaborate with cross-functional teams to improve the selling experience on the Amazon Marketplace. Partners with program management and editorial team to better inform and build trust with Amazon sellers. Mentor junior team members. Support the student mentorship program in partnership with The University of Washington.</p>
+					<p>Lead the design of tools and services for Amazon sellers from concept to delivery. Areas of focus include workflow automation for Amazon sellers and seller communication. Collaborate with cross-functional teams to improve the selling experience on the Amazon Marketplace. Partners with program management and editorial team to better inform and build trust with Amazon sellers. Mentor junior team members. Support the student mentorship program in partnership with The University of Washington.</p>
 					
 					<h5>Key achievements</h5>
 					<ul class="list">
@@ -373,7 +387,6 @@
 
 				</div>
 			</div>
-			<div class="break"></div>
 			<div class="block job">
 				<img src="img/logo-hp.png" alt="">
 				<div>

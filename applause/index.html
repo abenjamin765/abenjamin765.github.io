@@ -1,0 +1,484 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Applause</title>
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+	<style>
+		#wrapper{
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		body{
+			font-size: 15px;
+			font-family: arial;
+			line-height: 1.5em;
+		}
+		.lead{
+			font-size: 1.3rem;
+			line-height: 1.3em;
+		}
+		.cite{
+			color: #999;
+			font-size: 0.7rem;
+			padding: 20px;
+			background: #f3f3f3;
+			border: solid 1px #ccc;
+		}
+		.pcite{
+			color: #999;
+		}
+		.survey{
+			padding: 20px;
+			list-style: none;
+			border: solid 2px #333;
+		}
+		.survey li{
+			margin-bottom: 20px;
+		}
+		.survey ul{
+			padding: 5px 15px;
+		}
+		.survey li li{margin: 0;}
+		h1{
+			padding: 100px 20px;
+		}
+
+		h3{
+			margin-top: 40px;
+			border-top: solid 2px #333;
+			padding-top: 40px;
+		}
+		h2{
+			margin-top: 80px;
+			border-top: solid 10px #333;
+			padding-top: 80px;
+			font-family: 'Architects Daughter', sans-serif;
+
+		}
+		.center-img{text-align: center;}
+		.img-link{
+			padding: 10px;
+			border: solid 2px #333;
+			display: block;
+			background: white;
+			height: 200px;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: 170%;
+			transition: background-size 300ms ease-in;
+		}
+		.img-link:hover{
+			border-color: blue;
+			background-size: 190%;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="wrapper">
+		
+		<h1 class="center-img"><img width="197px" height="auto" src="img/logo.png" alt="Applause- For your waiter"></h1>
+		<p class="lead">Today, restaurant waiters are left shortchanged because of dated gratuity practices that make the dining experience awkward for both the customer and the waiter. </p>
+
+		<p>A study from Cornell University points to a weak relationship between a waiter's performance and the amount a customer leaves for a tip. <span class="pcite">(Lynn, 2000)</span> The study suggests that a waiter's performance has little influence on their gratuity amount and the customer's tip calculation is often nearly random. This makes for an unsustainable means of making a living for many people in the food industry.</p>
+		<p>By re-framing the process, Applause aims to modernize the dining experience to better suit the way we think about gratuities. Applause will also provide waiters with a mechanism to measure their  performance, collect feedback, and advance their careers.</p>
+		
+
+		<section>
+			<h2>Day 1 - Deep Dive</h2>
+			<p>The goal of day 1 in this design sprint is to gain domain knowledge. Who is my user? What challenges do they have? What is their environment like? What factors impact them? To answer these questions, I conducted user research, explored existing information about the industry, and identified opportunities for meaningful improvement. </p>
+
+			<h3>User Research</h3>
+			<p>I gathered qualitative and quantitative data using a survey to learn about the restaurant service industry. This gave me insight into how waitstaff view their own performance, how they compare themselves to others, and how they operate in their work environment. I have also interviewed people actively working in the restaurant industry to get better context and perspective.</p>
+
+			<strong>Survey results (17 participants):</strong>
+			<ul class="survey">
+				<li>Gender
+					<ul>
+						<li>Female: 65%</li>
+						<li>Male: 35%</li>
+					</ul>
+				</li>
+				<li>Age
+					<ul>
+						<li>18 to 24: 82%</li>
+						<li>35 to 44: 18%</li>
+					</ul>
+				</li>
+				<li>How many restaurants have you worked at as a waiter?
+					<ul>
+						<li>1: 58%</li>
+						<li>2: 16%</li>
+						<li>5: 16%</li>
+						<li>3: 8%</li>
+					</ul>
+				</li>
+				<li>Describe the type of restaurant you currently work at...
+					<ul>
+						<li>Casual dining: 50%</li>
+						<li>Fast-food: 33%</li>
+						<li>Fine dining: 17%</li>
+					</ul>
+				</li>
+				<li>How would you rate your overall job performance?
+					<ul>
+						<li>Above average: 75%</li>
+						<li>Top employee: 17%</li>
+						<li>Average: 8%</li>
+					</ul>
+				</li>
+				<li>How often do you discuss your job performance with your boss?
+					<ul>
+						<li>Weekly: 42%</li>
+						<li>Monthly: 33%</li>
+						<li>Daily: 25%</li>
+					</ul>
+				</li>
+				<li>How often does your performance impact how much a customer tips? (Scale of 1 - 10 from Never to Always)
+					<ul>
+						<li>Average: 8.00 (Frequently)</li>
+					</ul>
+
+				</li>
+				<li>What words would you use to describe a good waiter? (Free-form)
+					<ul>
+						<li>Quick: 58%</li>
+						<li>Friendly: 50%</li>
+						<li>Polite: 47%</li>
+						<li>Positive: 33%</li>
+					</ul>
+				</li>
+				<li>What words would a customer use to describe a good waiter?
+					<ul>
+						<li>Friendly: 50%</li>
+						<li>Attentive: 50%</li>
+						<li>Fast: 25%</li>
+					</ul>
+				</li>
+				<li>When applying for a new job at a restaurant, what best speaks to your previous experience as a waiter? (Multiple choice)
+					<ul>
+						<li>References: 92%</li>
+						<li>Resume: 83%</li>
+						<li>Letter of recommendation: 33%</li>
+						<li>Written performance review: 33%</li>
+						<li>Other: 8%</li>
+					</ul>
+				</li>
+				<li>Do you think customers would tip more before or after seeing the bill?
+					<ul>
+						<li>Before: 67%</li>
+						<li>After: 33%</li>
+					</ul>
+				</li>
+				<li>Is there anything else you'd like to share about what it's like being a waiter?
+					<ul>
+						<li>Not everyone can do it, good money, easy job</li>
+						<li>Be super nice, I get a lot of tips and compliments from that</li>
+						<li>It is a fun way to be paid to be social</li>
+						<li>It’s a tedious job but at the end of the day you get to walk shine with tips in your pocket.</li>
+						<li>It’s hard to find good ones honestly</li>
+						<li>Being a waiter isn't for everyone. You run into all kinds of people on the job. You'll meet some of the nicest people as well as some of the rudest. If you handle yourself well in both situations waiting tables is a breeze.</li>
+						<li>It’s often a very fast paced job that typically entails a great deal of multi-tasking . It can be a great test of both mental and physical endurance. There are also times when business is slow and it becomes a great test of patience. It requires evolved social skills and an ability to work efficiently under stress; however, it’s also a great way to learn and develop those traits.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<strong>Non-directive interview notes (4 participants):</strong>
+			<ul class="survey">
+				<li>Feedback often comes from customers verbally.</li>
+				<li>Most customers tip about 20% of the meal cost for "above average" service. (If they can accurately calculate it)</li>
+				<li>Simply filling orders on-time can result in under-tipping or no tip at all.</li>
+				<li>Tips at or above 20% seem random and not based on service quality. Sometimes customers will leave more than a 50% tip on counter service for to-go drinks.</li>
+				<li>The customers mood largely contributes the feedback and tip after service. Part of the job is improving the customers mood.</li>
+				<li>Settling arguments about "proper tip amounts" among groups of people is a common occurrence. It feels really awkward making a suggestion for gratuity directly to a customer.</li>
+				<li>Sometimes feedback goes to the manager and the waiter will hear about it weeks later or not at all.</li>
+				<li>It's not common to get a raise based on performance. Usually those come with time or becoming a manager.</li>
+				<li>When applying to a new job as a waiter, references from peers best represent previous performance.</li>
+
+			</ul>
+
+			<h3>Industry Considerations</h3>
+			<p>To better understand the user's environment and shape use-cases, I’ve investigated how a waiter's performance is measured and used in different scenarios. I have also analyzed job listings from multiple employers to help define the criteria for a waiter's service quality.</p>
+
+			<h4>Tips</h4>
+			<p>The purpose of tips is to reward waiters for exceptional service. Waiters expect better performance to yield higher tips. However, that's rarely the case. <span class="pcite">(Lynn, 2000)</span></p>
+			
+			<strong>Notes:</strong>
+			<ul>
+				<li>67% of waiters surveyed said customers are more likely to leave larger tips before seeing the bill.</li>
+				<li>72% of surveyed waiters believe their performance frequently impacts the amount of their gratuities.</li>	
+				<li>Studies show that after seeing the bill, a customer is more likely to base their tip on the cost of the meal with little consideration of the dining experience. <span class="pcite">(Bujisic, 2013)</span></li>
+			</ul>
+
+
+			<h4>Employee performance reviews</h4>
+			<p>Employee performance review frequency varies from monthly reviews to annual reviews. The purpose of these reviews is to assess each employee's performance and provide coaching as needed. Some businesses have incentive programs based on performance.</p>
+
+			<strong>Notes:</strong>
+			<ul>
+				<li>Interviewed waiters said their main source of feedback comes from customers.</li>
+				<li>Managers will sometimes reference customer comments during employee reviews.</li>
+				<li>Employee performance doesn't usually impact compensation as much as tenure and title.</li>
+			</ul>
+
+
+			<h4>Job Seeking</h4>
+			<p>A waiter's performance record comes into play when applying for a new job to give potential employers a frame of reference for their skills.</p>
+			<strong>Notes:</strong>
+			<ul>
+				<li>Waiters are likely to use a resume and references from co-workers to best represent them when job-seeking.</li>
+			</ul>
+
+			
+
+
+
+		</section>
+
+		<section>
+			<h2>Day 2 - Analysis</h2>
+			<p>The main focus of day 2 to is to analyze the research and distill the information down to actionable insights. I used pivot tables to compare data sets from the survey results, identified patterns in the interviews, and highlighted correlations and deltas between perceived outcomes and what the data suggests. Using the insights, I began to shape use-cases to design for.</p>
+			<h3>Insights</h3>
+			<ul>
+				<li>There's a gap in the perceived impact and the measurable impact of waiter performance on gratuities.</li>
+				<li>Current gratuity customs make for a poor dining experience because of the ambiguity and awkwardness of the process.</li>
+				<li>A waiter's performance is inconsistently measured depending on their employer, source of the feedback, and the customer expectations.</li>
+				<li>Job seeking is more effective with documented feedback from peers and customers. </li>
+				<li>It's common for waiters to work at multiple restaurants, sometimes at the same time.</li>
+				<li>The best criteria for evaluating waiter performance is: Speed, friendliness, positive attitude, politeness, and attentiveness.</li>
+			</ul>
+			<h3>Assumptions</h3>
+			<ul>
+				<li>Better juxtaposition between performance evaluation the gratuity process should strengthen the relationship between service quality and tip amounts.</li>
+				<li>A guided evaluation of the service and recommended gratuity will help remove ambiguity and friction from giving feedback and gratuities.</li>
+				<li>Making the feedback and gratuity process independent of employers will give waiters more ownership of their careers.</li>
+			</ul>
+			<h3>Use-cases</h3>
+			<ul class="survey">
+				<li>Case #1 - Customer leaves positive feedback</li>
+				<li>Actors:
+					<ul>
+						<li>Waiter</li>
+						<li>Happy customer</li>
+					</ul>
+				</li>
+				<li>Scenario:
+					<ul>						
+						<li>A customer finishing their meal at a restaurant thinks the service was excellent and wants to leave feedback for the waiter along with a gratuity to show their appreciation.</li>
+					</ul>
+				</li>
+				<li>Solution:
+					<ul>						
+						<li>The waiter brings a bill to the table that includes an invitation to give the waiter feedback on a mobile app that they can download or access from the web.</li>
+						<li>The customer enters the URL found in the invitation that takes them to the waiter's scorecard.</li>
+						<li>The customer completes a short survey about their visit and a gratuity is suggested. The customer can opt to leave a gratuity in the app or put the suggested gratuity on the bill the traditional way.</li>
+						<li>The waiter receives a notification about the new feedback via email.</li>
+					</ul>
+				</li>
+
+			</ul>
+
+			<ul class="survey">
+				<li>Case #2</li>
+				<li>Actors:
+					<ul>
+						<li>Waiter</li>
+						<li>Aggravated customer</li>
+					</ul>
+				</li>
+				<li>Scenario:
+					<ul>						
+						<li>A customer finishing their meal at a restaurant thinks the service was poor and wants to leave feedback for the waiter.</li>
+					</ul>
+				</li>
+				<li>Solution:
+					<ul>						
+						<li>The waiter brings a bill to the table that includes an invitation to give the waiter feedback on a mobile app that they can download or access from the web.</li>
+						<li>The customer enters the URL found in the invitation that takes them to the waiter's scorecard.</li>
+						<li>The customer completes a short survey about their visit and a below average gratuity is suggested. The customer can opt to leave a gratuity in the app or put the suggested gratuity on the bill the traditional way.</li>
+						<li>The waiter receives a notification about the new feedback via email.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul class="survey">
+				<li>Case #3 - Employee references feedback while job seeking</li>
+				<li>Actors:
+					<ul>
+						<li>Waiter</li>
+						<li>Potential employer</li>
+					</ul>
+				</li>
+				<li>Scenario:
+					<ul>						
+						<li>A waiter applies for a job at a new restaurant.</li>
+					</ul>
+				</li>
+				<li>Solution:
+					<ul>						
+						<li>The waiter sends his resume and link to their Applause profile to a potential employer.</li>
+						<li>The employer reviews the feedback and rating of the applicant.</li>
+						<li>The employer is able to make an informed hiring decision based on recent feedback from customers and previous co-workers.</li>
+					</ul>
+				</li>
+			</ul>
+
+			
+			<h3>Considerations</h3>
+			<ul>
+				<li>Low/no signal at a restaurant may make it difficult to use the app</li>
+				<li>Customers will be time-sensitive</li>
+				<li>Waiters should have full control over their feedback and tips</li>
+			</ul>
+
+			<h3>Goals</h3>
+
+			<p><strong>Goal #1:</strong> My initial research suggested a disconnect between the perceived relationship between gratuities and performance and the actual relationship. I think the relationship can be made stronger by removing distracting variables and putting the action of giving a gratuity into context. Waiters will receive gratuities that align with their performance and actionable feedback from customers.</p>
+			<p><strong>Goal #2:</strong> In many cases, feedback and gratuities are processed through a waiter's employer. By accepting both independently, waiters will have more ownership and control of their career. Employees will be able to share and discuss their customer feedback with their current and potential employers.</p>
+			
+		</section>
+
+		<section>
+			<h2>Day 3 - Explorations</h2>
+			<p>On day 3, I worked on developing flows that support my use-cases and wireframed the UI.</p>
+			
+			<h3>Flow</h3>
+			<p>Using the use-cases as a guideline for what the user needs, I began outlining the screens needed to address them and how visualized how they fit together.</p>
+
+			A customer needs to:
+			<ul>
+				<li>Be able to identify their waiter in the app</li>
+				<li>Rate their waiter</li>
+				<li>Quickly leave a tip</li>
+			</ul>
+
+			A waiter needs to:
+			<ul>
+				<li>View the feedback they receive from customers</li>
+				<li>Identify actionable trends in their ratings</li>
+				<li>See the balance of their tips</li>
+				<li>Be able to transfer their tip balance to a bank account</li>
+			</ul>
+
+			<!-- <a class="img-link" href="img/flow.png" target="_blank"><img width="100%" src="img/flow.png" alt=""></a> -->
+			<a class="img-link" href="img/flow.png" target="_blank" style="background-image: url(img/flow.png);"></a>
+
+			<h3>Wireframes</h3>
+			<p>After the screens were identified, I pieced together the UI elements needed on each screen for the user to complete their intended task.</p>
+			<a class="img-link" href="img/wires.png" target="_blank" style="background-image: url(img/wires.png); background-position: left center;"></a>
+
+			
+		</section>
+
+		<section>
+			<h2>Day 4 - Build</h2>
+			<p>Hurray! 🎉&nbsp; It's day 4. That means I have enough domain knowledge, user context, and a framework to starting building on. On day 4, I design a visual expression for the app to make using it intuitive and engaging. I also choreographed interactions to help manage users' attention as they move through the experience.</p>
+
+			<h3>Visual Design</h3>
+			<p>Each element on the screen is a either an actor or a prop used to communicate to the audience. The audience needs to easily identify each element and be able to easily interact with the performance for a good experience. Actors are dynamic components that can communicate data or instructions to the audience. Sometimes an actor will use props to help visualize a message or the audience will use props to communicate back to actors on stage.</p>
+
+			<p><img style="width: 100%; height: auto;" src="img/sketch.png" alt=""></p>
+
+			<h4>Hub</h4>
+			<p>The main screen acts as the hub for the app. The title is centered at the top with links to pivot screens on the left and right. The primary action is featured center stage.</p>
+			<p class="center-img"><img src="img/hub.png" alt=""></p>
+
+			<h4>Pivot</h4>
+			<p>Pivot screens branch off of the hub. These screens have a single focus and lead to flows.</p>
+			<p class="center-img"><img src="img/pivot.png" alt=""></p>
+
+			<h4>Flow</h4>
+			<p>When a user enters a flow, the screen background will adopt the color of the selected button and the primary controls will appear at the bottom of the screen.</p>
+			<p class="center-img"><img src="img/flow2.png" alt=""></p>
+
+			<h3>Choreography</h3>
+			<p>How an app moves and transitions helps the user understand the context of each actor. I used motion to help build relationships from scene to scene so that the flow of the experience is easy to follow.</p>
+			
+			<h4>Find scorecard</h4>
+			<p>When a diner enters their waiter's ID and taps "Give feedback", the button will expand to cover the screen and the the scorecard will enter the stage from the left. By transitioning this way, the user has context for the scorecard.</p>
+			<p class="center-img"><img src="img/profile.gif" alt=""></p>
+
+			<h4>Rating selection</h4>
+			<p>After a customer selects a rating for their waiter, the submit button slides onto the screen with a subtle spring animation to draw attention to the next step.</p>
+			<p class="center-img"><img src="img/rate.gif" alt=""></p>
+
+			<h4>Submit feedback</h4>
+			<p>The transition communicates back to the user that their feedback has been submitted before asking for input on the next step.</p>
+			<p class="center-img"><img src="img/submit.gif" alt=""></p>
+
+			<h4>Pivot transition</h4>
+			<p>When the screen transitions away from a main screen to a secondary action, the new screen enters from the right and shifts the current screen to the left so that the user stays oriented to where they are in the app.</p>
+			<p class="center-img"><img src="img/pivot.gif" alt=""></p>
+
+			<h4>Dashboard</h4>
+			<p>The dashboard shows waiter's their feedback scores for the day. They can swipe to pan through time and review their history.</p>
+			<p class="center-img"><img src="img/dash.gif" alt=""></p>
+		</section>
+
+		<section>
+			<h2>Day 5 - Reflect</h2>
+			<p>Now that I have a tangible product, it's time to reflect on where it started, who it's for, and how it measures up to my goals.</p>
+
+			<h3>FAQs</h3>
+			<p>As I've gotten feedback on product features, designs, and concepts, questions came up along the way that helped shape the design of the product.</p>
+			<strong>Why don't patrons have to register an account?</strong>
+			<p>The primary consumer of any collected data from the app is the waiter. For the app to be truly easy to use and a better alternative to the available options, the experience has to be frictionless. Also, I want to be sure a customer isn't giving out any more personal information than they would if they left a cash tip.</p>
+			<br>
+
+			<strong>On the rating card, why use emojis instead of the traditional 5-star expression of a likert scale?</strong>
+			<p>The purpose of the feedback mechanism is to capture a customer's feelings or attitude after their dining experience. In this context. I think it's easier for users to connect their feelings to a visual metaphor rather than assigning numerical value to an experience.</p>
+			<br>
+
+			<strong>Why use numerical IDs for waiters rather than a username or QR code?</strong>
+			<p>I chose to use ID numbers because they can easily be written onto the bill by hand or printed. A keypad is easier to use in more conditions than QR codes, localization, search, or other methods of identifying an individual.</p>
+			<br>
+
+			<strong>Is meal cost a factor in the gratuity recommendation?</strong>
+			<p>No. This concept focuses exclusively on performance. The recommended tip starts from a base amount set by the waiter and goes up or down based on the scorecard rating input by the customer.</p>
+			
+			<strong>Does a customer have to download the app to use it?</strong>
+			<p>No. A customer can also give a rating using the web version of Applause by visiting the waiter's url. ex: applause.com/97365 </p>
+			<br>
+
+			<h3>Goal check</h3>
+			<p>Goal #1 is to better connect waiter's tips to their performance. By having customers give feedback at the end of their meal and then a gratuity, the tip is being framed in the context of the waiter's performance.</p>
+			<p>Goal #2 is give waiter's more ownership of their career. By being able to manager their feedback and track their progress, a waiter can more independently grow their career.</p>
+
+			<h3>Future opportunities</h3>
+			<strong>Taxes</strong>
+			<p>Managing your own tips means managing your own taxes. There's an opportunity to integrate that calculation into the app.</p>
+			<br>
+
+			<strong>Skip the tip</strong>
+			<p>The purpose of the app is to separate the tipping process from the restaurant bill and frame it in the context of giving feedback. However, some users may want to give their tip using the traditional methods and use the app for only feedback. In that case, a "Skip" button on the tip screen might make sense.</p>
+			<br>
+
+			<strong>Advanced settings</strong>
+			<p>Giving the waiter more control over the feedback question, performance attributes, and tipping might make the app more flexible to varying needs.</p>
+			<br>
+
+			<strong>Table-top kiosks</strong>
+			<p>Seamlessly integrating the process into the dining experience would cut out the need to use a personal device to give feedback.</p>
+			<br>
+
+			<strong>Analytics</strong>
+			<p>A more robust analytics dashboard for feedback could allow waiter's to visualize and analyze their data at a deeper level. Employers might also find this useful to examine their staff's performance as a whole using anonymous data submissions from their employees' accounts.</p>
+			<br>
+
+
+
+
+		</section>
+
+	<footer>
+		<br>
+		<hr>
+		<br>
+		<p class="cite">Lynn, M. (2000). The relationship between tipping and service quality: A comment on Bodvarsson and Gibson’s article[Electronic version]. Retrieved 11/14/2017, from Cornell University, School of Hospitality Administration site: http://scholarship.sha.cornell.edu/articles/154</p>
+		<p class="cite">Milos Bujisic, Youngsoo Choi, H. G. Parsa, Matt Krawczyk. (2013) Tipping Practices in Food and Beverage Operations: A Longitudinal Study. Journal of Culinary Science &amp; Technology</p>
+	</footer>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+// Layout
+body
+  // background-color: #f4f4f4
+  margin: 0
+  color: #333
+.dark
+  background-color: #333
+  color: white  
+  font-weight: bold
+  .meta li
+    background: #333!important
+    border: solid 1px white
+
+  h4
+    color: white
+
+  + .block
+    margin-top: 0!important
+
+#wrapper
+  max-width: 1024px
+  margin: 0 auto
+  background-color: white
+.block
+  display: grid
+  grid-template-columns: 15% 85% 
+  padding: 20px
+  + .block 
+    border-top: solid 1px #ccc
+    margin-top: 0
+h4
+  text-transform: uppercase
+  color: #999
+
+header
+  display: grid
+  grid-template-columns: auto auto 
+  border-bottom: solid 2px #ccc
+  h3
+    span
+      font-weight: normal
+      color: #666
+      &:before
+        content: '//'
+        margin: 0 5px
+        color: #ccc
+        font-weight: normal
+
+.meta
+  padding: 0
+  li
+    display: inline
+    list-style: disc
+    display: inline-block
+    background-color: #f4f4f4
+    padding: 4px 15px
+    margin: 0 2px 5px 0
+  
+
+// Meta
+// .meta
+//   list-style: none
+//   margin: 0
+//   padding: 0
+//   display: grid
+//   grid-template-columns: 25% 25% 25% 25%
+//   .label
+//     font-weight: bold
+//   .value
+//     margin: 0
+
+// Job
+.job
+  p
+    margin: 3px 0 0
+  + .job
+    margin-top: 20px
+    border-top: dotted 1px #ccc
+.title
+  h3
+    color: #333
+    text-transform: none
+    span
+      &:before
+        content: '//'
+        margin: 0 5px
+        color: #ccc
+        font-weight: normal
+
+strong + ul
+  margin-top: 5px
+
+.threecol
+  display: grid
+  grid-template-columns: 33.33% 33.33% 33.33% 
+
+.skills
+  padding-right: 20px 
+  ul
+    list-style: none
+    padding: 0
+    li
+      display: inline-block
+      background-color: #f4f4f4
+      padding: 4px 15px
+      margin: 0 2px 5px 0
+
+
+/*! Typebase.less v0.1.0 | MIT License */
+
+// Typesetting variables. Edit these!
+$baseFontSize: 13 // in pixels. This would result in 22px on desktop
+$baseLineHeight: 1.5 // how large the line height is as a multiple of font size
+$leading: $baseLineHeight * 1rem
+
+// Rate of growth for headings
+// I actually like this to be slightly smaller then the leading. Makes for tight headings.
+$scale: 1.414
+
+/* Setup */
+html
+  /* Change default typefaces here */
+  font-family: serif
+  font-size: $baseFontSize / 16 * 100%
+
+  // Make everything look a little nicer in webkit
+  -webkit-font-smoothing: antialiased
+
+  // -webkit-text-size-adjust: auto
+  // -moz-text-size-adjust: auto
+  // -ms-text-size-adjust: auto
+  // -o-text-size-adjust: auto
+  // text-size-adjust: auto
+
+/* Copy & Lists */
+p
+  line-height: $leading
+  margin-top: $leading
+  margin-bottom: 0
+
+ul, ol
+  margin-top: $leading
+  margin-bottom: $leading
+  padding-left: 1.3em
+  li
+    line-height: $leading
+  ul, ol
+    margin-top: 0
+    margin-bottom: 0
+
+blockquote
+  line-height: $leading
+  margin-top: $leading
+  margin-bottom: $leading
+
+/* Headings */
+h1, h2, h3, h4, h5, h6
+  /* Change heading typefaces here */
+  font-family: sans-serif
+  margin-top: $leading
+  margin-bottom: 0
+  line-height: $leading
+
+h1
+  font-size: 3 * $scale * 1rem
+  line-height: 3 * $leading
+  margin-top: 2 * $leading
+
+h2
+  font-size: 2 * $scale * 1rem
+  line-height: 2 * $leading
+  margin-top: 2 * $leading
+h3
+  font-size: 1 * $scale * 1rem
+h4
+  font-size: $scale / 2 * 1rem
+h5
+  font-size: $scale / 3 * 1rem
+h6
+  font-size: $scale / 4 * 1rem
+
+/* Tables */
+table
+  margin-top: $leading
+  border-spacing: 0px
+  border-collapse: collapse
+
+  td, th
+    padding: 0
+    line-height: $baseLineHeight * $baseFontSize - 0px
+
+/* Code blocks */
+code
+  // Forces text to constrain to the line-height. Not ideal, but works.
+  vertical-align: bottom
+
+/* Leading paragraph text */
+.lead
+  font-size: $scale * 1rem
+
+/* Hug a the block above you */
+.hug
+  margin-top: 0
