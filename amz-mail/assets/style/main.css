@@ -69,7 +69,25 @@ h2 {
 
 h3 {
   font-size: 1.618rem;
-  padding-top: 100px; }
+  padding-top: 50px;
+  text-align: center;
+  background: white;
+  position: relative; }
+  h3 span {
+    z-index: 2;
+    background: white;
+    padding: 0 20px;
+    position: relative; }
+  h3:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 11px;
+    height: 1px;
+    background: #ccc;
+    z-index: 1; }
 
 h4 {
   font-size: 0.809rem; }
@@ -82,6 +100,10 @@ h6 {
 
 .hug {
   padding-top: 0; }
+
+.image-frame {
+  text-align: center;
+  margin: 50px 0; }
 
 .list {
   list-style: disc;
@@ -133,8 +155,18 @@ strong {
 
 .end {
   padding: 300px 0;
-  font-size: 120px;
-  text-align: center; }
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+  background: #f4f4f4; }
+  .end p {
+    font-size: 56px;
+    line-height: 60px;
+    font-weight: 200; }
+
+.boxy {
+  max-width: 1280px;
+  margin: 0 auto; }
 
 /* Layout */
 body {

@@ -587,6 +587,89 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/amz-mail\/assets\/images\/aaron-and-alice.jpg": {
+		"ft": 16384,
+		"iS": 249231,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/aaron-and-alice.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/amz-mail\/assets\/images\/applause-1.gif": {
+		"ft": 4194304,
+		"iS": 880992,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/applause-1.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/amz-mail\/assets\/images\/applause-2.gif": {
+		"ft": 4194304,
+		"iS": 847029,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/applause-2.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/amz-mail\/assets\/images\/applause-3.gif": {
+		"ft": 4194304,
+		"iS": 653711,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/applause-3.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/amz-mail\/assets\/images\/applause-4.gif": {
+		"ft": 4194304,
+		"iS": 696655,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/applause-4.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/amz-mail\/assets\/images\/applause-5.gif": {
+		"ft": 4194304,
+		"iS": 2167871,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/applause-5.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/amz-mail\/assets\/images\/buzz-1.png": {
+		"ft": 32768,
+		"iS": 189938,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/buzz-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/amz-mail\/assets\/images\/buzz-2.png": {
+		"ft": 32768,
+		"iS": 441699,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/buzz-2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/amz-mail\/assets\/images\/buzz-3.png": {
+		"ft": 32768,
+		"iS": 262734,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/buzz-3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/amz-mail\/assets\/images\/channel-page.png": {
 		"ft": 32768,
 		"iS": 301632,
@@ -625,6 +708,46 @@
 		"iS": 922750,
 		"oA": 0,
 		"oAP": "\/amz-mail\/assets\/images\/design.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/amz-mail\/assets\/images\/dummi-anim.gif": {
+		"ft": 4194304,
+		"iS": 114326,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/dummi-anim.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/amz-mail\/assets\/images\/dummi-v1.jpg": {
+		"ft": 16384,
+		"iS": 103984,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/dummi-v1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/amz-mail\/assets\/images\/dummi-v2.png": {
+		"ft": 32768,
+		"iS": 31634,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/dummi-v2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/amz-mail\/assets\/images\/dummi.png": {
+		"ft": 32768,
+		"iS": 45282,
+		"oA": 0,
+		"oAP": "\/amz-mail\/assets\/images\/dummi.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -813,6 +936,13 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/amz-mail\/assets\/notes.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/amz-mail\/assets\/notes.html",
+		"oF": 0
 		},
 	"\/amz-mail\/assets\/notes.md": {
 		"cB": 0,
