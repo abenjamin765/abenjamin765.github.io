@@ -1,0 +1,247 @@
+/* RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Values */
+/* Typography */
+html {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", Arial, sans-serif;
+  padding-top: 3.236rem;
+  margin: 0;
+  line-height: 1.618rem; }
+
+h1 {
+  font-size: 4.854rem;
+  line-height: 4.854rem; }
+
+h2 {
+  font-size: 3.236rem;
+  line-height: 3.236rem; }
+
+h3 {
+  font-size: 1.618rem;
+  padding-top: 100px; }
+
+h4 {
+  font-size: 0.809rem; }
+
+h5 {
+  font-size: 0.5393333333rem; }
+
+h6 {
+  font-size: 0.4045rem; }
+
+.hug {
+  padding-top: 0; }
+
+.list {
+  list-style: disc;
+  padding-left: 20px; }
+  .list li + li {
+    margin-top: 0.809rem; }
+
+.block-list li {
+  display: inline-block;
+  background: #eee;
+  margin: 0 0 3px 0;
+  padding: 3px 15px;
+  overflow: hidden; }
+
+a {
+  color: #006699;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.button {
+  color: #006699;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 800;
+  border-bottom: solid 2px #ccc;
+  padding-bottom: 0.6rem;
+  margin-top: 2rem;
+  display: inline-block; }
+  .button:hover {
+    border-color: #006699;
+    text-decoration: none; }
+
+p {
+  line-height: 1.618rem;
+  padding-top: 1.618rem;
+  margin-bottom: 0; }
+
+ul, ol {
+  margin-top: 0.809rem; }
+  ul li, ol li {
+    line-height: 1.618rem;
+    margin-top: 0.809rem; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+strong {
+  font-weight: bold; }
+
+.end {
+  padding: 300px 0;
+  font-size: 120px;
+  text-align: center; }
+
+/* Layout */
+body {
+  position: relative; }
+
+#side-bar {
+  position: fixed;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 0 1rem 1rem; }
+
+.frame {
+  max-width: 800px;
+  margin: 4rem auto 0;
+  background: white; }
+  .frame--header {
+    padding: 2rem 0;
+    color: #fc4a19;
+    font-weight: 800; }
+
+.block {
+  display: block;
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  position: relative; }
+  .block + .block {
+    margin-top: 1rem; }
+  .block .info {
+    display: none;
+    position: absolute;
+    color: #333;
+    background: rgba(255, 255, 255, 0.97);
+    top: 10;
+    bottom: 10;
+    right: 10;
+    left: 10;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden; }
+    .block .info h3 {
+      padding: 0; }
+  .block:hover .info {
+    display: block; }
+
+.pad-4 {
+  padding: 4rem; }
+
+/* Hero */
+.hero {
+  font-weight: 200;
+  font-size: 1.618rem;
+  line-height: 2.427rem;
+  padding-top: 3.236rem; }
+  .hero strong {
+    display: block;
+    font-size: 6.472rem;
+    line-height: 6.472rem;
+    margin-bottom: 1.618rem;
+    font-weight: 800;
+    margin-left: -0.3rem; }
+  .hero em {
+    color: #fc4a19; }
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* Toggle Button */
+.switch {
+  background: white;
+  border: solid 1px #ccc;
+  padding: 0.4rem 1rem;
+  display: block;
+  text-align: center;
+  margin: 20px 0 -1;
+  width: 200px; }
+  .switch:before {
+    content: 'Before'; }
+  .switch:hover {
+    cursor: pointer; }
+
+.toggle-box {
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  border: solid 1px #ccc;
+  background-image: url("assets/images/Chequerboard.png"); }
+  .toggle-box img {
+    border-radius: 15px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
+  .toggle-box .before {
+    display: inline; }
+  .toggle-box .after {
+    display: none; }
+
+.toggle-button {
+  display: none; }
+  .toggle-button:checked ~ .toggle-box .before {
+    display: none; }
+  .toggle-button:checked ~ .toggle-box .after {
+    display: inline; }
+  .toggle-button:checked + .switch {
+    background: #333;
+    color: white; }
+    .toggle-button:checked + .switch:before {
+      content: 'After'; }
