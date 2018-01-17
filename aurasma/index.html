@@ -1,0 +1,170 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Aaron Benjamin - Senior UX &amp; Product Designer</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/style/main.css">
+</head>
+<body>
+
+	<!-- <nav id="side-bar">
+		<h4 class="hug">Overview</h3>
+		<ul>
+			<li><a href="#role">My role</a></li>
+			<li><a href="#objective">Objective</a></li>
+		</ul>
+		<h4>Research</h3>
+		<ul>
+			<li><a href="#">Hello World</a></li>
+			<li><a href="#">Hello World</a></li>
+			<li><a href="#">Hello World</a></li>
+		</ul>
+		<h4>Modeling</h3>
+		<ul>
+			<li><a href="#">Hello World</a></li>
+			<li><a href="#">Hello World</a></li>
+			<li><a href="#">Hello World</a></li>
+		</ul>
+		<h4>Delivery</h3>
+		<ul>
+			<li><a href="#">Hello World</a></li>
+			<li><a href="#">Hello World</a></li>
+			<li><a href="#">Hello World</a></li>
+		</ul>
+	</nav> -->
+
+	<main id="wrapper">
+
+		<!-- Hero Space -->
+			<section class="frame">
+				<img src="/assets/images/splash.png" alt="">
+				<h1>
+					Redesign: Aurasma Mobile App
+				</h1>
+				
+				<p class="hero">Aurasma is a product that gives people the tools they need to create their own Augmented Reality (AR) experiences using their smartphone. "Auras" are created by layering 2D or 3D images on top of pictures captured by the user that hey can share with their friends and family.</p>
+				<iframe style="margin-top: 2rem" width="560" height="315" src="https://www.youtube.com/embed/VuSQo0vAugA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<h2 id="role">My role</h2>
+				<p>I led the end-to-end redesign of the Aurasma mobile app. My primary responsibilities were customer research, gathering technical requirements, developing the design vision, drafting design specifications, and delivering  high-fidelity prototypes for key interactions.</p>
+				<ul class="block-list">
+					<li>Design leadership</li>
+					<li>User research</li>
+					<li>Project management</li>
+					<li>Interaction design</li>
+					<li>Product modeling</li>
+					<li>Visual design</li>
+					<li>Prototyping</li>
+				</ul>
+
+				<h2 id="objective">Objective</h2>
+				<p>Aurasma's biggest fans are marketers and teachers. The goal of the redesign is to identify opportunities to make a better experience for the people that use it the most.</p>
+				<ul class="list">
+					<li>Modernize the UI visual design</li>
+					<li>Improve speed and performance</li>
+					<li>Simplify the app navigation</li>
+				</ul>
+				<h3>For marketers...</h3>
+				<p>To help better support our marketing customers, I did a deep-dive into industry trends for AR, helped the technology and product teams brainstorm ways for marketers to better engage their audience, and met with our marketing partners to get context for their needs.</p>
+				<ul class="list">
+					<li>Extend Aurasma to Android devices</li>
+					<li>Offer sharing through Instagram</li>
+					<li>Expand customization options for White-label customers</li>
+					<li>Enhance the viewing experience</li>
+					<li>Find new ways to engage with AR content</li>
+				</ul>
+
+				<h3>For educators...</h3>
+				<p>Talking with educators helped me understand what they enjoyed about the app and where we could make improvements to make Aurasma better for the classroom.</p>
+				<ul class="list">
+					<li>Optimize Aurasma for tablets</li>
+					<li>Create an unauthenticated experience</li>
+					<li>Partner with publishers to offer Aurasma content in educational material</li>
+					<li>Offer more ways to share and distribute content</li>
+					<li>Prioritize privacy and security</li>
+				</ul>
+				<h2>Design</h2>
+				<h3>Scanning</h3>
+				<ul class="list">
+					<li>The scanner screen was moved outside of the authenticated experience to allow guests to use the core feature withing signing in.</li>
+					<li>Ambiguous icons were replaced with labels.</li>
+					<li>The navigation menu was added to the screen to make it obvious how to move around the app.</li>
+					<li>A screen header was added to give the screen context.</li>
+
+				</ul>
+				
+				<div class="visual">
+					<input type="checkbox" class="toggle-button" name="scan" id="toggle">
+					<label for="toggle" class="switch"></label>
+
+					<div class="toggle-box">
+						<img class="before" src="/assets/images/scanner-before.png">
+						<img class="after" src="/assets/images/scanner.png">
+					</div>
+				</div>
+
+				<h3>Discovery</h3>
+				<ul class="list">
+					<li>Auras on the discovery screen were grouped into 2 categories, 'Nearby' and 'From friends'</li>
+					<li>The search feature was added to the Discovery screen</li>
+					<li>The screen is updated automatically as the guest's location moves.</li>
+				</ul>
+				
+				<div class="visual">
+					<input type="checkbox" class="toggle-button" name="explore" id="toggle1">
+					<label for="toggle1" class="switch"></label>
+					<div class="toggle-box">
+						<img class="before" src="/assets/images/explore-before.png">
+						<img class="after" src="/assets/images/explore.png">
+					</div>
+				</div>
+
+				<ul class="list">
+					<li>Clear instructions were added to the call-to-action.</li>
+					<li>A close button was added to the lightbox.</li>
+					<li>Trigger image sizes were standardized to make scanning easier.</li>
+				</ul>
+
+				<div class="visual">
+					<input type="checkbox" class="toggle-button" name="explore" id="toggle2">
+					<label for="toggle2" class="switch"></label>
+					<div class="toggle-box">
+						<img class="before" src="/assets/images/unlock-before.png">
+						<img class="after" src="/assets/images/unlock.png">
+					</div>
+				</div>
+
+				<h3>Authentication</h3>
+				<ul class="list">
+					<li>The notion of log in and register were separated.</li>
+					<li>Email is now a required field and is used for password recovery and account alerts.</li>
+					<li>A show/hide option replaced the need for a second password entry field.</li>
+					<li>The login screen was moved outside of the main navigation as a utility screen.</li>
+					<li>Guests will be invited to create an account only when it's required.</li>
+
+				</ul>
+				<div class="visual">
+					<input type="checkbox" class="toggle-button" name="scan" id="toggle3">
+					<label for="toggle3" class="switch"></label>
+
+					<div class="toggle-box">
+						<img class="before" src="/assets/images/newacct-before.png">
+						<img class="after" src="/assets/images/newacct.png">
+					</div>
+				</div>
+
+				<h2>Outcomes</h2>
+				<p>Within 60 days the redesigned Aurasma app  deployed across Android and iOS, we observed:</p>
+				<ul class="list">
+					<li>Increased customer rating in the Apple App Store</li>
+					<li>Above-target adoption for Android users</li>
+					<li>A decrease in login failures</li>
+					<li>Increased engagement and content creation</li>
+				</ul>
+			</section>
+
+		
+	</main>
+
+	
+</body>
+</html>

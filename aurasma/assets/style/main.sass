@@ -1,0 +1,245 @@
+/* RESET */
+@import 'tools/reset'
+
+
+
+
+/* Values */
+
+// Colors
+$primaryColor: rgba(252,74,25,1)
+$secondaryColor: #F7B733
+$linkColor: #006699
+
+// Fonts
+$primaryFont: 'Open Sans', Arial, sans-serif // Set primary typeface
+$secondaryFont: 'Open Sans', Arial, sans-serif // Set secondary typeface
+
+// Measurements
+$sideBarWidth: 200px
+
+
+
+
+/* Typography */
+
+// Base values
+$baseFontSize: 16 // In pixels
+$baseLineHeight: 1.618 // Multiple of font-size
+$leading: $baseLineHeight * 1rem
+
+// Scale
+$scale: 1.618
+
+// Global
+html
+	font-family: $primaryFont
+	font-size: $baseFontSize / 16 * 100%
+	-webkit-font-smoothing: antialiased
+
+// Headings
+h1, h2, h3, h4, h5, h6
+	font-family: $secondaryFont
+	padding-top: $leading * 2
+	margin: 0
+	line-height: $leading
+h1
+	font-size: 3rem * $scale 
+	line-height: 3 * $leading
+h2
+	font-size: 2rem * $scale 
+	line-height: 2 * $leading
+h3
+	font-size: 1rem * $scale
+h4
+	font-size: $scale / 2 * 1rem
+h5
+	font-size: $scale / 3 * 1rem
+h6
+	font-size: $scale / 4 * 1rem
+
+.hug // Snap to the top of the parent
+  padding-top: 0	
+
+.list
+	list-style: disc
+	padding-left: 20px
+	li
+		+ li
+			margin-top: $leading / 2
+
+.block-list
+	li
+		display: inline-block
+		background: #eee
+		margin: 0 0 3px 0
+		padding: 3px 15px
+		overflow: hidden
+
+
+
+// Links
+a
+	color: $linkColor
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+.button
+	color: $linkColor
+	font-family: $secondaryFont
+	font-weight: 800
+	border-bottom: solid 2px #ccc
+	padding-bottom: 0.6rem
+	margin-top: 2rem
+	display: inline-block
+
+	&:hover
+		border-color: $linkColor
+		text-decoration: none
+
+
+// Copy
+p
+  line-height: $leading
+  padding-top: $leading 
+  margin-bottom: 0
+
+// Lists
+ul, ol
+  margin-top: $leading / 2
+  li
+    line-height: $leading
+  ul, ol
+    margin-top: 0
+    margin-bottom: 0
+
+
+
+/* Layout */
+body
+	position: relative
+#side-bar
+	position: fixed
+	width: $sideBarWidth
+	box-sizing: border-box
+	padding: 0 1rem 1rem
+
+#wrapper
+	margin-left: $sideBarWidth
+
+.frame
+	max-width: 800px
+	margin: 4rem auto 0
+	background: white
+	&--header
+		padding: 2rem 0
+		// background: #f4f4f4
+		color: $primaryColor
+		font-weight: 800
+.block
+	display: block
+	height: 600px
+	background:
+		position: center center
+		size: cover
+	position: relative
+	+ .block
+		margin-top: 1rem
+	
+	.info
+		display: none
+		position: absolute
+		color: #333
+		background: rgba(255,255,255,0.97)
+		top: 10
+		bottom: 10
+		right: 10
+		left: 10
+		border-radius: 15px
+		box-shadow: 0 5px 15px rgba(0,0,0,0.2)
+		// border: solid 10px $primaryColor
+		overflow: hidden
+		h3
+			padding: 0
+		
+	&:hover
+		.info
+			display: block
+			
+
+
+		
+
+.pad-4
+	padding: 4rem
+
+
+
+
+/* Hero */
+.hero
+	font-weight: 200
+	font-size: 1rem * $scale
+	line-height: 1.5 * $leading
+	padding-top: $leading * 2
+	
+	strong
+		display: block
+		font-size: 4rem * $scale
+		line-height: 4 * $leading
+		margin-bottom: $leading
+		font-weight: 800
+		margin-left: -0.3rem
+	em
+		color: $primaryColor
+
+
+
+
+/* Images */
+img
+	max-width: 100%
+	height: auto
+
+
+/* Toggle Button */
+.switch
+	background: white
+	border: solid 1px #ccc
+	padding: 0.4rem 1rem
+	display: block
+	text-align: center
+	margin: 20px 0 -1
+	width: 200px
+	&:before
+		content: 'Before'
+	&:hover
+		cursor: pointer
+.toggle-box
+	padding: 2rem
+	text-align: center
+	width: 100%
+	border: solid 1px #ccc
+	background-image: url('/assets/images/Chequerboard.png')
+	img
+		border-radius: 15px
+		padding: 20px
+		background: white
+		box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+	.before
+		display: inline
+	.after
+		display: none
+.toggle-button
+	display: none
+	&:checked
+		~ .toggle-box
+			.before
+				display: none
+			.after
+				display: inline
+		+ .switch
+			background: #333
+			color: white
+			&:before
+				content: 'After'
