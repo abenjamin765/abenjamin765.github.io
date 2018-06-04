@@ -1,0 +1,165 @@
+$base: #ccc
+$element: #4A90E2
+$attr: #ccc
+$value: #E0107D
+$fill: #4A90E2
+
+@import 'animate'
+
+body
+	margin: 0
+	padding: 0
+	font-family: Avenir, Helvetica, Verdana, sans-serif
+	color: #666
+#wrapper
+	overflow: hidden	
+h1, h2, h3, h4
+	margin: 0	
+.container
+	max-width: 800px
+	margin: 0 auto
+	position: relative
+.fill
+	// background: $fill	
+	// background: linear-gradient(135deg, #622774 0%,#c53364 100%)
+	color: white
+	background: linear-gradient(to right, #cb356b, #bd3f32)
+.light
+	background: #f4f4f4
+
+.hero
+	padding:  50px
+
+header
+	text-align: center	
+	margin: 40px 20px 0
+	position: relative
+	z-index: 2
+	+ section
+		margin-top: -20px
+.page-header
+	font-size: 20px
+	font-weight: 200
+	// border: solid 1px #eee
+	display: inline-block
+	margin: 0 auto
+	background: white
+	box-shadow: 0 10px 40px 0 rgba(0,0,0,0.2)
+	padding: 10px 30px
+	border-radius: 3px
+
+		
+
+	
+.code
+	color: $base
+	font-family: 'Inconsolata', monospace
+	letter-spacing: 0.02em
+	text-rendering: optimizeLegibility;
+	.element
+		color: $element
+	.attr
+		color: $attr
+	.value
+		color: $value	
+.intro
+	line-height: 1.35em		
+	margin: 0
+	animation-delay: 2s
+	padding-left: 200px
+.lead
+	font-size: 20px
+	line-height: 1.4em	
+
+a
+	color: $element
+	text-decoration: none
+	&:hover
+			border-bottom: solid 1px $element
+
+#hero-img
+	position: absolute
+	bottom: 0
+	left: 20px
+	animation-delay: 1s
+
+footer
+	border-top: solid 1px #eee
+	padding: 20px
+	.tile
+		padding: 20px
+		background: #333
+		color: white
+		margin: 1em 0 0
+		// border-radius: 5px
+		a
+			color: white
+			border-bottom: solid 1px white
+
+	.eyebrow
+		margin-bottom: 1em
+		font-weight: 600
+		font-size: 13px
+	p
+		margin: 0
+		line-height: 1.4em
+		+ p
+			margin-top: 1em
+.res
+	width: 100%
+	height: auto
+.project
+	padding: 100px 50px
+	.videobox
+		margin: 0 auto
+		max-width: 414px
+		border-radius: 17px
+		overflow: hidden
+		border: solid 1px #ccc
+		font-size: 0
+		video
+			width: 100%
+			
+
+
+	.logo
+		// margin-bottom: 5px
+		img
+			height: 40px
+	.subhead
+		font-size: 11px
+		font-weight: 500
+		text-transform: uppercase
+		color: #999
+	.about
+		margin: 2em 0 4em
+		font-size: 20px
+		line-height: 1.5
+	.scorecard
+		background: white
+		padding: 2em 2em 0
+		margin-top: 2em
+		border: solid 1px $base
+		border-radius: 3px
+		p
+			margin: 1em 0 2em
+			line-height: 1.4
+		ul
+			padding: 0 0 0 1em
+			margin: 1em 0 2em
+			line-height: 1.4
+			li
+				+ li
+					margin-top: 10px
+	+ .project
+		border-top: solid 1px #ccc
+
+
+
+// Mobile	
+@media screen and (max-width: 850px)
+	.hero
+		height: 460px
+	.intro
+		padding: 0
+
