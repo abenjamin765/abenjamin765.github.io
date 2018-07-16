@@ -1,6 +1,6 @@
 html {
   font-family: avenir, arial, sans-serif;
-  font-size: 14px; }
+  font-size: 12px; }
 
 body {
   margin: 0;
@@ -19,15 +19,15 @@ header {
     display: block;
     flex: 1;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-decoration: none; }
   header a {
-    color: #3C78BD;
+    color: #333;
     border-left: 1px solid #eee; }
 
 #wrapper {
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto; }
 
 .skills {
@@ -43,13 +43,14 @@ header {
     margin: 0 4px 4px 0; }
 
 .list {
-  padding: 0 0 0 1em;
-  margin: 0; }
+  padding: 0;
+  margin: 0 0 0 1.15rem; }
   .list li {
     margin-top: 0.5em; }
 
 aside {
-  padding: 2rem; }
+  padding: 2rem;
+  order: 2; }
   aside h1 {
     margin: 0;
     color: #3C78BD;
@@ -69,13 +70,48 @@ main {
   padding: 2rem; }
 
 h2 {
-  color: #999;
+  color: #E0107D;
   margin: 0;
   text-transform: uppercase;
   font-size: 1rem;
   margin-bottom: 1rem; }
 
 .lead {
-  font-size: 1.5rem;
-  margin: 0 0 1.5rem;
-  font-weight: 100; }
+  font-size: 1.3rem;
+  margin: 0 0 2rem;
+  font-weight: 500;
+  display: flex;
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+  padding: 2rem 170px 2rem 2rem;
+  position: relative;
+  background: #E0107D; }
+  .lead img {
+    height: auto;
+    width: 130px;
+    order: 2;
+    margin-left: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 2rem; }
+
+h3 {
+  margin: 0;
+  font-size: 1rem; }
+  h3 + p {
+    margin: 0 0 1rem;
+    font-style: italic; }
+
+h4 {
+  margin: 0 0 1rem;
+  font-weight: 300; }
+
+.acc {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border-left: solid 1px #F3C029;
+  background: #FFFDF6; }
+
+.job + .job {
+  margin-top: 2rem; }
