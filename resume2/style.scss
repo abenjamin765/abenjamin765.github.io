@@ -92,6 +92,9 @@ h2{
 		text-transform: uppercase;
 		font-size: 1rem;
 		margin-bottom: 1rem;
+		~ h2{
+			margin-top: 2rem;
+		}
 	}
 
 .lead{
@@ -133,9 +136,9 @@ h4{
 
 .acc{
 	margin-top: 1rem;
-	padding: 1rem 2rem;
-	border-left: solid 1px #F3C029;
-	background: #FFFDF6;
+	padding: 1rem 0;
+	border-top: dotted 1px #ccc;
+	// background: #FFFDF6;
 	// border-radius: 17px;
 }
 
