@@ -1,0 +1,86 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{candidateName}, #{candidateTitle} | Resume
+        link(rel="stylesheet", href="assets/style/main.css")
+        script(src="assets/js/pdf-download.js", defer)
+    body 
+        button#download.button-8.no-print(role="button") Download this resume as a PDF
+        #wrapper 
+            main
+                h1 #{contactInfo.candidateName}
+
+                section#intro
+                    h2 #{contactInfo.candidateTitle}
+                    p #{contactInfo.candidateDescription}
+
+                
+                section#workExperience
+                    h2 Work Experience
+                    each xp, jobIndex in experience
+                        // Show first 5 jobs for print, all jobs for screen
+                        if jobIndex < 5
+                            article.work-experience-milestone
+                                h3 #{xp.title} 
+                                    span.light / #{xp.company}
+                                p.work-experience-date-range #{xp.date_range} - #{xp.type} (#{xp.location})
+                                ul.work-experience-accomplishments
+                                    each accomplishment, index in xp.accomplishments
+                                        // Show first 3 accomplishments always, hide 4+ for print
+                                        if index < 3
+                                            li #{accomplishment}
+                                        else
+                                            li.print-hide #{accomplishment}
+                        else
+                            article.work-experience-milestone.print-hide
+                                h3 #{xp.title} 
+                                    span.light / #{xp.company}
+                                p.work-experience-date-range #{xp.date_range} - #{xp.type} (#{xp.location})
+                                ul.work-experience-accomplishments
+                                    each accomplishment in xp.accomplishments
+                                        li #{accomplishment}
+            aside
+                img(src="assets/img/hello.webp", alt="").logo
+                section#contact
+                    a(href=`${contactInfo.candidateWebsite}`) #{contactInfo.candidateWebsite}
+                    a(href=`mailto:${contactInfo.candidateEmail}`) #{contactInfo.candidateEmail}
+                    a(href=`tel:${contactInfo.candidatePhone}`) #{contactInfo.candidatePhone}
+                    p#location #{contactInfo.candidateLocation}
+                section#education
+                    h2 Education
+                    ul.list#educationList
+                        li #{schoolName}, #{schoolLocation} (#{schoolGraduationYear})
+                section#focusAreas
+                    h2 Focus Areas
+                    ul.list#focusAreaList
+                        each area in focusAreas
+                            li #{area}
+                section#hardSkills
+                    h2 Hard Skills
+                    ul.list#hardSkillList
+                        each skill in hardSkills
+                            li #{skill}
+                section#softSkills
+                    h2 Soft Skills
+                    ul.list#softSkillList
+                        each skill in softSkills
+                            li #{skill}
+                section#tools
+                    h2 Tools
+                    p.small#toolList
+                        each tool in tools
+                            span #{tool}, 
+                section#references
+                    h2 References
+                    ul.no-list#referenceList
+                        each ref, index in references
+                            // Show first 3 references for print, all for screen
+                            if index < 3
+                                li 
+                                    div #{ref.name} (#{ref.relationship})
+                                    div.light #{ref.email}
+                            else
+                                li.print-hide 
+                                    div #{ref.name} (#{ref.relationship})
+                                    div.light #{ref.email}

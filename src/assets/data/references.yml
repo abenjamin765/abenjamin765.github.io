@@ -1,0 +1,25 @@
+references:
+  - name: Aviana Martin
+    relationship: Former Manager
+    email: avianap@indeed.com
+    phone: (512) 744-5270
+
+  - name: Donna Romeo
+    relationship: Former Colleague
+    email: drdonnamariaromeo@gmail.com
+    phone: (214) 491-8590
+
+  - name: Mel Nguyen
+    relationship: Former Colleague
+    email: mnguyen@indeed.com
+    phone: (346) 235-9697
+
+  - name: Leah Hamlin
+    relationship: Former Colleague
+    email: ljkulp@gmail.com
+    phone: (609) 713-4525
+
+  - name: Michael Berg
+    relationship: Former Colleague
+    email: mbberg@amazon.com
+    phone: (425) 647-6303

@@ -1,0 +1,296 @@
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+    word-break: break-all;
+  }
+
+  img.logo {
+    max-width: 80px !important;
+    height: auto;
+    margin-bottom: 0.5em !important;
+    filter: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  
+
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-condensed {
+    display: block !important;
+  }
+
+  #wrapper {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    gap: 0 !important;
+  }
+
+  main {
+    width: 65% !important;
+    float: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  aside {
+    width: 33% !important;
+    float: right !important;
+    margin: 0 !important;
+    padding: 0 0 0 1em !important;
+    display: block !important;
+    max-width: none !important;
+  }
+
+  h1 {
+    font-size: 18pt !important;
+    margin: 0 0 0.3em 0 !important;
+    line-height: 1.1 !important;
+  }
+
+  h2 {
+    font-size: 10pt !important;
+    margin: 0.8em 0 0.3em 0 !important;
+    line-height: 1.2 !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 10pt !important;
+    margin: 0.5em 0 0.2em 0 !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+  }
+
+  p {
+    margin: 0.3em 0 !important;
+    font-size: 9pt !important;
+  }
+
+  ul {
+    padding: 0 0 0 1em !important;
+    margin: 0.2em 0 0.5em 0 !important;
+  }
+
+  li {
+    font-size: 9pt !important;
+    line-height: 1.25 !important;
+    margin: 0.1em 0 !important;
+  }
+
+  .work-experience-milestone {
+    margin-bottom: 0.8em !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .work-experience-date-range {
+    margin-top: 0.2em !important;
+    font-size: 9pt !important;
+  }
+
+  .work-experience-accomplishments {
+    margin-top: 0.3em !important;
+  }
+
+  .light {
+    font-weight: 400 !important;
+    color: #333 !important;
+  }
+
+  #contact {
+    margin-bottom: 0.8em !important;
+  }
+
+  #contact a,
+  #contact p {
+    font-size: 9pt !important;
+    margin: 0.1em 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  aside section {
+    margin-bottom: 0.8em !important;
+  }
+
+  aside h2 {
+    margin: 0 0 0.3em 0 !important;
+  }
+
+  aside ul {
+    margin: 0.2em 0 !important;
+  }
+
+  aside li {
+    font-size: 9pt !important;
+    margin: 0.05em 0 !important;
+  }
+
+  .small {
+    font-size: 8pt !important;
+  }
+
+  #toolList {
+    line-height: 1.3 !important;
+  }
+
+  #referenceList {
+    margin-top: 0.3em !important;
+  }
+
+  #referenceList li {
+    margin-bottom: 0.3em !important;
+  }
+
+  #referenceList div {
+    font-size: 8pt !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Reduce spacing in intro section */
+  #intro {
+    margin-bottom: 0.8em !important;
+  }
+
+  #intro h2 {
+    margin-top: 0 !important;
+  }
+
+  #intro p {
+    margin: 0.2em 0 !important;
+  }
+
+  /* Optimize work experience section */
+  #workExperience {
+    margin-bottom: 0 !important;
+  }
+
+  /* Page break controls */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .work-experience-milestone {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure content doesn't break awkwardly */
+  ul,
+  ol {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5in 0.6in !important;
+    size: letter;
+  }
+
+  /* ATS Optimization: Ensure proper text structure and readability */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Ensure all text is selectable and searchable for ATS */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  span,
+  div,
+  a {
+    font-family: Arial, Helvetica, sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+
+  /* Remove any decorative elements that might confuse ATS */
+  *::before,
+  *::after {
+    display: none !important;
+  }
+
+  /* Ensure proper contrast for both ATS and human readability */
+  body,
+  main,
+  aside {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Make sure links are clearly identifiable */
+  a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Ensure proper spacing for ATS parsing */
+  section {
+    margin-bottom: 1em !important;
+  }
+
+  /* Make sure bullet points are properly formatted */
+  ul li {
+    list-style-type: disc !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* Ensure headings are properly structured for ATS */
+  h1 {
+    font-size: 18pt !important;
+    font-weight: bold !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  h2 {
+    font-size: 12pt !important;
+    font-weight: bold !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.3em !important;
+  }
+
+  h3 {
+    font-size: 11pt !important;
+    font-weight: bold !important;
+    margin-bottom: 0.2em !important;
+  }
+
+  /* Clear floats */
+  #wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

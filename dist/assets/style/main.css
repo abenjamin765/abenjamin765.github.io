@@ -1,0 +1,494 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background-image: url("/assets/img/paper_fibers.png");
+}
+
+#wrapper {
+  background: white;
+  max-width: 960px;
+  display: flex;
+  gap: 4rem;
+  margin: 1rem auto;
+  padding: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 2px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  border-bottom: solid 1px #333;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* CSS */
+.button-8 {
+  margin: 2rem auto;
+  align-self: center;
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: flex;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+/* Print utility classes for screen */
+.print-only {
+  display: none;
+}
+
+.print-hide {
+  display: block;
+}
+
+li.print-hide {
+  display: list-item;
+}
+
+.print-condensed {
+  display: none;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #222e50;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #3e5595;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+ul {
+  padding: 1rem;
+  margin: 0;
+}
+
+li,
+.small {
+  font-size: 0.875rem;
+}
+
+li + li {
+  margin-top: 0.5em;
+}
+
+.light {
+  font-weight: 300;
+  color: #545454;
+}
+
+.no-list {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+}
+
+.work-experience-date-range {
+  margin-top: 0.5em;
+}
+
+#contact a,
+#contact p {
+  color: #545454;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+    word-break: break-all;
+  }
+  img.logo {
+    max-width: 80px !important;
+    height: auto;
+    margin-bottom: 0.5em !important;
+    filter: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-hide {
+    display: none !important;
+  }
+  .print-condensed {
+    display: block !important;
+  }
+  #wrapper {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    gap: 0 !important;
+  }
+  main {
+    width: 65% !important;
+    float: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  aside {
+    width: 33% !important;
+    float: right !important;
+    margin: 0 !important;
+    padding: 0 0 0 1em !important;
+    display: block !important;
+    max-width: none !important;
+  }
+  h1 {
+    font-size: 18pt !important;
+    margin: 0 0 0.3em 0 !important;
+    line-height: 1.1 !important;
+  }
+  h2 {
+    font-size: 10pt !important;
+    margin: 0.8em 0 0.3em 0 !important;
+    line-height: 1.2 !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 10pt !important;
+    margin: 0.5em 0 0.2em 0 !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+  }
+  p {
+    margin: 0.3em 0 !important;
+    font-size: 9pt !important;
+  }
+  ul {
+    padding: 0 0 0 1em !important;
+    margin: 0.2em 0 0.5em 0 !important;
+  }
+  li {
+    font-size: 9pt !important;
+    line-height: 1.25 !important;
+    margin: 0.1em 0 !important;
+  }
+  .work-experience-milestone {
+    margin-bottom: 0.8em !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .work-experience-date-range {
+    margin-top: 0.2em !important;
+    font-size: 9pt !important;
+  }
+  .work-experience-accomplishments {
+    margin-top: 0.3em !important;
+  }
+  .light {
+    font-weight: 400 !important;
+    color: #333 !important;
+  }
+  #contact {
+    margin-bottom: 0.8em !important;
+  }
+  #contact a,
+  #contact p {
+    font-size: 9pt !important;
+    margin: 0.1em 0 !important;
+    line-height: 1.2 !important;
+  }
+  aside section {
+    margin-bottom: 0.8em !important;
+  }
+  aside h2 {
+    margin: 0 0 0.3em 0 !important;
+  }
+  aside ul {
+    margin: 0.2em 0 !important;
+  }
+  aside li {
+    font-size: 9pt !important;
+    margin: 0.05em 0 !important;
+  }
+  .small {
+    font-size: 8pt !important;
+  }
+  #toolList {
+    line-height: 1.3 !important;
+  }
+  #referenceList {
+    margin-top: 0.3em !important;
+  }
+  #referenceList li {
+    margin-bottom: 0.3em !important;
+  }
+  #referenceList div {
+    font-size: 8pt !important;
+    line-height: 1.2 !important;
+  }
+  /* Reduce spacing in intro section */
+  #intro {
+    margin-bottom: 0.8em !important;
+  }
+  #intro h2 {
+    margin-top: 0 !important;
+  }
+  #intro p {
+    margin: 0.2em 0 !important;
+  }
+  /* Optimize work experience section */
+  #workExperience {
+    margin-bottom: 0 !important;
+  }
+  /* Page break controls */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .work-experience-milestone {
+    page-break-inside: avoid;
+  }
+  /* Ensure content doesn't break awkwardly */
+  ul,
+  ol {
+    page-break-inside: avoid;
+  }
+  @page {
+    margin: 0.5in 0.6in !important;
+    size: letter;
+  }
+  /* ATS Optimization: Ensure proper text structure and readability */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  /* Ensure all text is selectable and searchable for ATS */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  span,
+  div,
+  a {
+    font-family: Arial, Helvetica, sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+  /* Remove any decorative elements that might confuse ATS */
+  *::before,
+  *::after {
+    display: none !important;
+  }
+  /* Ensure proper contrast for both ATS and human readability */
+  body,
+  main,
+  aside {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  /* Make sure links are clearly identifiable */
+  a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+  /* Ensure proper spacing for ATS parsing */
+  section {
+    margin-bottom: 1em !important;
+  }
+  /* Make sure bullet points are properly formatted */
+  ul li {
+    list-style-type: disc !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  /* Ensure headings are properly structured for ATS */
+  h1 {
+    font-size: 18pt !important;
+    font-weight: bold !important;
+    margin-bottom: 0.5em !important;
+  }
+  h2 {
+    font-size: 12pt !important;
+    font-weight: bold !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.3em !important;
+  }
+  h3 {
+    font-size: 11pt !important;
+    font-weight: bold !important;
+    margin-bottom: 0.2em !important;
+  }
+  /* Clear floats */
+  #wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
