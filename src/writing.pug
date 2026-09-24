@@ -1,0 +1,162 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title inside thoughts — aaron benjamin
+        link(rel="stylesheet", href="assets/style/site.css")
+    body.site
+        a.visually-hidden(href="#main") skip to content
+
+        header.hdr
+            .hdr__row
+                a.logo(href="/writing.html", aria-label="inside thoughts home")
+                    span.logo__mark(aria-hidden="true")
+                        span.logo__dot
+                    span.logo__wordmark inside thoughts
+                nav.nav(aria-label="Primary")
+                    a.nav__a.is-active(href="#latest") all
+                    a.nav__a(href="#latest") essays
+                    a.nav__a(href="#latest") critique
+                    a.nav__a(href="#latest") process
+                .hdr__tools
+                    a.btn.btn--solid(href="#subscribe") subscribe
+
+        main#main
+            #top
+            section.hero(aria-labelledby="hero-title")
+                a.hero__media(href="/blog/ai-is-exposing-ux-design/", aria-label="read: ai is exposing ux design")
+                .hero__body
+                    .hero__meta
+                        span featured · opinion
+                        span.meta-sep(aria-hidden="true") ·
+                        span new essay
+                        span.meta-sep(aria-hidden="true") ·
+                        time(datetime="2026-05-06") may 6, 2026
+                        span.meta-sep(aria-hidden="true") ·
+                        span 8 min read
+                    h1.hero__title#hero-title ai is exposing ux design
+                    p.hero__dek there’s a growing narrative that ai is transforming ux design. here’s a calmer starting point for what actually changes—and what doesn’t—in how we shape products.
+                    .hero__cta
+                        a.btn.btn--solid(href="/blog/ai-is-exposing-ux-design/") read the essay
+
+            section.section.section--latest#latest(aria-labelledby="latest-title")
+                .section__head
+                    h2.section__title#latest-title latest
+                .feed
+                    a.card.card--feature(href="/article.html")
+                        .ph.ph--soft(style="aspect-ratio:16/10")
+                        .card__body
+                            span.tag critique
+                            h3.card__title notion’s sidebar, after twelve months
+                            p.card__dek a long look at the navigation pattern that quietly trained a generation of knowledge workers.
+                            .card__meta
+                                span apr 29, 2026
+                                span.meta-sep ·
+                                span 6 min
+                    .feed__grid
+                        a.card.card--feed(href="/article.html")
+                            .ph.ph--soft(style="aspect-ratio:4/3")
+                            .card__body
+                                span.tag process
+                                h3.card__title wireframes are a bad first draft
+                                p.card__dek.card__dek--clamp why i stopped sketching low-fidelity and started writing the product instead.
+                                .card__meta
+                                    span apr 24, 2026
+                                    span.meta-sep ·
+                                    span 5 min
+                        a.card.card--feed(href="/article.html")
+                            .ph.ph--soft(style="aspect-ratio:4/3")
+                            .card__body
+                                span.tag interviews
+                                h3.card__title a conversation with a 30-year industrial designer
+                                p.card__dek.card__dek--clamp on affordances, the death of skeuomorphism, and why software still has so much to learn from chairs.
+                                .card__meta
+                                    span apr 18, 2026
+                                    span.meta-sep ·
+                                    span 12 min
+                        a.card.card--feed(href="/article.html")
+                            .ph.ph--soft(style="aspect-ratio:4/3")
+                            .card__body
+                                span.tag field notes
+                                h3.card__title three days at a hospital triage desk
+                                p.card__dek.card__dek--clamp field notes on the fastest, highest-stakes interface i've ever watched a person operate.
+                                .card__meta
+                                    span apr 14, 2026
+                                    span.meta-sep ·
+                                    span 9 min
+                        a.card.card--feed(href="/article.html")
+                            .ph.ph--soft(style="aspect-ratio:4/3")
+                            .card__body
+                                span.tag essays
+                                h3.card__title on taste, and why it can't be a/b tested
+                                p.card__dek.card__dek--clamp taste shows up in every interface decision—even when we pretend we're only optimizing.
+                                .card__meta
+                                    span apr 9, 2026
+                                    span.meta-sep ·
+                                    span 4 min
+                        a.card.card--feed(href="/article.html")
+                            .ph.ph--soft(style="aspect-ratio:4/3")
+                            .card__body
+                                span.tag process
+                                h3.card__title i deleted my component library
+                                p.card__dek.card__dek--clamp sometimes the system was the bottleneck. sometimes it was me.
+                                .card__meta
+                                    span apr 2, 2026
+                                    span.meta-sep ·
+                                    span 7 min
+                        a.card.card--feed(href="/article.html")
+                            .ph.ph--soft(style="aspect-ratio:4/3")
+                            .card__body
+                                span.tag critique
+                                h3.card__title the settings page is a confession
+                                p.card__dek.card__dek--clamp every toggle is a bet about what you think users owe you.
+                                .card__meta
+                                    span mar 27, 2026
+                                    span.meta-sep ·
+                                    span 5 min
+
+            section.news#subscribe(aria-labelledby="news-title")
+                .news__inner
+                    .news__copy
+                        h2.news__title#news-title weekly note
+                        p.news__sub one essay on product design, sunday mornings. no upsell.
+                    form.news__form#news-form(action="https://example.com", method="post", novalidate)
+                        label.news__field
+                            span.visually-hidden email address
+                            input(type="email", name="email", placeholder="you@example.com", autocomplete="email")
+                        button.btn.btn--solid(type="submit") subscribe
+                        p.news__note#news-note(role="status")
+
+        footer.ftr
+            .ftr__inner
+                p.ftr__legal © 2026 aaron benjamin
+                nav.ftr__nav(aria-label="Footer")
+                    a(href="/resume.html") resume
+                    a(href="/about.html") colophon
+                    a(href="#") rss
+
+        script.
+            document.addEventListener("DOMContentLoaded", function () {
+                var hdr = document.querySelector(".hdr");
+                function onScroll() {
+                    if (hdr) hdr.classList.toggle("hdr--scrolled", window.scrollY > 8);
+                }
+                onScroll();
+                window.addEventListener("scroll", onScroll, { passive: true });
+                var form = document.getElementById("news-form");
+                var note = document.getElementById("news-note");
+                if (form && note) {
+                    form.addEventListener("submit", function (e) {
+                        e.preventDefault();
+                        var input = form.querySelector('input[type="email"]');
+                        var ok = input && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((input.value || "").trim());
+                        form.classList.toggle("is-invalid", !ok);
+                        if (ok) {
+                            note.textContent = "welcome — hook this form to your provider.";
+                            form.classList.remove("is-invalid");
+                        } else {
+                            note.textContent = "that email doesn't look right. try again?";
+                        }
+                    });
+                }
+            });

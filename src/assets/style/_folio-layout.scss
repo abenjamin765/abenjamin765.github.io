@@ -1,0 +1,514 @@
+/* Folio landing — matches Figma frame 4:65 (960px column in 1280 frame). */
+
+$col: 960px;
+$pad: 40px;
+$ink: #333;
+$muted: #666;
+$body: #444;
+$wash: #f6f6f6;
+$radius: 16px;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body.folio {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8b731;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Blob matches Figma vector 7:5670: x=-277, y=206, 1974×1980 on a 1280 frame. */
+.folio__decor {
+  position: absolute;
+  top: 206px;
+  left: calc(50% - 917px);
+  width: 1974px;
+  height: 1980px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.folio__decor-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+
+.folio-hdr,
+.folio-main {
+  position: relative;
+  z-index: 1;
+}
+
+.folio-hdr {
+  max-width: $col;
+  margin: 0 auto;
+  /* Name sits 24px in from the 960 column; 25px below the label before the hero. */
+  padding: 24px 24px 25px;
+}
+
+.folio-hdr__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.folio-hdr__name {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $ink;
+  text-decoration: none;
+}
+
+a.folio-hdr__name:hover {
+  text-decoration: underline;
+}
+
+.folio-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.folio-nav__a {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  color: $ink;
+  text-decoration: none;
+}
+
+a.folio-nav__a:hover {
+  text-decoration: underline;
+}
+
+.folio-nav__a--muted {
+  cursor: default;
+}
+
+.folio-main {
+  max-width: $col;
+  margin: 0 auto;
+  border-radius: $radius;
+  overflow: hidden;
+}
+
+/* ——— Hero ——— */
+
+.folio-hero {
+  background: $wash;
+  border-radius: 0;
+}
+
+.folio-hero__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 0 0;
+  max-width: 627px;
+  margin: 0 auto;
+  min-height: 250px;
+  box-sizing: content-box;
+}
+
+.folio-hero__copy {
+  flex: 0 1 349px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.folio-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.folio-hero__title {
+  margin: 0;
+  color: $ink;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+}
+
+.folio-hero__kicker,
+.folio-hero__mark {
+  display: block;
+}
+
+.folio-hero__mark {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.folio-hero__mark strong {
+  font-weight: 700;
+}
+
+.folio-hero__mark em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.folio-hero__dek {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: $muted;
+  max-width: 349px;
+}
+
+.folio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 39px;
+  padding: 0 18px;
+  background: $ink;
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none !important;
+  line-height: 1;
+}
+
+.folio-btn:hover,
+.folio-btn:focus-visible {
+  background: #1a1a1a;
+  text-decoration: none !important;
+}
+
+.folio-hero__media {
+  flex: 0 0 238px;
+  width: 238px;
+  height: 250px;
+}
+
+.folio-hero__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ——— Claims 01–03 ——— */
+
+.folio-claims {
+  background: #fff;
+}
+
+.folio-claims__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: $pad;
+}
+
+.folio-claim {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.folio-claim__head {
+  display: flex;
+  flex-direction: column;
+  width: 235px;
+  max-width: 100%;
+}
+
+.folio-claim__num {
+  margin: 0;
+  font-family: "Helvetica Neue Condensed", "Arial Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  font-stretch: condensed;
+  line-height: 1.5;
+  color: #000;
+}
+
+.folio-claim__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: $ink;
+  line-height: normal;
+}
+
+.folio-claim__body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: $ink;
+}
+
+/* ——— Work sections ——— */
+
+.folio-work {
+  background: linear-gradient(269deg, #fff 0%, #fafafa 100%);
+}
+
+.folio-work__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: $pad;
+}
+
+.folio-eyebrow {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  color: $muted;
+  line-height: normal;
+}
+
+.folio-project {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 0;
+}
+
+.folio-project__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.folio-project__media {
+  width: 100%;
+  border-radius: $radius;
+  overflow: hidden;
+  background: rgba(246, 246, 241, 0.9);
+}
+
+.folio-project__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.folio-project__media--fill {
+  height: 280px;
+}
+
+.folio-project__media--nearpod,
+.folio-project__media--orbit {
+  background: #cb2929;
+}
+
+.folio-project__media--indeed,
+.folio-project__media--bite {
+  background: #86ca95;
+}
+
+.folio-project__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $ink;
+}
+
+.folio-project__dek {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.5;
+  color: $body;
+}
+
+.folio-project-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ——— Experiments ——— */
+
+.folio-experiments {
+  background: linear-gradient(269deg, #fff 0%, #fafafa 100%);
+  padding-bottom: 40px;
+}
+
+.folio-experiments__inner {
+  padding: $pad $pad 0;
+}
+
+.folio-experiments__title {
+  margin: 40px 0 10px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $ink;
+}
+
+.folio-experiments__dek {
+  margin: 0 0 40px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: $body;
+}
+
+.folio-experiments__scroller {
+  /* Cancel the inner padding so the scrollport spans the section. */
+  margin-right: calc(-1 * $pad);
+  margin-left: calc(-1 * $pad);
+  padding-right: $pad;
+  padding-left: $pad;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.folio-experiments__row {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  padding-bottom: 12px;
+}
+
+.folio-exp-card {
+  flex: 0 0 390px;
+  width: 390px;
+  height: 240px;
+  border-radius: $radius;
+  overflow: hidden;
+}
+
+.folio-exp-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.folio-exp-card--other {
+  background: #5c8efa;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 24px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.folio-exp-card__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.folio-exp-card__sub {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ——— Responsive ——— */
+
+@media (max-width: 900px) {
+  .folio-hdr {
+    padding-left: clamp(16px, 4vw, $pad);
+    padding-right: clamp(16px, 4vw, $pad);
+  }
+
+  .folio-main {
+    padding: 0 clamp(16px, 4vw, $pad);
+  }
+
+  .folio-hero__inner {
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .folio-hero__copy {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .folio-claims__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .folio-project-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-exp-card {
+    flex-basis: min(390px, 82vw);
+    width: min(390px, 82vw);
+  }
+}
+
+@media (max-width: 560px) {
+  .folio-hdr__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .folio-nav {
+    gap: 16px;
+  }
+
+  .folio-hero__mark {
+    font-size: 30px;
+  }
+
+  .folio-project__title,
+  .folio-experiments__title,
+  .folio-exp-card__title {
+    font-size: 30px;
+  }
+
+  .folio-project__dek,
+  .folio-experiments__dek {
+    font-size: 20px;
+  }
+
+  .folio-claims__inner,
+  .folio-work__inner,
+  .folio-experiments__inner {
+    padding: 24px 0;
+  }
+
+  .folio-experiments__scroller {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

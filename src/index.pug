@@ -2,85 +2,116 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title #{candidateName}, #{candidateTitle} | Resume
-        link(rel="stylesheet", href="assets/style/main.css")
-        script(src="assets/js/pdf-download.js", defer)
-    body 
-        button#download.button-8.no-print(role="button") Download this resume as a PDF
-        #wrapper 
-            main
-                h1 #{contactInfo.candidateName}
+        title Aaron Benjamin — Product Designer
+        meta(name="description", content="I’m a product designer for complicated things. I turn complex products, systems, and workflows into experiences people can actually understand.")
+        link(rel="stylesheet", href="assets/style/folio.css")
+    body.folio
+        a.visually-hidden(href="#main") Skip to content
 
-                section#intro
-                    h2 #{contactInfo.candidateTitle}
-                    p #{contactInfo.candidateDescription}
+        .folio__decor(aria-hidden="true")
+            img.folio__decor-img(src="assets/img/folio/blob.svg", alt="")
 
-                
-                section#workExperience
-                    h2 Work Experience
-                    each xp, jobIndex in experience
-                        // Show first 5 jobs for print, all jobs for screen
-                        if jobIndex < 5
-                            article.work-experience-milestone
-                                h3 #{xp.title} 
-                                    span.light / #{xp.company}
-                                p.work-experience-date-range #{xp.date_range} - #{xp.type} (#{xp.location})
-                                ul.work-experience-accomplishments
-                                    each accomplishment, index in xp.accomplishments
-                                        // Show first 3 accomplishments always, hide 4+ for print
-                                        if index < 3
-                                            li #{accomplishment}
-                                        else
-                                            li.print-hide #{accomplishment}
-                        else
-                            article.work-experience-milestone.print-hide
-                                h3 #{xp.title} 
-                                    span.light / #{xp.company}
-                                p.work-experience-date-range #{xp.date_range} - #{xp.type} (#{xp.location})
-                                ul.work-experience-accomplishments
-                                    each accomplishment in xp.accomplishments
-                                        li #{accomplishment}
-            aside
-                img(src="assets/img/hello.webp", alt="").logo
-                section#contact
-                    a(href=`${contactInfo.candidateWebsite}`) #{contactInfo.candidateWebsite}
-                    a(href=`mailto:${contactInfo.candidateEmail}`) #{contactInfo.candidateEmail}
-                    a(href=`tel:${contactInfo.candidatePhone}`) #{contactInfo.candidatePhone}
-                    p#location #{contactInfo.candidateLocation}
-                section#education
-                    h2 Education
-                    ul.list#educationList
-                        li #{schoolName}, #{schoolLocation} (#{schoolGraduationYear})
-                section#focusAreas
-                    h2 Focus Areas
-                    ul.list#focusAreaList
-                        each area in focusAreas
-                            li #{area}
-                section#hardSkills
-                    h2 Hard Skills
-                    ul.list#hardSkillList
-                        each skill in hardSkills
-                            li #{skill}
-                section#softSkills
-                    h2 Soft Skills
-                    ul.list#softSkillList
-                        each skill in softSkills
-                            li #{skill}
-                section#tools
-                    h2 Tools
-                    p.small#toolList
-                        each tool in tools
-                            span #{tool}, 
-                section#references
-                    h2 References
-                    ul.no-list#referenceList
-                        each ref, index in references
-                            // Show first 3 references for print, all for screen
-                            if index < 3
-                                li 
-                                    div #{ref.name} (#{ref.relationship})
-                                    div.light #{ref.email}
-                            else
-                                li.print-hide 
-                                    div #{ref.name} (#{ref.relationship})
-                                    div.light #{ref.email}
+        header.folio-hdr
+            .folio-hdr__inner
+                a.folio-hdr__name(href="/") Aaron Benjamin
+                nav.folio-nav(aria-label="Primary")
+                    a.folio-nav__a(href="#work") Work
+                    span.folio-nav__a.folio-nav__a--muted About
+                    a.folio-nav__a(href="/resume.html") Resume
+
+        main#main.folio-main
+            section.folio-hero(aria-labelledby="hero-title")
+                .folio-hero__inner
+                    .folio-hero__copy
+                        .folio-hero__text
+                            h1.folio-hero__title#hero-title
+                                span.folio-hero__kicker I’m a product designer for
+                                span.folio-hero__mark
+                                    strong complicated
+                                    |
+                                    em  things
+                                    | .
+                            p.folio-hero__dek I turn complex products, systems, and workflows into experiences people can actually understand.
+                        a.folio-btn(href="#work") Explore my work
+                    .folio-hero__media
+                        img(src="assets/img/folio/hero-portrait.png", alt="Illustrated portrait of Aaron Benjamin waving hello")
+
+            section.folio-claims(aria-label="How I work")
+                .folio-claims__inner
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 01
+                            h2.folio-claim__title I make complexity explainable.
+                        p.folio-claim__body Enterprise platforms, complex workflows, information architecture, and interconnected systems are where I'm most experienced.
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 02
+                            h2.folio-claim__title I work beyond the Figma file.
+                        p.folio-claim__body I use research, prototyping, code, experimentation, and AI to understand ideas quickly and get closer to the thing we're actually building.
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 03
+                            h2.folio-claim__title I improve how teams design.
+                        p.folio-claim__body Design systems, OOUX, reusable patterns, shared models, and better workflows let good design extend beyond a single feature.
+
+            section.folio-work#work(aria-labelledby="selected-work-title")
+                .folio-work__inner
+                    p.folio-eyebrow#selected-work-title Selected work
+
+                    article.folio-project.folio-project--feature
+                        .folio-project__media
+                            img(src="assets/img/folio/work-classroom.png", alt="Classroom assignment management interface showing student status and scores")
+                        .folio-project__copy
+                            h3.folio-project__title Classroom Assignment Management
+                            p.folio-project__dek Imagine you’re a teacher tracking assignments you gave across multiple apps to your 3rd graders....
+
+                    .folio-project-pair
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill.folio-project__media--nearpod(role="img", aria-label="Nearpod project preview placeholder")
+                            .folio-project__copy
+                                h3.folio-project__title Nearpod
+                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill.folio-project__media--indeed(role="img", aria-label="Indeed project preview placeholder")
+                            .folio-project__copy
+                                h3.folio-project__title Indeed
+                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+
+            section.folio-work.folio-work--independent(aria-labelledby="independent-work-title")
+                .folio-work__inner
+                    p.folio-eyebrow#independent-work-title Independent work
+
+                    article.folio-project.folio-project--feature
+                        .folio-project__media
+                            img(src="assets/img/folio/work-green-loom.png", alt="Green Loom catalog interface with product sidebar")
+                        .folio-project__copy
+                            h3.folio-project__title Green Loom
+                            p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+
+                    .folio-project-pair
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill.folio-project__media--orbit(role="img", aria-label="Orbit project preview placeholder")
+                            .folio-project__copy
+                                h3.folio-project__title Orbit
+                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill.folio-project__media--bite(role="img", aria-label="Bite Club project preview placeholder")
+                            .folio-project__copy
+                                h3.folio-project__title Bite Club
+                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+
+            section.folio-experiments(aria-labelledby="experiments-title")
+                .folio-experiments__inner
+                    p.folio-eyebrow experiments
+                    h2.folio-experiments__title#experiments-title Things I’m working on...
+                    p.folio-experiments__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+
+                    .folio-experiments__scroller
+                        .folio-experiments__row
+                            .folio-exp-card.folio-exp-card--many-hats
+                                img(src="assets/img/folio/experiment-many-hats.png", alt="Many Hats — illustration of a man wearing a stack of hats")
+                            .folio-exp-card.folio-exp-card--designdash
+                                img(src="assets/img/folio/experiment-designdash.png", alt="designdash logo")
+                            .folio-exp-card.folio-exp-card--other
+                                p.folio-exp-card__title Other Stuff
+                                p.folio-exp-card__sub Help teachers manage classroom assignments

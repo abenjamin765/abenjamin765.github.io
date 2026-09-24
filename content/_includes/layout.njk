@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }}{% else %}blog{% endif %} — inside thoughts</title>
+  {% if description %}
+  <meta name="description" content="{{ description | e }}">
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/style/site.css' | relativeFromSiteRoot(page) }}">
+</head>
+<body class="site">
+  <a class="visually-hidden" href="#main">skip to content</a>
+
+  <header class="hdr">
+    <div class="hdr__row">
+      <a class="logo" href="/writing.html" aria-label="inside thoughts home">
+        <span class="logo__mark" aria-hidden="true"><span class="logo__dot"></span></span>
+        <span class="logo__wordmark">inside thoughts</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__a" href="/writing.html#latest">all</a>
+        <a class="nav__a" href="/writing.html#latest">essays</a>
+        <a class="nav__a" href="/writing.html#latest">critique</a>
+        <a class="nav__a" href="/writing.html#latest">process</a>
+      </nav>
+      <div class="hdr__tools">
+        <a class="btn btn--solid" href="/writing.html#subscribe">subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    {% if isPost %}
+    <article class="post">
+      {% if page.date %}
+      <p class="post-meta">
+        <time class="post-meta__time" datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+        <span class="post-meta__sep" aria-hidden="true">·</span>
+        <span class="post-meta__kind">Essay</span>
+      </p>
+      {% endif %}
+      {{ content | safe }}
+    </article>
+    {% else %}
+    {{ content | safe }}
+    {% endif %}
+  </main>
+
+  <footer class="ftr">
+    <div class="ftr__inner">
+      <p class="ftr__legal">© 2026 aaron benjamin</p>
+      <nav class="ftr__nav" aria-label="Footer">
+        <a href="/resume.html">resume</a>
+        <a href="/about.html">colophon</a>
+        <a href="#">rss</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var hdr = document.querySelector(".hdr");
+      function onScroll() {
+        if (hdr) hdr.classList.toggle("hdr--scrolled", window.scrollY > 8);
+      }
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    });
+  </script>
+</body>
+</html>

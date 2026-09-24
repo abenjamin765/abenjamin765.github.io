@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI is exposing UX design — inside thoughts</title>
+  
+  <meta name="description" content="AI isn’t replacing UX—it exposes whether teams understand systems or only ship convincing interfaces. Why maturity compounds, surface production collapses, and the object model matters more than generated screens.">
+  
+  <link rel="stylesheet" href="../../assets/style/site.css">
+</head>
+<body class="site">
+  <a class="visually-hidden" href="#main">skip to content</a>
+
+  <header class="hdr">
+    <div class="hdr__row">
+      <a class="logo" href="/writing.html" aria-label="inside thoughts home">
+        <span class="logo__mark" aria-hidden="true"><span class="logo__dot"></span></span>
+        <span class="logo__wordmark">inside thoughts</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__a" href="/writing.html#latest">all</a>
+        <a class="nav__a" href="/writing.html#latest">essays</a>
+        <a class="nav__a" href="/writing.html#latest">critique</a>
+        <a class="nav__a" href="/writing.html#latest">process</a>
+      </nav>
+      <div class="hdr__tools">
+        <a class="btn btn--solid" href="/writing.html#subscribe">subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    
+    <article class="post">
+      
+      <p class="post-meta">
+        <time class="post-meta__time" datetime="2026-05-06">May 6, 2026</time>
+        <span class="post-meta__sep" aria-hidden="true">·</span>
+        <span class="post-meta__kind">Essay</span>
+      </p>
+      
+      <h1>AI is exposing UX design</h1>
+<p>A designer opens an AI coding tool and types:</p>
+<blockquote>
+<p>“Build a modern dashboard for teachers to track student performance.”</p>
+</blockquote>
+<p>Ten seconds later, the screen fills with polished UI.</p>
+<p>Cards. Charts. Filters. Tabs. Progress bars.</p>
+<p>It looks convincing. Maybe even impressive.</p>
+<p>But there’s a problem.</p>
+<p>Nobody on the team has actually defined:</p>
+<ul>
+<li>what a “student” is,</li>
+<li>what counts as “performance,”</li>
+<li>which metrics matter,</li>
+<li>how teachers make decisions,</li>
+<li>what actions teachers need to take,</li>
+<li>or what happens when the data is incomplete, contradictory, delayed, or wrong.</li>
+</ul>
+<p><strong>The interface exists before the understanding does.</strong></p>
+<p>And increasingly, that’s what AI is accelerating.</p>
+<hr>
+<h2>Narrative versus reality</h2>
+<p>There’s a growing narrative that AI is transforming UX design. Designers are panicking about being replaced. Product teams are celebrating “10x productivity.” Startups are bragging about going from prompt to prototype in a single afternoon.</p>
+<p>There is truth underneath the hype. Generative AI is spreading quickly across knowledge work, especially tasks like writing, searching, interpreting information, administrative work, and coding.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> Figma now describes AI features that can generate first drafts, rewrite text, and accelerate the path from idea to production.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup><sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> GitHub’s own research has reported faster completion times for developers using Copilot, while its documentation still warns that generated code must be reviewed, validated, and treated as assistance rather than replacement.<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup><sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup></p>
+<p>So yes, AI changes the economics of production.</p>
+<p>But I don’t think AI is making UX design better or worse.</p>
+<p><strong>I think it’s exposing it.</strong></p>
+<p>AI is not changing the quality of the thinking. It is changing how quickly that thinking becomes visible.</p>
+<p>More specifically, AI is exposing the difference between teams that understand software and teams that mostly understand how to produce artifacts that resemble software.</p>
+<p>That distinction matters more than ever, because for years, many organizations gradually narrowed UX from a holistic design practice into an interface production function.</p>
+<p>That narrowing matters because software design is not the same thing as interface design.</p>
+<blockquote>
+<p><strong>By software design, I don’t mean coding.</strong>
+I mean the work of deciding what the system is, what it knows, what it allows, what it prevents, how its parts relate, and how people understand and act within it.</p>
+</blockquote>
+<p>Software design includes objects, relationships, actions, attributes, rules, states, permissions, workflows, constraints, and meaning. The interface is just one representation of those decisions.</p>
+<p>And the tools rewarded a much narrower version of the work.</p>
+<h2>The drift — Drawing software versus understanding it</h2>
+<p>UX became very good at drawing software.</p>
+<p>Not necessarily understanding it.</p>
+<p>That is not because designers are lazy or shallow. It is because many organizations trained design teams to produce the parts of design that are easiest to see, easiest to schedule, easiest to critique, and easiest to present.</p>
+<p>That tension is not new. Don Norman has written that UX originally came from a broader idea of “User Centered System Design,” but that “the system part” was largely forgotten.<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> Nielsen Norman Group’s writing on UX strategy makes a similar point from a different angle: practitioners often over-prioritize practical production skills while strategic skills lag behind.<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup> McKinsey’s research on the business value of design also argues that mature design is cross-functional, iterative, and tied to outcomes, not merely a department producing artifacts.<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup></p>
+<p>The industry optimized around polished mockups, idealized user journeys, increasingly elaborate design systems, “surprise and delight,” and beautifully organized Figma files full of immaculate rectangles.</p>
+<p>Meanwhile, many teams stopped investing deeply in systems thinking, domain modeling, behavioral consistency, information architecture, state management, edge cases, permissions, workflows, and the underlying logic that actually makes software intuitive to use.</p>
+<p><strong>Many designers became experts in representing software without understanding how software behaves.</strong></p>
+<p>That sounds harsh, but it’s difficult to ignore once you start seeing it.</p>
+<p>You can sit in product reviews where teams debate spacing, animation timing, and corner radii for an hour without ever discussing how the data model works, how the user’s mental model maps to the system, what assumptions the workflow depends on, or what happens when reality refuses to behave like the happy path in the prototype.</p>
+<p>The industry became increasingly fluent in surface area.</p>
+<p>Tools like Figma accelerated that shift. Not because Figma is bad. Figma is excellent at what it was designed to do: it made interface production collaborative, scalable, and extremely efficient.</p>
+<p>Figma did not cause the drift.</p>
+<p><strong>It removed friction from the drift.</strong></p>
+<p>That framing matters. Figma’s own product materials describe a toolchain increasingly built to accelerate design production, handoff, and development workflows: AI-generated first drafts, Dev Mode, design-to-code bridges, and even workflows that bring Figma context into LLM-assisted development.<sup class="footnote-ref"><a href="#fn3" id="fnref3:1">[3:1]</a></sup><sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup><sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></p>
+<p>Those are useful capabilities. They solve real collaboration problems.</p>
+<p>But they also fit very neatly into a culture that already overvalues visible artifacts.</p>
+<p>The problem is that many organizations quietly mistook interface production for the practice of design itself.</p>
+<p>Executives can easily see screens, prototypes, design systems, polished flows, and tidy component libraries. They cannot easily see conceptual integrity, domain understanding, behavioral consistency, systems maturity, or whether the team actually understands the software they’re building.</p>
+<p>So organizations rewarded what became easiest to produce and easiest to present.</p>
+<p>And now AI has arrived to compress that entire layer of work even further.</p>
+<h2>The compounding — When generation outruns clarity</h2>
+<p>AI can generate wireframes, UI copy, user flows, personas, front-end code, dashboards, illustrations, presentations, and increasingly convincing prototypes.</p>
+<p>Which means the scarcity value of first-pass production is collapsing.</p>
+<p>That is uncomfortable for a discipline that spent the last decade heavily optimizing around production.</p>
+<p>But AI is not replacing designers.</p>
+<p>It is replacing the parts of design work that were already dangerously close to pattern matching.</p>
+<p>And the results are fascinating: the same AI tools producing extraordinary leverage for mature teams are producing oceans of plausible nonsense for immature ones.</p>
+<p>Because AI does not create organizational maturity.</p>
+<p><strong>It compounds it.</strong></p>
+<p>The evidence here is more nuanced than a simple “AI makes good teams better and bad teams worse.” Harvard Business School researchers studying consultants described AI capability as a “jagged technological frontier”: people performed better and faster on tasks inside the frontier, but worse on a task deliberately selected to be outside it.<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> In other words, AI can be incredibly useful when teams understand the work well enough to know when to trust it, when to challenge it, and when the output is pretending to be more reliable than it is.</p>
+<p>NBER research on generative AI in customer support complicates the story further. AI increased productivity overall, with the biggest gains for less-experienced workers, because the system appeared to help spread patterns used by stronger performers.<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup> That means AI can transfer useful practice on bounded tasks.</p>
+<p>But design is rarely just a bounded task.</p>
+<p>It is often a judgment problem disguised as a production problem.</p>
+<p>If a product organization already understands its domain, knows its users deeply, thinks critically, challenges assumptions, and designs systems intentionally, AI becomes a force multiplier.</p>
+<p>But if a team already relies on vague assumptions, shallow research, buzzwords, disconnected workflows, and polished theater masquerading as strategy, AI helps them produce more of it.</p>
+<p>Faster.</p>
+<p>Design is one of the ways an organization thinks.</p>
+<p>If the thinking is shallow, AI gives that shallowness a production pipeline.</p>
+<h2>Convincing interfaces, thin foundations</h2>
+<p>This is why so much AI-generated UX work feels strangely hollow.</p>
+<p>Not necessarily ugly.</p>
+<p>Not necessarily broken.</p>
+<p>Just disconnected from reality.</p>
+<p>The interfaces often look complete before the product understanding exists underneath them. That’s the real danger.</p>
+<p>NN/g’s evaluation of AI prototyping tools described many outputs as “good from afar, but far from good”: visually plausible, fast to produce, but weak in contextual understanding and nuanced design judgment.<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup> That phrase captures the risk perfectly. AI can create the feeling of progress while skipping the hard work that makes progress meaningful.</p>
+<p>AI removes many of the friction points that previously slowed weak thinking down. Historically, implementation constraints forced teams to clarify ideas. Engineering complexity exposed missing assumptions. Production costs punished ambiguity.</p>
+<p>Now teams can move from vague idea, to polished prototype, to generated code, in hours without ever fully understanding the system they’re building.</p>
+<p><strong>AI allows organizations to operationalize premature certainty.</strong></p>
+<p>Premature certainty looks like a team generating a dashboard before deciding what decisions the dashboard is supposed to support.</p>
+<p>It looks like creating a “personalized learning path” before defining what personalization means, what evidence it uses, how it adapts, or when it should stop adapting.</p>
+<p>It looks like designing an onboarding flow before understanding which users are actually confused, which steps are required, which steps are bureaucratic residue, and which steps exist only because the system is poorly modeled.</p>
+<p>It looks like moving quickly because the prototype looks real enough to make the uncertainty feel resolved.</p>
+<p>Many teams are using AI backwards.</p>
+<p>The current obsession is speed: ship faster, prototype faster, generate faster, iterate faster, code faster.</p>
+<p>But the most valuable use of AI in product design may actually be the opposite.</p>
+<p>AI should not help teams skip thinking. It should multiply understanding.</p>
+<p>The goal is not to slow shipping.</p>
+<p><strong>The goal is to make premature certainty harder.</strong></p>
+<h2>Multiply understanding before the interface</h2>
+<p>The strongest product teams I know are not using AI primarily to generate interfaces. They’re using it to synthesize research, identify contradictions, model systems, explore edge cases, draft requirements, challenge assumptions, map workflows, and deepen their understanding before committing to solutions.</p>
+<p>That is where the research is most encouraging. NN/g’s guidance on AI in UX research frames AI as an assistant for planning, analyzing, and reporting, not as a replacement for real user research.<sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup> Its warning about synthetic users is equally important: AI-generated “research” can produce artificial findings without studying real users, which makes it useful only in narrow contexts and dangerous when treated as evidence.<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup></p>
+<p>A growing body of requirements-engineering research is also exploring LLMs as tools for elicitation, validation, and structuring requirements.<sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup> That is much closer to the future I care about: not AI as a rectangle generator, but AI as a thought partner for clarifying what the system needs to mean and do.</p>
+<p>A better AI-assisted design workflow might look less like:</p>
+<blockquote>
+<p>idea → prompt → interface → code</p>
+</blockquote>
+<p>And more like:</p>
+<blockquote>
+<p>research notes → domain model → objects and relationships → edge cases → requirements → prototype → implementation plan</p>
+</blockquote>
+<p>In other words: mature teams use AI <em>before</em> the interface. Immature teams use it <em>after</em> the idea.</p>
+<p>That difference is enormous, because software is not fundamentally made of screens. It is made of objects, relationships, actions, attributes, permissions, rules, constraints, and states. The interface is simply one representation of those things.</p>
+<p>If screens are becoming easier to generate, then screens are the wrong foundation to design from.</p>
+<p>The more stable foundation is the object model underneath them.</p>
+<h2>Object models and design-system grammar</h2>
+<p>This is why so many design systems eventually disappoint people.</p>
+<p>Not because reuse is bad.</p>
+<p>Not because consistency is unimportant.</p>
+<p>But because many design systems became enormous vocabularies for products that still lacked grammar.</p>
+<p>A button library is not a design system. A modal inventory is not a design system.</p>
+<p>A real design system defines how a product expresses meaning and behavior consistently across contexts.</p>
+<p>Most design systems stopped at vocabulary.</p>
+<p><strong>The next generation needs grammar.</strong></p>
+<p>And by grammar, I mean interaction rules, state logic, permissions, object relationships, content patterns, accessibility expectations, behavioral standards, and clear rules for how the system should respond when reality gets messy.</p>
+<p>This critique is not anti-design-system. It is anti-design-system-theater.</p>
+<p>Brad Frost has made a similar distinction for years, arguing that design files and screenshots are not enough to build working software and that design systems need coded, reusable components and compositional guidance.<sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup><sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup> NN/g’s definition of design systems is more charitable, and useful: standards can reduce redundancy, create a shared language, and improve consistency at scale.<sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup> Both things can be true. Design systems are valuable when they help teams express meaning and behavior consistently. They become wasteful when they stop at component inventory and governance rituals.</p>
+<p>Industry surveys also show that design systems struggle with familiar organizational problems: adoption, documentation, design-code alignment, resourcing, governance, and keeping systems connected to real product work.<sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup></p>
+<p>Teams built libraries of buttons, cards, modals, spacing tokens, and component variants while avoiding the much harder work of defining meaning, behavior, workflows, object relationships, permissions, and conceptual consistency.</p>
+<p>They standardized ingredients before defining recipes.</p>
+<p>And increasingly, production software drifted away from the immaculate systems represented in Figma anyway.</p>
+<h2>Code you can generate isn’t architecture</h2>
+<p>Meanwhile, many UX teams are now trying to use AI to generate production code.</p>
+<p>Which is understandable.</p>
+<p>Code is a powerful sketching material. A coded prototype can communicate behavior that a static mockup never could, and designers experimenting with code can build a much better understanding of how software actually works.</p>
+<p>But it also exposes another uncomfortable gap: many designers were never trained to understand how software works.</p>
+<p>Generating code is not the same thing as understanding architecture.</p>
+<p>Or state.</p>
+<p>Or deployment.</p>
+<p>Or debugging.</p>
+<p>Or performance.</p>
+<p>Or resilience.</p>
+<p>Or security.</p>
+<p>Or maintenance.</p>
+<p>Designers do not need to become full-stack engineers.</p>
+<p>But they do need to understand enough about software to stop designing as if implementation is just a translation layer.</p>
+<p>AI lets people generate software-shaped outputs without necessarily understanding software itself.</p>
+<p>That can be useful when treated as exploration.</p>
+<p>AI-generated code is valuable when it works as a sketch of behavior.</p>
+<p>It becomes dangerous when organizations mistake generated code for engineered systems.</p>
+<p>This is not alarmism. GitHub’s own documentation says Copilot should be used as a tool rather than a replacement and warns that generated suggestions may not always be secure.<sup class="footnote-ref"><a href="#fn5" id="fnref5:1">[5:1]</a></sup> Independent research on Copilot-generated code has found substantial vulnerability risks in tested scenarios.<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup> Stack Overflow’s developer surveys have also shown persistent and growing distrust in the accuracy of AI outputs among developers.<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup><sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup></p>
+<p>At the same time, GitHub has published research suggesting Copilot can improve speed and quality in bounded tasks.<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup> That is the whole point: AI code can be helpful, and still not be architecture. It can support design exploration without replacing engineering judgment.</p>
+<h2>The shift — What comes next for the discipline</h2>
+<p>I think this is where the discipline is heading next.</p>
+<p>Not toward “faster wireframes.”</p>
+<p>Toward software design in a much more holistic sense.</p>
+<p>As interfaces become increasingly adaptive, contextual, personalized, and partially generative, the stable thing underneath them becomes more important.</p>
+<p>Not fixed screen layouts.</p>
+<p>The underlying system model.</p>
+<p>That does not mean the future should be infinitely fluid interfaces that change unpredictably from one user to another. Personalized does not automatically mean better. A constantly changing interface can become hostile, especially for people who rely on learned patterns, assistive technology, documentation, or predictable workflows.</p>
+<p>Generative UI is already being discussed seriously as a shift from static screens toward dynamic, goal-oriented interfaces.<sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup> W3C’s personalization semantics work also shows that adaptation can be beneficial, especially for people with cognitive and learning disabilities, when it is structured around meaningful semantics.<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup></p>
+<p>But accessibility standards also make the caution obvious. WCAG emphasizes predictability and consistent navigation, including repeated navigation appearing in the same relative order.<sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup> A fully fluid interface that changes without stable rules can easily become inaccessible, untestable, and impossible to document.</p>
+<p>Generative interfaces will only be usable if they are generated from stable, coherent, accessible system models.</p>
+<p>That is why the future of UX design may center far less around arranging rectangles and far more around defining objects, relationships, actions, attributes, behaviors, and meaning clearly enough that interfaces can be generated coherently.</p>
+<p>This is where object-oriented UX and ORCA become more important, not less. ORCA’s focus on objects, relationships, calls-to-action, and attributes gives teams a way to model the system before designing the screen.<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup> I would not claim ORCA has “won” the future. But I do think it points in the right direction.</p>
+<p>If the interface becomes more generative, the object model becomes the design system.</p>
+<p>The future designer may spend less time drawing screens and more time facilitating understanding.</p>
+<p>That means helping teams model reality, aligning organizations around shared concepts, synthesizing research into systems, defining behavioral rules, structuring information, and ensuring software matches the mental models of the people using it.</p>
+<p>In that future, the value of design shifts away from artifact production and toward organizational cognition.</p>
+<p>And honestly, I think that’s a good thing.</p>
+<p>Because the hardest part of software design was never drawing the interface.</p>
+<p>It was understanding reality well enough to design something useful in the first place.</p>
+<p>AI does not replace that work.</p>
+<p><strong>It exposes whether it was happening at all.</strong></p>
+<hr>
+<h2>References</h2>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Bick, A., Blandin, A., &amp; Deming, D. J. (2024). “The Rapid Adoption of Generative AI.” National Bureau of Economic Research. <a href="https://www.nber.org/system/files/working_papers/w32966/revisions/w32966.rev0.pdf">https://www.nber.org/system/files/working_papers/w32966/revisions/w32966.rev0.pdf</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Figma. (2024). “Meet Figma AI: Empowering Designers with Intelligent Tools.” <a href="https://www.figma.com/blog/introducing-figma-ai/">https://www.figma.com/blog/introducing-figma-ai/</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Figma. (2024). “Building a better First Draft for designers.” <a href="https://www.figma.com/blog/figma-ai-first-draft/">https://www.figma.com/blog/figma-ai-first-draft/</a> <a href="#fnref3" class="footnote-backref">↩︎</a> <a href="#fnref3:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>GitHub. (2023). “The economic impact of the AI-powered developer lifecycle and lessons from GitHub Copilot.” <a href="https://github.blog/news-insights/research/the-economic-impact-of-the-ai-powered-developer-lifecycle-and-lessons-from-github-copilot/">https://github.blog/news-insights/research/the-economic-impact-of-the-ai-powered-developer-lifecycle-and-lessons-from-github-copilot/</a> <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p>GitHub Docs. “Responsible use of GitHub Copilot inline suggestions.” <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/responsible-use/copilot-code-completion">https://docs.github.com/en/enterprise-cloud@latest/copilot/responsible-use/copilot-code-completion</a> <a href="#fnref5" class="footnote-backref">↩︎</a> <a href="#fnref5:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p>Norman, D. (2023). “Where did the term User Experience (UX) come from?” JND.org. <a href="https://jnd.org/where-did-the-term-user-experience-ux-come-from/">https://jnd.org/where-did-the-term-user-experience-ux-come-from/</a> <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn7" class="footnote-item"><p>Kaley, A., &amp; Gibbons, S. (2022). “UX Strategy: Definition and Components.” Nielsen Norman Group. <a href="https://www.nngroup.com/articles/ux-strategy/">https://www.nngroup.com/articles/ux-strategy/</a> <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn8" class="footnote-item"><p>McKinsey &amp; Company. (2018). “The Business Value of Design.” <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-business-value-of-design">https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-business-value-of-design</a> <a href="#fnref8" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn9" class="footnote-item"><p>Figma. (2024). “Everything You Need to Know About Dev Mode.” <a href="https://www.figma.com/blog/everything-you-need-to-know-about-dev-mode/">https://www.figma.com/blog/everything-you-need-to-know-about-dev-mode/</a> <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn10" class="footnote-item"><p>Figma. (2025). “Introducing our Dev Mode MCP server: Bringing Figma into your workflow.” <a href="https://www.figma.com/blog/introducing-figma-mcp-server/">https://www.figma.com/blog/introducing-figma-mcp-server/</a> <a href="#fnref10" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn11" class="footnote-item"><p>Dell’Acqua, F., et al. (2023). “Navigating the Jagged Technological Frontier.” Harvard Business School. <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=64700">https://www.hbs.edu/faculty/Pages/item.aspx?num=64700</a> <a href="#fnref11" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn12" class="footnote-item"><p>Brynjolfsson, E., Li, D., &amp; Raymond, L. (2023). “Generative AI at Work.” National Bureau of Economic Research. <a href="https://www.nber.org/system/files/working_papers/w31161/w31161.pdf">https://www.nber.org/system/files/working_papers/w31161/w31161.pdf</a> <a href="#fnref12" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn13" class="footnote-item"><p>Wang, H. H. (2025). “Good from Afar, But Far from Good: AI Prototyping in Real Design Contexts.” Nielsen Norman Group. <a href="https://www.nngroup.com/articles/ai-prototyping/">https://www.nngroup.com/articles/ai-prototyping/</a> <a href="#fnref13" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn14" class="footnote-item"><p>Nielsen Norman Group. (2024). “Accelerating Research with AI.” <a href="https://www.nngroup.com/articles/research-with-ai/">https://www.nngroup.com/articles/research-with-ai/</a> <a href="#fnref14" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn15" class="footnote-item"><p>Rosala, M., &amp; Moran, K. (2024). “Synthetic Users: If, When, and How to Use AI-Generated ‘Research.’” Nielsen Norman Group. <a href="https://www.nngroup.com/articles/synthetic-users/">https://www.nngroup.com/articles/synthetic-users/</a> <a href="#fnref15" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn16" class="footnote-item"><p>Zadenoori, M. A., et al. (2025). “Large Language Models (LLMs) for Requirements Engineering (RE): A Systematic Literature Review.” arXiv. <a href="https://arxiv.org/html/2509.11446v1">https://arxiv.org/html/2509.11446v1</a> <a href="#fnref16" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn17" class="footnote-item"><p>Frost, B. (2018). “Your Sketch library is not a design system.” <a href="https://bradfrost.com/blog/post/your-sketch-library-is-not-a-design-system/">https://bradfrost.com/blog/post/your-sketch-library-is-not-a-design-system/</a> <a href="#fnref17" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn18" class="footnote-item"><p>Frost, B. (2024). “The art of design system recipes.” <a href="https://bradfrost.com/blog/post/the-art-of-design-system-recipes/">https://bradfrost.com/blog/post/the-art-of-design-system-recipes/</a> <a href="#fnref18" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn19" class="footnote-item"><p>Fessenden, T. (2021). “Design Systems 101.” Nielsen Norman Group. <a href="https://www.nngroup.com/articles/design-systems-101/">https://www.nngroup.com/articles/design-systems-101/</a> <a href="#fnref19" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn20" class="footnote-item"><p>zeroheight. (2025). “Design Systems Report 2025.” <a href="https://zeroheight.com/how-we-document/">https://zeroheight.com/how-we-document/</a> <a href="#fnref20" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn21" class="footnote-item"><p>Pearce, H., et al. (2022). “Asleep at the Keyboard? Assessing the Security of GitHub Copilot’s Code Contributions.” <a href="https://arxiv.org/abs/2108.09293">https://arxiv.org/abs/2108.09293</a> <a href="#fnref21" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn22" class="footnote-item"><p>Stack Overflow. (2024). “2024 Developer Survey: AI.” <a href="https://survey.stackoverflow.co/2024/ai">https://survey.stackoverflow.co/2024/ai</a> <a href="#fnref22" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn23" class="footnote-item"><p>Stack Overflow. (2025). “2025 Developer Survey: AI.” <a href="https://survey.stackoverflow.co/2025/ai">https://survey.stackoverflow.co/2025/ai</a> <a href="#fnref23" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn24" class="footnote-item"><p>GitHub. (2024). “Does GitHub Copilot improve code quality? Here’s what the data says.” <a href="https://github.blog/news-insights/research/does-github-copilot-improve-code-quality-heres-what-the-data-says/">https://github.blog/news-insights/research/does-github-copilot-improve-code-quality-heres-what-the-data-says/</a> <a href="#fnref24" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn25" class="footnote-item"><p>Moran, K., &amp; Gibbons, S. (2024). “Generative UI and Outcome-Oriented Design.” Nielsen Norman Group. <a href="https://www.nngroup.com/articles/generative-ui/">https://www.nngroup.com/articles/generative-ui/</a> <a href="#fnref25" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn26" class="footnote-item"><p>W3C. (2020). “Personalization Semantics Content Module 1.0.” <a href="https://www.w3.org/TR/2020/WD-personalization-semantics-content-1.0-20200127/">https://www.w3.org/TR/2020/WD-personalization-semantics-content-1.0-20200127/</a> <a href="#fnref26" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn27" class="footnote-item"><p>W3C. (2023). “Web Content Accessibility Guidelines (WCAG) 2.2.” <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a> <a href="#fnref27" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn28" class="footnote-item"><p>Prater, S. V. (2023). “Introducing ORCA: The Third Diamond in your UX Process.” OOUX. <a href="https://ooux.com/resources/introducing-orca-the-third-diamond-in-your-ux-process">https://ooux.com/resources/introducing-orca-the-third-diamond-in-your-ux-process</a> <a href="#fnref28" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+    </article>
+    
+  </main>
+
+  <footer class="ftr">
+    <div class="ftr__inner">
+      <p class="ftr__legal">© 2026 aaron benjamin</p>
+      <nav class="ftr__nav" aria-label="Footer">
+        <a href="/resume.html">resume</a>
+        <a href="/about.html">colophon</a>
+        <a href="#">rss</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var hdr = document.querySelector(".hdr");
+      function onScroll() {
+        if (hdr) hdr.classList.toggle("hdr--scrolled", window.scrollY > 8);
+      }
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    });
+  </script>
+</body>
+</html>

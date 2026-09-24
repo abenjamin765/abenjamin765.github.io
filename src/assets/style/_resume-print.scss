@@ -29,8 +29,6 @@
     display: block !important;
   }
 
-  
-
   .print-hide {
     display: none !important;
   }
@@ -172,7 +170,6 @@
     line-height: 1.2 !important;
   }
 
-  /* Reduce spacing in intro section */
   #intro {
     margin-bottom: 0.8em !important;
   }
@@ -185,12 +182,10 @@
     margin: 0.2em 0 !important;
   }
 
-  /* Optimize work experience section */
   #workExperience {
     margin-bottom: 0 !important;
   }
 
-  /* Page break controls */
   h1,
   h2,
   h3 {
@@ -201,7 +196,6 @@
     page-break-inside: avoid;
   }
 
-  /* Ensure content doesn't break awkwardly */
   ul,
   ol {
     page-break-inside: avoid;
@@ -212,13 +206,11 @@
     size: letter;
   }
 
-  /* ATS Optimization: Ensure proper text structure and readability */
   * {
     -webkit-print-color-adjust: exact !important;
-    color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  /* Ensure all text is selectable and searchable for ATS */
   h1,
   h2,
   h3,
@@ -235,13 +227,11 @@
     -moz-osx-font-smoothing: grayscale !important;
   }
 
-  /* Remove any decorative elements that might confuse ATS */
   *::before,
   *::after {
     display: none !important;
   }
 
-  /* Ensure proper contrast for both ATS and human readability */
   body,
   main,
   aside {
@@ -249,25 +239,21 @@
     color: #000000 !important;
   }
 
-  /* Make sure links are clearly identifiable */
   a {
     color: #000000 !important;
     text-decoration: underline !important;
   }
 
-  /* Ensure proper spacing for ATS parsing */
   section {
     margin-bottom: 1em !important;
   }
 
-  /* Make sure bullet points are properly formatted */
   ul li {
     list-style-type: disc !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* Ensure headings are properly structured for ATS */
   h1 {
     font-size: 18pt !important;
     font-weight: bold !important;
@@ -287,7 +273,6 @@
     margin-bottom: 0.2em !important;
   }
 
-  /* Clear floats */
   #wrapper::after {
     content: "";
     display: table;
