@@ -1,0 +1,30 @@
+mixin folioHead(pageTitle, description, pagePath, stylesheet, shareImage)
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= pageTitle
+    meta(name="description", content=description)
+    link(rel="canonical", href='https://aaronbenjamin.design' + pagePath)
+    meta(property="og:type", content="website")
+    meta(property="og:title", content=pageTitle)
+    meta(property="og:description", content=description)
+    meta(property="og:url", content='https://aaronbenjamin.design' + pagePath)
+    meta(property="og:image", content='https://aaronbenjamin.design' + (shareImage || '/assets/img/folio/work-classroom.png'))
+    meta(name="twitter:card", content="summary_large_image")
+    link(rel="icon", type="image/svg+xml", href="/assets/img/folio/favicon.svg")
+    link(rel="stylesheet", href="/assets/style/" + (stylesheet || 'folio') + ".css")
+
+mixin folioHeader(active)
+    header.folio-hdr
+        .folio-hdr__inner
+            a.folio-hdr__name(href="/") Aaron Benjamin
+            nav.folio-nav(aria-label="Primary")
+                a.folio-nav__a(href="/#work" aria-current=active === 'work' ? 'page' : null) Work
+                a.folio-nav__a(href="/#about" aria-current=active === 'about' ? 'page' : null) About
+                a.folio-nav__a(href="/resume.html" aria-current=active === 'resume' ? 'page' : null) Resume
+
+mixin folioFooter(showResume)
+    footer.folio-footer
+        p.folio-footer__lead Have a complex product challenge? Let’s talk.
+        a.folio-footer__contact(href="mailto:hello@aaronbenjamin.design") Email Aaron
+        if showResume !== false
+            a.folio-footer__resume(href="/resume.html") View résumé

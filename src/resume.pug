@@ -1,0 +1,66 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('Aaron Benjamin | Résumé', 'Aaron Benjamin is a product designer who leads complex UX work across marketplaces, education, commerce, and internal tools.', '/resume.html')
+        link(rel="stylesheet", href="/assets/style/resume.css")
+    body.folio.folio--resume
+        a.visually-hidden(href="#main") Skip to content
+        +folioHeader('resume')
+
+        .resume-actions.no-print
+            a.resume-actions__pdf(href="/assets/Aaron-Benjamin-Resume.pdf" download) Download PDF
+
+        main#wrapper
+            .resume-main#main
+                header.resume-intro
+                    p.resume-kicker= contactInfo.candidateTitle
+                    h1= contactInfo.candidateName
+                    p.resume-summary I lead design for complex product systems, connecting research, shared models, and shipped interfaces. My work spans marketplaces, education, commerce, and internal tools, with a focus on decisions teams can carry through implementation.
+
+                section#workExperience(aria-labelledby="experience-title")
+                    h2#experience-title Experience
+                    each xp, jobIndex in experience
+                        article.work-experience-milestone
+                            h3
+                                span= xp.title
+                                span.light= ' / ' + xp.company
+                            p.work-experience-date-range= xp.date_range.replace(/[–—]/g, '-') + ' · ' + xp.location
+                            if jobIndex < 4
+                                - const highlighted = [[0, 1, 3], [0, 3, 4], [0, 1, 3], [0, 1, 2]]
+                                ul.work-experience-accomplishments
+                                    each index, bulletIndex in highlighted[jobIndex]
+                                        li(class=jobIndex >= 2 && bulletIndex === 2 ? 'resume-bullet--print-hide' : null)= xp.accomplishments[index]
+                            else
+                                p.resume-earlier= xp.accomplishments[0]
+
+            aside.resume-aside(aria-label="Contact and background")
+                section#contact(aria-labelledby="contact-title")
+                    h2#contact-title Contact
+                    a(href='mailto:' + contactInfo.candidateEmail)= contactInfo.candidateEmail
+                    a(href='https://' + contactInfo.candidateWebsite)= contactInfo.candidateWebsite
+                    a(href=contactInfo.candidateLinkedIn) LinkedIn
+                    p#location= contactInfo.candidateLocation
+
+                section#focusAreas(aria-labelledby="focus-title")
+                    h2#focus-title Focus
+                    ul.resume-list
+                        each area in focusAreas
+                            li= area
+
+                section#hardSkills(aria-labelledby="skills-title")
+                    h2#skills-title Capabilities
+                    ul.resume-list
+                        each skill in hardSkills
+                            li= skill
+
+                section#education(aria-labelledby="education-title")
+                    h2#education-title Education
+                    p= schoolName + ', ' + schoolLocation + ' (' + schoolGraduationYear + ')'
+
+                section.resume-early-print(aria-labelledby="earlier-title")
+                    h2#earlier-title Earlier roles
+                    p Amazon · HP Inc. · AT&T
+
+        .resume-bottom.no-print
+            +folioFooter(false)

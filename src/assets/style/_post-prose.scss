@@ -1,0 +1,202 @@
+/* Long-form posts (Markdown → HTML inside .post). Uses tokens from _site-layout.scss */
+
+$post-max: 760px;
+
+main#main.site-main:has(.post) {
+  max-width: $post-max;
+}
+
+.post {
+  color: $ink;
+  font-size: clamp(1rem, 0.35vw + 0.95rem, 1.0625rem);
+  line-height: 1.72;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  margin: 0 0 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+.post-meta__time {
+  color: $muted;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.post-meta__sep {
+  color: color-mix(in srgb, $muted 55%, $border);
+  font-weight: 400;
+}
+
+.post-meta__kind {
+  color: $link;
+  font-weight: 750;
+}
+
+.post > h1 {
+  scroll-margin-top: 4.75rem;
+  font-size: clamp(1.85rem, 2vw + 1.2rem, 2.65rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin: 0 0 1.25rem;
+}
+
+.post > p {
+  margin: 0 0 1.15rem;
+}
+
+.post > h2 {
+  scroll-margin-top: 4.75rem;
+  font-size: clamp(1.35rem, 1.2vw + 1.1rem, 1.85rem);
+  font-weight: 720;
+  letter-spacing: -0.035em;
+  line-height: 1.18;
+  margin: 2.75rem 0 1rem;
+}
+
+.post > h3 {
+  scroll-margin-top: 4.75rem;
+  font-size: clamp(1.12rem, 0.5vw + 1.02rem, 1.32rem);
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  line-height: 1.22;
+  margin: 2rem 0 0.75rem;
+}
+
+.post > h2:first-of-type {
+  margin-top: 1.35rem;
+}
+
+.post a {
+  color: $link;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.post a:hover {
+  color: $link-hover;
+}
+
+.post strong {
+  font-weight: 750;
+  color: $ink;
+}
+
+.post em {
+  font-style: italic;
+}
+
+.post blockquote {
+  margin: 1.75rem 0;
+  padding: 0.35rem 0 0.35rem 1rem;
+  border-left: 4px solid $link;
+  color: $ink;
+}
+
+.post blockquote p {
+  margin: 0;
+  font-size: clamp(1.05rem, 0.6vw + 1rem, 1.25rem);
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.post ul,
+.post ol {
+  margin: 0 0 1.35rem;
+  padding-left: 1.35rem;
+}
+
+.post li {
+  margin: 0.28rem 0;
+  padding-left: 0.15rem;
+}
+
+.post li::marker {
+  color: $muted;
+}
+
+.post hr {
+  position: relative;
+  border: none;
+  border-top: 1px solid $border;
+  margin: 3.25rem 0;
+  height: 0;
+  overflow: visible;
+}
+
+.post hr::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: $border;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 8px #fff;
+}
+
+/* markdown-it-footnote ([^id] citations) */
+.post hr.footnotes-sep {
+  margin: 2.5rem 0 1.25rem;
+}
+
+.post hr.footnotes-sep::after {
+  display: none;
+}
+
+.post sup.footnote-ref {
+  line-height: 0;
+  font-size: 0.78em;
+  vertical-align: super;
+}
+
+.post sup.footnote-ref a {
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.post sup.footnote-ref a:hover,
+.post sup.footnote-ref a:focus-visible {
+  text-decoration: underline;
+}
+
+.post section.footnotes {
+  font-size: clamp(0.88rem, 0.2vw + 0.85rem, 0.95rem);
+  line-height: 1.55;
+  color: $ink;
+}
+
+.post .footnotes-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.post .footnote-item {
+  margin: 0 0 0.85rem;
+}
+
+.post .footnote-item p {
+  margin: 0;
+  word-break: break-word;
+}
+
+.post a.footnote-backref {
+  text-decoration: none;
+  font-size: 0.95em;
+  margin-left: 0.15rem;
+}

@@ -1,0 +1,143 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('A catalog that knows what it is selling | Aaron Benjamin', 'How I shaped Green Loom’s retail catalog model, Georgia hemp requirements, and a public product-data schema.', '/green-loom.html', 'folio', '/assets/img/folio/project--green-loom/green-loom--figma-hero.png')
+    body.folio.folio--case
+        a.visually-hidden(href="#main") Skip to content
+
+        .folio__decor(aria-hidden="true")
+            img.folio__decor-img(src="assets/img/folio/blob.svg", alt="")
+
+        +folioHeader('work')
+
+        main#main.folio-main.folio-main--case
+            article.folio-case.green-case
+                header.folio-case__hero
+                    figure.folio-case__hero-media.green-case__hero-media(aria-labelledby="green-hero-caption")
+                        .green-case__hero-crop
+                            img(src="/assets/img/folio/project--green-loom/green-loom--figma-hero.png", alt="Green Loom catalog concept showing The Corner Store's varied product list beside Peach Orchard Chew product details" width="1920" height="1320")
+                        figcaption#green-hero-caption Figma exploration of the catalog workspace. This predates the Georgia-specific product-form decisions and is not the approved final interface.
+                    .folio-case__intro
+                        p.folio-eyebrow Case study
+                        h1 A catalog that knows what it is selling
+                        p.folio-case__dek I clarified how products, store listings, stock, and lab evidence fit together before designing a path to publication.
+                    dl.folio-case__facts
+                        .folio-case__fact
+                            dt Role
+                            dd Co-founder
+                        .folio-case__fact
+                            dt Scope
+                            dd Retail catalog model and operator workflow
+                        .folio-case__fact
+                            dt Key decision
+                            dd One guided path for first use, direct workspaces for routine work
+                        .folio-case__fact
+                            dt Outcome
+                            dd Selected design direction, approved wireframe baseline, and a public schema
+
+                section.folio-case__section(aria-labelledby="green-problem-title")
+                    .folio-case__prose
+                        h2#green-problem-title The catalog had several kinds of truth
+                        p A retail product can have multiple sellable packages, different prices and stock at each store, and lab evidence that affects whether it can be offered at all. Early catalog concepts put much of this on the same screens, but left ownership unclear. A description, a store listing, a stock count, and a lab result looked like fields on one product even though they follow different rules.
+                        p Research into the operating workflow, CMS wireframes, product definitions, and external data formats exposed conflicting vocabularies. Product form was mixed with regulatory classification. Potency looked editable on the product, although the laboratory result should be its source. Store price and quantity appeared close to product content, despite changing independently by location and package.
+                        p I separated those responsibilities. Product holds shared identity and content. Variant identifies a sellable package. Listing controls how a variant is offered at a store. Inventory records quantity and availability. A Lab Result holds testing evidence and has its own validity period. The interface can bring these facts together without making them the same record.
+                    figure.folio-case__figure.green-case__figure(aria-labelledby="green-model-caption")
+                        .green-case__hero-art
+                            .green-case__hero-head
+                                span.green-case__hero-kicker Green Loom catalog model
+                                span.green-case__hero-mark Concept diagram
+                            ol.green-case__model-path
+                                li.green-case__model-node
+                                    span.green-case__model-label Product
+                                    span.green-case__model-detail Shared identity and content
+                                li.green-case__model-node
+                                    span.green-case__model-label Variant
+                                    span.green-case__model-detail Sellable package
+                                li.green-case__model-node
+                                    span.green-case__model-label Listing
+                                    span.green-case__model-detail Store price and publication
+                            .green-case__model-support
+                                p
+                                    strong Lab Result
+                                    span Source of testing evidence
+                                p
+                                    strong Inventory
+                                    span Store quantity and availability
+                        figcaption#green-model-caption A simplified explanation of the chosen boundaries. Related work stays together without merging records that change independently.
+
+                section.folio-case__section.folio-case__section--tint(aria-labelledby="green-georgia-title")
+                    .folio-case__prose
+                        h2#green-georgia-title Georgia changed what the catalog needed to know
+                        p Green Loom’s retail launch scope is Georgia consumable hemp. Georgia prohibits retail sale of hemp flower and leaves and requires a full-panel certificate of analysis, or COA, contracted within the last 12 months and made publicly available. Product labels must show the analysis results or provide direct QR access to them. Those requirements shaped the available product forms, the evidence an operator needs to inspect, and the proposed publication checks.
+                        p We separated physical product form from regulatory class. A product can remain representable in a jurisdiction-neutral model while a Georgia profile narrows what the local catalog can offer. The Lab Result stays distinct from Product because the certificate can expire or be replaced without changing the product’s identity.
+                        p.green-case__source-note Design context:&#32;
+                            a(href="https://www.agr.georgia.gov/hemp-retail-consumable-hemp-licenses" target="_blank" rel="noopener noreferrer") Georgia Department of Agriculture retail guidance
+                            | &#32;and&#32;
+                            a(href="https://rules.sos.ga.gov/gac/40-32-5" target="_blank" rel="noopener noreferrer") Georgia’s consumable-hemp rules
+                            | . These sources informed the design; the case study is not a claim of legal certification.
+                    figure.folio-case__figure.green-case__figure(aria-labelledby="green-coa-caption")
+                        .green-case__diagram.green-case__diagram--coa
+                            p.green-case__diagram-title Designed COA-to-catalog workflow
+                            ol.green-case__steps
+                                li
+                                    strong Capture
+                                    span Add the certificate and its source details
+                                li
+                                    strong Review
+                                    span Check the extracted results and coverage
+                                li
+                                    strong Link
+                                    span Associate evidence with the applicable product or variant
+                                li
+                                    strong Derive
+                                    span Show lab-sourced values in the catalog
+                                li
+                                    strong Check
+                                    span Explain any publication blocker
+                            p.green-case__diagram-note The Lab Result stays authoritative; catalog values are derived from it.
+                        figcaption#green-coa-caption This is a designed workflow, not a live import demonstration. COA import and the complete publication gate are not yet available in the current Retail interface.
+
+                section.folio-case__section(aria-labelledby="green-schema-title")
+                    .folio-case__prose
+                        h2#green-schema-title A schema for the data, not a substitute for the product model
+                        p Existing standards and vendor formats did not give this catalog a complete, suitable product-data contract. Green Loom developed the public, versioned&#32;
+                            a(href="https://github.com/greenloom/cannabis-product-schema" target="_blank" rel="noopener noreferrer") Cannabis Product Schema
+                            |  to define the shape of exchanged product documents. Its jurisdiction-neutral core describes Product, Package, LabResult, Label, and Party. A separate Georgia hemp profile adds local constraints without hard-coding them into core.
+                        p The schema and Retail application do different jobs. The schema makes incoming and outgoing product data checkable. Retail still needs distinct Product, Variant, Listing, Inventory, and Lab Result records so an operator can edit, publish, or adjust the right thing. Publishing the schema is a concrete output, not evidence of industry adoption or legal approval.
+                    figure.folio-case__figure.green-case__figure(aria-labelledby="green-schema-caption")
+                        .green-case__diagram.green-case__diagram--schema
+                            .green-case__schema-core
+                                p.green-case__diagram-title Jurisdiction-neutral core
+                                ul
+                                    li Product
+                                    li Package
+                                    li LabResult
+                                    li Label
+                                    li Party
+                            .green-case__schema-profile
+                                p.green-case__diagram-title Georgia hemp profile
+                                p Allowed forms, testing evidence, labeling, and potency constraints
+                                span.green-case__schema-rule Applied to core data, not embedded in core
+                        figcaption#green-schema-caption The public schema defines a shared data shape. The Georgia profile applies local constraints; neither replaces the Retail operator model.
+
+                section.folio-case__section.folio-case__section--tint(aria-labelledby="green-direction-title")
+                    .folio-case__prose
+                        h2#green-direction-title One model, two speeds of work
+                        p The interface direction followed the model. A guided first-publish path helps a new operator create the needed records in sequence. Returning operators can work directly in catalog and inventory views instead of reopening a wizard for every change.
+                        p We selected this object-first approach after comparing it with a journey-led launchpad and a cross-object work queue. The tradeoff is that direct workspaces support routine work, but the first-use path must explain unfamiliar terms without exposing every underlying object at once. The selected concept and initial wireframe baseline were approved as design direction, not as usability findings.
+                    figure.folio-case__figure.green-case__figure.green-case__mobile-figure(aria-labelledby="green-mobile-caption")
+                        img(src="/assets/img/folio/project--green-loom/green-loom--mobile-catalog.png", alt="Figma mobile catalog exploration with Published and Draft groups, product rows, stock states, search, and an add control" width="402" height="874" loading="lazy")
+                        figcaption#green-mobile-caption An earlier Figma exploration of direct catalog access and visible stock states on mobile. It is design evidence, not an operator-tested outcome.
+
+                section.folio-case__outcome(aria-labelledby="green-outcome-title")
+                    .folio-case__outcome-inner
+                        p.folio-eyebrow Outcome
+                        h2#green-outcome-title A clearer model, with validation still ahead
+                        p The work moved the catalog from overlapping product concepts to a selected information architecture, an approved wireframe baseline, and a published schema. Later high-fidelity work remains a design candidate, and an operator pilot is active. Direct operator evidence, accessibility review, and other specialist checks are still needed before claiming the experience works in practice.
+                        p My takeaway is that simplifying a regulated workflow does not mean hiding its rules. It means keeping the right evidence authoritative and showing people why an action is available, blocked, or incomplete.
+
+                footer.folio-case__footer
+                    a.folio-case__back(href="/#work") Back to selected work
+
+            +folioFooter

@@ -1,0 +1,26 @@
+body.folio--resume {
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body.folio--resume a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.folio--resume a:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 4px;
+}
+
+.folio--resume .folio-hdr__name,
+.folio--resume .folio-nav__a {
+  text-decoration: none;
+}
+
+.folio--resume .folio-nav__a:hover,
+.folio--resume .folio-nav__a[aria-current="page"] {
+  text-decoration: underline;
+}

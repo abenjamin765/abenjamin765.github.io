@@ -10,9 +10,9 @@ For more than 10 years, I've helped global brands design and build products that
 
 - **Email**: hello@aaronbenjamin.design
 - **Phone**: (770) 380-5566
-- **Location**: Atlanta, GA
+- **Location**: Powder Springs, GA
 - **Website**: [aaronbenjamin.design](https://www.aaronbenjamin.design)
-- **LinkedIn**: [linkedin.com/in/aaronbenjamin](https://www.linkedin.com/in/aaronbenjamin)
+- **LinkedIn**: [linkedin.com/in/aaronbenjamindesign](https://www.linkedin.com/in/aaronbenjamindesign/)
 
 ---
 
@@ -59,7 +59,15 @@ For more than 10 years, I've helped global brands design and build products that
 
 ### Senior UX Designer
 
-**Indeed** | October 2022 – Present | Remote, Full-time
+**Renaissance Learning** | July 2024 – Present | Remote, Full-time
+
+- Led UX strategy and end-to-end design for K–12 classroom experiences across Renaissance Intelligence
+- Directed the design and launch of Renaissance Intelligence and contributed reusable design-system patterns
+- Championed Object-Oriented UX across design and engineering to strengthen shared product models
+
+### Senior UX Designer
+
+**Indeed** | October 2022 – July 2024 | Remote, Full-time
 
 - Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion
 - Partnered with leadership to shape and execute the company's marketplace monetization strategy
@@ -162,19 +170,20 @@ For more than 10 years, I've helped global brands design and build products that
 
 ## 📋 Project Repository
 
-This repository contains the source code for Aaron Benjamin's resume website with PDF download functionality.
+This repository contains Aaron Benjamin's portfolio, case study, résumé, and a separate writing section. Résumé content is rendered from the YAML files in `src/assets/data/`; update those files first.
 
 ### Quick Start
 
 1. Clone this repository
 2. Install dependencies: `npm install`
-3. Start development server: `npm run start:pdf`
-4. Visit `http://localhost:3000` to view the resume
+3. Build the site and static résumé PDF: `npm run build`
+4. Start the development server: `npm start`
+5. Run responsive, link, and case-study interaction checks: `npm test`
 
 ### Features
 
 - **Responsive Design**: Optimized for all devices
-- **PDF Download**: One-click PDF generation with ATS optimization
+- **PDF Download**: Static PDF generated from the résumé page during `npm run build`; no separate PDF server is needed
 - **Print Styles**: Professional print formatting
 - **Live Development**: Hot-reload development environment
 

@@ -60,7 +60,7 @@ app.get("/generate-pdf", async (req, res) => {
     await page.emulateMediaType("screen");
 
     // Navigate to the resume page - BrowserSync typically runs on port 3004
-    const resumeUrl = `http://localhost:3004/index.html`;
+    const resumeUrl = `http://localhost:3004/resume.html`;
     console.log(`Navigating to: ${resumeUrl}`);
 
     await page.goto(resumeUrl, {

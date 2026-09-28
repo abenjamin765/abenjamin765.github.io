@@ -1,86 +1,114 @@
+include includes/folio-shared.pug
+
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title #{candidateName}, #{candidateTitle} | Resume
-        link(rel="stylesheet", href="assets/style/main.css")
-        script(src="assets/js/pdf-download.js", defer)
-    body 
-        button#download.button-8.no-print(role="button") Download this resume as a PDF
-        #wrapper 
-            main
-                h1 #{contactInfo.candidateName}
+        +folioHead('Aaron Benjamin — Product Designer', 'I design complex products and help teams make clear, evidence-based decisions.', '/')
+    body.folio
+        a.visually-hidden(href="#main") Skip to content
 
-                section#intro
-                    h2 #{contactInfo.candidateTitle}
-                    p #{contactInfo.candidateDescription}
+        .folio__decor(aria-hidden="true")
+            img.folio__decor-img(src="assets/img/folio/blob.svg", alt="")
 
-                
-                section#workExperience
-                    h2 Work Experience
-                    each xp, jobIndex in experience
-                        // Show first 5 jobs for print, all jobs for screen
-                        if jobIndex < 5
-                            article.work-experience-milestone
-                                h3 #{xp.title} 
-                                    span.light / #{xp.company}
-                                p.work-experience-date-range #{xp.date_range} - #{xp.type} (#{xp.location})
-                                ul.work-experience-accomplishments
-                                    each accomplishment, index in xp.accomplishments
-                                        // Show first 3 accomplishments always, hide 4+ for print
-                                        if index < 3
-                                            li #{accomplishment}
-                                        else
-                                            li.print-hide #{accomplishment}
-                        else
-                            article.work-experience-milestone.print-hide
-                                h3 #{xp.title} 
-                                    span.light / #{xp.company}
-                                p.work-experience-date-range #{xp.date_range} - #{xp.type} (#{xp.location})
-                                ul.work-experience-accomplishments
-                                    each accomplishment in xp.accomplishments
-                                        li #{accomplishment}
-            aside
-                img(src="assets/img/hello.webp", alt="").logo
-                section#contact
-                    a(href=`${contactInfo.candidateWebsite}`) #{contactInfo.candidateWebsite}
-                    a(href=`mailto:${contactInfo.candidateEmail}`) #{contactInfo.candidateEmail}
-                    a(href=`tel:${contactInfo.candidatePhone}`) #{contactInfo.candidatePhone}
-                    p#location #{contactInfo.candidateLocation}
-                section#education
-                    h2 Education
-                    ul.list#educationList
-                        li #{schoolName}, #{schoolLocation} (#{schoolGraduationYear})
-                section#focusAreas
-                    h2 Focus Areas
-                    ul.list#focusAreaList
-                        each area in focusAreas
-                            li #{area}
-                section#hardSkills
-                    h2 Hard Skills
-                    ul.list#hardSkillList
-                        each skill in hardSkills
-                            li #{skill}
-                section#softSkills
-                    h2 Soft Skills
-                    ul.list#softSkillList
-                        each skill in softSkills
-                            li #{skill}
-                section#tools
-                    h2 Tools
-                    p.small#toolList
-                        each tool in tools
-                            span #{tool}, 
-                section#references
-                    h2 References
-                    ul.no-list#referenceList
-                        each ref, index in references
-                            // Show first 3 references for print, all for screen
-                            if index < 3
-                                li 
-                                    div #{ref.name} (#{ref.relationship})
-                                    div.light #{ref.email}
-                            else
-                                li.print-hide 
-                                    div #{ref.name} (#{ref.relationship})
-                                    div.light #{ref.email}
+        +folioHeader('work')
+
+        main#main.folio-main
+            section.folio-hero(aria-labelledby="hero-title")
+                .folio-hero__inner
+                    .folio-hero__copy
+                        .folio-hero__text
+                            h1.folio-hero__title#hero-title
+                                span.folio-hero__kicker I help teams make sense of
+                                span.folio-hero__mark
+                                    strong complex
+                                    |
+                                    em  products
+                                    | .
+                            p.folio-hero__dek I turn tangled workflows into clear product decisions, shared models, and interfaces people can use.
+                        a.folio-btn(href="#work") See selected work
+                    .folio-hero__media
+                        img(src="assets/img/folio/hero-portrait.png", alt="Illustrated portrait of Aaron Benjamin waving hello" width="238" height="250")
+
+            section.folio-work#work(aria-labelledby="selected-work-title")
+                .folio-work__inner
+                    h2.folio-eyebrow#selected-work-title Selected work
+
+                    article.folio-project.folio-project--feature
+                        a.folio-project__link(href="/classroom-assignment-management.html")
+                            .folio-project__media
+                                img(src="assets/img/folio/work-classroom.png", alt="Classroom assignment management interface showing student status and scores" loading="lazy")
+                            .folio-project__copy
+                                p.folio-project__status Full case study
+                                h3.folio-project__title Classroom Assignment Management
+                                p.folio-project__dek How I replaced a dense assignments table with a priority view that helped teachers find students who needed support.
+                                span.folio-project__cta Read case study
+
+                    .folio-project-pair
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Nearpod
+                            .folio-project__copy
+                                p.folio-project__status Project preview
+                                h3.folio-project__title Nearpod
+                                p.folio-project__dek Designing clearer structures and reusable patterns for a platform that supports complex learning experiences.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Nearpod%20project") Ask me about this work
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Indeed
+                            .folio-project__copy
+                                p.folio-project__status Project preview
+                                h3.folio-project__title Indeed
+                                p.folio-project__dek Making employer workflows more consistent, measurable, and scalable.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Indeed%20project") Ask me about this work
+
+            section.folio-claims#about(aria-labelledby="about-title")
+                .folio-claims__inner
+                    h2.folio-eyebrow.folio-claims__label#about-title How I work
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 01
+                            h3.folio-claim__title Make the system visible.
+                        p.folio-claim__body I map relationships and workflows with partners so we can agree on the problem before designing screens.
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 02
+                            h3.folio-claim__title Decide what matters first.
+                        p.folio-claim__body Research and prototypes help me turn competing needs into a clear, testable product direction.
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 03
+                            h3.folio-claim__title Bring the team along.
+                        p.folio-claim__body Shared models and working sessions make decisions easier to explain, build, and extend.
+
+            section.folio-work.folio-work--independent(aria-labelledby="independent-work-title")
+                .folio-work__inner
+                    h2.folio-eyebrow#independent-work-title Independent work
+
+                    article.folio-project.folio-project--feature
+                        a.folio-project__link(href="/green-loom.html")
+                            .folio-project__media
+                                img(src="assets/img/folio/project--green-loom/green-loom--figma-hero.png", alt="Green Loom catalog concept with varied products for The Corner Store" loading="lazy")
+                            .folio-project__copy
+                                p.folio-project__status Full case study
+                                h3.folio-project__title Green Loom
+                                p.folio-project__dek How I clarified a complex retail catalog, its Georgia requirements, and the data behind publication.
+                                span.folio-project__cta Read case study
+
+                    .folio-project-pair
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Orbit
+                            .folio-project__copy
+                                p.folio-project__status Project preview
+                                h3.folio-project__title Orbit
+                                p.folio-project__dek Exploring ways to make everyday systems easier to understand, navigate, and improve.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Orbit%20project") Ask me about this work
+                        article.folio-project
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Bite Club
+                            .folio-project__copy
+                                p.folio-project__status Project preview
+                                h3.folio-project__title Bite Club
+                                p.folio-project__dek Designing simple tools and rituals that help teams make better product decisions.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Bite%20Club%20project") Ask me about this work
+
+            +folioFooter
