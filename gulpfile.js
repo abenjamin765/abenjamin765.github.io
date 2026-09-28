@@ -6,6 +6,7 @@ const yaml = require("js-yaml");
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("node:child_process");
+const { pipeline } = require("node:stream/promises");
 const browserSync = require("browser-sync").create();
 
 /** Child Eleventy watch process — cleaned up on exit (see `serve`). */
@@ -33,7 +34,6 @@ function compilePug() {
     .pipe(
       data(function () {
         const yamlData = getYamlData();
-        console.log("YAML data passed to Pug:", yamlData);
         return yamlData;
       })
     )
@@ -92,10 +92,11 @@ function compileEleventy(done) {
 // Copy and optimize images
 async function copyImages() {
   const imagemin = (await import("gulp-imagemin")).default;
-  return gulp
-    .src("src/assets/img/**/*", { encoding: false })
-    .pipe(imagemin())
-    .pipe(gulp.dest("dist/assets/img"));
+  await pipeline(
+    gulp.src("src/assets/img/**/*", { encoding: false }),
+    imagemin(),
+    gulp.dest("dist/assets/img")
+  );
 }
 
 // Copy JavaScript files

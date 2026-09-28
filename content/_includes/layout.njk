@@ -6,7 +6,12 @@
   <title>{% if title %}{{ title }}{% else %}blog{% endif %} — inside thoughts</title>
   {% if description %}
   <meta name="description" content="{{ description | e }}">
+  <meta property="og:description" content="{{ description | e }}">
   {% endif %}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ title | e }} — inside thoughts">
+  <meta property="og:image" content="https://aaronbenjamin.design/assets/img/folio/work-classroom.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/folio/favicon.svg">
   <link rel="stylesheet" href="{{ '/assets/style/site.css' | relativeFromSiteRoot(page) }}">
 </head>
 <body class="site">
@@ -19,13 +24,11 @@
         <span class="logo__wordmark">inside thoughts</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a class="nav__a" href="/writing.html#latest">all</a>
-        <a class="nav__a" href="/writing.html#latest">essays</a>
-        <a class="nav__a" href="/writing.html#latest">critique</a>
-        <a class="nav__a" href="/writing.html#latest">process</a>
+        <a class="nav__a" href="/writing.html#latest">latest</a>
+        <a class="nav__a" href="/">portfolio</a>
       </nav>
       <div class="hdr__tools">
-        <a class="btn btn--solid" href="/writing.html#subscribe">subscribe</a>
+        <a class="btn btn--solid" href="mailto:hello@aaronbenjamin.design">contact</a>
       </div>
     </div>
   </header>
@@ -52,8 +55,7 @@
       <p class="ftr__legal">© 2026 aaron benjamin</p>
       <nav class="ftr__nav" aria-label="Footer">
         <a href="/resume.html">resume</a>
-        <a href="/about.html">colophon</a>
-        <a href="#">rss</a>
+        <a href="mailto:hello@aaronbenjamin.design">contact</a>
       </nav>
     </div>
   </footer>

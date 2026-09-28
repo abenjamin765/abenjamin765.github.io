@@ -1,23 +1,15 @@
+include includes/folio-shared.pug
+
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Aaron Benjamin — Product Designer
-        meta(name="description", content="I’m a product designer for complicated things. I turn complex products, systems, and workflows into experiences people can actually understand.")
-        link(rel="stylesheet", href="assets/style/folio.css")
+        +folioHead('Aaron Benjamin — Product Designer', 'I design complex products and help teams make clear, evidence-based decisions.', '/')
     body.folio
         a.visually-hidden(href="#main") Skip to content
 
         .folio__decor(aria-hidden="true")
             img.folio__decor-img(src="assets/img/folio/blob.svg", alt="")
 
-        header.folio-hdr
-            .folio-hdr__inner
-                a.folio-hdr__name(href="/") Aaron Benjamin
-                nav.folio-nav(aria-label="Primary")
-                    a.folio-nav__a(href="#work") Work
-                    span.folio-nav__a.folio-nav__a--muted About
-                    a.folio-nav__a(href="/resume.html") Resume
+        +folioHeader('work')
 
         main#main.folio-main
             section.folio-hero(aria-labelledby="hero-title")
@@ -25,93 +17,98 @@ html(lang="en")
                     .folio-hero__copy
                         .folio-hero__text
                             h1.folio-hero__title#hero-title
-                                span.folio-hero__kicker I’m a product designer for
+                                span.folio-hero__kicker I help teams make sense of
                                 span.folio-hero__mark
-                                    strong complicated
+                                    strong complex
                                     |
-                                    em  things
+                                    em  products
                                     | .
-                            p.folio-hero__dek I turn complex products, systems, and workflows into experiences people can actually understand.
-                        a.folio-btn(href="#work") Explore my work
+                            p.folio-hero__dek I turn tangled workflows into clear product decisions, shared models, and interfaces people can use.
+                        a.folio-btn(href="#work") See selected work
                     .folio-hero__media
-                        img(src="assets/img/folio/hero-portrait.png", alt="Illustrated portrait of Aaron Benjamin waving hello")
-
-            section.folio-claims(aria-label="How I work")
-                .folio-claims__inner
-                    article.folio-claim
-                        .folio-claim__head
-                            p.folio-claim__num 01
-                            h2.folio-claim__title I make complexity explainable.
-                        p.folio-claim__body Enterprise platforms, complex workflows, information architecture, and interconnected systems are where I'm most experienced.
-                    article.folio-claim
-                        .folio-claim__head
-                            p.folio-claim__num 02
-                            h2.folio-claim__title I work beyond the Figma file.
-                        p.folio-claim__body I use research, prototyping, code, experimentation, and AI to understand ideas quickly and get closer to the thing we're actually building.
-                    article.folio-claim
-                        .folio-claim__head
-                            p.folio-claim__num 03
-                            h2.folio-claim__title I improve how teams design.
-                        p.folio-claim__body Design systems, OOUX, reusable patterns, shared models, and better workflows let good design extend beyond a single feature.
+                        img(src="assets/img/folio/hero-portrait.png", alt="Illustrated portrait of Aaron Benjamin waving hello" width="238" height="250")
 
             section.folio-work#work(aria-labelledby="selected-work-title")
                 .folio-work__inner
-                    p.folio-eyebrow#selected-work-title Selected work
+                    h2.folio-eyebrow#selected-work-title Selected work
 
                     article.folio-project.folio-project--feature
-                        .folio-project__media
-                            img(src="assets/img/folio/work-classroom.png", alt="Classroom assignment management interface showing student status and scores")
-                        .folio-project__copy
-                            h3.folio-project__title Classroom Assignment Management
-                            p.folio-project__dek Imagine you’re a teacher tracking assignments you gave across multiple apps to your 3rd graders....
+                        a.folio-project__link(href="/classroom-assignment-management.html")
+                            .folio-project__media
+                                img(src="assets/img/folio/work-classroom.png", alt="Classroom assignment management interface showing student status and scores" loading="lazy")
+                            .folio-project__copy
+                                p.folio-project__status Full case study
+                                h3.folio-project__title Classroom Assignment Management
+                                p.folio-project__dek How I replaced a dense assignments table with a priority view that helped teachers find students who needed support.
+                                span.folio-project__cta Read case study
 
                     .folio-project-pair
                         article.folio-project
-                            .folio-project__media.folio-project__media--fill.folio-project__media--nearpod(role="img", aria-label="Nearpod project preview placeholder")
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Nearpod
                             .folio-project__copy
+                                p.folio-project__status Project preview
                                 h3.folio-project__title Nearpod
-                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+                                p.folio-project__dek Designing clearer structures and reusable patterns for a platform that supports complex learning experiences.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Nearpod%20project") Ask me about this work
                         article.folio-project
-                            .folio-project__media.folio-project__media--fill.folio-project__media--indeed(role="img", aria-label="Indeed project preview placeholder")
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Indeed
                             .folio-project__copy
+                                p.folio-project__status Project preview
                                 h3.folio-project__title Indeed
-                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+                                p.folio-project__dek Making employer workflows more consistent, measurable, and scalable.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Indeed%20project") Ask me about this work
+
+            section.folio-claims#about(aria-labelledby="about-title")
+                .folio-claims__inner
+                    h2.folio-eyebrow.folio-claims__label#about-title How I work
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 01
+                            h3.folio-claim__title Make the system visible.
+                        p.folio-claim__body I map relationships and workflows with partners so we can agree on the problem before designing screens.
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 02
+                            h3.folio-claim__title Decide what matters first.
+                        p.folio-claim__body Research and prototypes help me turn competing needs into a clear, testable product direction.
+                    article.folio-claim
+                        .folio-claim__head
+                            p.folio-claim__num 03
+                            h3.folio-claim__title Bring the team along.
+                        p.folio-claim__body Shared models and working sessions make decisions easier to explain, build, and extend.
 
             section.folio-work.folio-work--independent(aria-labelledby="independent-work-title")
                 .folio-work__inner
-                    p.folio-eyebrow#independent-work-title Independent work
+                    h2.folio-eyebrow#independent-work-title Independent work
 
                     article.folio-project.folio-project--feature
-                        .folio-project__media
-                            img(src="assets/img/folio/work-green-loom.png", alt="Green Loom catalog interface with product sidebar")
-                        .folio-project__copy
-                            h3.folio-project__title Green Loom
-                            p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+                        a.folio-project__link(href="/green-loom.html")
+                            .folio-project__media
+                                img(src="assets/img/folio/project--green-loom/green-loom--figma-hero.png", alt="Green Loom catalog concept with varied products for The Corner Store" loading="lazy")
+                            .folio-project__copy
+                                p.folio-project__status Full case study
+                                h3.folio-project__title Green Loom
+                                p.folio-project__dek How I clarified a complex retail catalog, its Georgia requirements, and the data behind publication.
+                                span.folio-project__cta Read case study
 
                     .folio-project-pair
                         article.folio-project
-                            .folio-project__media.folio-project__media--fill.folio-project__media--orbit(role="img", aria-label="Orbit project preview placeholder")
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Orbit
                             .folio-project__copy
+                                p.folio-project__status Project preview
                                 h3.folio-project__title Orbit
-                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+                                p.folio-project__dek Exploring ways to make everyday systems easier to understand, navigate, and improve.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Orbit%20project") Ask me about this work
                         article.folio-project
-                            .folio-project__media.folio-project__media--fill.folio-project__media--bite(role="img", aria-label="Bite Club project preview placeholder")
+                            .folio-project__media.folio-project__media--fill
+                                span.folio-project__preview-name Bite Club
                             .folio-project__copy
+                                p.folio-project__status Project preview
                                 h3.folio-project__title Bite Club
-                                p.folio-project__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
+                                p.folio-project__dek Designing simple tools and rituals that help teams make better product decisions.
+                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Bite%20Club%20project") Ask me about this work
 
-            section.folio-experiments(aria-labelledby="experiments-title")
-                .folio-experiments__inner
-                    p.folio-eyebrow experiments
-                    h2.folio-experiments__title#experiments-title Things I’m working on...
-                    p.folio-experiments__dek Object models, design systems, prototypes, and tools I've built to help teams define and ship products.
-
-                    .folio-experiments__scroller
-                        .folio-experiments__row
-                            .folio-exp-card.folio-exp-card--many-hats
-                                img(src="assets/img/folio/experiment-many-hats.png", alt="Many Hats — illustration of a man wearing a stack of hats")
-                            .folio-exp-card.folio-exp-card--designdash
-                                img(src="assets/img/folio/experiment-designdash.png", alt="designdash logo")
-                            .folio-exp-card.folio-exp-card--other
-                                p.folio-exp-card__title Other Stuff
-                                p.folio-exp-card__sub Help teachers manage classroom assignments
+            +folioFooter

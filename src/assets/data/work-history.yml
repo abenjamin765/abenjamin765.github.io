@@ -1,7 +1,18 @@
 experience:
   - title: Senior UX Designer
+    company: Renaissance Learning
+    date_range: July 2024 – Present
+    location: Remote
+    type: Full-time
+    accomplishments:
+      - Led UX strategy and end-to-end design for K-12 classroom experiences across Renaissance Intelligence.
+      - Directed the design and launch of Renaissance Intelligence and contributed reusable patterns to the design system.
+      - Designed AI-assisted teacher experiences and used AI-assisted prototyping to speed up design iteration and testing.
+      - Championed Object-Oriented UX across design and engineering to strengthen shared product models and team alignment.
+
+  - title: Senior UX Designer
     company: Indeed
-    date_range: October 2022 – Present
+    date_range: October 2022 – July 2024
     location: Remote
     type: Full-time
     accomplishments:
@@ -15,7 +26,7 @@ experience:
       - Hosted recurring team events to build morale and strengthen organizational culture.
       - Contributed to a comprehensive service blueprint mapping all internal systems and user touchpoints.
 
-  - title: Senior UX Designer II
+  - title: Senior Product Designer
     company: Redfin
     date_range: February 2022 – September 2022
     location: Remote
@@ -30,35 +41,20 @@ experience:
       - Advised partners on segmenting user needs and motivations to better align business priorities.
       - Influenced roadmap prioritization to drive customer-first feature development.
 
-  - title: Senior UX Designer
-    company: Amazon
-    date_range: October 2020 – January 2022
-    location: Remote
-    type: Full-time
-    accomplishments:
-      - Simplified complex compliance workflows for thousands of employees by defining and executing a UX strategy for intuitive internal tools.
-      - Collaborated with research and strategy teams to improve service design and systems thinking.
-      - Advocated for accessibility, scalability, and design systems within cross-functional teams.
-      - Partnered with legal, finance, and security to design workflows that balanced usability and compliance.
-      - Simplified regulation-heavy processes into intuitive tools for specialized internal users.
-      - Conducted user research and system mapping that directly influenced policy decisions.
-
   - title: Staff UX Designer
     company: The Home Depot
-    date_range: August 2018 – October 2020
+    date_range: October 2018 – February 2022
     location: Atlanta, GA
     type: Full-time
     accomplishments:
-      - Served as lead designer for Home Services applications used by millions of customers annually.
-      - Boosted conversions and reduced cancellations by leading a full redesign of the Home Services e-commerce experience for millions of customers.
-      - Designed tools for contractors, installers, and schedulers to improve coordination and service delivery.
-      - Built dashboards and internal tools that increased visibility and efficiency for field teams.
-      - Partnered with product and engineering to rapidly ship improvements and resolve usability gaps.
-      - Led UX integration efforts across third-party systems to streamline internal workflows.
+      - Designed enterprise tools for merchandising, store systems, and HR with cross-functional product and engineering teams.
+      - Planned and facilitated research to inform product priorities and validate design decisions.
+      - Championed accessibility in associate tools and led workshops for designers, product owners, and engineers.
+      - Helped develop design talent through hiring and mentorship.
 
   - title: Senior Product Designer
     company: Snap! Mobile
-    date_range: January 2017 – October 2018
+    date_range: January 2018 – October 2018
     location: Seattle, WA
     type: Full-time
     accomplishments:
@@ -86,7 +82,7 @@ experience:
 
   - title: UX Lead
     company: HP Inc.
-    date_range: July 2015 – August 2016
+    date_range: September 2015 – August 2016
     location: Alpharetta, GA
     type: Full-time
     accomplishments:
@@ -97,9 +93,9 @@ experience:
       - Streamlined intake and production processes, reducing design delivery time by 45%.
       - Evangelized design system adoption across HP Software, improving cross-product consistency.
 
-  - title: Junior → Senior UX Designer
+  - title: Senior UX Designer
     company: AT&T
-    date_range: August 2011 – July 2015
+    date_range: July 2011 – August 2015
     location: Atlanta, GA
     type: Full-time
     accomplishments:
