@@ -17,7 +17,12 @@ async function main() {
   }
 
   try {
-    const browser = await puppeteer.launch({ headless: true });
+    // GitHub-hosted Linux runners cannot start Chromium's sandbox. The PDF
+    // renderer opens only this build's local résumé page in an ephemeral job.
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: process.env.GITHUB_ACTIONS === "true" ? ["--no-sandbox"] : [],
+    });
     try {
       const page = await browser.newPage();
       const origin = externalOrigin || `http://127.0.0.1:${server.address().port}`;
