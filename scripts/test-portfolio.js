@@ -75,10 +75,10 @@ async function main() {
       assert.equal(await page.$$eval("h1", (nodes) => nodes.length), 1, "Green Loom should have one page heading");
       assert.equal(await page.$$eval(".green-case__figure", (nodes) => nodes.length), 4, "Green Loom should show its model, COA workflow, schema, and mobile catalog exploration");
       assert.equal(await page.$eval(".green-case__hero-media figcaption", (node) => node.textContent.includes("Figma exploration")), true);
-      for (const image of ["green-loom--figma-hero.png", "green-loom--mobile-catalog.png"]) {
+      for (const image of ["green-loom--figma-hero-v2.png", "green-loom--mobile-catalog.png"]) {
         assert.ok(fs.existsSync(path.join(dist, "assets", "img", "folio", "project--green-loom", image)), `Green Loom Figma image missing: ${image}`);
       }
-      assert.ok((await page.$eval(".green-case__hero-media img", (node) => node.getAttribute("src"))).includes("green-loom--figma-hero.png"), "Green Loom should display the corrected Figma hero");
+      assert.ok((await page.$eval(".green-case__hero-media img", (node) => node.getAttribute("src"))).includes("green-loom--figma-hero-v2.png"), "Green Loom should display the updated Figma hero");
       console.log("Green Loom case-study structure passed");
 
       await page.goto(origin + "/classroom-assignment-management.html", { waitUntil: "domcontentloaded", timeout: 60000 });
