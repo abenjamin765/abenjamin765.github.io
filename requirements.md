@@ -129,7 +129,7 @@ These are image files:
 - `project--assignment-management/assignment-management--object-model.png`: the object model figure.
 - `project--assignment-management/demo-icons/*.svg`: demo icons.
 - `project--green-loom/green-loom--mobile-catalog-2x.png`: the mobile catalog exploration (displayed 402×874).
-- `project--a-to-z-first-claim/`: hero, work card, and email figure cropped from the folio deck (product UI only; sample seller/order data).
+- `project--a-to-z-first-claim/`: hero (seller at a laptop showing the Seller Central A-to-z claims list, 1920×1320), work card (claims list beside the first-claim email, 1760×720), and annotated email figure (2220×1826). Sample seller and order data.
 - `project--curbside-pickup/`: hero, work card, ready-for-pickup email, and check-in states cropped from the folio deck. Do not use redacted-analysis or placeholder-journey slides as metric sources.
 - `project--price-adjustments/`: hero, work card, apply-markdown, and update-markdown UI crops. Order Up associate name and store number are cropped out of the header.
 
