@@ -123,8 +123,8 @@ async function main() {
           route: "/a-to-z-first-claim.html",
           title: "←A-to-z First Claim",
           back: "/#a-to-z-first-claim",
-          hero: "a-to-z-first-claim--hero-2x.png",
-          assets: ["a-to-z-first-claim--hero-2x.png", "a-to-z-first-claim--work-card-2x.png", "a-to-z-first-claim--email-2x.png"],
+          hero: "a-to-z-first-claim--hero-2x.jpg",
+          assets: ["a-to-z-first-claim--hero-2x.jpg", "a-to-z-first-claim--work-card-2x.png", "a-to-z-first-claim--email-2x.png"],
           folder: "project--a-to-z-first-claim",
         },
         {

@@ -177,10 +177,11 @@ function compileEleventy(done) {
 
 // Copy and optimize images
 async function copyImages() {
-  const imagemin = (await import("gulp-imagemin")).default;
+  const { default: imagemin, gifsicle, optipng, svgo } = await import("gulp-imagemin");
   await pipeline(
     gulp.src("src/assets/img/**/*", { encoding: false }),
-    imagemin(),
+    // JPEGs are exported at final quality; mozjpeg's default would re-encode them near quality 75.
+    imagemin([gifsicle(), optipng(), svgo()]),
     gulp.dest("dist/assets/img")
   );
 }
