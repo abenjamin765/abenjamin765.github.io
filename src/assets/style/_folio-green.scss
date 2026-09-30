@@ -1,0 +1,420 @@
+/* Green Loom case study. Figma screens show exploration, not a shipped interface. */
+.green-case__hero-media {
+  background: #1f2128;
+}
+
+.green-case__hero-crop {
+  overflow: hidden;
+}
+
+.green-case__hero-art {
+  box-sizing: border-box;
+  min-height: 500px;
+  padding: clamp(28px, 5vw, 60px);
+  color: $ink;
+  background: #edf2eb;
+}
+
+.green-case__hero-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 54px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.green-case__hero-kicker {
+  font-weight: 700;
+}
+
+.green-case__hero-mark {
+  color: #526252;
+}
+
+.green-case__model-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.green-case__model-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 150px;
+  box-sizing: border-box;
+  padding: 24px;
+  border: 1px solid #b9cabb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.green-case__model-node:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  color: #4f6d52;
+  font-size: 21px;
+  text-align: center;
+}
+
+.green-case__model-label {
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.green-case__model-detail {
+  margin-top: 10px;
+  color: #526052;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.green-case__model-support {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.green-case__model-support p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+  padding: 18px 20px;
+  border-top: 2px solid #47714d;
+  color: $ink;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.green-case__model-support p span {
+  color: #526052;
+}
+
+.green-case__source-note {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: $muted !important;
+}
+
+.green-case .folio-case__prose a,
+.green-case__source-note a {
+  color: #285d31;
+  text-decoration: none;
+}
+
+.folio--green-case .folio-hdr__name:hover,
+.folio--green-case .folio-nav__a:hover,
+.folio--green-case .folio-nav__a[aria-current="page"],
+.folio--green-case .folio-case__back,
+.folio--green-case .folio-footer a {
+  text-decoration: none;
+}
+
+.folio--green-case .folio-hdr__name:hover,
+.folio--green-case .folio-nav__a:hover,
+.folio--green-case .folio-case__back:hover {
+  color: #111;
+}
+
+.folio--green-case .folio-nav__a[aria-current="page"] {
+  font-weight: 600;
+}
+
+.folio--green-case .green-case__source-note a:hover,
+.folio--green-case .folio-case__prose a:hover {
+  color: #153f1c;
+  background: #edf4e9;
+}
+
+.green-case__figure {
+  margin-top: 48px;
+}
+
+.green-case__mobile-figure img {
+  width: min(100%, 402px);
+  margin: 0 auto;
+  border: 1px solid #d6d9de;
+  border-radius: 8px;
+}
+
+.green-case__diagram {
+  box-sizing: border-box;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid #c8d5c9;
+  border-radius: 8px;
+  background: #f4f7f2;
+}
+
+.green-case__diagram-title {
+  margin: 0 0 24px !important;
+  color: #285d31 !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.35 !important;
+}
+
+.green-case__steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.green-case__steps li {
+  min-width: 0;
+  min-height: 118px;
+  box-sizing: border-box;
+  padding: 15px;
+  border-top: 3px solid #47714d;
+  background: #fff;
+}
+
+.green-case__steps strong,
+.green-case__steps span {
+  display: block;
+}
+
+.green-case__steps strong {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.green-case__steps span {
+  margin-top: 8px;
+  color: #526052;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.green-case__diagram-note {
+  margin: 22px 0 0 !important;
+  color: #3f5542 !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+.green-case__diagram--schema {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 16px;
+  border: 0;
+  border-radius: 0;
+}
+
+.green-case__schema-core,
+.green-case__schema-profile {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 24px;
+  background: #fff;
+}
+
+.green-case__schema-core ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.green-case__schema-core li {
+  padding: 8px 10px;
+  background: #f4f7f2;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.green-case__schema-profile {
+  border: 0;
+}
+
+.green-case__schema-profile p:not(.green-case__diagram-title) {
+  margin: 0;
+  color: $ink;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.green-case__schema-rule {
+  display: block;
+  margin-top: 24px;
+  color: #526052;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .green-case__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .green-case__hero-art {
+    min-height: 0;
+  }
+
+  .green-case__hero-head {
+    margin-bottom: 26px;
+  }
+
+  .green-case__model-path,
+  .green-case__model-support,
+  .green-case__diagram--schema {
+    grid-template-columns: 1fr;
+  }
+
+  .green-case__model-path {
+    gap: 20px;
+  }
+
+  .green-case__model-node {
+    min-height: 104px;
+  }
+
+  .green-case__model-node:not(:last-child)::after {
+    content: "↓";
+    top: calc(100% + 1px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .green-case__model-support {
+    gap: 0;
+    margin-top: 26px;
+  }
+
+  .green-case__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .green-case__steps li {
+    min-height: 0;
+  }
+}
+
+/* Placeholder figure. The img stays hidden until its onload adds .is-loaded,
+   so a missing file never covers the spec. No overflow clipping, so aspect-ratio
+   acts as a minimum and the frame grows when the spec text is taller than 960×660. */
+.folio-case__placeholder-frame {
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  aspect-ratio: 960 / 660;
+  border: 2px dashed #9fb3a2;
+  border-radius: 8px;
+  background: #f4f7f2;
+}
+
+.folio-case__placeholder .folio-case__placeholder-img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  color: transparent;
+  font-size: 0;
+  visibility: hidden;
+}
+
+.folio-case__placeholder .folio-case__placeholder-img.is-loaded {
+  visibility: visible;
+}
+
+.folio-case__placeholder .folio-case__placeholder-img.is-missing {
+  display: none;
+}
+
+.folio-case__placeholder-meta {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+  box-sizing: border-box;
+  padding: clamp(28px, 6vw, 64px);
+}
+
+.folio-case__placeholder-desc {
+  margin: 0;
+  color: $ink;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.folio-case__placeholder-desc::before {
+  content: "Image to export";
+  display: block;
+  margin-bottom: 8px;
+  color: #285d31;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.folio-case__placeholder-dims {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0;
+  color: #3f5542;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.folio-case__placeholder-file {
+  margin: 0;
+  color: $muted;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.folio-case__hero-media .folio-case__placeholder {
+  margin-top: 0;
+}
+
+.folio-case__hero-media .folio-case__placeholder-frame,
+.folio-case__hero-media .folio-case__placeholder .folio-case__placeholder-img {
+  border-radius: 0;
+}
+
+/* Certificate timeline. Steps 2 and 3 are the expired certificate and the
+   stopped listing; the note is the product record that persists across them. */
+.green-case__diagram--timeline .green-case__steps li:nth-child(2),
+.green-case__diagram--timeline .green-case__steps li:nth-child(3) {
+  border-top-color: #a4472c;
+}
+
+.green-case__diagram--timeline .green-case__diagram-note {
+  padding: 14px 18px;
+  border-left: 4px solid #47714d;
+  background: #fff;
+  color: $ink !important;
+  font-weight: 600;
+}

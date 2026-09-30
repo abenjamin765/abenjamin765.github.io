@@ -1,0 +1,55 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('Turning a seller’s first A-to-z claim into a learning moment | Aaron Benjamin', 'I redesigned the Amazon Seller Central first-claim email so a punitive A-to-z notice could teach sellers how to avoid the next claim.', '/a-to-z-first-claim.html', 'folio', '/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--hero-2x.png')
+    body.folio.folio--case
+        +folioShell
+
+        +folioHeader('work', 'A-to-z First Claim', '/#a-to-z-first-claim')
+
+        main#main.folio-main.folio-main--case
+            article.folio-case
+                header.folio-case__hero
+                    figure.folio-case__hero-media
+                        img(src="/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--hero-2x.png", alt="Amazon Marketplace first-claim email showing claim details, Order Defect Rate explanation, first-claim coverage, and tips to avoid future claims", width="1920" height="1320" fetchpriority="high")
+                    .folio-case__intro
+                        p.folio-eyebrow Case study
+                        h1 Turning a seller’s first A-to-z claim into a learning moment
+                        p.folio-case__dek When a third-party order goes wrong, the seller’s first A-to-z email often felt like a penalty. I redesigned that notification so it could teach.
+                    +caseFacts
+                        .folio-case__fact
+                            dt Role
+                            dd UX Designer, Amazon Seller Central
+                        .folio-case__fact
+                            dt Scope
+                            dd First-claim email experience and partner alignment on tenets
+                        .folio-case__fact
+                            dt Key decision
+                            dd Treat the first claim as a covered learning event, not only a defect
+                        .folio-case__fact
+                            dt Outcome
+                            dd Sixty-day U.S. results reported higher seller confidence, lower A-to-z call volume, and more seller-initiated refunds (deck-stated, unverified)
+
+                +caseSection({labelledby: "atoz-support-title"})
+                    h2#atoz-support-title Support contacts showed what sellers did not understand
+                    p When a customer’s order from a third-party seller goes wrong and the seller does not respond in time, Amazon steps in. The customer gets a refund. The seller gets an A-to-z claim, a hit to Order Defect Rate, and an email that often felt like discipline.
+                    p I reviewed a sample of 250 Seller Support contacts tied to A-to-z. Appeals, disputes, and status questions made up large shares of the volume, and many of those contacts were marked preventable on the analysis. Sellers were not only unhappy—they were stuck.
+
+                +caseSection({labelledby: "atoz-map-title", tint: true})
+                    h2#atoz-map-title Mapping and interviews made the gap concrete
+                    p I worked with stakeholders and domain experts to map how messaging, eligibility, disputes, and appeals connected. Seller interviews added the human version: people felt helpless, could not see what to do next in the communications they received, cared deeply about ODR, and doubted they could avoid the next claim.
+                    p Before we redesigned anything, I aligned partners on three tenets: the first claim is a learning opportunity; notifications should inform rather than discipline; avoiding future claims helps the customer and the seller.
+
+                +caseSection({labelledby: "atoz-email-title", prose: false})
+                    .folio-case__prose
+                        h2#atoz-email-title The first-claim email had to explain, cover, and coach
+                        p The pivotal decision was to treat the first claim as a covered learning event. The email led with claim details, explained what an A-to-z claim is and how ODR works, stated that Amazon would cover the customer refund on the first claim, and listed concrete practices for avoiding another one. The stakes stayed visible. The tone changed.
+                        p I designed that notification. Shipping it and funding first-claim coverage were team and program moves; I do not claim them as solo outcomes.
+                    +caseFigure({labelledby: "atoz-email-caption", src: "/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--email-2x.png", alt: "Full first-claim email mock with claim summary, first-claim coverage callout, and avoidance tips", width: "1200", height: "2200", loading: "lazy", caption: "Redesigned first-claim email: claim specifics up front, ODR explained, first claim covered, and a short list of behaviors that prevent the next failure. Sample seller and order data.", captionId: "atoz-email-caption"})
+
+                +caseOutcome("atoz-outcome-title", "Sixty days in the U.S.")
+                    p Sixty days after the update was live in the U.S., the deck reports that 88% of sellers who opened the email said they were confident or very confident they could avoid future claims, A-to-z-related call volume fell 14% (+2% week over week), and seller-initiated refunds trended toward a 30% year-over-year increase. Those figures are stated on the results slide and remain unverified in my career record.
+                    p My takeaway: when the company is willing to absorb a first failure, the notification should spend that goodwill on specifics and a short path to better behavior—not on softer adjectives.
+
+            +folioFooter(true, 'A high-stakes notification earns its place when it teaches the next action, not when it only softens the tone.', {href: '/curbside-pickup.html', label: 'Next case: Curbside Pickup'})

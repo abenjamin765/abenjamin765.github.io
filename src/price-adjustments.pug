@@ -1,0 +1,52 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('Giving associates a real markdown path in Order Up | Aaron Benjamin', 'I designed Home Depot Order Up price adjustments so store associates could apply a markdown without losing cart context or the approval rules the business required.', '/price-adjustments.html', 'folio', '/assets/img/folio/project--price-adjustments/price-adjustments--hero-2x.png')
+    body.folio.folio--case
+        +folioShell
+
+        +folioHeader('work', 'Price Adjustments', '/#price-adjustments')
+
+        main#main.folio-main.folio-main--case
+            article.folio-case
+                header.folio-case__hero
+                    figure.folio-case__hero-media
+                        img(src="/assets/img/folio/project--price-adjustments/price-adjustments--hero-2x.png", alt="Order Up shopping cart with an Apply markdown fly-out for a damaged-item discount", width="1920" height="1320" fetchpriority="high")
+                    .folio-case__intro
+                        p.folio-eyebrow Case study
+                        h1 Giving associates a real markdown path in Order Up
+                        p.folio-case__dek Stores had workarounds for competitor matches and damaged-item discounts. I put markdowns in the cart associates already used.
+                    +caseFacts
+                        .folio-case__fact
+                            dt Role
+                            dd Staff UX Designer, The Home Depot
+                        .folio-case__fact
+                            dt Scope
+                            dd Order Up markdown interaction, discovery across 12 stores, usability
+                        .folio-case__fact
+                            dt Key decision
+                            dd Keep cart context visible with a fly-out markdown pattern
+                        .folio-case__fact
+                            dt Outcome
+                            dd Piloted in 50 stores, then rolled out chain-wide; impact trends directional only
+
+                +caseSection({labelledby: "pa-stores-title"})
+                    h2#pa-stores-title Twelve stores made the workarounds impossible to ignore
+                    p When a customer asked for a competitor match or a discount on a damaged item, associates still had to finish the sale in Order Up. Many stores had invented workarounds that burned time and still fought the reason codes in the system.
+                    p Observation and interviews across 12 stores showed a consistent pattern: managers trusted associates to make good calls, but each building had its own path to apply an adjustment, those paths lengthened transaction time, and the official reason codes did not match the situations on the floor.
+                    p Operations partners added the hard rules. Adjustments over $50 still needed manager approval. Each store had a satisfaction budget. An order-level markdown had to allocate across SKUs. Transaction time was a metric the business watched.
+
+                +caseSection({labelledby: "pa-usability-title", tint: true, prose: false})
+                    .folio-case__prose
+                        h2#pa-usability-title Usability picked the pattern; language picked “Markdown”
+                        p I iterated item-level and order-level markdown UI, then tested task completion, transaction time, and a short SUS questionnaire. Associates needed the order visible while they worked, juggled multiple apps, preferred “Markdown” to “adjustment,” and had to explain the math to the customer.
+                        p The fly-out concept won on task completion and perceived usability, so I kept iterating that direction and designed components to apply, update, and remove adjustments with an order summary that showed the discount. Discounts that required approval stayed explicit in the flow.
+                    +caseFigure({labelledby: "pa-apply-caption", src: "/assets/img/folio/project--price-adjustments/price-adjustments--apply-ui-2x.png", alt: "Apply markdown fly-out with reason Damaged, dollar amount, and quantity, beside the order summary", width: "1600", height: "1105", loading: "lazy", caption: "Apply markdown keeps the cart in view while the associate sets reason, amount, and quantity.", captionId: "pa-apply-caption"})
+                    +caseFigure({labelledby: "pa-update-caption", src: "/assets/img/folio/project--price-adjustments/price-adjustments--update-ui-2x.png", alt: "Update markdown fly-out and a cart row showing a struck-through price with a damaged discount line", width: "1600", height: "1105", loading: "lazy", caption: "Update and remove paths, plus cart treatment that shows the discount math to the associate and the customer.", captionId: "pa-update-caption"})
+
+                +caseOutcome("pa-outcome-title", "Shipped widely; impact stays directional")
+                    p The markdown feature was tested in a 50-store pilot and rolled out to all Home Depot stores. At 30, 60, and 90 days after launch, the deck reports that transaction times decreased, associates felt more empowered, shrink decreased, and SOP adoption for price adjustments increased. Those statements are directional only. I do not have magnitudes to quote, and I will not invent them.
+                    p My takeaway: in associate tools, the winning design is often the one that preserves context and speaks the floor’s language while still enforcing the approval rule the business cannot waive.
+
+            +folioFooter(true, 'The floor already had a workaround. The product needed a markdown path that kept the cart—and the rules—in view.', {href: '/classroom-assignment-management.html', label: 'Next case: Classroom Assignment Management'})

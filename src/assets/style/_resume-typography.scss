@@ -4,10 +4,11 @@ body.folio--resume {
   line-height: 1.5;
 }
 
-body.folio--resume a {
+body.folio--resume a,
+body.folio--resume a:hover,
+body.folio--resume a:focus-visible {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 
 body.folio--resume a:focus-visible {
@@ -22,5 +23,5 @@ body.folio--resume a:focus-visible {
 
 .folio--resume .folio-nav__a:hover,
 .folio--resume .folio-nav__a[aria-current="page"] {
-  text-decoration: underline;
+  text-decoration: none;
 }

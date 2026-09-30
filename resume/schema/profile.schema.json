@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aaronbenjamin.design/resume/schema/profile.schema.json",
+  "title": "Résumé Profile",
+  "description": "Selection and presentation for one résumé variant. A profile references the canonical career record by id only. It must NOT introduce new employers, new metrics, or free-form replacement bullet text; every displayed string is chosen from the canonical document via ids.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "label", "reader", "allow_unverified"],
+  "properties": {
+    "id": { "$ref": "#/$defs/slug" },
+    "label": {
+      "type": "string",
+      "description": "Human-readable name for this profile (e.g. 'AI Product Design Lead — public')."
+    },
+    "target_role": { "type": "string" },
+    "target_company": { "type": "string" },
+    "seniority": { "type": "string" },
+    "industry": { "type": "string" },
+    "length_budget": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Maximum number of claim bullets to render across the whole résumé (a bullet cap, not a page count). Role and skill selection should respect this ceiling."
+    },
+    "emphasis": {
+      "type": "array",
+      "description": "Emphasis tags this profile prioritizes; matched against claim.emphasis in the canonical record.",
+      "items": { "type": "string" }
+    },
+    "headline_id": {
+      "$ref": "#/$defs/slug",
+      "description": "Id of an entry in identity.headline_variants[] to render as the headline."
+    },
+    "summary_id": {
+      "$ref": "#/$defs/slug",
+      "description": "Id of an entry in identity.summary_variants[] to render as the personal summary."
+    },
+    "email_id": {
+      "$ref": "#/$defs/slug",
+      "description": "Id of an entry in identity.emails[] to render as the contact email."
+    },
+    "phone_id": {
+      "$ref": "#/$defs/slug",
+      "description": "Id of an entry in identity.phones[] to render as the contact phone."
+    },
+    "location_id": {
+      "$ref": "#/$defs/slug",
+      "description": "Id of an entry in identity.locations[] to render as the location."
+    },
+    "reader": {
+      "type": "string",
+      "enum": ["human", "ats"]
+    },
+    "allow_unverified": {
+      "type": "boolean",
+      "description": "When false, export must exclude any claim whose status is not 'verified'. The public profile sets this to false.",
+      "default": false
+    },
+    "roles": {
+      "type": "array",
+      "description": "Included roles in display order. Only role_ids and claim_ids/variant_ids that exist in the canonical record are valid.",
+      "items": { "$ref": "#/$defs/roleSelection" }
+    },
+    "required_role_ids": {
+      "type": "array",
+      "description": "Role ids that MUST be present in the export; the builder fails if any is missing from the canonical record or from roles[].",
+      "items": { "$ref": "#/$defs/slug" }
+    },
+    "skill_priority": {
+      "type": "array",
+      "description": "Ordered list of skill names or ids to surface first. References existing skills only.",
+      "items": { "type": "string" }
+    },
+    "tone": {
+      "type": "string",
+      "description": "Guidance string for voice/wording selection (e.g. 'confident, concise, outcome-first')."
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "claimSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id"],
+      "properties": {
+        "claim_id": {
+          "$ref": "#/$defs/slug",
+          "description": "Id of a claim that exists on the referenced role in the canonical record."
+        },
+        "variant_id": {
+          "$ref": "#/$defs/slug",
+          "description": "Id of an approved wording variant to use instead of the canonical claim text. Must exist on the claim; no free-form text is allowed here."
+        }
+      }
+    },
+    "roleSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role_id"],
+      "properties": {
+        "role_id": {
+          "$ref": "#/$defs/slug",
+          "description": "Id of a role in the canonical record."
+        },
+        "title_variant_id": {
+          "$ref": "#/$defs/slug",
+          "description": "Optional approved title variant id to display for this role."
+        },
+        "summary_level": {
+          "type": "string",
+          "enum": ["one_line", "short", "long"],
+          "description": "Which role summary to render, if any."
+        },
+        "claims": {
+          "type": "array",
+          "description": "Claims to include for this role, in display order. Each references an existing claim id and optional approved variant id.",
+          "items": { "$ref": "#/$defs/claimSelection" }
+        }
+      }
+    }
+  }
+}

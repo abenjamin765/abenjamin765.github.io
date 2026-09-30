@@ -1,0 +1,146 @@
+body.folio a:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 4px;
+  text-decoration: none;
+}
+
+/* ——— Responsive ——— */
+
+@media (max-width: 900px) {
+  .folio-hdr {
+    padding-left: clamp(16px, 4vw, $pad);
+    padding-right: clamp(16px, 4vw, $pad);
+  }
+
+  .folio-main {
+    padding: 0 clamp(16px, 4vw, $pad);
+  }
+
+  .folio-hero__inner {
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+
+  .folio-hero__media img {
+    object-position: bottom;
+  }
+
+  .folio-hero__copy {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 0;
+  }
+
+  .folio-claims__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .folio-project-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-case__section,
+  .folio-case__callout,
+  .folio-case__outcome {
+    padding-right: clamp(16px, 4vw, $pad);
+    padding-left: clamp(16px, 4vw, $pad);
+  }
+
+  .folio-case__intro,
+  .folio-case__facts {
+    width: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 560px) {
+  .folio-hdr__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .folio-nav {
+    gap: 16px;
+  }
+
+  .folio-hero__inner {
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+
+  .folio-hero__media {
+    flex-basis: 185px;
+    width: 185px;
+    height: 195px;
+  }
+
+  .folio-project__title {
+    font-size: 30px;
+  }
+
+  .folio-project__dek {
+    font-size: 20px;
+  }
+
+  .folio-claims__inner,
+  .folio-work__inner {
+    padding: 24px 16px;
+  }
+
+  .folio-footer {
+    padding: 32px 24px;
+  }
+
+  .folio-project__link {
+    gap: 24px;
+  }
+
+  .folio-case__section,
+  .folio-case__callout,
+  .folio-case__outcome {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .folio-case__hero {
+    padding-bottom: 48px;
+  }
+
+  .folio-case__intro,
+  .folio-case__facts {
+    width: calc(100% - 32px);
+  }
+
+  .folio-case__intro {
+    margin-top: 40px;
+  }
+
+  .folio-case__facts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+    padding-top: 24px;
+  }
+
+  .folio-case__prose p,
+  .folio-case__callout p,
+  .folio-case__outcome p {
+    font-size: 17px;
+  }
+
+  .folio-case__figure {
+    margin-top: 32px;
+  }
+
+  .folio-case__footer {
+    padding: 32px 24px;
+  }
+}

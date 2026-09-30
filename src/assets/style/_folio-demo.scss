@@ -1,0 +1,350 @@
+/* ——— Interactive assignments demo (Classroom case) ——— */
+
+.folio-demo {
+  max-width: 800px;
+  margin: 48px auto 0;
+  color: #333;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.folio-demo__note {
+  max-width: 640px;
+  margin: 0 0 16px;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  color: #53606c !important;
+}
+
+.folio-demo__canvas {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 24px 16px;
+  background: #fff;
+}
+
+.folio-demo__group {
+  margin: 0;
+}
+
+.folio-demo__group.folio-demo__disclosure--animating {
+  transition: height 240ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__group.folio-demo__disclosure--animating.folio-demo__disclosure--closing {
+  transition-delay: 60ms;
+}
+
+.folio-demo__group + .folio-demo__group {
+  margin-top: 32px;
+}
+
+.folio-demo__group-summary,
+.folio-demo__assignment-summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.folio-demo__group-summary::-webkit-details-marker,
+.folio-demo__assignment-summary::-webkit-details-marker {
+  display: none;
+}
+
+.folio-demo__group-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  color: #666;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.folio-demo__angle {
+  display: block;
+  flex: 0 0 auto;
+  transform: rotate(-90deg);
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__group[open] > .folio-demo__group-summary .folio-demo__angle {
+  transform: rotate(0deg);
+}
+
+.folio-demo__group-content {
+  margin-top: 24px;
+}
+
+.folio-demo__assignment {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+  background: #fff;
+  transition: box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), border-radius 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__assignment + .folio-demo__assignment {
+  margin-top: 8px;
+}
+
+.folio-demo__assignment[open] {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+.folio-demo__assignment.folio-demo__disclosure--animating {
+  transition:
+    height 240ms cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    border-radius 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__assignment.folio-demo__disclosure--animating.folio-demo__disclosure--closing {
+  transition-delay: 60ms, 0ms, 0ms;
+}
+
+.folio-demo__assignment-summary {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  padding: 16px;
+  transition: background-color 160ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .folio-demo__assignment-summary:hover {
+    background: #fafafa;
+  }
+}
+
+.folio-demo__assignment-main {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.folio-demo__icon-tile {
+  display: flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.folio-demo__icon-tile {
+  background: #eee;
+}
+
+.folio-demo__icon-tile img {
+  filter: brightness(0);
+  opacity: 0.78;
+}
+
+.folio-demo__assignment[open] .folio-demo__icon-tile {
+  background: rgba(20, 110, 179, 0.08);
+}
+
+.folio-demo__assignment[open] .folio-demo__icon-tile img {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(41%) saturate(1160%) hue-rotate(164deg) brightness(88%) contrast(88%);
+  opacity: 1;
+}
+
+.folio-demo__assignment-body {
+  min-width: 0;
+}
+
+.folio-demo__assignment-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.folio-demo__ellipsis,
+.folio-demo__lock {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.folio-demo__assignment-title,
+.folio-demo__assignment-meta,
+.folio-demo__due {
+  margin: 0;
+  color: #333 !important;
+}
+
+.folio-demo__assignment-title {
+  display: block;
+  overflow: hidden;
+  font-size: 16px !important;
+  font-weight: 700;
+  line-height: 1.4 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.folio-demo__assignment-meta {
+  display: block;
+  margin-top: 0;
+  color: #666 !important;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.4 !important;
+}
+
+.folio-demo__due {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #666 !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1 !important;
+  white-space: nowrap;
+}
+
+.folio-demo__student-progress {
+  padding: 8px 16px 16px;
+}
+
+.folio-demo__table-wrap {
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.folio-demo__table-wrap:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 3px;
+}
+
+.folio-demo__table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.folio-demo__table th,
+.folio-demo__table td {
+  padding: 8px 16px;
+  border-top: 1px solid #eee;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.folio-demo__table thead th {
+  border-top: 0;
+  background: #f4f4f4;
+  color: #666;
+  font-weight: 700;
+}
+
+.folio-demo__table th:first-child {
+  width: 140px;
+}
+
+.folio-demo__table th:last-child,
+.folio-demo__table td:last-child {
+  width: 130px;
+  text-align: right;
+}
+
+.folio-demo__table tbody th,
+.folio-demo__table tbody td {
+  font-weight: 500;
+}
+
+.folio-demo__table-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folio-demo__table-heading--score {
+  justify-content: flex-end;
+}
+
+.folio-demo__sort-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: inherit;
+}
+
+.folio-demo__sort-button:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 3px;
+}
+
+.folio-demo__status {
+  font-weight: 500;
+}
+
+.folio-demo__status--not-started {
+  color: #cf3a4e;
+}
+
+.folio-demo__status--in-progress {
+  color: #666;
+  font-style: italic;
+}
+
+.folio-demo__group-summary:focus-visible,
+.folio-demo__assignment-summary:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .folio-demo__angle {
+    transition: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .folio-demo {
+    margin-top: 32px;
+  }
+
+  .folio-demo__canvas {
+    padding: 24px 0;
+  }
+
+  .folio-demo__assignment,
+  .folio-demo__assignment-summary {
+    gap: 12px;
+  }
+
+  .folio-demo__assignment-actions {
+    gap: 8px;
+  }
+
+  .folio-demo__icon-tile {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    transform: scale(0.82);
+    transform-origin: left center;
+  }
+
+  .folio-demo__assignment-title {
+    white-space: normal;
+  }
+}

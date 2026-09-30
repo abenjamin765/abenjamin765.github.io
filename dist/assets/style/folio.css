@@ -97,15 +97,11 @@ body.folio {
   -webkit-font-smoothing: antialiased;
 }
 
-body.folio a {
-  color: inherit;
-  text-decoration: none;
-}
-
+body.folio a,
 body.folio a:hover,
 body.folio a:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Folio landing — matches Figma frame 4:65 (960px column in 1280 frame). */
@@ -178,8 +174,23 @@ body.folio {
   text-decoration: none;
 }
 
+.folio-hdr__name--project {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.folio-hdr__back-icon {
+  display: inline-block;
+  flex: none;
+  color: #666;
+  font-size: 20px;
+  line-height: 16px;
+}
+
 a.folio-hdr__name:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .folio-nav {
@@ -198,8 +209,7 @@ a.folio-hdr__name:hover {
 
 a.folio-nav__a:hover,
 .folio-nav__a[aria-current=page] {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
 
 .folio-nav__a--muted {
@@ -221,22 +231,25 @@ a.folio-nav__a:hover,
 
 .folio-hero__inner {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 40px;
-  padding: 80px 0 0;
-  max-width: 627px;
-  margin: 0 auto;
+  padding: 80px 40px 0;
+  box-sizing: border-box;
   min-height: 250px;
-  box-sizing: content-box;
 }
 
 .folio-hero__copy {
-  flex: 0 1 349px;
+  container-type: inline-size;
+  align-self: flex-start;
+  flex: 1 1 auto;
+  max-width: 600px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
   align-items: flex-start;
+  padding-bottom: 48px;
 }
 
 .folio-hero__text {
@@ -254,15 +267,83 @@ a.folio-nav__a:hover,
   line-height: normal;
 }
 
+.folio-hero__kicker {
+  display: block;
+  color: #666;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: clamp(12px, 4.55cqi, 24px);
+}
+
+.folio-hero__mark {
+  display: block;
+  margin-top: 0;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  font-size: clamp(13px, 5.35cqi, 38px);
+}
+
+.folio-hero__rotator {
+  display: inline-block;
+  position: relative;
+  height: 1.5em;
+  overflow: hidden;
+  vertical-align: bottom;
+  color: #f18309;
+  transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.folio-hero__word {
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #f18309;
+}
+
+.folio-hero__word:not(:first-child) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.folio-hero--motion .folio-hero__word {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(0.55em);
+  transition: opacity 0.4s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.folio-hero--motion .folio-hero__word.is-current {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.folio-hero--motion .folio-hero__word.is-leaving {
+  opacity: 0;
+  transform: translateY(-0.55em);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .folio-hero__rotator {
+    transition: none;
+  }
+  .folio-hero--motion .folio-hero__word {
+    transition: none;
+  }
+}
 .folio-hero__kicker,
 .folio-hero__mark {
   display: block;
 }
 
 .folio-hero__mark {
-  font-size: 38px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.5;
 }
 
 .folio-hero__mark strong {
@@ -276,10 +357,10 @@ a.folio-nav__a:hover,
 
 .folio-hero__dek {
   margin: 0;
-  font-size: 15px;
+  font-size: clamp(13px, 2.5cqi, 15px);
   line-height: 1.5;
-  color: #666;
-  max-width: 349px;
+  color: #333;
+  max-width: 100%;
 }
 
 .folio-btn {
@@ -411,8 +492,7 @@ a.folio-nav__a:hover,
 
 .folio-project__link:hover .folio-project__title,
 .folio-project__link:focus-visible .folio-project__title {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+  text-decoration: none;
 }
 
 .folio-project__copy {
@@ -481,8 +561,7 @@ a.folio-nav__a:hover,
   line-height: 1.5;
   color: #333;
   width: fit-content;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 
 .folio-footer {
@@ -506,8 +585,7 @@ a.folio-nav__a:hover,
 .folio-footer a {
   font-size: 15px;
   font-weight: 700;
-  text-decoration: underline !important;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 
 .folio-project-pair {
@@ -516,91 +594,139 @@ a.folio-nav__a:hover,
   gap: 40px;
 }
 
-/* ——— Experiments ——— */
-.folio-experiments {
-  background: linear-gradient(269deg, #fff 0%, #fafafa 100%);
-  padding-bottom: 40px;
-}
-
-.folio-experiments__inner {
-  padding: 40px 40px 0;
-}
-
-.folio-experiments__title {
-  margin: 40px 0 10px;
-  font-size: 38px;
-  font-weight: 700;
+/* ——— Homepage: "Also shipped at" line and How I work note ——— */
+.folio-work__also {
+  margin: 0;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 17px;
   line-height: 1.5;
-  color: #333;
+  color: #444;
 }
 
-.folio-experiments__dek {
-  margin: 0 0 40px;
+.folio-work__also a {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+
+.folio-claims__note {
+  grid-column: 1/-1;
+  max-width: 40em;
+  margin: 0;
   font-size: 24px;
   line-height: 1.5;
   color: #444;
 }
 
-.folio-experiments__scroller {
-  /* Cancel the inner padding so the scrollport spans the section. */
-  margin-right: -40px;
-  margin-left: -40px;
-  padding-right: 40px;
-  padding-left: 40px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+@media (max-width: 560px) {
+  .folio-claims__note {
+    font-size: 20px;
+  }
 }
-
-.folio-experiments__row {
+/* ——— Homepage card image placeholder ——— */
+/* aspect-ratio keeps the 880×360 slot. It only grows to fit the spec on narrow screens when overflow is visible. */
+.folio-project__placeholder {
+  position: relative;
   display: flex;
-  gap: 24px;
-  width: max-content;
-  padding-bottom: 12px;
+  align-items: flex-end;
+  aspect-ratio: 880/360;
+  overflow: visible;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #ededeb;
+  outline: 2px dashed rgba(0, 0, 0, 0.2);
+  outline-offset: -12px;
 }
 
-.folio-exp-card {
-  flex: 0 0 390px;
-  width: 390px;
-  height: 240px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.folio-exp-card img {
-  display: block;
+/* A loaded file covers the spec; a missing file stays transparent so the spec remains readable. */
+.folio-project__placeholder-img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
   object-fit: cover;
+  color: transparent;
+  font-size: 0;
 }
 
-.folio-exp-card--other {
-  background: #5c8efa;
+.folio-project__placeholder-meta {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 2px;
-  padding: 24px;
-  color: #fff;
-  box-sizing: border-box;
-}
-
-.folio-exp-card__title {
-  margin: 0;
-  font-size: 38px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.folio-exp-card__sub {
-  margin: 0;
+  gap: 8px;
+  max-width: 560px;
+  padding: 12px;
+  color: #444;
   font-size: 15px;
   line-height: 1.5;
 }
 
-/* ——— Classroom assignment management case study ——— */
+.folio-project__placeholder-meta p {
+  margin: 0;
+}
+
+.folio-project__placeholder-label {
+  color: #666;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.folio-project__placeholder-dims {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.folio-project__placeholder-file {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* ——— Footer close ——— */
+.folio-footer {
+  align-items: center;
+  gap: 24px 40px;
+}
+
+.folio-footer__body {
+  display: flex;
+  flex: 1 1 320px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px 24px;
+  min-width: 0;
+}
+
+.folio-footer__lead {
+  max-width: 36em;
+  line-height: 1.35;
+}
+
+.folio-footer__portrait {
+  display: block;
+  flex: 0 0 140px;
+  width: 140px;
+  height: auto;
+}
+
+@media (max-width: 560px) {
+  .folio-footer__portrait {
+    flex-basis: 112px;
+    width: 112px;
+  }
+  .folio-footer__lead {
+    font-size: 20px;
+  }
+}
+/* ——— Case study shell (Classroom + Green Loom) ——— */
 .folio-main--case {
   background: #fff;
 }
@@ -672,8 +798,7 @@ a.folio-nav__a:hover,
 .folio-case__context a,
 .folio-case__back {
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 
 .folio-case__facts {
@@ -756,6 +881,111 @@ a.folio-nav__a:hover,
   background: #fff;
 }
 
+.folio-case__callout {
+  margin: 0;
+  padding: 80px 40px;
+  background: #333;
+}
+
+.folio-case__callout-inner,
+.folio-case__outcome-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.folio-case__callout h2,
+.folio-case__callout p {
+  color: #fff;
+}
+
+.folio-case__callout .folio-eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.folio-case__outcome {
+  padding: 80px 40px;
+  background: #f8b731;
+}
+
+.folio-case__footer {
+  padding: 40px;
+  background: #fff;
+}
+
+.folio-case__back {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+/* ——— Annotated screenshot pair ——— */
+.folio-case__frame-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.folio-case__frame-shot {
+  min-width: 0;
+}
+
+.folio-case__frame-callouts {
+  max-width: 640px;
+  margin: 32px auto 0;
+  padding: 0 0 0 24px;
+  list-style: decimal;
+}
+
+.folio-case__frame-callout {
+  padding-left: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.folio-case__frame-callout + .folio-case__frame-callout {
+  margin-top: 12px;
+}
+
+.folio-case__frame-callout::marker {
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .folio-case__frame-pair {
+    grid-template-columns: 1fr;
+  }
+}
+/* ——— Pull quote (dark callout) ——— */
+.folio-case__quote {
+  margin: 0;
+}
+
+.folio-case__callout .folio-case__quote p {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.folio-case__quote-cite {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ——— Outcome tint ——— */
+/* The page background is #f8b731, so the outcome needs its own gold or the column reads as a gap. */
+.folio-case__outcome {
+  background: #fdefc8;
+  border-top: 6px solid #f8b731;
+}
+
+/* ——— Interactive assignments demo (Classroom case) ——— */
 .folio-demo {
   max-width: 800px;
   margin: 48px auto 0;
@@ -1094,44 +1324,6 @@ a.folio-nav__a:hover,
     white-space: normal;
   }
 }
-.folio-case__callout {
-  margin: 0;
-  padding: 80px 40px;
-  background: #333;
-}
-
-.folio-case__callout-inner,
-.folio-case__outcome-inner {
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.folio-case__callout h2,
-.folio-case__callout p {
-  color: #fff;
-}
-
-.folio-case__callout .folio-eyebrow {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.folio-case__outcome {
-  padding: 80px 40px;
-  background: #f8b731;
-}
-
-.folio-case__footer {
-  padding: 40px;
-  background: #fff;
-}
-
-.folio-case__back {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-  font-size: 15px;
-}
-
 /* Green Loom case study. Figma screens show exploration, not a shipped interface. */
 .green-case__hero-media {
   background: #1f2128;
@@ -1240,14 +1432,6 @@ a.folio-nav__a:hover,
   color: #526052;
 }
 
-.green-case__hero-media figcaption {
-  padding: 14px clamp(24px, 5vw, 60px) 18px;
-  background: #fff;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
 .green-case__source-note {
   font-size: 14px !important;
   line-height: 1.5 !important;
@@ -1257,8 +1441,31 @@ a.folio-nav__a:hover,
 .green-case .folio-case__prose a,
 .green-case__source-note a {
   color: #285d31;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+}
+
+.folio--green-case .folio-hdr__name:hover,
+.folio--green-case .folio-nav__a:hover,
+.folio--green-case .folio-nav__a[aria-current=page],
+.folio--green-case .folio-case__back,
+.folio--green-case .folio-footer a {
+  text-decoration: none;
+}
+
+.folio--green-case .folio-hdr__name:hover,
+.folio--green-case .folio-nav__a:hover,
+.folio--green-case .folio-case__back:hover {
+  color: #111;
+}
+
+.folio--green-case .folio-nav__a[aria-current=page] {
+  font-weight: 600;
+}
+
+.folio--green-case .green-case__source-note a:hover,
+.folio--green-case .folio-case__prose a:hover {
+  color: #153f1c;
+  background: #edf4e9;
 }
 
 .green-case__figure {
@@ -1335,6 +1542,8 @@ a.folio-nav__a:hover,
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: 16px;
+  border: 0;
+  border-radius: 0;
 }
 
 .green-case__schema-core,
@@ -1342,7 +1551,6 @@ a.folio-nav__a:hover,
   min-width: 0;
   box-sizing: border-box;
   padding: 24px;
-  border-radius: 6px;
   background: #fff;
 }
 
@@ -1357,14 +1565,13 @@ a.folio-nav__a:hover,
 
 .green-case__schema-core li {
   padding: 8px 10px;
-  border: 1px solid #b9cabb;
-  border-radius: 4px;
+  background: #f4f7f2;
   font-size: 15px;
   line-height: 1.3;
 }
 
 .green-case__schema-profile {
-  border-left: 4px solid #47714d;
+  border: 0;
 }
 
 .green-case__schema-profile p:not(.green-case__diagram-title) {
@@ -1422,6 +1629,777 @@ a.folio-nav__a:hover,
     min-height: 0;
   }
 }
+/* Placeholder figure. The img stays hidden until its onload adds .is-loaded,
+   so a missing file never covers the spec. No overflow clipping, so aspect-ratio
+   acts as a minimum and the frame grows when the spec text is taller than 960×660. */
+.folio-case__placeholder-frame {
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  aspect-ratio: 960/660;
+  border: 2px dashed #9fb3a2;
+  border-radius: 8px;
+  background: #f4f7f2;
+}
+
+.folio-case__placeholder .folio-case__placeholder-img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  color: transparent;
+  font-size: 0;
+  visibility: hidden;
+}
+
+.folio-case__placeholder .folio-case__placeholder-img.is-loaded {
+  visibility: visible;
+}
+
+.folio-case__placeholder .folio-case__placeholder-img.is-missing {
+  display: none;
+}
+
+.folio-case__placeholder-meta {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+  box-sizing: border-box;
+  padding: clamp(28px, 6vw, 64px);
+}
+
+.folio-case__placeholder-desc {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.folio-case__placeholder-desc::before {
+  content: "Image to export";
+  display: block;
+  margin-bottom: 8px;
+  color: #285d31;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.folio-case__placeholder-dims {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0;
+  color: #3f5542;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.folio-case__placeholder-file {
+  margin: 0;
+  color: #666;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.folio-case__hero-media .folio-case__placeholder {
+  margin-top: 0;
+}
+
+.folio-case__hero-media .folio-case__placeholder-frame,
+.folio-case__hero-media .folio-case__placeholder .folio-case__placeholder-img {
+  border-radius: 0;
+}
+
+/* Certificate timeline. Steps 2 and 3 are the expired certificate and the
+   stopped listing; the note is the product record that persists across them. */
+.green-case__diagram--timeline .green-case__steps li:nth-child(2),
+.green-case__diagram--timeline .green-case__steps li:nth-child(3) {
+  border-top-color: #a4472c;
+}
+
+.green-case__diagram--timeline .green-case__diagram-note {
+  padding: 14px 18px;
+  border-left: 4px solid #47714d;
+  background: #fff;
+  color: #333 !important;
+  font-weight: 600;
+}
+
+/* ——— Internal résumé builder (resume-builder.html). Scoped to .rb. ——— */
+.rb-hdr-tag {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* overflow: clip (not hidden) so the sticky preview column still sticks. */
+.folio-main.rb {
+  overflow: clip;
+  margin-bottom: 40px;
+  padding: 40px;
+  background: #fff;
+  color: #333;
+  font-size: 15px;
+}
+.folio-main.rb [hidden] {
+  display: none !important;
+}
+.folio-main.rb code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+}
+.folio-main.rb button,
+.folio-main.rb input,
+.folio-main.rb select,
+.folio-main.rb textarea {
+  font: inherit;
+  color: inherit;
+}
+.folio-main.rb :is(button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 2px;
+}
+
+.rb-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 40em;
+  margin-bottom: 32px;
+}
+
+.rb-intro__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.rb-intro__dek {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.rb-loading {
+  margin: 0;
+  color: #666;
+}
+
+.rb-alert {
+  padding: 20px 24px;
+  border-radius: 8px;
+  background: #fff3d6;
+  color: #6b4a00;
+}
+.rb-alert p {
+  margin: 0;
+}
+.rb-alert p + p {
+  margin-top: 8px;
+}
+
+.rb-alert__title {
+  font-weight: 700;
+}
+
+.rb-app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.rb-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.rb-output {
+  position: sticky;
+  top: 16px;
+  min-width: 0;
+}
+
+.rb-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #f6f6f6;
+}
+
+.rb-panel--output {
+  max-height: calc(100vh - 32px);
+}
+
+.rb-panel__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.rb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.rb-field--inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.rb-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rb-label {
+  padding: 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.rb-label--small {
+  font-size: 13px;
+}
+
+.rb-hint {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #666;
+}
+
+.rb-rule-note {
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rb-input {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  background: #fff;
+  line-height: 1.4;
+}
+
+.rb-input--area {
+  min-height: 0;
+  resize: vertical;
+}
+
+.rb-input--narrow {
+  width: 8em;
+}
+
+.rb-input--small {
+  width: auto;
+  min-height: 32px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+textarea.rb-input--small {
+  width: 100%;
+}
+
+.rb-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.rb-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #333;
+  color: #fff !important;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.rb-btn--quiet {
+  background: transparent;
+  color: #333 !important;
+}
+
+.rb-btn--small {
+  min-height: 32px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.rb-download {
+  border: 0;
+  cursor: pointer;
+}
+
+.rb-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.45;
+  cursor: pointer;
+}
+.rb-check input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: #333;
+}
+
+.rb-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rb-chip {
+  position: relative;
+  display: inline-flex;
+}
+.rb-chip input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.rb-chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 13px;
+}
+.rb-chip .rb-chip__count {
+  min-height: 0;
+  padding: 0 0 0 2px;
+  border: 0;
+  background: none;
+  color: #666;
+}
+.rb-chip input:checked + span {
+  border-color: #333;
+  background: #333;
+  color: #fff;
+}
+.rb-chip input:checked + span .rb-chip__count {
+  color: rgba(255, 255, 255, 0.75);
+}
+.rb-chip input:focus-visible + span {
+  outline: 3px solid #0b67b2;
+  outline-offset: 2px;
+}
+
+.rb-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rb-role {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.rb-role.is-off .rb-claims,
+.rb-role.is-off .rb-role__opts {
+  opacity: 0.5;
+}
+
+.rb-check--role span {
+  display: flex;
+  flex-direction: column;
+}
+
+.rb-role__title {
+  color: #444;
+}
+
+.rb-role__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 4px 0 0 28px;
+  font-size: 13px;
+  color: #666;
+}
+
+.rb-role__opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-left: 28px;
+}
+
+.rb-role__note {
+  margin: 0 0 0 28px;
+  font-size: 13px;
+  color: #666;
+}
+
+.rb-claims {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rb-claim {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rb-claim.is-disabled .rb-check {
+  color: #666;
+  cursor: not-allowed;
+}
+
+.rb-claim[data-state=over-budget] .rb-claim__text {
+  text-decoration: line-through;
+  text-decoration-color: rgba(0, 0, 0, 0.35);
+}
+
+.rb-claim__meta,
+.rb-claim__tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-left: 28px;
+}
+
+.rb-claim__state {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b4a00;
+}
+
+.rb-claim__edit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-left: 28px;
+}
+
+.rb-claim__warn {
+  margin: 0;
+  font-size: 13px;
+  color: #6b4a00;
+}
+
+.rb-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: #ececec;
+  color: #333;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.rb-badge--warn {
+  background: #fff3d6;
+  color: #6b4a00;
+}
+
+.rb-badge--dark {
+  background: #333;
+  color: #fff;
+}
+
+.rb-badge--edit {
+  background: #e3effa;
+  color: #0b4f86;
+}
+
+.rb-badge--match {
+  max-width: 100%;
+  background: #e6f4ea;
+  color: #1e5a31;
+  white-space: normal;
+}
+
+.rb-output__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+}
+.rb-output__bar .rb-field {
+  flex: 1 1 160px;
+}
+
+.rb-segment {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+}
+.rb-segment legend {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.rb-segment__opt {
+  position: relative;
+}
+.rb-segment__opt input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.rb-segment__opt span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #fff;
+  font-size: 13px;
+}
+.rb-segment__opt:first-of-type span {
+  border-radius: 6px 0 0 6px;
+}
+.rb-segment__opt:last-of-type span {
+  border-left: 0;
+  border-radius: 0 6px 6px 0;
+}
+.rb-segment__opt input:checked + span {
+  border-color: #333;
+  background: #333;
+  color: #fff;
+}
+.rb-segment__opt input:focus-visible + span {
+  outline: 3px solid #0b67b2;
+  outline-offset: 2px;
+}
+
+.rb-status {
+  margin: 0;
+  font-weight: 700;
+}
+
+.rb-warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #fff3d6;
+  color: #6b4a00;
+  font-size: 13px;
+  list-style: none;
+}
+
+.rb-preview,
+.rb-source {
+  flex: 1 1 auto;
+  min-height: 240px;
+  overflow: auto;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.rb-preview {
+  padding: 24px;
+}
+
+.rb-source {
+  margin: 0;
+  padding: 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.rb-note {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #fff3d6;
+  color: #6b4a00;
+  font-size: 13px;
+}
+
+.rb-doc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1d1d1f;
+}
+.rb-doc p {
+  margin: 0 0 8px;
+}
+.rb-doc ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+.rb-doc li {
+  margin: 4px 0;
+}
+.rb-doc .rb-badge {
+  margin-left: 6px;
+  vertical-align: 1px;
+}
+
+.rb-doc__name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.rb-doc__headline {
+  font-size: 16px;
+}
+
+.rb-doc__contact,
+.rb-doc__meta {
+  color: #666;
+  font-size: 13px;
+}
+
+.rb-doc__h {
+  margin: 24px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e5e5ea;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.rb-doc__role + .rb-doc__role {
+  margin-top: 16px;
+}
+
+.rb-doc__role-title {
+  margin: 0 0 2px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.rb-doc__company {
+  font-weight: 400;
+  color: #666;
+}
+
+.rb-doc__skills {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+  margin: 0;
+}
+.rb-doc__skills dt {
+  font-weight: 700;
+}
+.rb-doc__skills dd {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .folio-main.rb {
+    margin: 0 clamp(16px, 4vw, 40px) 40px;
+    padding: clamp(16px, 4vw, 40px);
+  }
+  .rb-app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .rb-output {
+    position: static;
+  }
+  .rb-panel--output {
+    max-height: none;
+  }
+  .rb-preview,
+  .rb-source {
+    max-height: 70vh;
+  }
+}
+@media (max-width: 560px) {
+  .rb-intro__title {
+    font-size: 30px;
+  }
+  .rb-panel {
+    padding: 16px;
+  }
+  .rb-role {
+    padding: 12px;
+  }
+  .rb-role__meta,
+  .rb-role__opts,
+  .rb-role__note,
+  .rb-claim__meta,
+  .rb-claim__tools,
+  .rb-claim__edit {
+    margin-left: 0;
+  }
+  .rb-field--inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .rb-input--small {
+    width: 100%;
+  }
+}
 body.folio a:focus-visible {
   outline: 3px solid #0b67b2;
   outline-offset: 4px;
@@ -1442,12 +2420,16 @@ body.folio a:focus-visible {
     align-items: center;
     max-width: none;
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 0;
+  }
+  .folio-hero__media img {
+    object-position: bottom;
   }
   .folio-hero__copy {
     flex: 1 1 auto;
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
+    padding-bottom: 0;
   }
   .folio-claims__inner {
     grid-template-columns: 1fr;
@@ -1455,10 +2437,6 @@ body.folio a:focus-visible {
   }
   .folio-project-pair {
     grid-template-columns: 1fr;
-  }
-  .folio-exp-card {
-    flex-basis: min(390px, 82vw);
-    width: min(390px, 82vw);
   }
   .folio-case__section,
   .folio-case__callout,
@@ -1479,13 +2457,10 @@ body.folio a:focus-visible {
   .folio-nav {
     gap: 16px;
   }
-  .folio-hero__mark {
-    font-size: 30px;
-  }
   .folio-hero__inner {
     gap: 24px;
     padding-top: 32px;
-    padding-bottom: 24px;
+    padding-bottom: 0;
     padding-right: 16px;
     padding-left: 16px;
     box-sizing: border-box;
@@ -1495,28 +2470,18 @@ body.folio a:focus-visible {
     width: 185px;
     height: 195px;
   }
-  .folio-project__title,
-  .folio-experiments__title,
-  .folio-exp-card__title {
+  .folio-project__title {
     font-size: 30px;
   }
-  .folio-project__dek,
-  .folio-experiments__dek {
+  .folio-project__dek {
     font-size: 20px;
   }
   .folio-claims__inner,
-  .folio-work__inner,
-  .folio-experiments__inner {
+  .folio-work__inner {
     padding: 24px 16px;
   }
   .folio-footer {
     padding: 32px 24px;
-  }
-  .folio-experiments__scroller {
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 0;
   }
   .folio-project__link {
     gap: 24px;

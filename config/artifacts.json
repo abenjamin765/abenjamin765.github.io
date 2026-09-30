@@ -1,0 +1,232 @@
+[
+  {
+    "type": "object",
+    "layer": "knowledge",
+    "owner": "luke",
+    "template": "knowledge/objects/_template.md",
+    "destination": "knowledge/objects/{slug}.md",
+    "id_prefix": "object-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Definition", "Attributes", "Relationships", "Actions", "States and transitions", "Permissions and rules", "Open questions"]
+  },
+  {
+    "type": "evidence",
+    "layer": "knowledge",
+    "owner": "scout",
+    "template": "knowledge/evidence/_template.md",
+    "destination": "knowledge/evidence/{slug}.md",
+    "id_prefix": "evidence-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Observation or source claim", "Context and population", "Limitations and contradictions", "Analyst inference", "Product implication"]
+  },
+  {
+    "type": "decision",
+    "layer": "knowledge",
+    "owner": "liza",
+    "template": "knowledge/decisions/_template.md",
+    "destination": "knowledge/decisions/{slug}.md",
+    "id_prefix": "decision-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Context", "Options considered", "Decision and rationale", "Consequences", "Revisit trigger"]
+  },
+  {
+    "type": "metric",
+    "layer": "knowledge",
+    "owner": "ledger",
+    "template": "knowledge/metrics/_template.md",
+    "destination": "knowledge/metrics/{slug}.md",
+    "id_prefix": "metric-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": []
+  },
+  {
+    "type": "event",
+    "layer": "knowledge",
+    "owner": "ledger",
+    "template": "knowledge/metrics/_event-template.md",
+    "destination": "knowledge/metrics/{slug}.md",
+    "id_prefix": "event-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Event name", "Trigger", "Properties", "Identity and deduplication", "Privacy constraints"]
+  },
+  {
+    "type": "experiment",
+    "layer": "knowledge",
+    "owner": "ledger",
+    "template": "knowledge/metrics/_experiment-template.md",
+    "destination": "knowledge/metrics/{slug}.md",
+    "id_prefix": "experiment-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Hypothesis", "Unit and assignment", "Primary outcome", "Guardrails", "Duration and stopping"]
+  },
+  {
+    "type": "glossary",
+    "layer": "knowledge",
+    "owner": "echo",
+    "template": "knowledge/glossary/_template.md",
+    "destination": "knowledge/glossary/terms.md",
+    "id_prefix": "glossary-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": []
+  },
+  {
+    "type": "direction",
+    "layer": "work",
+    "owner": "liza",
+    "template": "templates/work/direction.md",
+    "destination": "work/direction-{slug}.md",
+    "id_prefix": "direction-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Decision needed", "Users and breakdown", "Evidence status", "Outcomes", "Options", "Goals / non-goals", "Acceptance criteria", "Open questions"]
+  },
+  {
+    "type": "run-packet",
+    "layer": "work",
+    "owner": "liza",
+    "template": "templates/work/run-packet.md",
+    "destination": "work/run-packet-{slug}.md",
+    "id_prefix": "run-packet-",
+    "required_frontmatter": ["id", "type", "status", "owner", "expected_artifacts"],
+    "required_headings": ["Outcome", "Owners and sequence", "Human gates", "Expected artifacts", "Completion evidence"]
+  },
+  {
+    "type": "challenge",
+    "layer": "work",
+    "owner": "allie",
+    "template": "templates/work/challenge.md",
+    "destination": "work/challenge-{slug}.md",
+    "id_prefix": "challenge-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["What I am challenging", "Strongest case against", "Findings", "Preserve list", "Verdict"]
+  },
+  {
+    "type": "flow",
+    "layer": "work",
+    "owner": "charlie",
+    "template": "templates/work/flow.md",
+    "destination": "work/flow-{slug}.md",
+    "id_prefix": "flow-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Primary scenarios", "Page / surface sketch", "Edge states", "Loading / error / permission", "Out of flow"]
+  },
+  {
+    "type": "research-plan",
+    "layer": "work",
+    "owner": "scout",
+    "template": "templates/work/research-plan.md",
+    "destination": "work/research-plan-{slug}.md",
+    "id_prefix": "research-plan-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Decision", "Research questions", "Method", "Population and sampling", "Next step"]
+  },
+  {
+    "type": "research-synthesis",
+    "layer": "work",
+    "owner": "scout",
+    "template": "templates/work/research-synthesis.md",
+    "destination": "work/research-synthesis-{slug}.md",
+    "id_prefix": "research-synthesis-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Decision", "Evidence table", "Synthesis", "Contradictions", "Confidence and limitations", "Implications"]
+  },
+  {
+    "type": "threat-model",
+    "layer": "work",
+    "owner": "cipher",
+    "template": "templates/work/threat-model.md",
+    "destination": "work/threat-model-{slug}.md",
+    "id_prefix": "threat-model-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Scope", "Assets and data inventory", "Trust boundaries", "Abuse paths", "Privacy risks", "Controls", "Prioritized mitigations", "Assumptions"]
+  },
+  {
+    "type": "integration-contract",
+    "layer": "work",
+    "owner": "relay",
+    "template": "templates/work/integration-contract.md",
+    "destination": "work/integration-contract-{slug}.md",
+    "id_prefix": "integration-contract-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Outcome and systems", "Source of truth", "Object mapping", "Operations or events", "Failure and degraded behavior", "Versioning", "Observability"]
+  },
+  {
+    "type": "ops-readiness",
+    "layer": "work",
+    "owner": "harbor",
+    "template": "templates/work/ops-readiness.md",
+    "destination": "work/ops-readiness-{slug}.md",
+    "id_prefix": "ops-readiness-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Critical journeys", "SLIs and SLOs", "Failure modes", "Delivery and rollback", "Alerts and ownership", "Unverified assumptions"]
+  },
+  {
+    "type": "runbook",
+    "layer": "work",
+    "owner": "harbor",
+    "template": "templates/work/runbook.md",
+    "destination": "work/runbook-{slug}.md",
+    "id_prefix": "runbook-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Symptom", "Detect", "Mitigate", "Recover", "Communicate"]
+  },
+  {
+    "type": "quality-strategy",
+    "layer": "work",
+    "owner": "sentry",
+    "template": "templates/work/quality-strategy.md",
+    "destination": "work/quality-strategy-{slug}.md",
+    "id_prefix": "quality-strategy-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Release decision", "Risks ranked", "Mapped acceptance criteria", "Coverage plan", "Residual risk"]
+  },
+  {
+    "type": "defect",
+    "layer": "work",
+    "owner": "sentry",
+    "template": "templates/work/defect.md",
+    "destination": "work/defect-{slug}.md",
+    "id_prefix": "defect-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Environment", "Steps to reproduce", "Expected behavior", "Actual behavior", "Evidence", "Severity"]
+  },
+  {
+    "type": "language-inventory",
+    "layer": "work",
+    "owner": "echo",
+    "template": "templates/work/language-inventory.md",
+    "destination": "work/language-inventory-{slug}.md",
+    "id_prefix": "language-inventory-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Scope", "Term inventory", "Before / after", "Open glossary updates"]
+  },
+  {
+    "type": "interface-direction",
+    "layer": "work",
+    "owner": "iris",
+    "template": "templates/work/interface-direction.md",
+    "destination": "work/interface-direction-{slug}.md",
+    "id_prefix": "interface-direction-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Baseline surfaces", "Components", "Token roles", "Interaction states", "Accessibility notes", "Handoff for Finn"]
+  },
+  {
+    "type": "slice-report",
+    "layer": "work",
+    "owner": "finn",
+    "template": "templates/work/slice-report.md",
+    "destination": "work/slice-report-{slug}.md",
+    "id_prefix": "slice-report-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Acceptance criteria mapping", "Files changed", "Verification", "Residual risk", "Deferred work"]
+  },
+  {
+    "type": "practice-change",
+    "layer": "work",
+    "owner": "liza",
+    "template": "templates/work/practice-change.md",
+    "destination": "work/practice-change-{slug}.md",
+    "id_prefix": "practice-change-",
+    "required_frontmatter": ["id", "type", "status", "owner"],
+    "required_headings": ["Trigger", "Actual vs desired", "Scope decision", "Evaluation case", "Files changed"]
+  }
+]

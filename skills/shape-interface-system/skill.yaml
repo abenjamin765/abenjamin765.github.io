@@ -1,0 +1,47 @@
+standard: portable-agent-skills/0.1
+version: 0.2.0
+contract:
+  inputs:
+    - "User request"
+    - "Relevant project context or a safe way to discover it"
+  outputs:
+    - "An implementable interface-system direction with a traceable judgment and revision record"
+  preconditions:
+    - "The requested scope and active project can be determined"
+  invariants:
+    - "Preserve user authority and project constraints"
+    - "Separate evidence, inference, and assumptions"
+    - "Do not conceal or silently change unresolved product structure through visual styling"
+    - "Treat semantics, task accessibility, recovery, and responsive integrity as gates rather than preferences"
+  success_criteria:
+    - "The SKILL.md completion and verification conditions are satisfied"
+    - "Residual assumptions and unverified risk are reported"
+    - "Representative content and critical states support the direction"
+    - "A consequential selection compares a credible alternative and records its tradeoffs"
+  failure_modes:
+    - "Missing material context requires focused clarification"
+    - "Unavailable capability requires a declared fallback or stop"
+    - "Unresolved structural ambiguity returns to the accountable flow or domain owner"
+capabilities:
+  tools: []
+  filesystem: declared-paths
+  network: read
+  side_effects:
+    - "May write declared project artifacts"
+safety:
+  confirmation_gates:
+    - "Confirm before destructive or consequential changes"
+  sensitive_data: Minimize collection; never place private project data in upstream contributions.
+  untrusted_content: isolate
+compatibility:
+  hosts:
+    - "Claude Code"
+    - "Codex"
+    - "Cursor"
+    - "GitHub Copilot"
+    - "Windsurf"
+    - "Generic Agent Skills host"
+  runtimes: []
+  dependencies: []
+evaluation:
+  suite: evals/cases.jsonl

@@ -1,0 +1,42 @@
+# Full record: every non-rejected role and claim in canonical order.
+# A role selection without `claims` means "all eligible claims on that role".
+# allow_unverified is true because no claim is verified yet.
+# No skill_priority, so every skill is exported.
+id: default-full
+label: Full career record (all roles and claims)
+reader: human
+allow_unverified: true
+length_budget: 100
+headline_id: headline-ux-designer
+summary_id: summary-ten-years
+email_id: email-hello
+phone_id: phone-main
+location_id: location-powder-springs
+roles:
+  - role_id: role-renaissance-learning-senior-ux-designer
+  - role_id: role-indeed-senior-ux-designer
+    summary_level: one_line
+  - role_id: role-redfin-senior-product-designer
+    summary_level: one_line
+  - role_id: role-home-depot-staff-ux-designer
+    summary_level: one_line
+  - role_id: role-snap-mobile-senior-product-designer
+    summary_level: one_line
+  - role_id: role-amazon-ux-designer
+    summary_level: one_line
+  - role_id: role-hp-ux-lead
+    summary_level: one_line
+  - role_id: role-att-senior-ux-designer
+    summary_level: one_line
+  - role_id: role-pyramid-consulting-graphic-designer
+    summary_level: one_line
+required_role_ids:
+  - role-renaissance-learning-senior-ux-designer
+  - role-indeed-senior-ux-designer
+  - role-redfin-senior-product-designer
+  - role-home-depot-staff-ux-designer
+  - role-snap-mobile-senior-product-designer
+  - role-amazon-ux-designer
+  - role-hp-ux-lead
+  - role-att-senior-ux-designer
+  - role-pyramid-consulting-graphic-designer

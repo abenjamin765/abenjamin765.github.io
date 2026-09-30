@@ -1,0 +1,459 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aaronbenjamin.design/resume/schema/career.schema.json",
+  "title": "Canonical Career Record",
+  "description": "Single source of truth for Aaron Benjamin's career facts. Presentation (order, length, emphasis, wording choice, format) is NOT stored here; it lives in profile documents. JSON exports are generated projections of this document.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["identity", "experience", "education", "skills"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Optional version marker for the canonical document shape."
+    },
+    "identity": { "$ref": "#/$defs/identity" },
+    "experience": {
+      "type": "array",
+      "description": "Roles in reverse-chronological source order. Display order is a profile concern.",
+      "items": { "$ref": "#/$defs/role" }
+    },
+    "education": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/educationItem" }
+    },
+    "skills": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/skill" }
+    },
+    "projects": {
+      "type": "array",
+      "description": "Optional. Portfolio or notable projects not owned by a single role.",
+      "items": { "$ref": "#/$defs/project" }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "description": "Stable, lowercase kebab-case identifier.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "yearOrYearMonth": {
+      "type": "string",
+      "description": "Year-month (YYYY-MM), or year only (YYYY) when the source does not state a month. A year-only value means the month is unknown; do not normalize it to January.",
+      "pattern": "^\\d{4}(-\\d{2})?$"
+    },
+    "yearOrYearMonthNullable": {
+      "type": ["string", "null"],
+      "description": "Same as yearOrYearMonth, or null for an ongoing end date.",
+      "pattern": "^\\d{4}(-\\d{2})?$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["verified", "unverified", "rejected"]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Repository-relative path to the evidence file (e.g. under resume/sources/ or src/assets/data/)."
+        },
+        "locator": {
+          "type": "string",
+          "description": "Where inside the source the claim is supported (line range, heading, anchor, quote)."
+        }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "description": "Present ONLY when a source states a measure. A numeric value is never required; wording alone is allowed.",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": ["string", "number"],
+          "description": "The measured amount as stated by the source. May be a string (e.g. '30+', '$1B')."
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit or dimension of the value (e.g. 'tests', 'USD', 'percent', 'sellers')."
+        },
+        "wording": {
+          "type": "string",
+          "description": "The metric expressed as approved prose, e.g. 'over 30 A/B tests'."
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "description": "An approved alternate wording of the same claim. Never a new fact.",
+      "additionalProperties": false,
+      "required": ["id", "text"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "text": { "type": "string" },
+        "length": {
+          "type": "string",
+          "enum": ["short", "medium", "long"]
+        },
+        "audience": {
+          "type": "string",
+          "enum": ["human", "ats", "either"]
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "text", "status"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "kind": {
+          "type": "string",
+          "enum": ["summary", "impact", "leadership", "strategy", "craft", "method", "project"]
+        },
+        "text": {
+          "type": "string",
+          "description": "Canonical wording of the claim. Alternate approved wordings go in variants."
+        },
+        "variants": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/variant" }
+        },
+        "metric": { "$ref": "#/$defs/metric" },
+        "skills": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tools": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "status": { "$ref": "#/$defs/status" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source" }
+        },
+        "confidential": {
+          "type": "boolean",
+          "default": false
+        },
+        "emphasis": {
+          "type": "array",
+          "description": "Free-form tags used by profiles to select and rank this claim.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "titleVariant": {
+      "type": "object",
+      "description": "A historically-used or context-specific title for the same role. Conflicting titles are preserved, never collapsed.",
+      "additionalProperties": false,
+      "required": ["id", "title", "label"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "title": { "type": "string" },
+        "label": {
+          "type": "string",
+          "description": "Where/why this title applied (e.g. 'offer-letter', 'internal', 'business-card', 'promotion-2023')."
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source" }
+        }
+      }
+    },
+    "leadershipScope": {
+      "type": "object",
+      "description": "Team size, reports, or breadth of leadership. Include only when a source states it.",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source" }
+        }
+      }
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "company", "title", "start"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "company": { "type": "string" },
+        "company_context": {
+          "type": "string",
+          "description": "One-line description of the employer when it aids reader comprehension. Not presentation ordering."
+        },
+        "title": {
+          "type": "string",
+          "description": "The primary/current title for this role."
+        },
+        "title_variants": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/titleVariant" }
+        },
+        "employment_type": {
+          "type": "string",
+          "description": "e.g. full-time, part-time, contract, freelance, internship, temporary. See conventions.md for suggested vocabulary."
+        },
+        "location": { "type": "string" },
+        "workplace": {
+          "type": "string",
+          "enum": ["remote", "hybrid", "onsite"]
+        },
+        "start": { "$ref": "#/$defs/yearOrYearMonth" },
+        "end": { "$ref": "#/$defs/yearOrYearMonthNullable" },
+        "current": {
+          "type": "boolean",
+          "default": false
+        },
+        "area": {
+          "type": "string",
+          "description": "Org unit or product area the role sat within."
+        },
+        "leadership_scope": { "$ref": "#/$defs/leadershipScope" },
+        "overlap_note": {
+          "type": "string",
+          "description": "Explanation when this role's dates legitimately overlap another (e.g. concurrent contract)."
+        },
+        "summaries": {
+          "type": "object",
+          "description": "Role-level summaries at three detail levels. Each entry is a claim (kind: summary).",
+          "additionalProperties": false,
+          "properties": {
+            "one_line": { "$ref": "#/$defs/claim" },
+            "short": { "$ref": "#/$defs/claim" },
+            "long": { "$ref": "#/$defs/claim" }
+          }
+        },
+        "claims": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/claim" }
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "company": { "type": "string" },
+        "url": { "type": "string" },
+        "start": { "$ref": "#/$defs/yearOrYearMonth" },
+        "end": { "$ref": "#/$defs/yearOrYearMonthNullable" },
+        "summaries": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "one_line": { "$ref": "#/$defs/claim" },
+            "short": { "$ref": "#/$defs/claim" },
+            "long": { "$ref": "#/$defs/claim" }
+          }
+        },
+        "claims": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/claim" }
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "educationAlternate": {
+      "type": "object",
+      "description": "A contradictory or alternate wording of the same education entry (e.g. a different year, campus, credential wording, or honor). None is designated the winner.",
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "label": {
+          "type": "string",
+          "description": "What this alternate captures or where it came from (e.g. 'transcript-year', 'orlando-campus', 'salutatorian')."
+        },
+        "credential": { "type": "string" },
+        "location": { "type": "string" },
+        "year": { "$ref": "#/$defs/yearOrYearMonth" },
+        "honors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "status": { "$ref": "#/$defs/status" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source" }
+        }
+      }
+    },
+    "educationItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["institution"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "institution": { "type": "string" },
+        "credential": {
+          "type": "string",
+          "description": "Degree, certificate, or program name. Omit if none was earned."
+        },
+        "location": { "type": "string" },
+        "year": { "$ref": "#/$defs/yearOrYearMonth" },
+        "honors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "status": { "$ref": "#/$defs/status" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source" }
+        },
+        "alternates": {
+          "type": "array",
+          "description": "Contradictory or alternate wordings for this entry. Parent fields hold one candidate wording; alternates hold the others. No verified winner is required.",
+          "items": { "$ref": "#/$defs/educationAlternate" }
+        }
+      }
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "kind"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "name": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["focus", "capability", "tool", "practice"]
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "emailEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "address"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "label": {
+          "type": "string",
+          "description": "Which context this email belongs to (e.g. 'primary', 'personal', 'work'). No single email is marked as the one true address."
+        },
+        "address": {
+          "type": "string",
+          "format": "email"
+        },
+        "context": { "type": "string" }
+      }
+    },
+    "locationEntry": {
+      "type": "object",
+      "description": "One valid location for the candidate. Sources may disagree; store all, mark none as the winner.",
+      "additionalProperties": false,
+      "required": ["label", "text"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "label": {
+          "type": "string",
+          "description": "Which context this location belongs to (e.g. 'primary', 'source-of-record', 'legacy')."
+        },
+        "text": {
+          "type": "string",
+          "description": "The location as stated (e.g. 'Powder Springs, GA')."
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source" }
+        }
+      }
+    },
+    "phoneEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["number"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "label": { "type": "string" },
+        "number": { "type": "string" }
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "label": { "type": "string" },
+        "url": { "type": "string" }
+      }
+    },
+    "textVariant": {
+      "type": "object",
+      "description": "An approved wording of an identity-level statement (headline or summary). Never a new fact.",
+      "additionalProperties": false,
+      "required": ["id", "text"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "text": { "type": "string" },
+        "length": {
+          "type": "string",
+          "enum": ["short", "medium", "long"]
+        },
+        "audience": {
+          "type": "string",
+          "enum": ["human", "ats", "either"]
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "headline_variants": {
+          "type": "array",
+          "description": "Multiple approved headlines/taglines. No single headline is canonical.",
+          "items": { "$ref": "#/$defs/textVariant" }
+        },
+        "emails": {
+          "type": "array",
+          "description": "All valid emails. Do not designate a single true email; profiles choose.",
+          "items": { "$ref": "#/$defs/emailEntry" }
+        },
+        "phones": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/phoneEntry" }
+        },
+        "locations": {
+          "type": "array",
+          "description": "All valid locations. Sources may disagree; do not designate a single true location — profiles choose.",
+          "items": { "$ref": "#/$defs/locationEntry" }
+        },
+        "website": { "type": "string" },
+        "linkedin": { "type": "string" },
+        "links": {
+          "type": "array",
+          "description": "Additional profiles or portfolio links.",
+          "items": { "$ref": "#/$defs/link" }
+        },
+        "summary_variants": {
+          "type": "array",
+          "description": "Multiple approved personal summaries at varying lengths/audiences.",
+          "items": { "$ref": "#/$defs/textVariant" }
+        }
+      }
+    }
+  }
+}

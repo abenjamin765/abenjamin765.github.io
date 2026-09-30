@@ -1,0 +1,1299 @@
+{
+  "profiles": [
+    {
+      "id": "default-full",
+      "definition": {
+        "id": "default-full",
+        "label": "Full career record (all roles and claims)",
+        "reader": "human",
+        "allow_unverified": true,
+        "length_budget": 100,
+        "headline_id": "headline-ux-designer",
+        "summary_id": "summary-ten-years",
+        "email_id": "email-hello",
+        "phone_id": "phone-main",
+        "location_id": "location-powder-springs",
+        "roles": [
+          {
+            "role_id": "role-renaissance-learning-senior-ux-designer"
+          },
+          {
+            "role_id": "role-indeed-senior-ux-designer",
+            "summary_level": "one_line"
+          },
+          {
+            "role_id": "role-redfin-senior-product-designer",
+            "summary_level": "one_line"
+          },
+          {
+            "role_id": "role-home-depot-staff-ux-designer",
+            "summary_level": "one_line"
+          },
+          {
+            "role_id": "role-snap-mobile-senior-product-designer",
+            "summary_level": "one_line"
+          },
+          {
+            "role_id": "role-amazon-ux-designer",
+            "summary_level": "one_line"
+          },
+          {
+            "role_id": "role-hp-ux-lead",
+            "summary_level": "one_line"
+          },
+          {
+            "role_id": "role-att-senior-ux-designer",
+            "summary_level": "one_line"
+          },
+          {
+            "role_id": "role-pyramid-consulting-graphic-designer",
+            "summary_level": "one_line"
+          }
+        ],
+        "required_role_ids": [
+          "role-renaissance-learning-senior-ux-designer",
+          "role-indeed-senior-ux-designer",
+          "role-redfin-senior-product-designer",
+          "role-home-depot-staff-ux-designer",
+          "role-snap-mobile-senior-product-designer",
+          "role-amazon-ux-designer",
+          "role-hp-ux-lead",
+          "role-att-senior-ux-designer",
+          "role-pyramid-consulting-graphic-designer"
+        ]
+      },
+      "resume": {
+        "profile": {
+          "id": "default-full",
+          "label": "Full career record (all roles and claims)",
+          "reader": "human",
+          "allow_unverified": true,
+          "length_budget": 100
+        },
+        "identity": {
+          "name": "Aaron Benjamin",
+          "headline": {
+            "id": "headline-ux-designer",
+            "text": "UX Designer"
+          },
+          "summary": {
+            "id": "summary-ten-years",
+            "text": "For more than 10 years, I've helped global brands design and build products that deliver long-term value to customers and achieve business goals."
+          },
+          "emails": [
+            {
+              "id": "email-hello",
+              "address": "hello@aaronbenjamin.design"
+            }
+          ],
+          "phones": [
+            {
+              "id": "phone-main",
+              "number": "(770) 380-5566"
+            }
+          ],
+          "locations": [
+            {
+              "id": "location-powder-springs",
+              "text": "Powder Springs, GA"
+            }
+          ],
+          "website": "aaronbenjamin.design",
+          "linkedin": "https://www.linkedin.com/in/aaronbenjamindesign/"
+        },
+        "experience": [
+          {
+            "role_id": "role-renaissance-learning-senior-ux-designer",
+            "company": "Renaissance Learning",
+            "title": "Senior UX Designer",
+            "title_variant_id": null,
+            "location": "Remote",
+            "start": "2024-07",
+            "end": null,
+            "current": true,
+            "dates": "Jul 2024 – Present",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-renaissance-ux-strategy",
+                "variant_id": null,
+                "text": "Led UX strategy and end-to-end design for K-12 classroom experiences across Renaissance Intelligence.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-renaissance-intelligence-launch",
+                "variant_id": null,
+                "text": "Directed the design and launch of Renaissance Intelligence and contributed reusable patterns to the design system.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-renaissance-ai-prototyping",
+                "variant_id": null,
+                "text": "Designed AI-assisted teacher experiences and used AI-assisted prototyping to speed up design iteration and testing.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-renaissance-ooux",
+                "variant_id": null,
+                "text": "Championed Object-Oriented UX across design and engineering to strengthen shared product models and team alignment.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-indeed-senior-ux-designer",
+            "company": "Indeed",
+            "title": "Senior UX Designer",
+            "title_variant_id": null,
+            "location": "Remote",
+            "start": "2022-10",
+            "end": "2024-07",
+            "current": false,
+            "dates": "Oct 2022 – Jul 2024",
+            "summary": {
+              "claim_id": "claim-indeed-summary-one-line",
+              "text": "Ownership of monetization and growth employer experience focused on driving revenue",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-indeed-monetization-growth",
+                "variant_id": null,
+                "text": "Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-marketplace-strategy",
+                "variant_id": null,
+                "text": "Partnered with leadership to shape and execute the companys marketplace monetization strategy.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-end-to-end-delivery",
+                "variant_id": null,
+                "text": "Delivered end-to-end design from discovery through launch, influencing product development across multiple teams.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-ab-tests",
+                "variant_id": null,
+                "text": "Generated new revenue streams and cost savings by designing and analyzing over 30 A/B tests for employer monetization initiatives.",
+                "status": "unverified",
+                "metric": {
+                  "value": "30+",
+                  "unit": "A/B tests",
+                  "wording": "over 30 A/B tests"
+                }
+              },
+              {
+                "claim_id": "claim-indeed-ux-working-group",
+                "variant_id": null,
+                "text": "Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-mentoring",
+                "variant_id": null,
+                "text": "Mentored peers and promoted best practices to foster a culture of continuous learning and craft excellence.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-stakeholder-relationships",
+                "variant_id": null,
+                "text": "Built trusted relationships with product, engineering, and business stakeholders to align on goals and strategy.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-team-events",
+                "variant_id": null,
+                "text": "Hosted recurring team events to build morale and strengthen organizational culture.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-service-blueprint",
+                "variant_id": null,
+                "text": "Contributed to a comprehensive service blueprint mapping all internal systems and user touchpoints.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-redfin-senior-product-designer",
+            "company": "Redfin",
+            "title": "Senior Product Designer",
+            "title_variant_id": null,
+            "location": "Remote",
+            "start": "2022-02",
+            "end": "2022-09",
+            "current": false,
+            "dates": "Feb 2022 – Sep 2022",
+            "summary": {
+              "claim_id": "claim-redfin-summary-one-line",
+              "text": "Strategic partner for vision and roadmap development",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-redfin-research-roadmap",
+                "variant_id": null,
+                "text": "Influenced product roadmap and strategy by delivering user research that realigned business priorities toward customer-first features.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-discovery-research",
+                "variant_id": null,
+                "text": "Conducted discovery and tactical research to identify user needs and business opportunities.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-accessible-solutions",
+                "variant_id": null,
+                "text": "Translated insights into accessible, user-centered solutions that elevated core experiences.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-hiring-onboarding",
+                "variant_id": null,
+                "text": "Supported hiring, onboarding, and growth of design team talent.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-design-principles",
+                "variant_id": null,
+                "text": "Championed company-aligned design principles grounded in user advocacy and design excellence.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-strengthsfinder",
+                "variant_id": null,
+                "text": "Led team-wide StrengthsFinder workshops to foster a culture of development and collaboration.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-segmentation",
+                "variant_id": null,
+                "text": "Advised partners on segmenting user needs and motivations to better align business priorities.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-roadmap-prioritization",
+                "variant_id": null,
+                "text": "Influenced roadmap prioritization to drive customer-first feature development.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-home-depot-staff-ux-designer",
+            "company": "The Home Depot",
+            "title": "Staff UX Designer",
+            "title_variant_id": null,
+            "location": "Atlanta, GA",
+            "start": "2018-10",
+            "end": "2022-02",
+            "current": false,
+            "dates": "Oct 2018 – Feb 2022",
+            "summary": {
+              "claim_id": "claim-home-depot-summary-one-line",
+              "text": "Work with cross-functional teams to deliver solutions at scale",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-home-depot-curbside-pilot",
+                "variant_id": null,
+                "text": "For a 60-day curbside pickup pilot in 50 stores, about 90% of customers said the order arrived when they expected it, door-to-door time averaged 3.8 minutes with ETAs versus 4.5 without, and calls to change fulfillment fell from a 30%+ baseline to under 10%.",
+                "status": "unverified",
+                "metric": {
+                  "wording": "about 90% said the order arrived when expected; 3.8 vs 4.5 minutes door-to-door; fulfillment-change calls under 10% from a 30%+ baseline, after a 60-day pilot in 50 stores"
+                }
+              },
+              {
+                "claim_id": "claim-home-depot-price-adjustments",
+                "variant_id": null,
+                "text": "After a 50-store pilot, price adjustments rolled out to all stores. At 30, 60, and 90 days, order transaction times decreased, associates reported feeling more empowered to help customers, shrink decreased, and SOP adoption for price adjustments increased.",
+                "status": "unverified",
+                "metric": {
+                  "wording": "50-store pilot then all stores; directional only at 30, 60, and 90 days (transaction time, associate empowerment, shrink, SOP adoption)"
+                }
+              },
+              {
+                "claim_id": "claim-home-depot-enterprise-tools",
+                "variant_id": null,
+                "text": "Designed enterprise tools for merchandising, store systems, and HR with cross-functional product and engineering teams.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-home-depot-research",
+                "variant_id": null,
+                "text": "Planned and facilitated research to inform product priorities and validate design decisions.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-home-depot-accessibility-workshops",
+                "variant_id": null,
+                "text": "Championed accessibility in associate tools and led workshops for designers, product owners, and engineers.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-home-depot-talent",
+                "variant_id": null,
+                "text": "Helped develop design talent through hiring and mentorship.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-home-depot-enterprise-strategy",
+                "variant_id": null,
+                "text": "Contribute to the enterprise vision and strategy (OGSMs/OKRs)",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-home-depot-omnichannel-suppliers",
+                "variant_id": null,
+                "text": "Led the discovery and implementation of key business changes to support omni-channel selling for suppliers; This will improve the in-store and online shopping experience and generate significant savings for the business",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-snap-mobile-senior-product-designer",
+            "company": "Snap! Mobile",
+            "title": "Senior Product Designer",
+            "title_variant_id": null,
+            "location": "Seattle, WA",
+            "start": "2018-01",
+            "end": "2018-10",
+            "current": false,
+            "dates": "Jan 2018 – Oct 2018",
+            "summary": {
+              "claim_id": "claim-snap-summary-one-line",
+              "text": "Lead agile design process for cross-functional team",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-snap-agile-leadership",
+                "variant_id": null,
+                "text": "Led end-to-end design in agile, cross-functional teams, supporting a portfolio of fundraising products.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-snap-research-kpis",
+                "variant_id": null,
+                "text": "Introduced user research practices and defined KPIs aligned to business drivers.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-snap-design-standards",
+                "variant_id": null,
+                "text": "Developed and documented design standards and reusable UI patterns across platforms.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-snap-accessibility-audits",
+                "variant_id": null,
+                "text": "Conducted accessibility audits, enabling better experiences and expanding market reach.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-snap-new-business-line",
+                "variant_id": null,
+                "text": "Designed and launched a new business line that automated previously manual workflows.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-snap-mentoring",
+                "variant_id": null,
+                "text": "Mentored junior designers and fostered a culture of continuous improvement.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-snap-pwa",
+                "variant_id": null,
+                "text": "Championed adoption of progressive web app technologies across product teams.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-snap-cohort-analysis",
+                "variant_id": null,
+                "text": "Led a customer cohort analysis across three channels, informing roadmap direction.",
+                "status": "unverified",
+                "metric": {
+                  "value": 3,
+                  "unit": "channels",
+                  "wording": "across three channels"
+                }
+              },
+              {
+                "claim_id": "claim-snap-donation-redesign",
+                "variant_id": null,
+                "text": "Redesigned the donation experience for a high school fundraising platform, improving conversion rates.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-amazon-ux-designer",
+            "company": "Amazon",
+            "title": "UX Designer",
+            "title_variant_id": null,
+            "location": "Seattle, WA",
+            "start": "2016-08",
+            "end": "2017-12",
+            "current": false,
+            "dates": "Aug 2016 – Dec 2017",
+            "summary": {
+              "claim_id": "claim-amazon-summary-one-line",
+              "text": "Lead the design of customer-facing tools from concept to delivery.",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-amazon-a-to-z-first-claim",
+                "variant_id": null,
+                "text": "Redesigned the first A-to-z claim notification. In the 60 days after the U.S. update, 88% of sellers who opened the email felt confident they could avoid future claims, related Seller Support call volume fell 14%, and seller-initiated refunds trended toward a 30% year-over-year increase.",
+                "status": "unverified",
+                "metric": {
+                  "value": "88%",
+                  "unit": "sellers who opened the email",
+                  "wording": "88% confident they could avoid future claims; call volume reduced 14%; seller-initiated refunds trended toward a 30% YoY increase, 60 days after the U.S. update"
+                }
+              },
+              {
+                "claim_id": "claim-amazon-seller-tools",
+                "variant_id": null,
+                "text": "Designed end-to-end seller tools for the Amazon Marketplace, improving onboarding and engagement.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-amazon-cross-functional-trust",
+                "variant_id": null,
+                "text": "Partnered across program management, editorial, and engineering to build trust and usability into seller experiences.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-amazon-newsletter-reach",
+                "variant_id": null,
+                "text": "Launched the Amazon Seller Newsletter, reaching over 1 million sellers across 12 markets.",
+                "status": "unverified",
+                "metric": {
+                  "value": "1 million",
+                  "unit": "sellers",
+                  "wording": "over 1 million sellers across 12 markets"
+                }
+              },
+              {
+                "claim_id": "claim-amazon-automation-support-volume",
+                "variant_id": null,
+                "text": "Introduced automation into key support workflows, reducing support volume and improving seller satisfaction.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-amazon-mentorship-scope",
+                "variant_id": null,
+                "text": "Mentored junior designers and supported Amazon’s internal mentorship program.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-amazon-newsletter-languages-open-rate",
+                "variant_id": null,
+                "text": "Responsible for the end-to-end design and launch of the Amazon Seller Newsletter; reaching more than 1 million sellers in 6 different languages across 12 global markets with an open rate consistently above 32% over 6 months.",
+                "status": "unverified",
+                "metric": {
+                  "value": "32%",
+                  "unit": "open rate",
+                  "wording": "an open rate consistently above 32% over 6 months"
+                }
+              },
+              {
+                "claim_id": "claim-amazon-mentorship-uw",
+                "variant_id": null,
+                "text": "Mentor junior team members. Support the student mentorship program in partnership with The University of Washington.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-hp-ux-lead",
+            "company": "HP Inc.",
+            "title": "UX Lead",
+            "title_variant_id": null,
+            "location": "Alpharetta, GA",
+            "start": "2015-09",
+            "end": "2016-08",
+            "current": false,
+            "dates": "Sep 2015 – Aug 2016",
+            "summary": {
+              "claim_id": "claim-hp-summary-one-line",
+              "text": "Lead design team responsible for HP Software UX design.",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-hp-team-size",
+                "variant_id": null,
+                "text": "Managed and supported a team of four designers and a UX researcher.",
+                "status": "unverified",
+                "metric": {
+                  "wording": "a team of four designers and a UX researcher"
+                }
+              },
+              {
+                "claim_id": "claim-hp-product",
+                "variant_id": null,
+                "text": "Owned design roadmap and team resourcing for HP Marketing Cloud.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-hp-white-label-customization",
+                "variant_id": null,
+                "text": "Created customization workflows for white-label enterprise clients.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-hp-grommet",
+                "variant_id": null,
+                "text": "Contributed to the Grommet design system, enhancing accessibility and reusability across HP products.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-hp-intake-process",
+                "variant_id": null,
+                "text": "Streamlined intake and production processes, reducing design delivery time by 45%.",
+                "status": "unverified",
+                "metric": {
+                  "value": "45%",
+                  "unit": "percent",
+                  "wording": "reducing design delivery time by 45%"
+                }
+              },
+              {
+                "claim_id": "claim-hp-design-system-adoption",
+                "variant_id": null,
+                "text": "Evangelized design system adoption across HP Software, improving cross-product consistency.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-hp-team-size-direct-reports",
+                "variant_id": null,
+                "text": "Oversee design direction, concepts, and implementations while supporting and developing 3 direct reports.",
+                "status": "unverified",
+                "metric": {
+                  "value": 3,
+                  "unit": "direct reports",
+                  "wording": "3 direct reports"
+                }
+              },
+              {
+                "claim_id": "claim-hp-product-aurasma",
+                "variant_id": null,
+                "text": "Manage resourcing, road-map, and design direction for HP Aurasma, an Augmented Reality (AR) product for marketers and consumers.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-hp-application-modeling",
+                "variant_id": null,
+                "text": "Lead application modeling sessions to visualize product requirements.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-hp-user-research",
+                "variant_id": null,
+                "text": "Conduct user research studies to inform product direction.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-hp-team-workshops",
+                "variant_id": null,
+                "text": "Organize workshops for team development.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-att-senior-ux-designer",
+            "company": "AT&T",
+            "title": "Senior UX Designer",
+            "title_variant_id": null,
+            "location": "Atlanta, GA",
+            "start": "2011-07",
+            "end": "2015-08",
+            "current": false,
+            "dates": "Jul 2011 – Aug 2015",
+            "summary": {
+              "claim_id": "claim-att-summary-one-line",
+              "text": "Provide UX design support and direction for customer-facing projects.",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-att-responsive-experiences",
+                "variant_id": null,
+                "text": "Designed mobile and responsive experiences for customer-facing digital platforms.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-responsive-architecture",
+                "variant_id": null,
+                "text": "Led UX system efforts that replaced native apps with a responsive web architecture.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-design-system",
+                "variant_id": null,
+                "text": "Created and maintained a cross-platform design system and mobile pattern library.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-billpay-metric",
+                "variant_id": null,
+                "text": "Designed the mobile bill-pay flow that drove over $1B in app-based payments.",
+                "status": "unverified",
+                "metric": {
+                  "value": "$1B",
+                  "unit": "USD in app-based payments",
+                  "wording": "over $1B in app-based payments"
+                }
+              },
+              {
+                "claim_id": "claim-att-mobile-first",
+                "variant_id": null,
+                "text": "Championed AT&T’s mobile-first design initiative across business units.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-community-forums-award",
+                "variant_id": null,
+                "text": "Redesigned the AT&T Community forums, earning a “Game Changing UX” award and improving CHI scores.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-billpay-revenue",
+                "variant_id": null,
+                "text": "Designed the mobile bill-pay experience for customers resulting in more than $1 billion in new revenue through the mobile app.",
+                "status": "unverified",
+                "metric": {
+                  "value": "$1 billion",
+                  "unit": "USD in new revenue",
+                  "wording": "more than $1 billion in new revenue through the mobile app"
+                }
+              },
+              {
+                "claim_id": "claim-att-iphone-campaigns",
+                "variant_id": null,
+                "text": "Successfully launched campaign elements for the iPhone 4, iPhone 4s, and iPhone 5, resulting in record breaking sales.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-attcom-redesign",
+                "variant_id": null,
+                "text": "Redesigned the att.com search UI and taxonomy resulting in higher accuracy of search results.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-connected-car",
+                "variant_id": null,
+                "text": "Contributed to the AT&T Connected Car design system.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-att-design-roundtable",
+                "variant_id": null,
+                "text": "Hosted a bi-weekly “design round-table” meeting to open communication across design teams.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-pyramid-consulting-graphic-designer",
+            "company": "Pyramid Consulting Inc.",
+            "title": "Graphic Designer",
+            "title_variant_id": null,
+            "location": null,
+            "start": "2010",
+            "end": "2011",
+            "current": false,
+            "dates": "2010 – 2011",
+            "summary": {
+              "claim_id": "claim-pyramid-summary-one-line",
+              "text": "Design collateral for digital marketing campaigns including landing pages, email templates, and graphics.",
+              "status": "unverified"
+            },
+            "bullets": [
+              {
+                "claim_id": "claim-pyramid-ticket-reduction",
+                "variant_id": null,
+                "text": "Automated the production of web-ready device images resulting in the elimination of more than 240 tickets per year.",
+                "status": "unverified",
+                "metric": {
+                  "value": "240+",
+                  "unit": "tickets per year",
+                  "wording": "more than 240 tickets per year"
+                }
+              },
+              {
+                "claim_id": "claim-pyramid-ticket-reduction-css-buttons",
+                "variant_id": null,
+                "text": "Advocated for the replacement of graphic buttons with CSS buttons across all digital properties. Eliminated more than 1000 tickets per year.",
+                "status": "unverified",
+                "metric": {
+                  "value": "1000+",
+                  "unit": "tickets per year",
+                  "wording": "more than 1000 tickets per year"
+                }
+              },
+              {
+                "claim_id": "claim-pyramid-html-prototypes",
+                "variant_id": null,
+                "text": "Create HTML prototypes of landing pages.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-pyramid-campaign-templates",
+                "variant_id": null,
+                "text": "Define templates and patterns for modular campaigns.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-pyramid-style-guides",
+                "variant_id": null,
+                "text": "Develop strategic style guides to support product life-cycle events.",
+                "status": "unverified"
+              }
+            ]
+          }
+        ],
+        "education": [
+          {
+            "id": "education-full-sail",
+            "institution": "FullSail University",
+            "credential": null,
+            "location": "Winter Park, FL",
+            "year": "2008",
+            "honors": [],
+            "status": "unverified"
+          }
+        ],
+        "skills": [
+          {
+            "kind": "focus",
+            "label": "Focus",
+            "items": [
+              "Accessibility & Inclusive Design",
+              "UX Leadership & Strategy",
+              "AI-Enhanced Design"
+            ]
+          },
+          {
+            "kind": "capability",
+            "label": "Capabilities",
+            "items": [
+              "UX Design & Strategy",
+              "Design Systems & Scalable Design",
+              "Rapid Prototyping & Wireframing",
+              "Cross-Platform UI Design (Web & Mobile)",
+              "User Research & Usability Testing",
+              "Information Architecture & User Journey Mapping",
+              "Accessibility & Inclusive Design (WCAG, Section 508)",
+              "Front-End Fundamentals (HTML/CSS)",
+              "AI-Integrated UX (Conversational UI, Generative Tools)"
+            ]
+          },
+          {
+            "kind": "practice",
+            "label": "Practices",
+            "items": [
+              "Leadership & Mentorship",
+              "Collaboration & Communication",
+              "Strategic Problem Solving & Adaptability",
+              "Empathy & User Advocacy",
+              "Workshop Facilitation & Stakeholder Alignment",
+              "Storytelling & Design Presentation"
+            ]
+          },
+          {
+            "kind": "tool",
+            "label": "Tools",
+            "items": [
+              "Figma",
+              "Sketch",
+              "Miro",
+              "ChatGPT",
+              "Cursor"
+            ]
+          }
+        ],
+        "stats": {
+          "roles": 9,
+          "bullets": 73,
+          "unverified_bullets": 73,
+          "excluded_by_status": 0,
+          "truncated_by_budget": 0
+        }
+      }
+    },
+    {
+      "id": "public-portfolio",
+      "definition": {
+        "id": "public-portfolio",
+        "label": "Public portfolio résumé (aaronbenjamin.design/resume.html)",
+        "reader": "human",
+        "allow_unverified": true,
+        "length_budget": 19,
+        "headline_id": "headline-ux-designer",
+        "summary_id": "summary-resume-page",
+        "email_id": "email-hello",
+        "location_id": "location-powder-springs",
+        "roles": [
+          {
+            "role_id": "role-renaissance-learning-senior-ux-designer",
+            "claims": [
+              {
+                "claim_id": "claim-renaissance-ux-strategy"
+              },
+              {
+                "claim_id": "claim-renaissance-intelligence-launch"
+              },
+              {
+                "claim_id": "claim-renaissance-ooux"
+              }
+            ]
+          },
+          {
+            "role_id": "role-indeed-senior-ux-designer",
+            "claims": [
+              {
+                "claim_id": "claim-indeed-monetization-growth"
+              },
+              {
+                "claim_id": "claim-indeed-ab-tests"
+              },
+              {
+                "claim_id": "claim-indeed-ux-working-group"
+              }
+            ]
+          },
+          {
+            "role_id": "role-redfin-senior-product-designer",
+            "claims": [
+              {
+                "claim_id": "claim-redfin-research-roadmap"
+              },
+              {
+                "claim_id": "claim-redfin-discovery-research"
+              },
+              {
+                "claim_id": "claim-redfin-hiring-onboarding"
+              }
+            ]
+          },
+          {
+            "role_id": "role-home-depot-staff-ux-designer",
+            "claims": [
+              {
+                "claim_id": "claim-home-depot-curbside-pilot"
+              },
+              {
+                "claim_id": "claim-home-depot-price-adjustments"
+              },
+              {
+                "claim_id": "claim-home-depot-enterprise-tools"
+              },
+              {
+                "claim_id": "claim-home-depot-research"
+              },
+              {
+                "claim_id": "claim-home-depot-accessibility-workshops"
+              }
+            ]
+          },
+          {
+            "role_id": "role-snap-mobile-senior-product-designer",
+            "claims": [
+              {
+                "claim_id": "claim-snap-agile-leadership"
+              }
+            ]
+          },
+          {
+            "role_id": "role-amazon-ux-designer",
+            "claims": [
+              {
+                "claim_id": "claim-amazon-a-to-z-first-claim"
+              },
+              {
+                "claim_id": "claim-amazon-seller-tools"
+              }
+            ]
+          },
+          {
+            "role_id": "role-hp-ux-lead",
+            "claims": [
+              {
+                "claim_id": "claim-hp-team-size"
+              }
+            ]
+          },
+          {
+            "role_id": "role-att-senior-ux-designer",
+            "claims": [
+              {
+                "claim_id": "claim-att-responsive-experiences"
+              }
+            ]
+          }
+        ],
+        "required_role_ids": [
+          "role-renaissance-learning-senior-ux-designer",
+          "role-indeed-senior-ux-designer",
+          "role-redfin-senior-product-designer",
+          "role-home-depot-staff-ux-designer",
+          "role-snap-mobile-senior-product-designer",
+          "role-amazon-ux-designer",
+          "role-hp-ux-lead",
+          "role-att-senior-ux-designer"
+        ],
+        "skill_priority": [
+          "focus-accessibility-inclusive-design",
+          "focus-ux-leadership-strategy",
+          "focus-ai-enhanced-design",
+          "ux-design-strategy",
+          "design-systems",
+          "rapid-prototyping-wireframing",
+          "cross-platform-ui-design",
+          "user-research-usability-testing",
+          "information-architecture-journey-mapping",
+          "accessibility-wcag-508",
+          "front-end-fundamentals",
+          "ai-integrated-ux"
+        ]
+      },
+      "resume": {
+        "profile": {
+          "id": "public-portfolio",
+          "label": "Public portfolio résumé (aaronbenjamin.design/resume.html)",
+          "reader": "human",
+          "allow_unverified": true,
+          "length_budget": 19
+        },
+        "identity": {
+          "name": "Aaron Benjamin",
+          "headline": {
+            "id": "headline-ux-designer",
+            "text": "UX Designer"
+          },
+          "summary": {
+            "id": "summary-resume-page",
+            "text": "I lead design for complex product systems, connecting research, shared models, and shipped interfaces. My work spans marketplaces, education, commerce, and internal tools, with a focus on decisions teams can carry through implementation."
+          },
+          "emails": [
+            {
+              "id": "email-hello",
+              "address": "hello@aaronbenjamin.design"
+            }
+          ],
+          "phones": [],
+          "locations": [
+            {
+              "id": "location-powder-springs",
+              "text": "Powder Springs, GA"
+            }
+          ],
+          "website": "aaronbenjamin.design",
+          "linkedin": "https://www.linkedin.com/in/aaronbenjamindesign/"
+        },
+        "experience": [
+          {
+            "role_id": "role-renaissance-learning-senior-ux-designer",
+            "company": "Renaissance Learning",
+            "title": "Senior UX Designer",
+            "title_variant_id": null,
+            "location": "Remote",
+            "start": "2024-07",
+            "end": null,
+            "current": true,
+            "dates": "Jul 2024 – Present",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-renaissance-ux-strategy",
+                "variant_id": null,
+                "text": "Led UX strategy and end-to-end design for K-12 classroom experiences across Renaissance Intelligence.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-renaissance-intelligence-launch",
+                "variant_id": null,
+                "text": "Directed the design and launch of Renaissance Intelligence and contributed reusable patterns to the design system.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-renaissance-ooux",
+                "variant_id": null,
+                "text": "Championed Object-Oriented UX across design and engineering to strengthen shared product models and team alignment.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-indeed-senior-ux-designer",
+            "company": "Indeed",
+            "title": "Senior UX Designer",
+            "title_variant_id": null,
+            "location": "Remote",
+            "start": "2022-10",
+            "end": "2024-07",
+            "current": false,
+            "dates": "Oct 2022 – Jul 2024",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-indeed-monetization-growth",
+                "variant_id": null,
+                "text": "Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-indeed-ab-tests",
+                "variant_id": null,
+                "text": "Generated new revenue streams and cost savings by designing and analyzing over 30 A/B tests for employer monetization initiatives.",
+                "status": "unverified",
+                "metric": {
+                  "value": "30+",
+                  "unit": "A/B tests",
+                  "wording": "over 30 A/B tests"
+                }
+              },
+              {
+                "claim_id": "claim-indeed-ux-working-group",
+                "variant_id": null,
+                "text": "Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-redfin-senior-product-designer",
+            "company": "Redfin",
+            "title": "Senior Product Designer",
+            "title_variant_id": null,
+            "location": "Remote",
+            "start": "2022-02",
+            "end": "2022-09",
+            "current": false,
+            "dates": "Feb 2022 – Sep 2022",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-redfin-research-roadmap",
+                "variant_id": null,
+                "text": "Influenced product roadmap and strategy by delivering user research that realigned business priorities toward customer-first features.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-discovery-research",
+                "variant_id": null,
+                "text": "Conducted discovery and tactical research to identify user needs and business opportunities.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-redfin-hiring-onboarding",
+                "variant_id": null,
+                "text": "Supported hiring, onboarding, and growth of design team talent.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-home-depot-staff-ux-designer",
+            "company": "The Home Depot",
+            "title": "Staff UX Designer",
+            "title_variant_id": null,
+            "location": "Atlanta, GA",
+            "start": "2018-10",
+            "end": "2022-02",
+            "current": false,
+            "dates": "Oct 2018 – Feb 2022",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-home-depot-curbside-pilot",
+                "variant_id": null,
+                "text": "For a 60-day curbside pickup pilot in 50 stores, about 90% of customers said the order arrived when they expected it, door-to-door time averaged 3.8 minutes with ETAs versus 4.5 without, and calls to change fulfillment fell from a 30%+ baseline to under 10%.",
+                "status": "unverified",
+                "metric": {
+                  "wording": "about 90% said the order arrived when expected; 3.8 vs 4.5 minutes door-to-door; fulfillment-change calls under 10% from a 30%+ baseline, after a 60-day pilot in 50 stores"
+                }
+              },
+              {
+                "claim_id": "claim-home-depot-price-adjustments",
+                "variant_id": null,
+                "text": "After a 50-store pilot, price adjustments rolled out to all stores. At 30, 60, and 90 days, order transaction times decreased, associates reported feeling more empowered to help customers, shrink decreased, and SOP adoption for price adjustments increased.",
+                "status": "unverified",
+                "metric": {
+                  "wording": "50-store pilot then all stores; directional only at 30, 60, and 90 days (transaction time, associate empowerment, shrink, SOP adoption)"
+                }
+              },
+              {
+                "claim_id": "claim-home-depot-enterprise-tools",
+                "variant_id": null,
+                "text": "Designed enterprise tools for merchandising, store systems, and HR with cross-functional product and engineering teams.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-home-depot-research",
+                "variant_id": null,
+                "text": "Planned and facilitated research to inform product priorities and validate design decisions.",
+                "status": "unverified"
+              },
+              {
+                "claim_id": "claim-home-depot-accessibility-workshops",
+                "variant_id": null,
+                "text": "Championed accessibility in associate tools and led workshops for designers, product owners, and engineers.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-snap-mobile-senior-product-designer",
+            "company": "Snap! Mobile",
+            "title": "Senior Product Designer",
+            "title_variant_id": null,
+            "location": "Seattle, WA",
+            "start": "2018-01",
+            "end": "2018-10",
+            "current": false,
+            "dates": "Jan 2018 – Oct 2018",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-snap-agile-leadership",
+                "variant_id": null,
+                "text": "Led end-to-end design in agile, cross-functional teams, supporting a portfolio of fundraising products.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-amazon-ux-designer",
+            "company": "Amazon",
+            "title": "UX Designer",
+            "title_variant_id": null,
+            "location": "Seattle, WA",
+            "start": "2016-08",
+            "end": "2017-12",
+            "current": false,
+            "dates": "Aug 2016 – Dec 2017",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-amazon-a-to-z-first-claim",
+                "variant_id": null,
+                "text": "Redesigned the first A-to-z claim notification. In the 60 days after the U.S. update, 88% of sellers who opened the email felt confident they could avoid future claims, related Seller Support call volume fell 14%, and seller-initiated refunds trended toward a 30% year-over-year increase.",
+                "status": "unverified",
+                "metric": {
+                  "value": "88%",
+                  "unit": "sellers who opened the email",
+                  "wording": "88% confident they could avoid future claims; call volume reduced 14%; seller-initiated refunds trended toward a 30% YoY increase, 60 days after the U.S. update"
+                }
+              },
+              {
+                "claim_id": "claim-amazon-seller-tools",
+                "variant_id": null,
+                "text": "Designed end-to-end seller tools for the Amazon Marketplace, improving onboarding and engagement.",
+                "status": "unverified"
+              }
+            ]
+          },
+          {
+            "role_id": "role-hp-ux-lead",
+            "company": "HP Inc.",
+            "title": "UX Lead",
+            "title_variant_id": null,
+            "location": "Alpharetta, GA",
+            "start": "2015-09",
+            "end": "2016-08",
+            "current": false,
+            "dates": "Sep 2015 – Aug 2016",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-hp-team-size",
+                "variant_id": null,
+                "text": "Managed and supported a team of four designers and a UX researcher.",
+                "status": "unverified",
+                "metric": {
+                  "wording": "a team of four designers and a UX researcher"
+                }
+              }
+            ]
+          },
+          {
+            "role_id": "role-att-senior-ux-designer",
+            "company": "AT&T",
+            "title": "Senior UX Designer",
+            "title_variant_id": null,
+            "location": "Atlanta, GA",
+            "start": "2011-07",
+            "end": "2015-08",
+            "current": false,
+            "dates": "Jul 2011 – Aug 2015",
+            "summary": null,
+            "bullets": [
+              {
+                "claim_id": "claim-att-responsive-experiences",
+                "variant_id": null,
+                "text": "Designed mobile and responsive experiences for customer-facing digital platforms.",
+                "status": "unverified"
+              }
+            ]
+          }
+        ],
+        "education": [
+          {
+            "id": "education-full-sail",
+            "institution": "FullSail University",
+            "credential": null,
+            "location": "Winter Park, FL",
+            "year": "2008",
+            "honors": [],
+            "status": "unverified"
+          }
+        ],
+        "skills": [
+          {
+            "kind": "focus",
+            "label": "Focus",
+            "items": [
+              "Accessibility & Inclusive Design",
+              "UX Leadership & Strategy",
+              "AI-Enhanced Design"
+            ]
+          },
+          {
+            "kind": "capability",
+            "label": "Capabilities",
+            "items": [
+              "UX Design & Strategy",
+              "Design Systems & Scalable Design",
+              "Rapid Prototyping & Wireframing",
+              "Cross-Platform UI Design (Web & Mobile)",
+              "User Research & Usability Testing",
+              "Information Architecture & User Journey Mapping",
+              "Accessibility & Inclusive Design (WCAG, Section 508)",
+              "Front-End Fundamentals (HTML/CSS)",
+              "AI-Integrated UX (Conversational UI, Generative Tools)"
+            ]
+          }
+        ],
+        "stats": {
+          "roles": 8,
+          "bullets": 19,
+          "unverified_bullets": 19,
+          "excluded_by_status": 0,
+          "truncated_by_budget": 0
+        }
+      }
+    }
+  ]
+}

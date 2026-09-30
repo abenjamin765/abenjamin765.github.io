@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="525" viewBox="0 0 840 525" role="img" aria-labelledby="title desc">
+  <title id="title">Direction artifact preview</title>
+  <desc id="desc">Crop of Liza Library Holds direction: decision, evidence status, goals</desc>
+  <rect width="840" height="525" fill="#E8E6E1"/>
+  <rect x="48" y="36" width="744" height="453" rx="8" fill="#FFFcf7" stroke="#D0CBC3"/>
+  <text x="76" y="78" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">Liza - Library Holds direction</text>
+  <text x="76" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6B6560">type: direction | owner: liza</text>
+  <text x="76" y="148" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Decision needed</text>
+  <text x="76" y="172" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">What is the smallest hold-and-pickup product that reduces</text>
+  <text x="76" y="190" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">missed pickups and desk confusion without a multi-branch platform?</text>
+  <text x="76" y="230" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Evidence status</text>
+  <rect x="76" y="244" width="688" height="92" rx="4" fill="#F7F4EE" stroke="#E0DBD2"/>
+  <text x="92" y="268" font-family="ui-monospace, Menlo, monospace" font-size="12" font-weight="700" fill="#555">Claim</text>
+  <text x="420" y="268" font-family="ui-monospace, Menlo, monospace" font-size="12" font-weight="700" fill="#555">Class</text>
+  <line x1="92" y1="278" x2="740" y2="278" stroke="#D8D2C8"/>
+  <text x="92" y="298" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Label confusion at desk</text>
+  <text x="420" y="298" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Observed (demo fiction)</text>
+  <text x="92" y="318" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Missed pickups after ready</text>
+  <text x="420" y="318" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Observed (demo fiction)</text>
+  <text x="76" y="372" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Goals / non-goals</text>
+  <text x="76" y="396" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">Goals: waiting -&gt; ready -&gt; fulfilled/expired/cancelled; visible PickupWindow</text>
+  <text x="76" y="416" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">Non-goals: waitlist gamification, multi-branch transfer, preference center</text>
+  <text x="76" y="452" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#8A847C">... acceptance criteria | open questions</text>
+</svg>

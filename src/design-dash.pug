@@ -1,0 +1,62 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('The screen arrived before the system was defined | Aaron Benjamin', 'I built Design Dash so a fuzzy product problem becomes a plan a team can build from, with evidence and assumptions labeled, before a generated screen is treated as the design.', '/design-dash.html', 'folio', '/assets/img/folio/project--design-dash/design-dash--hero-2x.png')
+    body.folio.folio--case
+        +folioShell
+
+        +folioHeader('work', 'Design Dash', '/#design-dash')
+
+        main#main.folio-main.folio-main--case
+            article.folio-case
+                header.folio-case__hero
+                    .folio-case__hero-media
+                        +figurePlaceholder('One glance at a Design Dash plan: a short phase strip from preconditions through learning, beside the three walk-away files — a pitch, requirements, and a monochrome wireframe. No consumer dashboard, no charts standing in for a product, no fake customer UI.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--hero-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--hero-2x.png', 'Design Dash plan: nine phases, with a pitch, requirements, and a monochrome wireframe as the outputs.')
+                    .folio-case__intro
+                        p.folio-eyebrow Case study
+                        h1 The screen arrived before the system was defined
+                        p.folio-case__dek I built Design Dash, an open-source workflow that takes a fuzzy problem to a plan a team can build from. A generated interface is not that plan.
+                    +caseFacts
+                        .folio-case__fact
+                            dt Role
+                            dd Author and facilitator
+                        .folio-case__fact
+                            dt Form
+                            dd Open-source method, nine phases, runnable in a chat, an agent, or a workshop
+                        .folio-case__fact
+                            dt Used with
+                            dd Product, research, and engineering on the Renaissance Intelligence Assignments page
+                        .folio-case__fact
+                            dt Outcome
+                            dd A public method and an accepted file-based architecture. No public usage count.
+
+                +caseSection({labelledby: "dash-files-title", prose: false})
+                    .folio-case__prose
+                        h2#dash-files-title A workshop could end as a stack of files
+                        p A dash could leave assumptions, a design spec, a flow, a wireframe, and a pitch site. The relationships lived in the prose. Asking why a control existed meant searching the folder.
+                        p I had already seen the other version of the same gap. A prompt can return cards, charts, and filters in seconds. The team still has not named the objects, the actions, or which claims are evidence and which are hopes.
+                        p On the Assignments page at Renaissance, I facilitated a session with product and engineering before we argued about layout. Every assignment shared a title, type, assigned date, and due date. Product-specific detail, such as questions answered or pages read, stayed beside those fields. That split is what let the page stay scannable.
+                    +figurePlaceholder('Two columns. Left: a stack of loosely named files — assumptions, spec, flow, wireframe, pitch — with no lines between them. Right: one chain reading evidence, insight, opportunity, requirement, object, decision, interface, outcome, with the last step feeding the first. Do not draw a product screen.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--trace-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--trace-2x.png', 'A stack of unlinked workshop files beside a chain from evidence through outcome.')
+
+                +caseSection({labelledby: "dash-rigor-title", tint: true, prose: false})
+                    .folio-case__prose
+                        h2#dash-rigor-title I derived the rigor from the risk
+                        p I did not want the facilitator to choose how careful to be. Design Dash derives a tier from risk, reversibility, and reach.
+                        p Express is for low-risk, easily reversible, narrow work. It keeps an ethics floor, and any skipped gate is written down as evidence debt. Standard work requires evidence, a reconciliation between the system and the user’s mental model, a real comparison of concepts, an ethics review, and a learning plan. High-stakes work — hard to undo, broad in reach, or touching regulated, financial, or safety-related data — cannot waive those gates. A simulated reviewer does not count as sign-off.
+                        p Inside that path, the team names the objects and what a person can do with each before screens are treated as the source of truth.
+                    +figurePlaceholder('Three cards in a row labeled Express, Standard, and High-stakes. Express lists an ethics floor and recorded evidence debt. Standard lists evidence, reconciliation, selection, ethics, and learning. High-stakes shows the same five gates and the words “no waivers.” No logos, no people, no product UI.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--tiers-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--tiers-2x.png', 'Three Design Dash tiers: Express, Standard, and High-stakes, with the gates each one requires.')
+
+                +caseSection({labelledby: "dash-store-title", prose: false})
+                    .folio-case__prose
+                        h2#dash-store-title Plain files are the only thing anyone edits
+                        p An early version of the method treated a rich living-plan document as the source of truth whenever a local toolchain was available. Hand-authored summaries drift, and they leave out anyone working from a chat or a worksheet.
+                        p The architecture I accepted on 23 August 2026 inverts that. The Dash Model is plain files: Markdown with a small header, plus typed links. A generated graph can be rebuilt and must not be edited by hand. Chat can facilitate, but a product decision has to leave the transcript as a record. The Design Plan regenerates from the current files. A Story is a frozen snapshot for a release.
+                        p Three links are required. The interface points at a decision. The decision points at a requirement or an object. The requirement points at an opportunity. An open assumption at a gate stays visible. I rejected a database as the canonical store because the method has to run without one, including when there is no Node toolchain.
+                    +figurePlaceholder('A diagram with chat and a workshop writing into one store labeled Dash Model. Two outputs leave the store: a Design Plan marked as regenerating, and a Story marked as a frozen release. A note says nothing meaningful lives only in a view. No application chrome.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--model-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--model-2x.png', 'Chat and workshop write into the Dash Model, which generates the Design Plan and a frozen Story.')
+
+                +caseOutcome("dash-outcome-title", "The Assignments session left a model the team could test")
+                    p A finished dash yields object guides, a stakeholder pitch, requirements, monochrome wireframes that include empty, loading, error, and permission states, and an evidence trail. On the Assignments work, the session produced the object notes, diagrams, wireframes, and low-fidelity prototype the team tested. The grouped priority view that later shipped came out of that shared model.
+                    p I do not have a public usage count for the repository. The Dash Model is an accepted architecture, and existing dashes still move onto it one at a time. My takeaway: documents stay aligned when there is one store, the views are generated, and a gate can fail a screen that cannot point back to a decision.
+
+            +folioFooter(true, 'A screen that cannot point back to a decision does not pass the gate.', {href: '/many-hats.html', label: 'Next case: Many Hats'})

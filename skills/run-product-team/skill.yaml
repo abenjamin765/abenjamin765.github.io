@@ -1,0 +1,42 @@
+standard: portable-agent-skills/0.1
+version: 0.1.0
+contract:
+  inputs:
+    - "User request"
+    - "Relevant project context or a safe way to discover it"
+  outputs:
+    - "A verified cross-functional plan and artifact set"
+  preconditions:
+    - "The requested scope and active project can be determined"
+  invariants:
+    - "Preserve user authority and project constraints"
+    - "Separate evidence, inference, and assumptions"
+  success_criteria:
+    - "The SKILL.md completion and verification conditions are satisfied"
+    - "Residual assumptions and unverified risk are reported"
+  failure_modes:
+    - "Missing material context requires focused clarification"
+    - "Unavailable capability requires a declared fallback or stop"
+capabilities:
+  tools: []
+  filesystem: declared-paths
+  network: read
+  side_effects:
+    - "May write declared project artifacts"
+safety:
+  confirmation_gates:
+    - "Confirm before destructive or consequential changes"
+  sensitive_data: Minimize collection; never place private project data in upstream contributions.
+  untrusted_content: isolate
+compatibility:
+  hosts:
+    - "Claude Code"
+    - "Codex"
+    - "Cursor"
+    - "GitHub Copilot"
+    - "Windsurf"
+    - "Generic Agent Skills host"
+  runtimes: []
+  dependencies: []
+evaluation:
+  suite: evals/cases.jsonl

@@ -13,18 +13,204 @@ mixin folioHead(pageTitle, description, pagePath, stylesheet, shareImage)
     link(rel="icon", type="image/svg+xml", href="/assets/img/folio/favicon.svg")
     link(rel="stylesheet", href="/assets/style/" + (stylesheet || 'folio') + ".css")
 
-mixin folioHeader(active)
+//- Skip link and gold blob that every folio page pastes at the top of <body>.
+mixin folioShell
+    a.visually-hidden(href="#main") Skip to content
+
+    .folio__decor(aria-hidden="true")
+        img.folio__decor-img(src="assets/img/folio/blob.svg", alt="")
+
+//- backHref defaults to /#work so existing pages keep the current destination.
+mixin folioHeader(active, projectTitle, backHref)
     header.folio-hdr
         .folio-hdr__inner
-            a.folio-hdr__name(href="/") Aaron Benjamin
+            if projectTitle
+                a.folio-hdr__name.folio-hdr__name--project(href=(backHref || '/#work') aria-label=`Back to selected work: ${projectTitle}`)
+                    span.folio-hdr__back-icon(aria-hidden="true") ←
+                    span= projectTitle
+            else
+                a.folio-hdr__name(href="/") Aaron Benjamin
             nav.folio-nav(aria-label="Primary")
                 a.folio-nav__a(href="/#work" aria-current=active === 'work' ? 'page' : null) Work
                 a.folio-nav__a(href="/#about" aria-current=active === 'about' ? 'page' : null) About
                 a.folio-nav__a(href="/resume.html" aria-current=active === 'resume' ? 'page' : null) Resume
 
-mixin folioFooter(showResume)
-    footer.folio-footer
-        p.folio-footer__lead Have a complex product challenge? Let’s talk.
-        a.folio-footer__contact(href="mailto:hello@aaronbenjamin.design") Email Aaron
-        if showResume !== false
-            a.folio-footer__resume(href="/resume.html") View résumé
+//- next is an optional { href, label } case link. portrait defaults off so case pages stay text-only.
+mixin folioFooter(showResume, lead, next, portrait)
+    footer.folio-footer(class=portrait ? 'folio-footer--portrait' : null)
+        if portrait
+            img.folio-footer__portrait(src="assets/img/folio/hero-portrait.png" alt="Illustrated portrait of Aaron Benjamin waving hello" width="238" height="250" loading="lazy")
+        .folio-footer__body
+            p.folio-footer__lead= lead || 'If this work is close to what your team needs, I’d like to hear from you.'
+            a.folio-footer__contact(href="mailto:hello@aaronbenjamin.design") Email Aaron
+            if next
+                a.folio-footer__next(href=next.href)
+                    = next.label
+                    span(aria-hidden="true")  →
+            if showResume !== false
+                a.folio-footer__resume(href="/resume.html") View Resume
+
+//- ——— Homepage cards ———
+
+//- One card shape for a linked case (card.href + card.image) and an email preview
+//- (card.previewName + card.ctaHref). Copy stays in the caller as arguments.
+//- A linked case can pass card.placeholder { description, displaySize, exportSize,
+//- fileName, src, alt } in place of card.image until the exported file exists.
+mixin projectCard(card)
+    article.folio-project(id=card.id class=card.feature ? 'folio-project--feature' : null)
+        if card.href
+            a.folio-project__link(href=card.href)
+                if card.placeholder
+                    .folio-project__media.folio-project__placeholder
+                        img.folio-project__placeholder-img(src=card.placeholder.src, alt=card.placeholder.alt, loading="lazy")
+                        .folio-project__placeholder-meta(aria-hidden="true")
+                            p.folio-project__placeholder-label Image placeholder
+                            p.folio-project__placeholder-desc= card.placeholder.description
+                            p.folio-project__placeholder-dims
+                                span Display #{card.placeholder.displaySize}
+                                span Export #{card.placeholder.exportSize}
+                            p.folio-project__placeholder-file= card.placeholder.fileName
+                else
+                    .folio-project__media
+                        img(src=card.image.src, alt=card.image.alt, loading="lazy")
+                .folio-project__copy
+                    p.folio-project__status= card.status
+                    h3.folio-project__title= card.title
+                    p.folio-project__dek= card.dek
+                    span.folio-project__cta= card.cta
+        else
+            .folio-project__media.folio-project__media--fill
+                span.folio-project__preview-name= card.previewName
+            .folio-project__copy
+                p.folio-project__status= card.status
+                h3.folio-project__title= card.title
+                p.folio-project__dek= card.dek
+                a.folio-project__cta(href=card.ctaHref)= card.cta
+
+//- 01–03 "How I work" block. Body prose stays in the caller as a block.
+mixin claim(num, title)
+    article.folio-claim
+        .folio-claim__head
+            p.folio-claim__num= num
+            h3.folio-claim__title= title
+        p.folio-claim__body
+            block
+
+//- ——— Case study devices ———
+
+//- Definition list wrapper; the caller supplies .folio-case__fact items as a block
+//- so every label and value stays literal in the page.
+mixin caseFacts
+    dl.folio-case__facts
+        block
+
+//- Section wrapper. opts: { labelledby, tint, final, prose, figure }.
+//- Default wraps the block in .folio-case__prose and can append a simple image
+//- figure (opts.figure). Set opts.prose = false to own the full section body
+//- (used for the demo and the Green Loom diagram figures).
+mixin caseSection(opts)
+    - opts = opts || {}
+    section.folio-case__section(class=[opts.tint ? 'folio-case__section--tint' : null, opts.final ? 'folio-case__section--final' : null] aria-labelledby=opts.labelledby)
+        if opts.prose === false
+            block
+        else
+            .folio-case__prose
+                block
+            if opts.figure
+                +caseFigure(opts.figure)
+
+//- Simple image figure. fig: { class, labelledby, src, alt, width, height, loading,
+//- fetchpriority, caption, captionId }.
+mixin caseFigure(fig)
+    figure.folio-case__figure(class=fig.class aria-labelledby=fig.labelledby)
+        img(src=fig.src alt=fig.alt width=fig.width height=fig.height loading=fig.loading fetchpriority=fig.fetchpriority)
+        if fig.caption
+            figcaption(id=fig.captionId)= fig.caption
+
+//- Gold outcome block. The prose paragraphs stay in the caller as a block.
+mixin caseOutcome(id, title)
+    section.folio-case__outcome(aria-labelledby=id)
+        .folio-case__outcome-inner
+            p.folio-eyebrow Outcome
+            h2(id=id)= title
+            block
+
+//- Back-to-work footer. href/label default to today's shared destination.
+mixin caseBack(href, label)
+    footer.folio-case__footer
+        a.folio-case__back(href=(href || '/#work'))= label || 'Back to selected work'
+
+//- Dark callout used as a pull quote. Reuses the existing .folio-case__callout styling.
+mixin pullQuote(quote, cite)
+    aside.folio-case__callout.folio-case__callout--quote
+        .folio-case__callout-inner
+            blockquote.folio-case__quote
+                p= quote
+                if cite
+                    footer.folio-case__quote-cite= cite
+
+//- Structure for a pair of screenshots with HTML callouts.
+//- opts: { labelledby, images:[{src,alt,width,height}], callouts:[string], caption, captionId }.
+//- Available for the Classroom annotated pair; not inserted in this task.
+mixin annotatedFrame(opts)
+    - opts = opts || {}
+    figure.folio-case__figure.folio-case__frame(aria-labelledby=opts.labelledby)
+        .folio-case__frame-pair
+            each image in (opts.images || [])
+                .folio-case__frame-shot
+                    img(src=image.src alt=image.alt width=image.width height=image.height loading="lazy")
+        if opts.callouts && opts.callouts.length
+            ol.folio-case__frame-callouts
+                each callout in opts.callouts
+                    li.folio-case__frame-callout= callout
+        if opts.caption
+            figcaption(id=opts.captionId)= opts.caption
+
+//- Green Loom object-relationship diagram.
+//- opts: { labelledby, kicker, mark, nodes:[{label,detail}], support:[{term,detail}], caption, captionId }.
+mixin objectPath(opts)
+    figure.folio-case__figure.green-case__figure(aria-labelledby=opts.labelledby)
+        .green-case__hero-art
+            .green-case__hero-head
+                span.green-case__hero-kicker= opts.kicker
+                span.green-case__hero-mark= opts.mark
+            ol.green-case__model-path
+                each node in opts.nodes
+                    li.green-case__model-node
+                        span.green-case__model-label= node.label
+                        span.green-case__model-detail= node.detail
+            .green-case__model-support
+                each item in opts.support
+                    p
+                        strong= item.term
+                        span= item.detail
+        figcaption(id=opts.captionId)= opts.caption
+
+//- Numbered workflow diagram.
+//- opts: { labelledby, variant, title, steps:[{term,detail}], note, caption, captionId }.
+mixin stepList(opts)
+    figure.folio-case__figure.green-case__figure(aria-labelledby=opts.labelledby)
+        .green-case__diagram(class=opts.variant)
+            if opts.title
+                p.green-case__diagram-title= opts.title
+            ol.green-case__steps
+                each step in opts.steps
+                    li
+                        strong= step.term
+                        span= step.detail
+            if opts.note
+                p.green-case__diagram-note= opts.note
+        figcaption(id=opts.captionId)= opts.caption
+
+//- Placeholder figure for a visual that must be produced outside the repo.
+//- Points at src so dropping the exported file in replaces the block.
+mixin figurePlaceholder(description, displaySize, exportSize, src, fileName, alt)
+    figure.folio-case__figure.folio-case__placeholder
+        .folio-case__placeholder-frame(role="img" aria-label=alt)
+            img.folio-case__placeholder-img(src=src alt=alt loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.classList.add('is-missing')")
+            .folio-case__placeholder-meta
+                p.folio-case__placeholder-desc= description
+                p.folio-case__placeholder-dims
+                    span Display #{displaySize}
+                    span Export #{exportSize}
+                p.folio-case__placeholder-file= fileName

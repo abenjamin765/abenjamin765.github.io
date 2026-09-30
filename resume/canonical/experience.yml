@@ -1,0 +1,1185 @@
+# LinkedIn is the preferred work-history source (Aaron's stated preference) and
+# is NOT yet ingested: retrieval was blocked. See
+# resume/sources/notes/linkedin-experience.md. Nothing below comes from LinkedIn.
+#
+# Sources used: src/assets/data/work-history.yml (current site) and the archive
+# résumés reconciled in resume/sources/notes/reconciliation.md. Ids follow
+# reconciliation section 9. Every claim is unverified.
+#
+# Claims on each role list the current work-history.yml accomplishments first,
+# in their YAML order, followed by archive-only claims.
+experience:
+  - id: role-renaissance-learning-senior-ux-designer
+    company: Renaissance Learning
+    title: Senior UX Designer
+    title_variants:
+      - id: renaissance-title-current-site
+        title: Senior UX Designer
+        label: current-site
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 2"
+    employment_type: full-time
+    location: Remote
+    workplace: remote
+    start: "2024-07"
+    end: null
+    current: true
+    area: Renaissance Intelligence
+    claims:
+      - id: claim-renaissance-ux-strategy
+        kind: strategy
+        text: Led UX strategy and end-to-end design for K-12 classroom experiences across Renaissance Intelligence.
+        status: unverified
+        emphasis: [current-site, leadership, education]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 8"
+      - id: claim-renaissance-intelligence-launch
+        kind: craft
+        text: Directed the design and launch of Renaissance Intelligence and contributed reusable patterns to the design system.
+        status: unverified
+        emphasis: [current-site, design-systems]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 9"
+      - id: claim-renaissance-ai-prototyping
+        kind: method
+        text: Designed AI-assisted teacher experiences and used AI-assisted prototyping to speed up design iteration and testing.
+        status: unverified
+        emphasis: [current-site, ai]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 10"
+      - id: claim-renaissance-ooux
+        kind: method
+        text: Championed Object-Oriented UX across design and engineering to strengthen shared product models and team alignment.
+        status: unverified
+        emphasis: [current-site, ooux]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 11"
+
+  - id: role-indeed-senior-ux-designer
+    company: Indeed
+    title: Senior UX Designer
+    title_variants:
+      - id: indeed-title-current-site
+        title: Senior UX Designer
+        label: current-site-and-archive-resume2
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 13"
+          - path: archive/resume2/index.html
+            locator: 'line 51: "Senior UX Designer at Indeed, Remote"'
+    employment_type: full-time
+    location: Remote
+    workplace: remote
+    start: "2022-10"
+    end: "2024-07"
+    summaries:
+      one_line:
+        id: claim-indeed-summary-one-line
+        kind: summary
+        text: Ownership of monetization and growth employer experience focused on driving revenue
+        status: unverified
+        sources:
+          - path: archive/resume2/index.html
+            locator: "line 56"
+    claims:
+      - id: claim-indeed-monetization-growth
+        kind: impact
+        text: Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.
+        status: unverified
+        emphasis: [current-site, monetization, growth]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 19"
+      - id: claim-indeed-marketplace-strategy
+        kind: strategy
+        text: Partnered with leadership to shape and execute the companys marketplace monetization strategy.
+        status: unverified
+        emphasis: [current-site, monetization, strategy]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 20 (source spelling 'companys' preserved)"
+      - id: claim-indeed-end-to-end-delivery
+        kind: craft
+        text: Delivered end-to-end design from discovery through launch, influencing product development across multiple teams.
+        status: unverified
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 21"
+      - id: claim-indeed-ab-tests
+        kind: impact
+        text: Generated new revenue streams and cost savings by designing and analyzing over 30 A/B tests for employer monetization initiatives.
+        status: unverified
+        metric:
+          value: "30+"
+          unit: A/B tests
+          wording: over 30 A/B tests
+        variants:
+          - id: indeed-ab-tests-archive-resume2
+            text: Led the design and execution of more than 30 A/B tests that created new revenue and cost savings
+            length: short
+            audience: either
+        emphasis: [current-site, experimentation, monetization]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 22"
+          - path: archive/resume2/index.html
+            locator: "line 75"
+      - id: claim-indeed-ux-working-group
+        kind: leadership
+        text: Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.
+        status: unverified
+        variants:
+          - id: indeed-working-group-archive-resume2
+            text: Founded and operated a working group testing, iterating, and teaching novel UX methods and processes company-wide
+            length: short
+            audience: either
+        emphasis: [current-site, leadership, practice]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 23"
+          - path: archive/resume2/index.html
+            locator: "line 78"
+      - id: claim-indeed-mentoring
+        kind: leadership
+        text: Mentored peers and promoted best practices to foster a culture of continuous learning and craft excellence.
+        status: unverified
+        emphasis: [current-site, mentorship]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 24"
+      - id: claim-indeed-stakeholder-relationships
+        kind: leadership
+        text: Built trusted relationships with product, engineering, and business stakeholders to align on goals and strategy.
+        status: unverified
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 25"
+      - id: claim-indeed-team-events
+        kind: leadership
+        text: Hosted recurring team events to build morale and strengthen organizational culture.
+        status: unverified
+        emphasis: [current-site, culture]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 26"
+      - id: claim-indeed-service-blueprint
+        kind: method
+        text: Contributed to a comprehensive service blueprint mapping all internal systems and user touchpoints.
+        status: unverified
+        emphasis: [current-site, service-design]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 27"
+
+  - id: role-redfin-senior-product-designer
+    company: Redfin
+    title: Senior Product Designer
+    title_variants:
+      - id: redfin-title-current-site
+        title: Senior Product Designer
+        label: current-site
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 29"
+      # Reconciliation section 9: claim-redfin-title-variant
+      - id: redfin-title-senior-product-designer-2
+        title: Senior Product Designer 2
+        label: archive-resume2
+        sources:
+          - path: archive/resume2/index.html
+            locator: 'line 92: "Senior Product Designer 2 at Redfin, Remote"'
+    employment_type: full-time
+    location: Remote
+    workplace: remote
+    start: "2022-02"
+    end: "2022-09"
+    summaries:
+      one_line:
+        id: claim-redfin-summary-one-line
+        kind: summary
+        text: Strategic partner for vision and roadmap development
+        status: unverified
+        sources:
+          - path: archive/resume2/index.html
+            locator: "line 97"
+    claims:
+      - id: claim-redfin-research-roadmap
+        kind: strategy
+        text: Influenced product roadmap and strategy by delivering user research that realigned business priorities toward customer-first features.
+        status: unverified
+        emphasis: [current-site, research, strategy]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 35"
+      - id: claim-redfin-discovery-research
+        kind: method
+        text: Conducted discovery and tactical research to identify user needs and business opportunities.
+        status: unverified
+        emphasis: [current-site, research]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 36"
+      - id: claim-redfin-accessible-solutions
+        kind: craft
+        text: Translated insights into accessible, user-centered solutions that elevated core experiences.
+        status: unverified
+        emphasis: [current-site, accessibility]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 37"
+      - id: claim-redfin-hiring-onboarding
+        kind: leadership
+        text: Supported hiring, onboarding, and growth of design team talent.
+        status: unverified
+        emphasis: [current-site, hiring]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 38"
+      - id: claim-redfin-design-principles
+        kind: leadership
+        text: Championed company-aligned design principles grounded in user advocacy and design excellence.
+        status: unverified
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 39"
+      - id: claim-redfin-strengthsfinder
+        kind: leadership
+        text: Led team-wide StrengthsFinder workshops to foster a culture of development and collaboration.
+        status: unverified
+        variants:
+          - id: redfin-strengthsfinder-archive-resume2
+            text: Led StrengthsFinder workshops to help build a development culture within the design team
+            length: short
+            audience: either
+        emphasis: [current-site, culture, facilitation]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 40"
+          - path: archive/resume2/index.html
+            locator: "line 120"
+      - id: claim-redfin-segmentation
+        kind: strategy
+        text: Advised partners on segmenting user needs and motivations to better align business priorities.
+        status: unverified
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 41"
+      - id: claim-redfin-roadmap-prioritization
+        kind: strategy
+        text: Influenced roadmap prioritization to drive customer-first feature development.
+        status: unverified
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 42"
+
+  - id: role-home-depot-staff-ux-designer
+    company: The Home Depot
+    title: Staff UX Designer
+    title_variants:
+      - id: home-depot-title-current-site
+        title: Staff UX Designer
+        label: current-site-and-archive-resume2
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 44"
+          - path: archive/resume2/index.html
+            locator: 'line 133: "Staff UX Designer at The Home Depot, Atlanta, Georgia"'
+    employment_type: full-time
+    location: Atlanta, GA
+    start: "2018-10"
+    end: "2022-02"
+    summaries:
+      one_line:
+        id: claim-home-depot-summary-one-line
+        kind: summary
+        text: Work with cross-functional teams to deliver solutions at scale
+        status: unverified
+        sources:
+          - path: archive/resume2/index.html
+            locator: "line 148"
+    claims:
+      - id: claim-home-depot-curbside-pilot
+        kind: impact
+        text: For a 60-day curbside pickup pilot in 50 stores, about 90% of customers said the order arrived when they expected it, door-to-door time averaged 3.8 minutes with ETAs versus 4.5 without, and calls to change fulfillment fell from a 30%+ baseline to under 10%.
+        status: unverified
+        metric:
+          wording: about 90% said the order arrived when expected; 3.8 vs 4.5 minutes door-to-door; fulfillment-change calls under 10% from a 30%+ baseline, after a 60-day pilot in 50 stores
+        emphasis: [current-site, curbside]
+        sources:
+          - path: projects/folio-case-studies/knowledge/metrics/curbside-pickup-on-time-expectation.md
+            locator: "folio.pdf p. 44; stated-with-window; unverified"
+          - path: projects/folio-case-studies/knowledge/metrics/curbside-pickup-door-to-door-time.md
+            locator: "folio.pdf p. 44; 3.8 minutes with ETAs, 4.5 without"
+          - path: projects/folio-case-studies/knowledge/metrics/curbside-pickup-fulfillment-switch-rate.md
+            locator: "folio.pdf p. 37 baseline 30% and p. 44 pilot under 10%"
+      - id: claim-home-depot-price-adjustments
+        kind: impact
+        text: After a 50-store pilot, price adjustments rolled out to all stores. At 30, 60, and 90 days, order transaction times decreased, associates reported feeling more empowered to help customers, shrink decreased, and SOP adoption for price adjustments increased.
+        status: unverified
+        metric:
+          wording: 50-store pilot then all stores; directional only at 30, 60, and 90 days (transaction time, associate empowerment, shrink, SOP adoption)
+        emphasis: [current-site, store-systems]
+        sources:
+          - path: projects/folio-case-studies/knowledge/metrics/price-adjustments-transaction-time.md
+            locator: "folio.pdf p. 31; directional-only; no magnitude stated"
+          - path: projects/folio-case-studies/knowledge/metrics/price-adjustments-shrink.md
+            locator: "folio.pdf p. 31; directional-only"
+          - path: projects/folio-case-studies/knowledge/metrics/price-adjustments-sop-adoption.md
+            locator: "folio.pdf p. 31; directional-only"
+          - path: projects/folio-case-studies/knowledge/metrics/price-adjustments-associate-empowerment.md
+            locator: "folio.pdf p. 31; directional-only"
+      - id: claim-home-depot-enterprise-tools
+        kind: craft
+        text: Designed enterprise tools for merchandising, store systems, and HR with cross-functional product and engineering teams.
+        status: unverified
+        emphasis: [current-site, enterprise]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 50"
+      - id: claim-home-depot-research
+        kind: method
+        text: Planned and facilitated research to inform product priorities and validate design decisions.
+        status: unverified
+        emphasis: [current-site, research]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 51"
+      - id: claim-home-depot-accessibility-workshops
+        kind: leadership
+        text: Championed accessibility in associate tools and led workshops for designers, product owners, and engineers.
+        status: unverified
+        emphasis: [current-site, accessibility, facilitation]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 52"
+      - id: claim-home-depot-talent
+        kind: leadership
+        text: Helped develop design talent through hiring and mentorship.
+        status: unverified
+        emphasis: [current-site, hiring, mentorship]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 53"
+      - id: claim-home-depot-enterprise-strategy
+        kind: strategy
+        text: Contribute to the enterprise vision and strategy (OGSMs/OKRs)
+        status: unverified
+        emphasis: [archive-only, strategy]
+        sources:
+          - path: archive/resume2/index.html
+            locator: "line 138"
+      - id: claim-home-depot-omnichannel-suppliers
+        kind: strategy
+        text: Led the discovery and implementation of key business changes to support omni-channel selling for suppliers; This will improve the in-store and online shopping experience and generate significant savings for the business
+        status: unverified
+        emphasis: [archive-only, strategy]
+        sources:
+          - path: archive/resume2/index.html
+            locator: "lines 173-176"
+
+  - id: role-snap-mobile-senior-product-designer
+    company: Snap! Mobile
+    title: Senior Product Designer
+    title_variants:
+      - id: snap-title-current-site
+        title: Senior Product Designer
+        label: current-site-and-archive-resume2
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 55"
+          - path: archive/resume2/index.html
+            locator: 'line 191: "Senior Product Designer at Snap! Mobile, Seattle, Washington"'
+    employment_type: full-time
+    location: Seattle, WA
+    start: "2018-01"
+    end: "2018-10"
+    overlap_note: "Start-date conflict. src/assets/data/work-history.yml line 57 states 'January 2018 – October 2018'; archive/resume2/index.html line 193 states 'January 2017 – October 2018'. start stays 2018-01 from the current YAML. A January 2017 start would overlap the Amazon role (August 2016 – December 2017). Unresolved."
+    summaries:
+      one_line:
+        id: claim-snap-summary-one-line
+        kind: summary
+        text: Lead agile design process for cross-functional team
+        status: unverified
+        sources:
+          - path: archive/resume2/index.html
+            locator: "line 195"
+    claims:
+      - id: claim-snap-agile-leadership
+        kind: leadership
+        text: Led end-to-end design in agile, cross-functional teams, supporting a portfolio of fundraising products.
+        status: unverified
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 61"
+      - id: claim-snap-research-kpis
+        kind: method
+        text: Introduced user research practices and defined KPIs aligned to business drivers.
+        status: unverified
+        variants:
+          - id: snap-research-kpis-archive-resume2
+            text: Introduced user research process and reporting on key business drivers
+            length: short
+            audience: either
+        emphasis: [current-site, research]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 62"
+          - path: archive/resume2/index.html
+            locator: "lines 214-215"
+      - id: claim-snap-design-standards
+        kind: craft
+        text: Developed and documented design standards and reusable UI patterns across platforms.
+        status: unverified
+        emphasis: [current-site, design-systems]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 63"
+      - id: claim-snap-accessibility-audits
+        kind: impact
+        text: Conducted accessibility audits, enabling better experiences and expanding market reach.
+        status: unverified
+        variants:
+          - id: snap-accessibility-audit-archive-resume2
+            text: Conducted an accessibility audit that led to a better customer experience and new market penetration
+            length: short
+            audience: either
+        emphasis: [current-site, accessibility]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 64"
+          - path: archive/resume2/index.html
+            locator: "lines 227-228"
+      - id: claim-snap-new-business-line
+        kind: impact
+        text: Designed and launched a new business line that automated previously manual workflows.
+        status: unverified
+        variants:
+          - id: snap-new-business-line-archive-resume2
+            text: Developed a new line of business to improve user experience and automate a largely manual process
+            length: short
+            audience: either
+        emphasis: [current-site, automation]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 65"
+          - path: archive/resume2/index.html
+            locator: "lines 210-211"
+      - id: claim-snap-mentoring
+        kind: leadership
+        text: Mentored junior designers and fostered a culture of continuous improvement.
+        status: unverified
+        emphasis: [current-site, mentorship]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 66"
+      - id: claim-snap-pwa
+        kind: strategy
+        text: Championed adoption of progressive web app technologies across product teams.
+        status: unverified
+        variants:
+          - id: snap-pwa-archive-resume2
+            text: Championed a shift to progressive web app development
+            length: short
+            audience: either
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 67"
+          - path: archive/resume2/index.html
+            locator: "line 225"
+      - id: claim-snap-cohort-analysis
+        kind: method
+        text: Led a customer cohort analysis across three channels, informing roadmap direction.
+        status: unverified
+        metric:
+          value: 3
+          unit: channels
+          wording: across three channels
+        variants:
+          - id: snap-cohort-analysis-archive-resume2
+            text: Completed customer cohort analysis across 3 product channels that informed product direction
+            length: short
+            audience: either
+        emphasis: [current-site, research]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 68"
+          - path: archive/resume2/index.html
+            locator: "lines 218-219"
+      - id: claim-snap-donation-redesign
+        kind: impact
+        text: Redesigned the donation experience for a high school fundraising platform, improving conversion rates.
+        status: unverified
+        emphasis: [current-site, conversion]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 69"
+
+  - id: role-amazon-ux-designer
+    company: Amazon
+    title: UX Designer
+    title_variants:
+      - id: amazon-title-current-site
+        title: UX Designer
+        label: current-site
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 71"
+      - id: amazon-title-user-experience-designer
+        title: User Experience Designer
+        label: archive-resume2
+        sources:
+          - path: archive/resume2/index.html
+            locator: 'line 234: "User Experience Designer at Amazon, Seattle, Washington"'
+      - id: amazon-title-ux-designer-ii
+        title: UX Designer II
+        label: archive-2017-written-while-role-was-current
+        sources:
+          - path: archive/resume/index.html
+            locator: 'line 365: "UX Designer II Amazon / 2016 - Present (1 year)"'
+          - path: archive/resume/index2.html
+            locator: 'line 56: "2016 - Present Amazon UX Designer II"'
+          - path: archive/resume/print.html
+            locator: "line 379"
+    employment_type: full-time
+    location: Seattle, WA
+    start: "2016-08"
+    end: "2017-12"
+    summaries:
+      one_line:
+        id: claim-amazon-summary-one-line
+        kind: summary
+        text: Lead the design of customer-facing tools from concept to delivery.
+        status: unverified
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 366 (first sentence)"
+    claims:
+      - id: claim-amazon-a-to-z-first-claim
+        kind: impact
+        text: Redesigned the first A-to-z claim notification. In the 60 days after the U.S. update, 88% of sellers who opened the email felt confident they could avoid future claims, related Seller Support call volume fell 14%, and seller-initiated refunds trended toward a 30% year-over-year increase.
+        status: unverified
+        metric:
+          value: "88%"
+          unit: sellers who opened the email
+          wording: 88% confident they could avoid future claims; call volume reduced 14%; seller-initiated refunds trended toward a 30% YoY increase, 60 days after the U.S. update
+        emphasis: [current-site, marketplace]
+        sources:
+          - path: projects/folio-case-studies/knowledge/metrics/a-to-z-first-claim-seller-confidence.md
+            locator: "folio.pdf p. 12; 88%; stated-with-window; unverified"
+          - path: projects/folio-case-studies/knowledge/metrics/a-to-z-first-claim-call-volume.md
+            locator: "folio.pdf p. 12; reduced by 14%"
+          - path: projects/folio-case-studies/knowledge/metrics/a-to-z-first-claim-seller-refunds.md
+            locator: "folio.pdf p. 12; trended towards a 30% increase YoY"
+      - id: claim-amazon-seller-tools
+        kind: craft
+        text: Designed end-to-end seller tools for the Amazon Marketplace, improving onboarding and engagement.
+        status: unverified
+        emphasis: [current-site, marketplace]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 77"
+      - id: claim-amazon-cross-functional-trust
+        kind: craft
+        text: Partnered across program management, editorial, and engineering to build trust and usability into seller experiences.
+        status: unverified
+        emphasis: [current-site]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 78"
+      - id: claim-amazon-newsletter-reach
+        kind: impact
+        text: Launched the Amazon Seller Newsletter, reaching over 1 million sellers across 12 markets.
+        status: unverified
+        metric:
+          value: "1 million"
+          unit: sellers
+          wording: over 1 million sellers across 12 markets
+        emphasis: [current-site, communication]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 79"
+      - id: claim-amazon-automation-support-volume
+        kind: impact
+        text: Introduced automation into key support workflows, reducing support volume and improving seller satisfaction.
+        status: unverified
+        variants:
+          - id: amazon-automation-archive-2017
+            text: Led the design of automated workflows that resulted in an increase in seller trust and a decrease in contact volume.
+            length: short
+            audience: either
+          - id: amazon-automation-archive-resume2
+            text: Led the design of automated workflows that resulted in an increase in seller trust and a decrease in support contact volume
+            length: short
+            audience: either
+        emphasis: [current-site, automation]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 80"
+          - path: archive/resume/index.html
+            locator: "line 371"
+          - path: archive/resume/index2.html
+            locator: "line 68"
+          - path: archive/resume/print.html
+            locator: "line 385"
+          - path: archive/resume2/index.html
+            locator: "lines 264-266"
+      - id: claim-amazon-mentorship-scope
+        kind: leadership
+        text: Mentored junior designers and supported Amazon’s internal mentorship program.
+        status: unverified
+        emphasis: [current-site, mentorship]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 81"
+      - id: claim-amazon-newsletter-languages-open-rate
+        kind: impact
+        text: Responsible for the end-to-end design and launch of the Amazon Seller Newsletter; reaching more than 1 million sellers in 6 different languages across 12 global markets with an open rate consistently above 32% over 6 months.
+        status: unverified
+        metric:
+          value: "32%"
+          unit: open rate
+          wording: an open rate consistently above 32% over 6 months
+        emphasis: [archive-only, communication]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 370"
+          - path: archive/resume/index2.html
+            locator: "line 67"
+          - path: archive/resume/print.html
+            locator: "line 384"
+          - path: archive/resume2/index.html
+            locator: "lines 258-261"
+      - id: claim-amazon-mentorship-uw
+        kind: leadership
+        text: Mentor junior team members. Support the student mentorship program in partnership with The University of Washington.
+        status: unverified
+        variants:
+          - id: amazon-mentorship-student-program
+            text: Mentor junior team members and support the student mentorship program.
+            length: short
+            audience: either
+        emphasis: [archive-only, mentorship]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 366"
+          - path: archive/resume/print.html
+            locator: "line 380"
+          - path: archive/resume/index2.html
+            locator: "line 63 (University of Washington not named)"
+          - path: archive/resume2/index.html
+            locator: "lines 250-251 (University of Washington not named)"
+
+  - id: role-hp-ux-lead
+    company: HP Inc.
+    title: UX Lead
+    title_variants:
+      - id: hp-title-ux-lead
+        title: UX Lead
+        label: current-site-and-archive-2017
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 83"
+          - path: archive/resume/index.html
+            locator: 'line 380: "UX Lead HP Inc. / 2015 - 2016 (1 year)"'
+          - path: archive/resume/print.html
+            locator: "line 393"
+      - id: hp-title-head-of-user-experience
+        title: Head of User Experience
+        label: archive-2017-index2
+        sources:
+          - path: archive/resume/index2.html
+            locator: 'line 76: "2015 - 2016 HP Inc. Head of User Experience"'
+      - id: hp-title-user-experience-lead
+        title: User Experience Lead
+        label: archive-resume2
+        sources:
+          - path: archive/resume2/index.html
+            locator: 'line 272: "User Experience Lead at HP Inc., Alpharetta, Georgia"'
+    employment_type: full-time
+    location: Alpharetta, GA
+    start: "2015-09"
+    end: "2016-08"
+    overlap_note: "Start-month conflict. src/assets/data/work-history.yml line 85 states 'September 2015 – August 2016'; archive/resume2/index.html line 273 states 'July 2015 – August 2016'; the 2017 archives give year-only '2015 - 2016'. A July 2015 start would overlap the AT&T end month in work-history.yml (August 2015). Unresolved."
+    leadership_scope:
+      text: "Sources conflict. 'a team of four designers and a UX researcher' (work-history.yml; archive/resume/index2.html and archive/resume2/index.html: 'a team of 4 designers and a researcher') versus '3 direct reports' (archive/resume/index.html and print.html)."
+      sources:
+        - path: src/assets/data/work-history.yml
+          locator: "line 89"
+        - path: archive/resume/index2.html
+          locator: "line 81"
+        - path: archive/resume2/index.html
+          locator: "line 276"
+        - path: archive/resume/index.html
+          locator: "line 381"
+        - path: archive/resume/print.html
+          locator: "line 394"
+    summaries:
+      one_line:
+        id: claim-hp-summary-one-line
+        kind: summary
+        text: Lead design team responsible for HP Software UX design.
+        status: unverified
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 381 (first sentence)"
+          - path: archive/resume/print.html
+            locator: "line 394 (first sentence)"
+    claims:
+      - id: claim-hp-team-size
+        kind: leadership
+        text: Managed and supported a team of four designers and a UX researcher.
+        status: unverified
+        metric:
+          wording: a team of four designers and a UX researcher
+        variants:
+          - id: hp-team-size-archive
+            text: Support and develop a team of 4 designers and a researcher.
+            length: short
+            audience: either
+        emphasis: [current-site, leadership, conflict]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 89"
+          - path: archive/resume/index2.html
+            locator: "line 81"
+          - path: archive/resume2/index.html
+            locator: "line 276"
+      - id: claim-hp-product
+        kind: strategy
+        text: Owned design roadmap and team resourcing for HP Marketing Cloud.
+        status: unverified
+        variants:
+          - id: hp-product-archive-index2
+            text: Manage resourcing, road-map, and product direction for HP Marketing Cloud.
+            length: short
+            audience: either
+          - id: hp-product-archive-resume2
+            text: Manage resourcing, roadmap, and product direction for HP Marketing Cloud.
+            length: short
+            audience: either
+        emphasis: [current-site, strategy, conflict]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 90"
+          - path: archive/resume/index2.html
+            locator: "line 82"
+          - path: archive/resume2/index.html
+            locator: "lines 279-280"
+      - id: claim-hp-white-label-customization
+        kind: craft
+        text: Created customization workflows for white-label enterprise clients.
+        status: unverified
+        emphasis: [current-site, enterprise]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 91"
+      - id: claim-hp-grommet
+        kind: craft
+        text: Contributed to the Grommet design system, enhancing accessibility and reusability across HP products.
+        status: unverified
+        variants:
+          - id: hp-grommet-archive-2017
+            text: Drove adoption of Grommet design system across all HP Software products to support company goals around product consistency, accessibility, and performance.
+            length: medium
+            audience: either
+          - id: hp-grommet-archive-resume2
+            text: Drove adoption of Grommet design system across all HP Software products to support company goals targeting product usability, accessibility, and performance.
+            length: medium
+            audience: either
+        emphasis: [current-site, design-systems, accessibility]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 92"
+          - path: archive/resume/index.html
+            locator: "line 386"
+          - path: archive/resume/index2.html
+            locator: "line 91"
+          - path: archive/resume/print.html
+            locator: "line 399"
+          - path: archive/resume2/index.html
+            locator: "lines 304-306"
+      - id: claim-hp-intake-process
+        kind: impact
+        text: Streamlined intake and production processes, reducing design delivery time by 45%.
+        status: unverified
+        metric:
+          value: "45%"
+          unit: percent
+          wording: reducing design delivery time by 45%
+        variants:
+          - id: hp-intake-process-archive
+            text: Redefined intake process, team tool-set, and workflow resulting in a 45% decrease in production time.
+            length: short
+            audience: either
+        emphasis: [current-site, operations]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 93"
+          - path: archive/resume/index.html
+            locator: "line 385"
+          - path: archive/resume/index2.html
+            locator: "line 90"
+          - path: archive/resume/print.html
+            locator: "line 398"
+          - path: archive/resume2/index.html
+            locator: "lines 300-301"
+      - id: claim-hp-design-system-adoption
+        kind: strategy
+        text: Evangelized design system adoption across HP Software, improving cross-product consistency.
+        status: unverified
+        emphasis: [current-site, design-systems]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 94"
+      - id: claim-hp-team-size-direct-reports
+        kind: leadership
+        text: Oversee design direction, concepts, and implementations while supporting and developing 3 direct reports.
+        status: unverified
+        metric:
+          value: 3
+          unit: direct reports
+          wording: 3 direct reports
+        emphasis: [archive-only, leadership, conflict]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 381"
+          - path: archive/resume/print.html
+            locator: "line 394"
+      - id: claim-hp-product-aurasma
+        kind: strategy
+        text: Manage resourcing, road-map, and design direction for HP Aurasma, an Augmented Reality (AR) product for marketers and consumers.
+        status: unverified
+        emphasis: [archive-only, strategy, conflict]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 381"
+          - path: archive/resume/print.html
+            locator: "line 394"
+      - id: claim-hp-application-modeling
+        kind: method
+        text: Lead application modeling sessions to visualize product requirements.
+        status: unverified
+        emphasis: [archive-only]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 381"
+          - path: archive/resume/print.html
+            locator: "line 394"
+      - id: claim-hp-user-research
+        kind: method
+        text: Conduct user research studies to inform product direction.
+        status: unverified
+        emphasis: [archive-only, research]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 381"
+          - path: archive/resume/print.html
+            locator: "line 394"
+      - id: claim-hp-team-workshops
+        kind: leadership
+        text: Organize workshops for team development.
+        status: unverified
+        emphasis: [archive-only, facilitation]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 381"
+          - path: archive/resume/print.html
+            locator: "line 394"
+
+  - id: role-att-senior-ux-designer
+    company: AT&T
+    title: Senior UX Designer
+    title_variants:
+      - id: att-title-senior-ux-designer
+        title: Senior UX Designer
+        label: current-site-and-archive-2017-index2
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 96"
+          - path: archive/resume/index2.html
+            locator: 'line 99: "2011 - 2015 AT&T Senior UX Designer"'
+      - id: att-title-sr-ux-designer
+        title: Sr. UX Designer
+        label: archive-2017
+        sources:
+          - path: archive/resume/index.html
+            locator: 'line 394: "Sr. UX Designer AT&T / 2011 - 2015 (4 years)"'
+          - path: archive/resume/print.html
+            locator: "line 407"
+      # Reconciliation section 9: claim-att-level-progression
+      - id: att-title-junior-to-senior
+        title: Junior UX Designer → Senior UX Designer
+        label: archive-resume2-progression
+        sources:
+          - path: archive/resume2/index.html
+            locator: 'line 313: "Junior UX Designer → Senior UX Designer at AT&T, Atlanta, Georgia"'
+    employment_type: full-time
+    location: Atlanta, GA
+    start: "2011-07"
+    end: "2015-08"
+    overlap_note: "Month conflict. src/assets/data/work-history.yml line 98 states 'July 2011 – August 2015'; archive/resume2/index.html line 315 states 'August 2011 – July 2015'; the 2017 archives give year-only '2011 - 2015'. Unresolved."
+    summaries:
+      one_line:
+        id: claim-att-summary-one-line
+        kind: summary
+        text: Provide UX design support and direction for customer-facing projects.
+        status: unverified
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 395 (first sentence)"
+          - path: archive/resume/index2.html
+            locator: "line 103"
+          - path: archive/resume2/index.html
+            locator: "lines 318-319"
+    claims:
+      - id: claim-att-responsive-experiences
+        kind: craft
+        text: Designed mobile and responsive experiences for customer-facing digital platforms.
+        status: unverified
+        emphasis: [current-site, mobile]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 102"
+      - id: claim-att-responsive-architecture
+        kind: strategy
+        text: Led UX system efforts that replaced native apps with a responsive web architecture.
+        status: unverified
+        emphasis: [current-site, mobile, design-systems]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 103"
+      - id: claim-att-design-system
+        kind: craft
+        text: Created and maintained a cross-platform design system and mobile pattern library.
+        status: unverified
+        emphasis: [current-site, design-systems]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 104"
+      - id: claim-att-billpay-metric
+        kind: impact
+        text: Designed the mobile bill-pay flow that drove over $1B in app-based payments.
+        status: unverified
+        metric:
+          value: "$1B"
+          unit: USD in app-based payments
+          wording: over $1B in app-based payments
+        variants:
+          - id: att-billpay-archive-resume2
+            text: Designed the mobile bill-pay experience for customers resulting in more than $1 billion in payments through the mobile app.
+            length: medium
+            audience: either
+        emphasis: [current-site, mobile, conflict]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 105"
+          - path: archive/resume2/index.html
+            locator: "lines 342-344"
+      - id: claim-att-mobile-first
+        kind: leadership
+        text: Championed AT&T’s mobile-first design initiative across business units.
+        status: unverified
+        emphasis: [current-site, mobile]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 106"
+      - id: claim-att-community-forums-award
+        kind: impact
+        text: Redesigned the AT&T Community forums, earning a “Game Changing UX” award and improving CHI scores.
+        status: unverified
+        variants:
+          - id: att-community-forums-archive-2017
+            text: Redesign of AT&T Community forums increased Community Health Index (CHI) score and won an award for “Game Changing UX” from Lithium
+            length: medium
+            audience: either
+          - id: att-community-forums-archive-resume2
+            text: Redesigned the AT&T Community forums that resulted in the increase of the Community Health Index (CHI) score and won an award for “Game Changing UX” from Lithium
+            length: medium
+            audience: either
+        emphasis: [current-site, community]
+        sources:
+          - path: src/assets/data/work-history.yml
+            locator: "line 107"
+          - path: archive/resume/index.html
+            locator: "line 402"
+          - path: archive/resume/print.html
+            locator: "line 415"
+          - path: archive/resume/index2.html
+            locator: "line 118"
+          - path: archive/resume2/index.html
+            locator: "lines 352-354"
+      - id: claim-att-billpay-revenue
+        kind: impact
+        text: Designed the mobile bill-pay experience for customers resulting in more than $1 billion in new revenue through the mobile app.
+        status: unverified
+        metric:
+          value: "$1 billion"
+          unit: USD in new revenue
+          wording: more than $1 billion in new revenue through the mobile app
+        emphasis: [archive-only, mobile, conflict]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 399"
+          - path: archive/resume/index2.html
+            locator: "line 112"
+          - path: archive/resume/print.html
+            locator: "line 412"
+      - id: claim-att-iphone-campaigns
+        kind: impact
+        text: Successfully launched campaign elements for the iPhone 4, iPhone 4s, and iPhone 5, resulting in record breaking sales.
+        status: unverified
+        emphasis: [archive-only, marketing]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 398"
+          - path: archive/resume/index2.html
+            locator: "line 111"
+          - path: archive/resume/print.html
+            locator: "line 411"
+          - path: archive/resume2/index.html
+            locator: "lines 338-339"
+      - id: claim-att-attcom-redesign
+        kind: impact
+        text: Redesigned the att.com search UI and taxonomy resulting in higher accuracy of search results.
+        status: unverified
+        emphasis: [archive-only, information-architecture]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 400; line 395 also states 'Lead the redesign of att.com search, contact us, and home page.'"
+          - path: archive/resume/index2.html
+            locator: "line 113"
+          - path: archive/resume/print.html
+            locator: "line 413"
+      - id: claim-att-connected-car
+        kind: craft
+        text: Contributed to the AT&T Connected Car design system.
+        status: unverified
+        variants:
+          - id: att-connected-car-archive-index
+            text: Contribute to the AT&T Connected Car in-car UI design system.
+            length: short
+            audience: either
+        emphasis: [archive-only, design-systems]
+        sources:
+          - path: archive/resume/index2.html
+            locator: "line 116"
+          - path: archive/resume/index.html
+            locator: "line 395 (source markup reads 'AT&amp; Connected Car')"
+          - path: archive/resume/print.html
+            locator: "line 408"
+      - id: claim-att-design-roundtable
+        kind: leadership
+        text: Hosted a bi-weekly “design round-table” meeting to open communication across design teams.
+        status: unverified
+        variants:
+          - id: att-design-roundtable-archive-index
+            text: Lead the bi-weekly “design round-table” meeting to open design communication across the company.
+            length: short
+            audience: either
+        emphasis: [archive-only, facilitation]
+        sources:
+          - path: archive/resume/index2.html
+            locator: "line 115"
+          - path: archive/resume/index.html
+            locator: "line 395"
+          - path: archive/resume/print.html
+            locator: "line 408"
+
+  # Archive-only role. The only sources give year-only dates ("2010 - 2011").
+  - id: role-pyramid-consulting-graphic-designer
+    company: Pyramid Consulting Inc.
+    title: Graphic Designer
+    title_variants:
+      - id: pyramid-title-graphic-designer
+        title: Graphic Designer
+        label: archive-2017
+        sources:
+          - path: archive/resume/index.html
+            locator: 'line 409: "Graphic Designer Pyramid Consulting Inc. / 2010 - 2011 (1 year)"'
+          - path: archive/resume/print.html
+            locator: "line 422"
+    start: "2010"
+    end: "2011"
+    overlap_note: "Dates are year-only in every source: archive/resume/index.html line 409 and print.html line 422 state '2010 - 2011 (1 year)'. No month is stated; start and end months are unknown. Location is not stated."
+    summaries:
+      one_line:
+        id: claim-pyramid-summary-one-line
+        kind: summary
+        text: Design collateral for digital marketing campaigns including landing pages, email templates, and graphics.
+        status: unverified
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 410 (first sentence)"
+          - path: archive/resume/print.html
+            locator: "line 423 (first sentence)"
+    claims:
+      - id: claim-pyramid-ticket-reduction
+        kind: impact
+        text: Automated the production of web-ready device images resulting in the elimination of more than 240 tickets per year.
+        status: unverified
+        metric:
+          value: "240+"
+          unit: tickets per year
+          wording: more than 240 tickets per year
+        emphasis: [archive-only, automation]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 413"
+          - path: archive/resume/print.html
+            locator: "line 426"
+      - id: claim-pyramid-ticket-reduction-css-buttons
+        kind: impact
+        text: Advocated for the replacement of graphic buttons with CSS buttons across all digital properties. Eliminated more than 1000 tickets per year.
+        status: unverified
+        metric:
+          value: "1000+"
+          unit: tickets per year
+          wording: more than 1000 tickets per year
+        emphasis: [archive-only, front-end]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 414"
+          - path: archive/resume/print.html
+            locator: "line 427"
+      - id: claim-pyramid-html-prototypes
+        kind: craft
+        text: Create HTML prototypes of landing pages.
+        status: unverified
+        emphasis: [archive-only, front-end]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 410"
+          - path: archive/resume/print.html
+            locator: "line 423"
+      - id: claim-pyramid-campaign-templates
+        kind: craft
+        text: Define templates and patterns for modular campaigns.
+        status: unverified
+        emphasis: [archive-only]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 410"
+          - path: archive/resume/print.html
+            locator: "line 423"
+      - id: claim-pyramid-style-guides
+        kind: craft
+        text: Develop strategic style guides to support product life-cycle events.
+        status: unverified
+        emphasis: [archive-only]
+        sources:
+          - path: archive/resume/index.html
+            locator: "line 410"
+          - path: archive/resume/print.html
+            locator: "line 423"

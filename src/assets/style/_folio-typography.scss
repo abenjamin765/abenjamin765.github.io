@@ -5,13 +5,9 @@ body.folio {
   -webkit-font-smoothing: antialiased;
 }
 
-body.folio a {
-  color: inherit;
-  text-decoration: none;
-}
-
+body.folio a,
 body.folio a:hover,
 body.folio a:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: inherit;
+  text-decoration: none;
 }
