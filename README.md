@@ -170,7 +170,7 @@ For more than 10 years, I've helped global brands design and build products that
 
 ## 📋 Project Repository
 
-This repository contains Aaron Benjamin's portfolio, case study, résumé, and a separate writing section. Résumé content is rendered from the YAML files in `src/assets/data/`; update those files first.
+This repository contains Aaron Benjamin's portfolio, case study, résumé, and a separate writing section. The résumé page is rendered from the `public-portfolio` profile export (`resume/exports/public-portfolio/resume.json`), which `npm run build` regenerates from `resume/canonical/` and `resume/profiles/` before compiling Pug; edit those files, not the page.
 
 ### Quick Start
 

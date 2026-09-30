@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://portable-agent-skills.dev/schema/portable-skill.schema.json",
+  "title": "Portable Agent Skill Contract",
+  "type": "object",
+  "required": ["standard", "version", "contract", "capabilities", "safety", "compatibility", "evaluation"],
+  "properties": {
+    "standard": { "const": "portable-agent-skills/0.1" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][0-9A-Za-z.-]+)?$" },
+    "contract": {
+      "type": "object",
+      "required": ["inputs", "outputs", "preconditions", "invariants", "success_criteria", "failure_modes"],
+      "properties": {
+        "inputs": { "$ref": "#/$defs/stringArray" },
+        "outputs": { "$ref": "#/$defs/stringArray" },
+        "preconditions": { "$ref": "#/$defs/stringArray" },
+        "invariants": { "$ref": "#/$defs/stringArray" },
+        "success_criteria": { "$ref": "#/$defs/stringArray" },
+        "failure_modes": { "$ref": "#/$defs/stringArray" }
+      },
+      "additionalProperties": false
+    },
+    "capabilities": {
+      "type": "object",
+      "required": ["tools", "filesystem", "network", "side_effects"],
+      "properties": {
+        "tools": { "$ref": "#/$defs/stringArray" },
+        "filesystem": { "enum": ["none", "read", "write", "declared-paths"] },
+        "network": { "enum": ["none", "read", "write", "declared-origins"] },
+        "side_effects": { "$ref": "#/$defs/stringArray" }
+      },
+      "additionalProperties": false
+    },
+    "safety": {
+      "type": "object",
+      "required": ["confirmation_gates", "sensitive_data", "untrusted_content"],
+      "properties": {
+        "confirmation_gates": { "$ref": "#/$defs/stringArray" },
+        "sensitive_data": { "type": "string" },
+        "untrusted_content": { "enum": ["none", "isolate", "reject"] }
+      },
+      "additionalProperties": false
+    },
+    "compatibility": {
+      "type": "object",
+      "required": ["hosts", "runtimes", "dependencies"],
+      "properties": {
+        "hosts": { "$ref": "#/$defs/stringArray" },
+        "runtimes": { "$ref": "#/$defs/stringArray" },
+        "dependencies": { "$ref": "#/$defs/stringArray" }
+      },
+      "additionalProperties": false
+    },
+    "evaluation": {
+      "type": "object",
+      "required": ["suite"],
+      "properties": { "suite": { "type": "string", "minLength": 1 } },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

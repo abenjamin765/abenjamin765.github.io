@@ -1,0 +1,55 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('Managing curbside expectations when the store is inventing the process | Aaron Benjamin', 'I designed Home Depot curbside ready-for-pickup and check-in messaging so customers could share an ETA and get confirmation when the store was inventing contactless pickup.', '/curbside-pickup.html', 'folio', '/assets/img/folio/project--curbside-pickup/curbside-pickup--hero-2x.png')
+    body.folio.folio--case
+        +folioShell
+
+        +folioHeader('work', 'Curbside Pickup', '/#curbside-pickup')
+
+        main#main.folio-main.folio-main--case
+            article.folio-case
+                header.folio-case__hero
+                    figure.folio-case__hero-media
+                        img(src="/assets/img/folio/project--curbside-pickup/curbside-pickup--hero-2x.png", alt="Mobile ready-for-pickup email with I’ll be there in time choices and an I’m here button", width="1920" height="1320" fetchpriority="high")
+                    .folio-case__intro
+                        p.folio-eyebrow Case study
+                        h1 Managing curbside expectations when the store is inventing the process
+                        p.folio-case__dek In early 2020, contactless pickup had to work before every system caught up. I put timing and confirmation into the messages customers already received.
+                    +caseFacts
+                        .folio-case__fact
+                            dt Role
+                            dd Staff UX Designer, The Home Depot
+                        .folio-case__fact
+                            dt Scope
+                            dd Ready-for-pickup email, check-in confirmation, field discovery
+                        .folio-case__fact
+                            dt Key decision
+                            dd Make arrival timing a two-way signal between customer and store
+                        .folio-case__fact
+                            dt Outcome
+                            dd Sixty-day pilot in 50 stores reported on-time expectations, door-to-door times under five minutes, and fewer fulfillment-switch calls (deck-stated, unverified)
+
+                +caseSection({labelledby: "curb-field-title"})
+                    h2#curb-field-title The field made the variance obvious
+                    p In early 2020, Home Depot had to invent contactless pickup while regulations and customer habits changed week to week. Associates, signage, and email carried a lot of the experience. The failure mode I kept seeing was not only slow delivery—it was uncertainty. When customers did not get feedback after check-in, they left the car, called to change fulfillment, or assumed something was wrong.
+                    p I interviewed store managers, associates, and customers. Orders varied wildly in size and complexity. Store layout changed door-to-door time. Fulfillment-channel changes disrupted the floor. Customers expected a confirmation when they checked in, and they did not share one definition of “on time.”
+                    p Analysis added a few usable baselines: customers expected delivery in under five minutes, average door-to-door time was 3.5 minutes, and 30% of pickup customers called to change their pickup method.
+
+                +caseSection({labelledby: "curb-align-title", tint: true})
+                    h2#curb-align-title Alignment started from a problem statement, not a finished journey
+                    p I told partners that missing feedback during pickup made customers feel uncertain and more likely to leave the designed process. I kept unfinished journey sketches out of the “finished artifact” column; expectation-setting belonged in communications, not only in associate heroics.
+
+                +caseSection({labelledby: "curb-eta-title", prose: false})
+                    .folio-case__prose
+                        h2#curb-eta-title ETA in the email, confirmation at check-in
+                        p The decision that changed the work was to make timing a two-way signal. The ready-for-pickup email said when and where to come, asked for an ETA, explained how to get help, offered Spanish, and avoided unrelated fulfillment options. Check-in confirmation told customers when they were successful, when to call the store, or when the order would take longer.
+                    +caseFigure({labelledby: "curb-email-caption", src: "/assets/img/folio/project--curbside-pickup/curbside-pickup--email-2x.png", alt: "Ready-for-pickup mobile message with ETA choices of 10, 15, 20, and 30 minutes and an I’m here button", width: "1000", height: "2000", loading: "lazy", caption: "Ready-for-pickup email: pickup window, ETA choices, and a way to say “I’m here.”", captionId: "curb-email-caption"})
+                    +caseFigure({labelledby: "curb-checkin-caption", src: "/assets/img/folio/project--curbside-pickup/curbside-pickup--checkin-2x.png", alt: "Three check-in confirmation states: success with a wait time, error asking the customer to call the store, and delay messaging", width: "1600", height: "1800", loading: "lazy", caption: "Check-in confirmation states for success, error, and delay—so customers are not left guessing.", captionId: "curb-checkin-caption"})
+
+                +caseOutcome("curb-outcome-title", "Fifty stores, sixty days")
+                    p After a 60-day pilot in 50 stores, about 90% of customers said the order arrived when they expected it. Average door-to-door time was 3.8 minutes with ETAs and 4.5 minutes without—both under the five-minute goal. Fewer than 10% of pilot customers called to switch fulfillment, against a prior baseline above 30%. Those figures are deck-stated and unverified in my career record.
+                    p My takeaway: when operations are inventing the channel, expectation design is not decoration. It is how you keep customers and associates in the same playbook.
+
+            +folioFooter(true, 'When the store is inventing the channel, the message has to carry the expectation the product cannot yet hold.', {href: '/price-adjustments.html', label: 'Next case: Price Adjustments'})

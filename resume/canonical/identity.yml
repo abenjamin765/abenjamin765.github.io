@@ -1,0 +1,90 @@
+# Canonical identity. Facts only; profiles choose which email, location,
+# headline, and summary to render. Nothing here is verified.
+# identity.schema has no `sources` on emails, headline_variants, or
+# summary_variants, so their evidence is recorded in `context` or in comments.
+identity:
+  name: Aaron Benjamin
+
+  headline_variants:
+    # src/assets/data/contact-info.yml line 3 (candidateTitle);
+    # archive/resume/index.html line 315; archive/resume/print.html line 327
+    - id: headline-ux-designer
+      text: UX Designer
+      length: short
+      audience: either
+    # archive/resume/index2.html line 20
+    - id: headline-senior-ux-product-designer
+      text: Senior UX / Product Designer
+      length: short
+      audience: either
+    # archive/resume2/index.html line 12 (present in markup but HTML-commented-out)
+    - id: headline-ux-and-product-designer
+      text: UX & Product Designer
+      length: short
+      audience: either
+
+  emails:
+    - id: email-hello
+      label: current-site
+      address: hello@aaronbenjamin.design
+      context: "src/assets/data/contact-info.yml line 7 (candidateEmail); archive/resume2/index.html line 14"
+    - id: email-gmail
+      label: archive-2017
+      address: abenjamin765@gmail.com
+      context: "archive/resume/index.html line 320; archive/resume/print.html line 331"
+    - id: email-outlook
+      label: archive-2017-alternate
+      address: aaronbenjamin@outlook.com
+      context: "archive/resume/index2.html line 30"
+
+  phones:
+    # Same digits in every source; formatting differs only.
+    # contact-info.yml line 8; archive/resume/index.html line 321 ("770 380 5566");
+    # archive/resume/index2.html line 29 ("770.380.5566"); archive/resume2/index.html line 15
+    - id: phone-main
+      label: current-site
+      number: (770) 380-5566
+
+  locations:
+    - id: location-powder-springs
+      label: current-site
+      text: Powder Springs, GA
+      sources:
+        - path: src/assets/data/contact-info.yml
+          locator: 'line 9: candidateLocation: "Powder Springs, GA"'
+    - id: location-seattle
+      label: archive-2017
+      text: Seattle
+      sources:
+        - path: archive/resume/index.html
+          locator: 'line 358: "Seattle based UX designer."'
+        - path: archive/resume/print.html
+          locator: 'line 334: "Seattle based UX designer."'
+
+  website: aaronbenjamin.design
+  linkedin: https://www.linkedin.com/in/aaronbenjamindesign/
+
+  summary_variants:
+    # src/assets/data/contact-info.yml line 4 (candidateDescription);
+    # archive/resume2/index.html line 43 (exact match)
+    - id: summary-ten-years
+      text: "For more than 10 years, I've helped global brands design and build products that deliver long-term value to customers and achieve business goals."
+      length: short
+      audience: either
+    # src/resume.pug line 19 (.resume-summary, hardcoded in the template).
+    # Reconciliation section 9 id: claim-identity-summary-variant
+    - id: summary-resume-page
+      text: "I lead design for complex product systems, connecting research, shared models, and shipped interfaces. My work spans marketplaces, education, commerce, and internal tools, with a focus on decisions teams can carry through implementation."
+      length: medium
+      audience: human
+    # src/resume.pug line 5 (folioHead meta description, hardcoded)
+    - id: summary-resume-meta
+      text: "Aaron Benjamin is a product designer who leads complex UX work across marketplaces, education, commerce, and internal tools."
+      length: short
+      audience: either
+    # archive/resume/index.html line 358; archive/resume/print.html line 334;
+    # HTML-commented-out in archive/resume/index2.html line 32
+    - id: summary-seattle-seven-years
+      text: "Seattle based UX designer. More than 7 years of experience creating products for customers around the world at companies including AT&T, HP, and Amazon. Skilled at visualizing complex, technical concepts as concrete mockups and prototypes. Exceptional design leadership skills. Able to lead broad-ranging initiatives and projects. Excels at translating customer and business needs into solutions with long-term value."
+      length: long
+      audience: human

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="525" viewBox="0 0 840 525" role="img" aria-labelledby="title desc">
+  <title id="title">Object guide preview</title>
+  <desc id="desc">Crop of Hold object: definition and states table</desc>
+  <rect width="840" height="525" fill="#E8E6E1"/>
+  <rect x="48" y="36" width="744" height="453" rx="8" fill="#FFFcf7" stroke="#D0CBC3"/>
+  <text x="76" y="78" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">Hold</text>
+  <text x="76" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6B6560">type: object | owner: luke | id: object-hold</text>
+  <text x="76" y="148" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Definition</text>
+  <text x="76" y="172" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">A patron&apos;s request that a specific circulating Item be set aside</text>
+  <text x="76" y="190" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">until they pick it up, cancel, or the hold expires. Distinct from</text>
+  <text x="76" y="208" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">Checkout and from a generic calendar Reservation.</text>
+  <text x="76" y="248" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">States and transitions</text>
+  <rect x="76" y="262" width="688" height="176" rx="4" fill="#F7F4EE" stroke="#E0DBD2"/>
+  <text x="92" y="286" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">State</text>
+  <text x="200" y="286" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">Meaning</text>
+  <text x="470" y="286" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">May exit to</text>
+  <line x1="92" y1="296" x2="740" y2="296" stroke="#D8D2C8"/>
+  <text x="92" y="318" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">waiting</text>
+  <text x="200" y="318" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">In queue; item not yet set aside</text>
+  <text x="470" y="318" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">ready, cancelled</text>
+  <text x="92" y="342" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">ready</text>
+  <text x="200" y="342" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Set aside; pickup window open</text>
+  <text x="470" y="342" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">fulfilled, expired, cancelled</text>
+  <text x="92" y="366" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">fulfilled</text>
+  <text x="200" y="366" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Picked up / handed to checkout</text>
+  <text x="470" y="366" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">-</text>
+  <text x="92" y="390" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">expired</text>
+  <text x="200" y="390" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Window ended without pickup</text>
+  <text x="470" y="390" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">-</text>
+  <text x="92" y="414" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">cancelled</text>
+  <text x="200" y="414" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Explicitly stopped</text>
+  <text x="470" y="414" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">-</text>
+  <text x="76" y="468" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#8A847C">... attributes | relationships | actions | permissions</text>
+</svg>

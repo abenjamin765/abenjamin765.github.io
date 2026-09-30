@@ -1,0 +1,60 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('One chat was answering as the whole team | Aaron Benjamin', 'I built Many Hats, a cloneable product team of thirteen specialists, so a single chat cannot approve a decision I did not make.', '/many-hats.html', 'folio', '/assets/img/folio/project--many-hats/many-hats--hero-2x.png')
+    body.folio.folio--case
+        +folioShell
+
+        +folioHeader('work', 'Many Hats', '/#many-hats')
+
+        main#main.folio-main.folio-main--case
+            article.folio-case
+                header.folio-case__hero
+                    .folio-case__hero-media
+                        +figurePlaceholder('The thirteen Many Hats specialists as a single team portrait, each with a hat and a readable role: Liza, Luke, Charlie, Iris, Finn, Sentry, Scout, Cipher, Ledger, Echo, Relay, Harbor, Allie. No extra characters. No product UI behind them.', '960×660', '1920×1320', '/assets/img/folio/project--many-hats/many-hats--hero-2x.png', 'src/assets/img/folio/project--many-hats/many-hats--hero-2x.png', 'Thirteen Many Hats specialists, each with a hat and a role name.')
+                    .folio-case__intro
+                        p.folio-eyebrow Case study
+                        h1 One chat was answering as the whole team
+                        p.folio-case__dek I built Many Hats so one person can work with named specialists who leave citable artifacts. The person using it stays the product owner.
+                    +caseFacts
+                        .folio-case__fact
+                            dt Role
+                            dd Author
+                        .folio-case__fact
+                            dt Form
+                            dd Thirteen agents and fifteen portable skills, public v0.1
+                        .folio-case__fact
+                            dt Runs in
+                            dd Cursor, Claude Code, Codex, GitHub Copilot, and Windsurf
+                        .folio-case__fact
+                            dt Outcome
+                            dd A cloneable team and a fictional Library Holds demo. No adoption count.
+
+                +caseSection({labelledby: "hats-methods-title"})
+                    h2#hats-methods-title Fifty-three methods still had no owner
+                    p Design Dash already held 53 stage-oriented methods, from object discovery through ethics review. They worked inside a facilitated workshop. They were a poor fit for ongoing product work, where the same person needs to ask a product lead to frame the problem and a critic who did not write the plan.
+                    p A general agent can draft all of those jobs in one thread. Strategy, domain rules, interface language, and implementation advice arrive as one voice. Nothing in that thread has to stay inside a role, cite a project fact, or stop before it sounds like a decision.
+                    p I reviewed public agent collections for boundaries and verification patterns, including GitHub’s awesome-copilot, OpenAI’s skills, and Anthropic’s skill packaging. I wrote original contracts. I did not copy their agents.
+
+                +caseSection({labelledby: "hats-split-title", tint: true, prose: false})
+                    .folio-case__prose
+                        h2#hats-split-title I separated roles, skills, and project facts
+                        p The architecture keeps four things apart. People are stable roles. Practice is a portable skill with a testable contract. Knowledge is shared facts, including the object library. Work is the artifact a role produces on one project.
+                        p That split decides where a correction goes. A fix that belongs to one product stays in that project. A reusable change needs a motivating case, an evaluation, and a pull request I approve. I mapped all 53 Design Dash methods onto accountable agents and folded them into fifteen skills. Luke holds the domain methods. Liza holds direction and facilitation. The original methods stay as references, so the fold did not delete the practice.
+                        p The object library sits in shared knowledge, not inside one agent’s folder. Luke stewards it. The other roles cite the same objects. A project can reference an object, fork it, or propose a promotion. It does not edit the shared object to satisfy an unreviewed assumption.
+                    +figurePlaceholder('Four labeled planes in a row: People (stable roles), Practice (portable skills), Knowledge (objects, evidence, decisions, metrics, glossary), Work (project artifacts). A return path shows observed learning going either to a project override or to a reviewed upstream change. No chat screenshot.', '960×660', '1920×1320', '/assets/img/folio/project--many-hats/many-hats--planes-2x.png', 'src/assets/img/folio/project--many-hats/many-hats--planes-2x.png', 'Four planes — people, practice, knowledge, and work — with learning returning as a project override or a reviewed change.')
+
+                +caseSection({labelledby: "hats-demo-title", prose: false})
+                    .folio-case__prose
+                        h2#hats-demo-title The critic can reject the bigger product
+                        p Library Holds is the public demo, and it is fictional. Patrons and desk staff need a holds-and-pickup loop they can trust. The tempting version is a platform: branch transfers, waitlist games, and a notification preference center.
+                        p Liza’s direction chooses a smaller Hold MVP: place, cancel, ready, fulfill, and expire, with one notice channel. Luke defines Hold, Patron, Item, and Pickup Window. Charlie maps waiting, ready, expired, cancelled, and an empty queue. Echo separates Hold from Reservation and Checkout. Allie challenges the platform version. A text-message preference is an assumption. Waitlist points do not answer when a book must be picked up. Multi-branch transfer is a different product. Liza’s accepted decision cites that challenge and leaves those ideas out of the first version.
+                        p Allie does not inherit the plan she is challenging. Across the system, agents may recommend and prepare. They may not claim a stakeholder said yes, merge, deploy, or send anything unless I authorized that exact action.
+                    +figurePlaceholder('Four artifact sheets in a row, each with a hat and a name: Liza’s Hold MVP direction, Luke’s Hold object, Charlie’s ready-to-pickup flow, and Allie’s challenge. The challenge sheet is visibly the one that cuts transfers, waitlist games, and a preference center. Mark the set as a fictional demo. No library branding that implies a real client.', '960×660', '1920×1320', '/assets/img/folio/project--many-hats/many-hats--holds-2x.png', 'src/assets/img/folio/project--many-hats/many-hats--holds-2x.png', 'Library Holds artifacts: Liza’s direction, Luke’s Hold object, Charlie’s flow, and Allie’s challenge.')
+
+                +caseOutcome("hats-outcome-title", "v0.1 is a cloneable team, and the decision stays mine")
+                    p A builder can clone the repository, install the skills, and replay a pass from scope through objects, flow, language, and an independent challenge. The skills stay the same across hosts. Adapters only change how a tool finds them.
+                    p I do not have an adoption count for v0.1, and Library Holds is not a field study. What the repository shows is a way to do product work with AI without collapsing the team into one obliging voice. My takeaway: a useful specialist produces a citable artifact, stays inside a role, and leaves the decision with the person accountable for it.
+
+            +folioFooter(true, 'The agents can prepare the work. I still own the decision.', {href: '/a-to-z-first-claim.html', label: 'Next case: A-to-z First Claim'})

@@ -6,6 +6,7 @@ const yaml = require("js-yaml");
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("node:child_process");
+const { Transform } = require("node:stream");
 const { pipeline } = require("node:stream/promises");
 const browserSync = require("browser-sync").create();
 
@@ -27,13 +28,38 @@ function getYamlData() {
   return result;
 }
 
+const RESUME_PROFILE_EXPORT = path.join(__dirname, "resume/exports/public-portfolio/resume.json");
+const CAREER_DATA_DIR = path.join(__dirname, "resume/exports/data");
+const CAREER_DATA_FILES = ["career.json", "resume-profiles.json"];
+
+/** Regenerates résumé exports and resume/exports/data; fails the build if a profile no longer resolves. */
+function exportResume(done) {
+  try {
+    execSync("node scripts/export-resume.js", { cwd: __dirname, stdio: "inherit" });
+    // career.json holds private contact details and unverified claims; it must never be a standalone site URL.
+    for (const name of CAREER_DATA_FILES) {
+      fs.rmSync(path.join(__dirname, "dist/assets/data", name), { force: true });
+    }
+    done();
+  } catch (_err) {
+    done(_err);
+  }
+}
+
+// The résumé builder embeds the full career record (private contact details,
+// unverified claims), so it is never compiled or copied into dist/.
+const BUILDER_PAGE = "src/resume-builder.pug";
+const BUILDER_SCRIPT = "src/assets/js/resume-builder.js";
+const BUILDER_OUT = path.join(__dirname, "resume/exports/builder");
+
 // Compile Pug templates
 function compilePug() {
   return gulp
-    .src("src/*.pug")
+    .src(["src/*.pug", "!" + BUILDER_PAGE])
     .pipe(
       data(function () {
         const yamlData = getYamlData();
+        yamlData.resume = JSON.parse(fs.readFileSync(RESUME_PROFILE_EXPORT, "utf8"));
         return yamlData;
       })
     )
@@ -41,6 +67,66 @@ function compilePug() {
     .pipe(gulp.dest("dist"))
     .pipe(browserSync.stream());
 }
+
+const buildPug = gulp.series(exportResume, compilePug);
+
+/** JSON for a `script type="application/json"` body; escaping `<` keeps `</script>` in data from closing the tag. */
+function inlineJson(file) {
+  return fs.readFileSync(file, "utf8").trim().replace(/</g, "\\u003c");
+}
+
+/** Local-only builder page; root-relative asset paths become relative so it opens from file://. */
+function compileBuilderPage() {
+  return gulp
+    .src(BUILDER_PAGE)
+    .pipe(
+      data(() => ({
+        builderData: {
+          career: inlineJson(path.join(CAREER_DATA_DIR, "career.json")),
+          profiles: inlineJson(path.join(CAREER_DATA_DIR, "resume-profiles.json")),
+        },
+      }))
+    )
+    .pipe(pug())
+    .pipe(
+      new Transform({
+        objectMode: true,
+        transform(file, _encoding, callback) {
+          file.contents = Buffer.from(String(file.contents).replace(/(href|src)="\/assets\//g, '$1="assets/'));
+          file.basename = "index.html";
+          callback(null, file);
+        },
+      })
+    )
+    .pipe(gulp.dest(BUILDER_OUT));
+}
+
+function compileBuilderSass() {
+  return gulp
+    .src("src/assets/style/folio.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest(path.join(BUILDER_OUT, "assets/style")));
+}
+
+function copyBuilderAssets() {
+  return gulp
+    .src([BUILDER_SCRIPT, "src/assets/img/folio/blob.svg", "src/assets/img/folio/favicon.svg"], {
+      base: "src",
+      encoding: false,
+    })
+    .pipe(gulp.dest(BUILDER_OUT));
+}
+
+function reportBuilderPath(done) {
+  console.log(`Résumé builder (local only, not published): ${path.join(BUILDER_OUT, "index.html")}`);
+  done();
+}
+
+const buildResumeBuilder = gulp.series(
+  exportResume,
+  gulp.parallel(compileBuilderPage, compileBuilderSass, copyBuilderAssets),
+  reportBuilderPath
+);
 
 // Compile Sass — site / resume / folio as separate outputs.
 // Scope BrowserSync injection per stylesheet so parallel builds don't inject the wrong CSS.
@@ -102,7 +188,7 @@ async function copyImages() {
 // Copy JavaScript files
 function copyJS() {
   return gulp
-    .src("src/assets/js/**/*.js")
+    .src(["src/assets/js/**/*.js", "!" + BUILDER_SCRIPT])
     .pipe(gulp.dest("dist/assets/js"))
     .pipe(browserSync.stream());
 }
@@ -170,6 +256,7 @@ function serve() {
     compileFolioSass
   );
   gulp.watch("src/assets/data/**/*.yml", compilePug);
+  gulp.watch(["resume/canonical/**/*.yml", "resume/profiles/**/*.yml"], buildPug);
   gulp.watch("src/assets/img/**/*", copyImages);
   gulp.watch("src/assets/js/**/*.js", copyJS);
 }
@@ -187,7 +274,9 @@ function watchSass() {
   );
 }
 
-exports.pug = compilePug;
+exports.pug = buildPug;
+exports.resumeExport = exportResume;
+exports.resumeBuilder = buildResumeBuilder;
 exports.sassSite = compileSiteSass;
 exports.sassResume = compileResumeSass;
 exports.sassFolio = compileFolioSass;
@@ -197,7 +286,7 @@ exports.images = copyImages;
 exports.js = copyJS;
 exports.eleventy = compileEleventy;
 exports.serve = gulp.series(
-  compilePug,
+  buildPug,
   compileSass,
   copyImages,
   copyJS,

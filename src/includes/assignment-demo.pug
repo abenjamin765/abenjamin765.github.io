@@ -1,0 +1,61 @@
+//- Interactive assignment disclosure used by the Classroom case demo.
+//- Behavior is driven by assets/js/assignment-demo.js; counts and copy are illustrative.
+mixin assignment(title, stats, due, icon, locked, active)
+    - const isReading = title.indexOf('Reading Activity:') === 0
+    - const isMathChallenge = title.indexOf('Math Challenge:') === 0
+    - const variant = Number(due.split('/')[1])
+    - const resultTotal = isReading ? 24 + (variant % 3) * 4 : (isMathChallenge ? 10 : 12)
+    - const studentNames = ['Aisha Patel', 'Amara Okafor', 'Ava Coleman', 'Benjamin Frost', 'Caleb Nguyen', 'Diego Fuentes', 'Elena Voss', 'Fatima Khan', 'Gabriel Ortiz', 'Harper Lee', 'Isaac Moreno', 'Jasmine Kim']
+    - const counts = stats.match(/\d+/g).map(Number)
+    - const totalStudents = counts[0] + counts[1] + counts[2]
+    - const notStartedRows = Math.min(7, Math.round(counts[2] / totalStudents * 7))
+    - const inProgressRows = Math.min(7 - notStartedRows, Math.round(counts[1] / totalStudents * 7))
+    details.folio-demo__assignment(open=active)
+        summary.folio-demo__assignment-summary
+            span.folio-demo__assignment-main
+                span.folio-demo__icon-tile
+                    img(src='assets/img/folio/project--assignment-management/demo-icons/' + icon + '.svg', alt="")
+                span.folio-demo__assignment-body
+                    span.folio-demo__assignment-title= title
+                    span.folio-demo__assignment-meta= stats
+            span.folio-demo__assignment-actions
+                if locked
+                    img.folio-demo__lock(src="assets/img/folio/project--assignment-management/demo-icons/lock.svg", alt="Locked assignment")
+                span.folio-demo__due= 'Due ' + due
+                img.folio-demo__ellipsis(src="assets/img/folio/project--assignment-management/demo-icons/ellipsis.svg", alt="")
+        .folio-demo__student-progress
+            .folio-demo__table-wrap(tabindex="0" aria-label='Student progress table for ' + title + '. Scroll horizontally on smaller screens.')
+                table.folio-demo__table
+                    caption.visually-hidden= 'Student progress for ' + title
+                    thead
+                        tr
+                            th(scope="col" aria-sort="none")
+                                button.folio-demo__table-heading.folio-demo__sort-button(type="button" data-sort-key="student" aria-label="Sort students by name")
+                                    span Student
+                                    img(src="assets/img/folio/project--assignment-management/demo-icons/angles-up-down.svg", alt="")
+                            th(scope="col" aria-sort="ascending")
+                                button.folio-demo__table-heading.folio-demo__sort-button(type="button" data-sort-key="status" aria-label="Sort by status urgency")
+                                    span Status
+                                    img(src="assets/img/folio/project--assignment-management/demo-icons/angles-up-down.svg", alt="")
+                            th(scope="col" aria-sort="none")
+                                button.folio-demo__table-heading.folio-demo__table-heading--score.folio-demo__sort-button(type="button" data-sort-key="result" aria-label=isReading ? "Sort by pages read" : "Sort by correct answers")
+                                    span= isReading ? 'Pages read' : 'Correct'
+                                    img(src="assets/img/folio/project--assignment-management/demo-icons/angles-up-down.svg", alt="")
+                    tbody
+                        each rowIndex in [0, 1, 2, 3, 4, 5, 6]
+                            - const progressState = (rowIndex + variant) % 7
+                            - const isNotStarted = progressState < notStartedRows
+                            - const isInProgress = !isNotStarted && progressState < notStartedRows + inProgressRows
+                            - const status = isNotStarted ? 'Not started' : (isInProgress ? 'In progress' : 'Completed in ' + (11 + ((rowIndex * 3 + variant) % 14)) + 'm')
+                            - const resultValue = isInProgress ? Math.max(1, Math.floor(resultTotal * (0.3 + ((rowIndex + variant) % 3) * 0.15))) : Math.max(1, resultTotal - ((rowIndex * 2 + variant) % 4))
+                            - const resultPercent = Math.round(resultValue / resultTotal * 100)
+                            tr
+                                th(scope="row")= studentNames[(rowIndex + variant) % studentNames.length]
+                                td.folio-demo__status(class=isNotStarted ? 'folio-demo__status--not-started' : (isInProgress ? 'folio-demo__status--in-progress' : null))= status
+                                td
+                                    if isNotStarted
+                                        | —
+                                    else if isReading
+                                        | #{resultValue} of #{resultTotal} pages
+                                    else
+                                        | #{resultValue} / #{resultTotal} (#{resultPercent}%)

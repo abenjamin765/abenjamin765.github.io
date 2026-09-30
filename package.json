@@ -4,13 +4,16 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass && gulp pug && gulp images && gulp js && ELEVENTY_SKIP_SASS=1 npx @11ty/eleventy && node scripts/build-resume-pdf.js",
+    "build": "node scripts/validate-resume.js && gulp sass && gulp pug && gulp images && gulp js && ELEVENTY_SKIP_SASS=1 npx @11ty/eleventy && node scripts/build-resume-pdf.js",
     "build:eleventy": "npx @11ty/eleventy",
     "dev:eleventy": "npx @11ty/eleventy --serve --watch",
     "watch:sass": "gulp watchSass",
     "start:pdf": "node start-with-pdf.js",
     "pdf-server": "node pdf-server.js",
-    "test": "node scripts/test-portfolio.js"
+    "test": "node scripts/test-portfolio.js",
+    "resume:export": "node scripts/export-resume.js",
+    "resume:validate": "node scripts/validate-resume.js",
+    "resume:builder": "gulp resumeBuilder"
   },
   "keywords": [],
   "author": "",
@@ -29,5 +32,8 @@
     "markdown-it-footnote": "^4.0.0",
     "puppeteer": "^24.15.0",
     "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0"
   }
 }

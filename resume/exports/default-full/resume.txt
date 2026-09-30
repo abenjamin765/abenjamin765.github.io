@@ -1,0 +1,125 @@
+AARON BENJAMIN
+UX Designer
+hello@aaronbenjamin.design | (770) 380-5566 | Powder Springs, GA | aaronbenjamin.design | https://www.linkedin.com/in/aaronbenjamindesign/
+
+SUMMARY
+For more than 10 years, I've helped global brands design and build products that deliver long-term value to customers and achieve business goals.
+
+EXPERIENCE
+
+Senior UX Designer, Renaissance Learning
+Jul 2024 – Present · Remote
+- Led UX strategy and end-to-end design for K-12 classroom experiences across Renaissance Intelligence.
+- Directed the design and launch of Renaissance Intelligence and contributed reusable patterns to the design system.
+- Designed AI-assisted teacher experiences and used AI-assisted prototyping to speed up design iteration and testing.
+- Championed Object-Oriented UX across design and engineering to strengthen shared product models and team alignment.
+
+Senior UX Designer, Indeed
+Oct 2022 – Jul 2024 · Remote
+Ownership of monetization and growth employer experience focused on driving revenue
+- Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.
+- Partnered with leadership to shape and execute the companys marketplace monetization strategy.
+- Delivered end-to-end design from discovery through launch, influencing product development across multiple teams.
+- Generated new revenue streams and cost savings by designing and analyzing over 30 A/B tests for employer monetization initiatives.
+- Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.
+- Mentored peers and promoted best practices to foster a culture of continuous learning and craft excellence.
+- Built trusted relationships with product, engineering, and business stakeholders to align on goals and strategy.
+- Hosted recurring team events to build morale and strengthen organizational culture.
+- Contributed to a comprehensive service blueprint mapping all internal systems and user touchpoints.
+
+Senior Product Designer, Redfin
+Feb 2022 – Sep 2022 · Remote
+Strategic partner for vision and roadmap development
+- Influenced product roadmap and strategy by delivering user research that realigned business priorities toward customer-first features.
+- Conducted discovery and tactical research to identify user needs and business opportunities.
+- Translated insights into accessible, user-centered solutions that elevated core experiences.
+- Supported hiring, onboarding, and growth of design team talent.
+- Championed company-aligned design principles grounded in user advocacy and design excellence.
+- Led team-wide StrengthsFinder workshops to foster a culture of development and collaboration.
+- Advised partners on segmenting user needs and motivations to better align business priorities.
+- Influenced roadmap prioritization to drive customer-first feature development.
+
+Staff UX Designer, The Home Depot
+Oct 2018 – Feb 2022 · Atlanta, GA
+Work with cross-functional teams to deliver solutions at scale
+- For a 60-day curbside pickup pilot in 50 stores, about 90% of customers said the order arrived when they expected it, door-to-door time averaged 3.8 minutes with ETAs versus 4.5 without, and calls to change fulfillment fell from a 30%+ baseline to under 10%.
+- After a 50-store pilot, price adjustments rolled out to all stores. At 30, 60, and 90 days, order transaction times decreased, associates reported feeling more empowered to help customers, shrink decreased, and SOP adoption for price adjustments increased.
+- Designed enterprise tools for merchandising, store systems, and HR with cross-functional product and engineering teams.
+- Planned and facilitated research to inform product priorities and validate design decisions.
+- Championed accessibility in associate tools and led workshops for designers, product owners, and engineers.
+- Helped develop design talent through hiring and mentorship.
+- Contribute to the enterprise vision and strategy (OGSMs/OKRs)
+- Led the discovery and implementation of key business changes to support omni-channel selling for suppliers; This will improve the in-store and online shopping experience and generate significant savings for the business
+
+Senior Product Designer, Snap! Mobile
+Jan 2018 – Oct 2018 · Seattle, WA
+Lead agile design process for cross-functional team
+- Led end-to-end design in agile, cross-functional teams, supporting a portfolio of fundraising products.
+- Introduced user research practices and defined KPIs aligned to business drivers.
+- Developed and documented design standards and reusable UI patterns across platforms.
+- Conducted accessibility audits, enabling better experiences and expanding market reach.
+- Designed and launched a new business line that automated previously manual workflows.
+- Mentored junior designers and fostered a culture of continuous improvement.
+- Championed adoption of progressive web app technologies across product teams.
+- Led a customer cohort analysis across three channels, informing roadmap direction.
+- Redesigned the donation experience for a high school fundraising platform, improving conversion rates.
+
+UX Designer, Amazon
+Aug 2016 – Dec 2017 · Seattle, WA
+Lead the design of customer-facing tools from concept to delivery.
+- Redesigned the first A-to-z claim notification. In the 60 days after the U.S. update, 88% of sellers who opened the email felt confident they could avoid future claims, related Seller Support call volume fell 14%, and seller-initiated refunds trended toward a 30% year-over-year increase.
+- Designed end-to-end seller tools for the Amazon Marketplace, improving onboarding and engagement.
+- Partnered across program management, editorial, and engineering to build trust and usability into seller experiences.
+- Launched the Amazon Seller Newsletter, reaching over 1 million sellers across 12 markets.
+- Introduced automation into key support workflows, reducing support volume and improving seller satisfaction.
+- Mentored junior designers and supported Amazon’s internal mentorship program.
+- Responsible for the end-to-end design and launch of the Amazon Seller Newsletter; reaching more than 1 million sellers in 6 different languages across 12 global markets with an open rate consistently above 32% over 6 months.
+- Mentor junior team members. Support the student mentorship program in partnership with The University of Washington.
+
+UX Lead, HP Inc.
+Sep 2015 – Aug 2016 · Alpharetta, GA
+Lead design team responsible for HP Software UX design.
+- Managed and supported a team of four designers and a UX researcher.
+- Owned design roadmap and team resourcing for HP Marketing Cloud.
+- Created customization workflows for white-label enterprise clients.
+- Contributed to the Grommet design system, enhancing accessibility and reusability across HP products.
+- Streamlined intake and production processes, reducing design delivery time by 45%.
+- Evangelized design system adoption across HP Software, improving cross-product consistency.
+- Oversee design direction, concepts, and implementations while supporting and developing 3 direct reports.
+- Manage resourcing, road-map, and design direction for HP Aurasma, an Augmented Reality (AR) product for marketers and consumers.
+- Lead application modeling sessions to visualize product requirements.
+- Conduct user research studies to inform product direction.
+- Organize workshops for team development.
+
+Senior UX Designer, AT&T
+Jul 2011 – Aug 2015 · Atlanta, GA
+Provide UX design support and direction for customer-facing projects.
+- Designed mobile and responsive experiences for customer-facing digital platforms.
+- Led UX system efforts that replaced native apps with a responsive web architecture.
+- Created and maintained a cross-platform design system and mobile pattern library.
+- Designed the mobile bill-pay flow that drove over $1B in app-based payments.
+- Championed AT&T’s mobile-first design initiative across business units.
+- Redesigned the AT&T Community forums, earning a “Game Changing UX” award and improving CHI scores.
+- Designed the mobile bill-pay experience for customers resulting in more than $1 billion in new revenue through the mobile app.
+- Successfully launched campaign elements for the iPhone 4, iPhone 4s, and iPhone 5, resulting in record breaking sales.
+- Redesigned the att.com search UI and taxonomy resulting in higher accuracy of search results.
+- Contributed to the AT&T Connected Car design system.
+- Hosted a bi-weekly “design round-table” meeting to open communication across design teams.
+
+Graphic Designer, Pyramid Consulting Inc.
+2010 – 2011
+Design collateral for digital marketing campaigns including landing pages, email templates, and graphics.
+- Automated the production of web-ready device images resulting in the elimination of more than 240 tickets per year.
+- Advocated for the replacement of graphic buttons with CSS buttons across all digital properties. Eliminated more than 1000 tickets per year.
+- Create HTML prototypes of landing pages.
+- Define templates and patterns for modular campaigns.
+- Develop strategic style guides to support product life-cycle events.
+
+EDUCATION
+FullSail University — Winter Park, FL · 2008
+
+SKILLS
+Focus: Accessibility & Inclusive Design, UX Leadership & Strategy, AI-Enhanced Design
+Capabilities: UX Design & Strategy, Design Systems & Scalable Design, Rapid Prototyping & Wireframing, Cross-Platform UI Design (Web & Mobile), User Research & Usability Testing, Information Architecture & User Journey Mapping, Accessibility & Inclusive Design (WCAG, Section 508), Front-End Fundamentals (HTML/CSS), AI-Integrated UX (Conversational UI, Generative Tools)
+Practices: Leadership & Mentorship, Collaboration & Communication, Strategic Problem Solving & Adaptability, Empathy & User Advocacy, Workshop Facilitation & Stakeholder Alignment, Storytelling & Design Presentation
+Tools: Figma, Sketch, Miro, ChatGPT, Cursor

@@ -1,0 +1,78 @@
+# TEMPORARY: allow_unverified is true only so the live résumé page is not blank
+# while every canonical claim is still unverified. Set it back to false once
+# the claims shown here are verified against real sources.
+#
+# Mirrors what src/resume.pug renders today: highlighted accomplishment indexes
+# [[0,1,3],[0,3,4],[0,1,3],[0,1,2]] for the first four roles in
+# src/assets/data/work-history.yml, then accomplishments[0] for later roles.
+# Pyramid Consulting is not on the page, so it is not listed. The page shows no
+# phone number, so phone_id is unset.
+id: public-portfolio
+label: Public portfolio résumé (aaronbenjamin.design/resume.html)
+reader: human
+allow_unverified: true
+length_budget: 19
+headline_id: headline-ux-designer
+summary_id: summary-resume-page
+email_id: email-hello
+location_id: location-powder-springs
+roles:
+  - role_id: role-renaissance-learning-senior-ux-designer
+    claims:
+      - claim_id: claim-renaissance-ux-strategy
+      - claim_id: claim-renaissance-intelligence-launch
+      - claim_id: claim-renaissance-ooux
+  - role_id: role-indeed-senior-ux-designer
+    claims:
+      - claim_id: claim-indeed-monetization-growth
+      - claim_id: claim-indeed-ab-tests
+      - claim_id: claim-indeed-ux-working-group
+  - role_id: role-redfin-senior-product-designer
+    claims:
+      - claim_id: claim-redfin-research-roadmap
+      - claim_id: claim-redfin-discovery-research
+      - claim_id: claim-redfin-hiring-onboarding
+  - role_id: role-home-depot-staff-ux-designer
+    claims:
+      - claim_id: claim-home-depot-curbside-pilot
+      - claim_id: claim-home-depot-price-adjustments
+      - claim_id: claim-home-depot-enterprise-tools
+      - claim_id: claim-home-depot-research
+      - claim_id: claim-home-depot-accessibility-workshops
+  - role_id: role-snap-mobile-senior-product-designer
+    claims:
+      - claim_id: claim-snap-agile-leadership
+  - role_id: role-amazon-ux-designer
+    claims:
+      - claim_id: claim-amazon-a-to-z-first-claim
+      - claim_id: claim-amazon-seller-tools
+  - role_id: role-hp-ux-lead
+    claims:
+      - claim_id: claim-hp-team-size
+  - role_id: role-att-senior-ux-designer
+    claims:
+      - claim_id: claim-att-responsive-experiences
+required_role_ids:
+  - role-renaissance-learning-senior-ux-designer
+  - role-indeed-senior-ux-designer
+  - role-redfin-senior-product-designer
+  - role-home-depot-staff-ux-designer
+  - role-snap-mobile-senior-product-designer
+  - role-amazon-ux-designer
+  - role-hp-ux-lead
+  - role-att-senior-ux-designer
+# Focus then Capabilities, in src/resume.pug display order. The page does not
+# show soft skills or tools.
+skill_priority:
+  - focus-accessibility-inclusive-design
+  - focus-ux-leadership-strategy
+  - focus-ai-enhanced-design
+  - ux-design-strategy
+  - design-systems
+  - rapid-prototyping-wireframing
+  - cross-platform-ui-design
+  - user-research-usability-testing
+  - information-architecture-journey-mapping
+  - accessibility-wcag-508
+  - front-end-fundamentals
+  - ai-integrated-ux

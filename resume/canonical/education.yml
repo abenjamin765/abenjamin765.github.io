@@ -1,0 +1,44 @@
+# Parent fields hold the current src/assets/data/education.yml wording.
+# Every other source wording is an alternate. No winner is chosen.
+education:
+  - id: education-full-sail
+    institution: FullSail University
+    location: Winter Park, FL
+    year: "2008"
+    status: unverified
+    sources:
+      - path: src/assets/data/education.yml
+        locator: "lines 1-3: schoolName: FullSail University / schoolLocation: Winter Park, FL / schoolGraduationYear: 2008"
+    alternates:
+      # Reconciliation section 9: claim-education-year, claim-education-salutatorian
+      - id: education-alt-archive-resume-salutatorian
+        label: "archive/resume index.html and print.html; spelled 'Full Sail University'; no location stated"
+        credential: A.S. Graphic Design
+        year: "2009"
+        honors:
+          - Salutatorian
+        status: unverified
+        sources:
+          - path: archive/resume/index.html
+            locator: 'line 327: "A.S. Graphic Design Full Sail University / 2009 Salutatorian"'
+          - path: archive/resume/print.html
+            locator: 'line 341: "A.S. Graphic Design Full Sail University / 2009 Salutatorian"'
+      # Reconciliation section 9: claim-education-year, claim-education-degree-wording
+      - id: education-alt-archive-resume-index2
+        label: "archive/resume index2.html; spelled 'Full Sail University'; no location or honor stated; also lists 'Classes included Visual Design, Front-end web development, Project management, and User research'"
+        credential: A.S. Graphic Design
+        year: "2009"
+        status: unverified
+        sources:
+          - path: archive/resume/index2.html
+            locator: 'line 40: "2009 Full Sail University A.S. Graphic Design"; line 42: classes list'
+      # Reconciliation section 9: claim-education-location, claim-education-degree-wording
+      - id: education-alt-archive-resume2
+        label: "archive/resume2 index.html; spelled 'Full Sail University'; states the range 'September 2008 – November 2009'"
+        credential: Associate of Science
+        location: Orlando, Florida
+        year: "2009-11"
+        status: unverified
+        sources:
+          - path: archive/resume2/index.html
+            locator: 'line 360: "Associate of Science, Full Sail University, Orlando, Florida"; line 361: "September 2008 – November 2009"'

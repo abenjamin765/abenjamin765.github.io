@@ -1,0 +1,96 @@
+include includes/folio-shared.pug
+
+html(lang="en")
+    head
+        +folioHead('Résumé builder (internal, unlisted) | Aaron Benjamin', 'Internal tool for assembling résumé variants from the canonical career record. Not a public page.', '/resume-builder.html')
+        meta(name="robots", content="noindex, nofollow")
+    body.folio.folio--builder
+        +folioShell
+
+        header.folio-hdr
+            .folio-hdr__inner
+                a.folio-hdr__name(href="/") Aaron Benjamin
+                p.rb-hdr-tag Internal tool
+
+        main#main.folio-main.rb
+            header.rb-intro
+                p.folio-eyebrow Internal · unlisted
+                h1.rb-intro__title Résumé builder
+                p.rb-intro__dek Assemble a résumé from the canonical career record. Everything happens in this browser: pasted job descriptions are never sent anywhere, and text edits apply to this download only. The career record is not changed.
+
+            .rb-alert(role="alert" hidden data-rb-error)
+                p.rb-alert__title Career data could not be loaded
+                p.rb-alert__body(data-rb-error-body)
+                p.rb-alert__body The page needs the career record and profiles that the site build embeds in this page. It does not use any other data.
+
+            p.rb-loading(data-rb-loading) Loading career data…
+
+            .rb-app(hidden data-rb-app)
+                .rb-controls
+                    section.rb-panel(aria-labelledby="rb-source-title")
+                        h2.rb-panel__title#rb-source-title 1. Start from
+                        .rb-field
+                            label.rb-label(for="rb-profile") Profile
+                            select.rb-input#rb-profile(aria-describedby="rb-profile-meta")
+                            p.rb-hint#rb-profile-meta
+                        .rb-field
+                            label.rb-label(for="rb-jd") Job description (optional)
+                            textarea.rb-input.rb-input--area#rb-jd(rows="6" aria-describedby="rb-jd-hint" spellcheck="false")
+                            p.rb-hint#rb-jd-hint Matching runs in this browser against claim text, claim skills, and claim keywords. It selects and orders existing claims; it never writes new ones. The profile above still supplies contact details and rules.
+                        .rb-row
+                            button.rb-btn(type="button" data-rb-match) Match claims
+                            button.rb-btn.rb-btn--quiet(type="button" data-rb-clear-match) Reset to profile
+                        p.rb-hint(data-rb-match-status aria-live="polite")
+
+                    section.rb-panel(aria-labelledby="rb-rules-title")
+                        h2.rb-panel__title#rb-rules-title 2. Rules
+                        fieldset.rb-fieldset
+                            legend.rb-label Emphasis filter
+                            p.rb-hint#rb-emphasis-hint Show only claims tagged with at least one selected tag. Select none to show every claim.
+                            .rb-chips(data-rb-emphasis aria-describedby="rb-emphasis-hint")
+                        .rb-field
+                            label.rb-label(for="rb-budget") Length budget (bullets)
+                            input.rb-input.rb-input--narrow#rb-budget(type="number" min="1" step="1" inputmode="numeric" aria-describedby="rb-budget-hint")
+                            p.rb-hint#rb-budget-hint Maximum bullets across the whole résumé, filled in role order. Leave empty for no limit.
+                        .rb-field
+                            label.rb-check
+                                input#rb-unverified(type="checkbox")
+                                span Include unverified claims
+                            p.rb-hint Unverified claims are marked in the list and the preview. The marks do not appear in the downloaded file.
+                        p.rb-hint.rb-rule-note(data-rb-confidential)
+
+                    section.rb-panel(aria-labelledby="rb-roles-title")
+                        h2.rb-panel__title#rb-roles-title 3. Roles and claims
+                        p.rb-hint Only roles and claims in the career record are listed. Rejected claims are never offered.
+                        .rb-roles(data-rb-roles)
+
+                .rb-output
+                    section.rb-panel.rb-panel--output(aria-labelledby="rb-output-title")
+                        h2.rb-panel__title#rb-output-title 4. Preview and download
+                        .rb-output__bar
+                            .rb-field
+                                label.rb-label(for="rb-format") Format
+                                select.rb-input#rb-format
+                                    option(value="md") Markdown
+                                    option(value="txt") Plain text
+                                    option(value="ats") ATS HTML
+                                    option(value="json") JSON
+                            fieldset.rb-fieldset.rb-segment
+                                legend.rb-label Preview
+                                label.rb-segment__opt
+                                    input(type="radio" name="rb-view" value="doc" checked)
+                                    span Formatted
+                                label.rb-segment__opt
+                                    input(type="radio" name="rb-view" value="file")
+                                    span File contents
+                        p.rb-status(data-rb-status aria-live="polite")
+                        ul.rb-warnings(role="list" data-rb-warnings hidden)
+                        .rb-preview(data-rb-preview tabindex="0" aria-label="Résumé preview")
+                        pre.rb-source(data-rb-source tabindex="0" aria-label="File contents" hidden)
+                        .rb-row
+                            button.folio-btn.rb-download(type="button" data-rb-download) Download
+
+        if builderData
+            script#rb-career-data(type="application/json")!= builderData.career
+            script#rb-profiles-data(type="application/json")!= builderData.profiles
+        script(src="assets/js/resume-builder.js" defer)

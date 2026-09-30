@@ -2,12 +2,9 @@ include includes/folio-shared.pug
 
 html(lang="en")
     head
-        +folioHead('Aaron Benjamin — Product Designer', 'I design complex products and help teams make clear, evidence-based decisions.', '/')
+        +folioHead('Aaron Benjamin — Product Designer', 'I help teams make sense of complex problems. Then we ship something glorious.', '/')
     body.folio
-        a.visually-hidden(href="#main") Skip to content
-
-        .folio__decor(aria-hidden="true")
-            img.folio__decor-img(src="assets/img/folio/blob.svg", alt="")
+        +folioShell
 
         +folioHeader('work')
 
@@ -17,98 +14,89 @@ html(lang="en")
                     .folio-hero__copy
                         .folio-hero__text
                             h1.folio-hero__title#hero-title
-                                span.folio-hero__kicker I help teams make sense of
+                                span.folio-hero__kicker I help teams make sense of complex problems.
                                 span.folio-hero__mark
-                                    strong complex
-                                    |
-                                    em  products
-                                    | .
-                            p.folio-hero__dek I turn tangled workflows into clear product decisions, shared models, and interfaces people can use.
-                        a.folio-btn(href="#work") See selected work
+                                    | Then we ship something 
+                                    span.folio-hero__rotator(aria-hidden="true")
+                                        span.folio-hero__word glorious
+                                        span.folio-hero__word delightful
+                                        span.folio-hero__word outrageous
+                                        span.folio-hero__word splendid
+                                        span.folio-hero__word mischievous
+                                        span.folio-hero__word brilliant
+                                        span.folio-hero__word audacious
+                                        span.folio-hero__word exquisite
+                                        span.folio-hero__word scalable
+                                        span.folio-hero__word useful
+                                        span.folio-hero__word clear
+                                        span.folio-hero__word usable
+                                        span.folio-hero__word accessible
+                                        span.folio-hero__word engaging
+                                        span.folio-hero__word thoughtful
+                                        span.folio-hero__word intentional
+                                        span.folio-hero__word durable
+                                        span.folio-hero__word reliable
+                                        span.folio-hero__word humane
+                                        span.folio-hero__word focused
+                                        span.folio-hero__word simple
+                                        span.folio-hero__word sturdy
+                                        span.folio-hero__word precise
+                                        span.folio-hero__word inclusive
+                                        span.folio-hero__word coherent
+                                        span.folio-hero__word measurable
+                                        span.folio-hero__word considered
+                                        span.folio-hero__word legible
+                                        span.folio-hero__word user-centered
+                                        span.folio-hero__word ridiculous
+                                        span.folio-hero__word bonkers
+                                        span.folio-hero__word feral
+                                        span.folio-hero__word cheeky
+                                        span.folio-hero__word absurd
+                                        span.folio-hero__word chaotic
+                                        span.folio-hero__word spicy
+                                        span.folio-hero__word suspicious
+                                        span.folio-hero__word unhinged
+                                        span.folio-hero__word extra
+                                    span.visually-hidden glorious
+                            p.folio-hero__dek I'm a UX and product leader with 10+ years of experience turning complex problems into useful, scalable products for companies including Amazon, The Home Depot, HP, and AT&T.
+                        a.folio-btn(href="#work") Explore my work
                     .folio-hero__media
-                        img(src="assets/img/folio/hero-portrait.png", alt="Illustrated portrait of Aaron Benjamin waving hello" width="238" height="250")
+                        img(src="assets/img/folio/hero-hi.png", alt="Illustrated portrait of Aaron Benjamin waving, with a speech bubble that says hi" width="238" height="250")
 
             section.folio-work#work(aria-labelledby="selected-work-title")
                 .folio-work__inner
                     h2.folio-eyebrow#selected-work-title Selected work
 
-                    article.folio-project.folio-project--feature
-                        a.folio-project__link(href="/classroom-assignment-management.html")
-                            .folio-project__media
-                                img(src="assets/img/folio/work-classroom.png", alt="Classroom assignment management interface showing student status and scores" loading="lazy")
-                            .folio-project__copy
-                                p.folio-project__status Full case study
-                                h3.folio-project__title Classroom Assignment Management
-                                p.folio-project__dek How I replaced a dense assignments table with a priority view that helped teachers find students who needed support.
-                                span.folio-project__cta Read case study
+                    +projectCard({feature: true, href: "/classroom-assignment-management.html", image: {src: "assets/img/folio/work-classroom.png", alt: "Classroom assignment management interface showing student status and scores"}, status: "Renaissance · Senior UX Designer", title: "Classroom Assignment Management", dek: "Teachers could see how many students finished, not which ones. I replaced a table they had to sort with a priority view and worked with engineering to put student names on the page.", cta: "Read case study"})
 
-                    .folio-project-pair
-                        article.folio-project
-                            .folio-project__media.folio-project__media--fill
-                                span.folio-project__preview-name Nearpod
-                            .folio-project__copy
-                                p.folio-project__status Project preview
-                                h3.folio-project__title Nearpod
-                                p.folio-project__dek Designing clearer structures and reusable patterns for a platform that supports complex learning experiences.
-                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Nearpod%20project") Ask me about this work
-                        article.folio-project
-                            .folio-project__media.folio-project__media--fill
-                                span.folio-project__preview-name Indeed
-                            .folio-project__copy
-                                p.folio-project__status Project preview
-                                h3.folio-project__title Indeed
-                                p.folio-project__dek Making employer workflows more consistent, measurable, and scalable.
-                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Indeed%20project") Ask me about this work
+                    +projectCard({id: "green-loom", feature: true, href: "/green-loom.html", image: {src: "assets/img/folio/project--green-loom/green-loom--work-card-2x.png", alt: "Green Loom catalog with Peach Orchard Chew and stock states"}, status: "Green Loom · Co-founder", title: "Green Loom", dek: "A lab certificate can expire without changing the product. I designed a retail catalog for Georgia’s hemp rules that keeps those two facts apart.", cta: "Read case study"})
+
+                    +projectCard({id: "design-dash", feature: true, href: "/design-dash.html", placeholder: {src: "assets/img/folio/project--design-dash/design-dash--work-card-2x.png", alt: "Design Dash plan outputs: a pitch, requirements, and a monochrome wireframe", description: "Wide crop of a Design Dash plan: phase strip plus pitch, requirements, and wireframe. Not a consumer dashboard.", displaySize: "880×360", exportSize: "1760×720", fileName: "src/assets/img/folio/project--design-dash/design-dash--work-card-2x.png"}, status: "Design Dash · Author", title: "Design Dash", dek: "A generated screen can land before anyone has defined the system. I built a workflow that ends in a plan a team can build from.", cta: "Read case study"})
+
+                    +projectCard({id: "many-hats", feature: true, href: "/many-hats.html", placeholder: {src: "assets/img/folio/project--many-hats/many-hats--work-card-2x.png", alt: "Many Hats specialists and four Library Holds artifacts", description: "Wide crop of the thirteen hats or the four Library Holds artifacts, with Allie’s challenge visible. Fictional demo, no real library branding.", displaySize: "880×360", exportSize: "1760×720", fileName: "src/assets/img/folio/project--many-hats/many-hats--work-card-2x.png"}, status: "Many Hats · Author", title: "Many Hats", dek: "One chat was answering as the whole team. I built thirteen specialists who leave citable work, and I kept the decision.", cta: "Read case study"})
+
+                    +projectCard({id: "a-to-z-first-claim", feature: true, href: "/a-to-z-first-claim.html", image: {src: "assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--work-card-2x.png", alt: "Amazon Marketplace first-claim email with claim details and coverage callout"}, status: "Amazon · UX Designer", title: "A-to-z First Claim", dek: "A seller’s first A-to-z email often felt like a penalty. I redesigned it to teach—claim details, first-claim coverage, and a short path to avoid the next one.", cta: "Read case study"})
+
+                    +projectCard({id: "curbside-pickup", feature: true, href: "/curbside-pickup.html", image: {src: "assets/img/folio/project--curbside-pickup/curbside-pickup--work-card-2x.png", alt: "Curbside ready-for-pickup mobile messages with ETA choices"}, status: "The Home Depot · Staff UX Designer", title: "Curbside Pickup", dek: "Contactless pickup was inventing itself in 2020. I put ETAs and check-in confirmation into the messages customers already got.", cta: "Read case study"})
+
+                    +projectCard({id: "price-adjustments", feature: true, href: "/price-adjustments.html", image: {src: "assets/img/folio/project--price-adjustments/price-adjustments--work-card-2x.png", alt: "Order Up Apply markdown fly-out on a shopping cart item"}, status: "The Home Depot · Staff UX Designer", title: "Price Adjustments", dek: "Associates had workarounds for damaged-item and competitor discounts. I put a markdown path in Order Up that kept the cart in view.", cta: "Read case study"})
+
+                    p.folio-work__also
+                        | Also shipped at Indeed, where I designed and analyzed more than 30 A/B tests for employer monetization.
+                        |
+                        a(href="mailto:hello@aaronbenjamin.design?subject=Indeed%20project") Ask me about Indeed
 
             section.folio-claims#about(aria-labelledby="about-title")
                 .folio-claims__inner
                     h2.folio-eyebrow.folio-claims__label#about-title How I work
-                    article.folio-claim
-                        .folio-claim__head
-                            p.folio-claim__num 01
-                            h3.folio-claim__title Make the system visible.
-                        p.folio-claim__body I map relationships and workflows with partners so we can agree on the problem before designing screens.
-                    article.folio-claim
-                        .folio-claim__head
-                            p.folio-claim__num 02
-                            h3.folio-claim__title Decide what matters first.
-                        p.folio-claim__body Research and prototypes help me turn competing needs into a clear, testable product direction.
-                    article.folio-claim
-                        .folio-claim__head
-                            p.folio-claim__num 03
-                            h3.folio-claim__title Bring the team along.
-                        p.folio-claim__body Shared models and working sessions make decisions easier to explain, build, and extend.
+                    p.folio-claims__note I believe good design is facilitated, not produced by one person in isolation.
+                    +claim("01", "Make the system visible.")
+                        | Before screens, I map what the product is, with the people who have to build it. The product can be theirs. The model still comes first.
+                    +claim("02", "Decide what matters first.")
+                        | Research picks what is worth building first. The interface then makes that choice, instead of handing someone a pile of filters and wishing them luck.
+                    +claim("03", "Bring the team along.")
+                        | I stay in the room with product, research, and engineering until the decision is something they can build. The handoff is a shared model, not a file drop.
 
-            section.folio-work.folio-work--independent(aria-labelledby="independent-work-title")
-                .folio-work__inner
-                    h2.folio-eyebrow#independent-work-title Independent work
+            +folioFooter(true, 'If there’s a question your product should answer and can’t yet, send it my way.', null, true)
 
-                    article.folio-project.folio-project--feature
-                        a.folio-project__link(href="/green-loom.html")
-                            .folio-project__media
-                                img(src="assets/img/folio/project--green-loom/green-loom--figma-hero-v2.png", alt="Green Loom catalog concept with The Corner Store's products and stock states" loading="lazy")
-                            .folio-project__copy
-                                p.folio-project__status Full case study
-                                h3.folio-project__title Green Loom
-                                p.folio-project__dek How I clarified a complex retail catalog, its Georgia requirements, and the data behind publication.
-                                span.folio-project__cta Read case study
-
-                    .folio-project-pair
-                        article.folio-project
-                            .folio-project__media.folio-project__media--fill
-                                span.folio-project__preview-name Orbit
-                            .folio-project__copy
-                                p.folio-project__status Project preview
-                                h3.folio-project__title Orbit
-                                p.folio-project__dek Exploring ways to make everyday systems easier to understand, navigate, and improve.
-                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Orbit%20project") Ask me about this work
-                        article.folio-project
-                            .folio-project__media.folio-project__media--fill
-                                span.folio-project__preview-name Bite Club
-                            .folio-project__copy
-                                p.folio-project__status Project preview
-                                h3.folio-project__title Bite Club
-                                p.folio-project__dek Designing simple tools and rituals that help teams make better product decisions.
-                                a.folio-project__cta(href="mailto:hello@aaronbenjamin.design?subject=Bite%20Club%20project") Ask me about this work
-
-            +folioFooter
+        script(src="assets/js/hero-rotator.js" defer)

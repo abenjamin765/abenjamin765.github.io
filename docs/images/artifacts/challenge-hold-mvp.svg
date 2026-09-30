@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="525" viewBox="0 0 840 525" role="img" aria-labelledby="title desc">
+  <title id="title">Challenge memo preview</title>
+  <desc id="desc">Crop of Allie Hold MVP challenge: strongest case against and verdict</desc>
+  <rect width="840" height="525" fill="#E8E6E1"/>
+  <rect x="48" y="36" width="744" height="453" rx="8" fill="#FFFcf7" stroke="#D0CBC3"/>
+  <text x="76" y="78" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">Allie - challenge to Hold MVP</text>
+  <text x="76" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6B6560">type: challenge | owner: allie</text>
+  <text x="76" y="148" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">What I am challenging</text>
+  <text x="76" y="172" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">Expanding Hold MVP into a &quot;holds platform&quot; (transfers, gamified</text>
+  <text x="76" y="190" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">waitlists, preference center) before the ready-&gt;pickup loop works.</text>
+  <text x="76" y="230" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Strongest case against</text>
+  <text x="76" y="254" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">Building preference centers, waitlist games, or multi-branch transfer</text>
+  <text x="76" y="272" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">now spends complexity on unvalidated stories while expiry</text>
+  <text x="76" y="290" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">comprehension remains the labeled problem.</text>
+  <text x="76" y="330" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Preserve list</text>
+  <text x="76" y="354" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">- Explicit Hold states including expired and cancelled</text>
+  <text x="76" y="374" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">- Visible pickup window end; one notice channel as a constraint</text>
+  <rect x="76" y="400" width="688" height="56" rx="4" fill="#F3EFE6" stroke="#D8D0C0"/>
+  <text x="92" y="424" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700" fill="#2C2C2C">Verdict</text>
+  <text x="92" y="444" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#3D3D3D">Proceed with conditions - only if non-goals stay non-goals.</text>
+</svg>

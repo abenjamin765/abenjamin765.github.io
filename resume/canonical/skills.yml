@@ -1,0 +1,79 @@
+# Source: src/assets/data/skills.yml (current site).
+# focusAreas -> focus, hardSkills -> capability, softSkills -> practice, tools -> tool.
+# Archive skill lists (archive/resume*, 2017-2024) are not ingested here.
+skills:
+  - id: focus-accessibility-inclusive-design
+    name: Accessibility & Inclusive Design
+    kind: focus
+  - id: focus-ux-leadership-strategy
+    name: UX Leadership & Strategy
+    kind: focus
+  - id: focus-ai-enhanced-design
+    name: AI-Enhanced Design
+    kind: focus
+
+  - id: ux-design-strategy
+    name: UX Design & Strategy
+    kind: capability
+  - id: design-systems
+    name: Design Systems & Scalable Design
+    kind: capability
+  - id: rapid-prototyping-wireframing
+    name: Rapid Prototyping & Wireframing
+    kind: capability
+  - id: cross-platform-ui-design
+    name: Cross-Platform UI Design (Web & Mobile)
+    kind: capability
+  - id: user-research-usability-testing
+    name: User Research & Usability Testing
+    kind: capability
+  - id: information-architecture-journey-mapping
+    name: Information Architecture & User Journey Mapping
+    kind: capability
+  - id: accessibility-wcag-508
+    name: Accessibility & Inclusive Design (WCAG, Section 508)
+    kind: capability
+    keywords: [WCAG, Section 508]
+  - id: front-end-fundamentals
+    name: Front-End Fundamentals (HTML/CSS)
+    kind: capability
+    keywords: [HTML, CSS]
+  - id: ai-integrated-ux
+    name: AI-Integrated UX (Conversational UI, Generative Tools)
+    kind: capability
+    keywords: [Conversational UI, Generative Tools]
+
+  - id: leadership-mentorship
+    name: Leadership & Mentorship
+    kind: practice
+  - id: collaboration-communication
+    name: Collaboration & Communication
+    kind: practice
+  - id: strategic-problem-solving
+    name: Strategic Problem Solving & Adaptability
+    kind: practice
+  - id: empathy-user-advocacy
+    name: Empathy & User Advocacy
+    kind: practice
+  - id: workshop-facilitation
+    name: Workshop Facilitation & Stakeholder Alignment
+    kind: practice
+  - id: storytelling-presentation
+    name: Storytelling & Design Presentation
+    kind: practice
+
+  - id: tool-figma
+    name: Figma
+    kind: tool
+  - id: tool-sketch
+    name: Sketch
+    kind: tool
+  - id: tool-miro
+    name: Miro
+    kind: tool
+  - id: tool-chatgpt
+    name: ChatGPT
+    kind: tool
+  - id: tool-cursor
+    name: Cursor
+    kind: tool

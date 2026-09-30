@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="525" viewBox="0 0 840 525" role="img" aria-labelledby="title desc">
+  <title id="title">Flow artifact preview</title>
+  <desc id="desc">Crop of Charlie Hold flow: page sketch and edge states</desc>
+  <rect width="840" height="525" fill="#E8E6E1"/>
+  <rect x="48" y="36" width="744" height="453" rx="8" fill="#FFFcf7" stroke="#D0CBC3"/>
+  <text x="76" y="78" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">Charlie - Hold flow and edge states</text>
+  <text x="76" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6B6560">type: flow | owner: charlie</text>
+  <text x="76" y="148" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Page / surface sketch</text>
+  <rect x="76" y="162" width="688" height="108" rx="4" fill="#F7F4EE" stroke="#E0DBD2"/>
+  <text x="92" y="186" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">Surface</text>
+  <text x="300" y="186" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">Job</text>
+  <line x1="92" y1="196" x2="740" y2="196" stroke="#D8D2C8"/>
+  <text x="92" y="216" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">My holds (patron)</text>
+  <text x="300" y="216" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">List holds by state; empty state explains place path</text>
+  <text x="92" y="238" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Hold detail</text>
+  <text x="300" y="238" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Status, title, dates, cancel</text>
+  <text x="92" y="260" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Staff ready queue</text>
+  <text x="300" y="260" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Ready holds due soonest; expire/fulfill actions</text>
+  <text x="76" y="306" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2C2C2C">Edge states</text>
+  <rect x="76" y="320" width="688" height="122" rx="4" fill="#F7F4EE" stroke="#E0DBD2"/>
+  <text x="92" y="344" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">State</text>
+  <text x="220" y="344" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">Actor experience</text>
+  <text x="560" y="344" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#555">Recovery</text>
+  <line x1="92" y1="354" x2="740" y2="354" stroke="#D8D2C8"/>
+  <text x="92" y="376" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Empty</text>
+  <text x="220" y="376" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Explain place-hold path</text>
+  <text x="560" y="376" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Link to place hold</text>
+  <text x="92" y="398" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Ready</text>
+  <text x="220" y="398" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Pick-up-by date prominent</text>
+  <text x="560" y="398" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Fulfill or expire</text>
+  <text x="92" y="420" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Expired</text>
+  <text x="220" y="420" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Expired - place again?</text>
+  <text x="560" y="420" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#333">Place new hold</text>
+  <text x="76" y="468" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#8A847C">... primary scenarios | loading / error / permission</text>
+</svg>

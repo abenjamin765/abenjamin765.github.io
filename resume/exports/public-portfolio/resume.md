@@ -1,0 +1,79 @@
+# Aaron Benjamin
+
+**UX Designer**
+
+hello@aaronbenjamin.design · Powder Springs, GA · aaronbenjamin.design · https://www.linkedin.com/in/aaronbenjamindesign/
+
+## Summary
+
+I lead design for complex product systems, connecting research, shared models, and shipped interfaces. My work spans marketplaces, education, commerce, and internal tools, with a focus on decisions teams can carry through implementation.
+
+## Experience
+
+### Senior UX Designer — Renaissance Learning
+
+*Jul 2024 – Present · Remote*
+
+- Led UX strategy and end-to-end design for K-12 classroom experiences across Renaissance Intelligence.
+- Directed the design and launch of Renaissance Intelligence and contributed reusable patterns to the design system.
+- Championed Object-Oriented UX across design and engineering to strengthen shared product models and team alignment.
+
+### Senior UX Designer — Indeed
+
+*Oct 2022 – Jul 2024 · Remote*
+
+- Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.
+- Generated new revenue streams and cost savings by designing and analyzing over 30 A/B tests for employer monetization initiatives.
+- Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.
+
+### Senior Product Designer — Redfin
+
+*Feb 2022 – Sep 2022 · Remote*
+
+- Influenced product roadmap and strategy by delivering user research that realigned business priorities toward customer-first features.
+- Conducted discovery and tactical research to identify user needs and business opportunities.
+- Supported hiring, onboarding, and growth of design team talent.
+
+### Staff UX Designer — The Home Depot
+
+*Oct 2018 – Feb 2022 · Atlanta, GA*
+
+- For a 60-day curbside pickup pilot in 50 stores, about 90% of customers said the order arrived when they expected it, door-to-door time averaged 3.8 minutes with ETAs versus 4.5 without, and calls to change fulfillment fell from a 30%+ baseline to under 10%.
+- After a 50-store pilot, price adjustments rolled out to all stores. At 30, 60, and 90 days, order transaction times decreased, associates reported feeling more empowered to help customers, shrink decreased, and SOP adoption for price adjustments increased.
+- Designed enterprise tools for merchandising, store systems, and HR with cross-functional product and engineering teams.
+- Planned and facilitated research to inform product priorities and validate design decisions.
+- Championed accessibility in associate tools and led workshops for designers, product owners, and engineers.
+
+### Senior Product Designer — Snap! Mobile
+
+*Jan 2018 – Oct 2018 · Seattle, WA*
+
+- Led end-to-end design in agile, cross-functional teams, supporting a portfolio of fundraising products.
+
+### UX Designer — Amazon
+
+*Aug 2016 – Dec 2017 · Seattle, WA*
+
+- Redesigned the first A-to-z claim notification. In the 60 days after the U.S. update, 88% of sellers who opened the email felt confident they could avoid future claims, related Seller Support call volume fell 14%, and seller-initiated refunds trended toward a 30% year-over-year increase.
+- Designed end-to-end seller tools for the Amazon Marketplace, improving onboarding and engagement.
+
+### UX Lead — HP Inc.
+
+*Sep 2015 – Aug 2016 · Alpharetta, GA*
+
+- Managed and supported a team of four designers and a UX researcher.
+
+### Senior UX Designer — AT&T
+
+*Jul 2011 – Aug 2015 · Atlanta, GA*
+
+- Designed mobile and responsive experiences for customer-facing digital platforms.
+
+## Education
+
+- FullSail University — Winter Park, FL · 2008
+
+## Skills
+
+- **Focus:** Accessibility & Inclusive Design, UX Leadership & Strategy, AI-Enhanced Design
+- **Capabilities:** UX Design & Strategy, Design Systems & Scalable Design, Rapid Prototyping & Wireframing, Cross-Platform UI Design (Web & Mobile), User Research & Usability Testing, Information Architecture & User Journey Mapping, Accessibility & Inclusive Design (WCAG, Section 508), Front-End Fundamentals (HTML/CSS), AI-Integrated UX (Conversational UI, Generative Tools)
