@@ -32,6 +32,7 @@ The folio is for a hiring manager who skims first and then decides whether to ke
 - Styles are SCSS, compiled by Gulp. `src/assets/style/folio.scss` is the folio entry point.
 - The blog is built by Eleventy (`eleventy.config.js`).
 - Folio images live in `src/assets/img/folio/`, with one folder per case (`project--assignment-management/`, `project--green-loom/`, `project--design-dash/`, `project--many-hats/`, `project--a-to-z-first-claim/`, `project--curbside-pickup/`, `project--price-adjustments/`).
+- `gulp images` optimizes PNG, GIF, and SVG losslessly and copies JPEGs unchanged. Save photographs as JPEG at final quality (the A-to-z hero is quality 92), and keep screenshots with text as PNG.
 - There is no component framework. Copy stays in the page files. Shared structure lives in Pug mixins.
 
 ## 2. Writing
@@ -129,7 +130,7 @@ These are image files:
 - `project--assignment-management/assignment-management--object-model.png`: the object model figure.
 - `project--assignment-management/demo-icons/*.svg`: demo icons.
 - `project--green-loom/green-loom--mobile-catalog-2x.png`: the mobile catalog exploration (displayed 402×874).
-- `project--a-to-z-first-claim/`: hero (seller at a laptop showing the Seller Central A-to-z claims list, 1920×1320), work card (claims list beside the first-claim email, 1760×720), and annotated email figure (2220×1826). Sample seller and order data.
+- `project--a-to-z-first-claim/`: hero (`a-to-z-first-claim--hero-2x.jpg`, a quality-92 JPEG because it is a photograph; seller at a laptop showing the Seller Central A-to-z claims list, 1920×1320), work card (claims list beside the first-claim email, 1760×720), and annotated email figure (2220×1826). Sample seller and order data.
 - `project--curbside-pickup/`: hero, work card, ready-for-pickup email, and check-in states cropped from the folio deck. Do not use redacted-analysis or placeholder-journey slides as metric sources.
 - `project--price-adjustments/`: hero, work card, apply-markdown, and update-markdown UI crops. Order Up associate name and store number are cropped out of the header.
 
@@ -150,17 +151,17 @@ Current placeholders:
 | Slot | File | Displayed | Export |
 | --- | --- | --- | --- |
 | Green Loom case hero (also the Green Loom share image) | `src/assets/img/folio/project--green-loom/green-loom--catalog-hero-2x.png` | 960×660 | 1920×1320 |
-| Design Dash work card | `src/assets/img/folio/project--design-dash/design-dash--work-card-2x.png` | 880×360 | 1760×720 |
 | Design Dash case hero (also the share image) | `src/assets/img/folio/project--design-dash/design-dash--hero-2x.png` | 960×660 | 1920×1320 |
 | Design Dash trace figure | `src/assets/img/folio/project--design-dash/design-dash--trace-2x.png` | 960×660 | 1920×1320 |
 | Design Dash tier figure | `src/assets/img/folio/project--design-dash/design-dash--tiers-2x.png` | 960×660 | 1920×1320 |
 | Design Dash model figure | `src/assets/img/folio/project--design-dash/design-dash--model-2x.png` | 960×660 | 1920×1320 |
-| Many Hats work card | `src/assets/img/folio/project--many-hats/many-hats--work-card-2x.png` | 880×360 | 1760×720 |
 | Many Hats case hero (also the share image) | `src/assets/img/folio/project--many-hats/many-hats--hero-2x.png` | 960×660 | 1920×1320 |
 | Many Hats planes figure | `src/assets/img/folio/project--many-hats/many-hats--planes-2x.png` | 960×660 | 1920×1320 |
 | Many Hats Library Holds figure | `src/assets/img/folio/project--many-hats/many-hats--holds-2x.png` | 960×660 | 1920×1320 |
 
 The homepage card uses `src/assets/img/folio/project--green-loom/green-loom--work-card-2x.png` directly. It is not a placeholder. The picture is the corrected catalog: Peach Orchard Chew as an edible, no Flower category, no Inhalable tag, no "Help-derived" text. It is a wide crop, so do not reuse the hero file for it.
+
+The Design Dash and Many Hats homepage cards also use their exported images directly (`design-dash--work-card-2x.png`, the Design Dash logo; `many-hats--work-card-2x.png`, an illustrated man wearing a stack of hats). Both are 1760×720.
 
 Do not request a publish-blocker screenshot. That story is told by the HTML certificate timeline. An older plan described a publish-blocker placeholder as an option; it was not used.
 
@@ -280,5 +281,5 @@ The test does not check copy, the word budget, the placeholder specs, or whether
 - Recheck Georgia hemp rules before treating the 12-month certificate rule as current. The page already tells readers to check the current rules.
 - Nearpod was removed because it is not in the work history.
 - Both Green Loom placeholder files are still missing. Until `green-loom--catalog-hero-2x.png` exists, the Green Loom share image points at a missing file.
-- Design Dash and Many Hats image files are not exported yet. Their pages and cards point at the paths in the placeholder table. Dropping each file in place is the swap.
+- Design Dash and Many Hats case-page images are not exported yet. Their pages point at the paths in the placeholder table. Dropping each file in place is the swap. Their homepage cards are done.
 - No hiring manager has read the current pages. Claims about what the pages make a reader feel are untested.
