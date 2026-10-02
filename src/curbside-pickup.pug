@@ -2,54 +2,78 @@ include includes/folio-shared.pug
 
 html(lang="en")
     head
-        +folioHead('Managing curbside expectations when the store is inventing the process | Aaron Benjamin', 'I designed Home Depot curbside ready-for-pickup and check-in messaging so customers could share an ETA and get confirmation when the store was inventing contactless pickup.', '/curbside-pickup.html', 'folio', '/assets/img/folio/project--curbside-pickup/curbside-pickup--hero-2x.png')
+        +folioHead('Curbside Pickup: what happened after check-in? | Aaron Benjamin', 'I designed Home Depot pickup messaging that let customers share an ETA, confirm check-in, and know what to expect next.', '/curbside-pickup.html', 'folio', '/assets/img/folio/project--curbside-pickup/curbside-pickup--checkin-complete-2x.png')
     body.folio.folio--case
         +folioShell
-
         +folioHeader('work', 'Curbside Pickup', '/#curbside-pickup')
-
         main#main.folio-main.folio-main--case
             article.folio-case
                 header.folio-case__hero
-                    figure.folio-case__hero-media
-                        img(src="/assets/img/folio/project--curbside-pickup/curbside-pickup--hero-2x.png", alt="Mobile ready-for-pickup email with I’ll be there in time choices and an I’m here button", width="1920" height="1320" fetchpriority="high")
+                    figure.folio-case__hero-media.folio-case__hero-media--phone
+                        img(src="/assets/img/folio/project--curbside-pickup/curbside-pickup--email-complete-2x.png" alt="Mobile ready-for-pickup email with arrival-time choices and an I’m here button" width="900" height="1940" fetchpriority="high")
                     .folio-case__intro
-                        p.folio-eyebrow Case study
-                        h1 Managing curbside expectations when the store is inventing the process
-                        p.folio-case__dek In early 2020, contactless pickup had to work before every system caught up. I put timing and confirmation into the messages customers already received.
+                        p.folio-eyebrow The Home Depot · Curbside Pickup
+                        h1 The wait was short. The uncertainty was not.
+                        p.folio-case__dek In early 2020, contactless pickup had to work before every system caught up. I put arrival timing and check-in confirmation into the messages customers already received.
                     +caseFacts
                         .folio-case__fact
                             dt Role
-                            dd Staff UX Designer, The Home Depot
+                            dd Staff UX Designer
                         .folio-case__fact
                             dt Scope
-                            dd Ready-for-pickup email, check-in confirmation, field discovery
+                            dd Field research, pickup email, and check-in messaging
                         .folio-case__fact
                             dt Key decision
                             dd Make arrival timing a two-way signal between customer and store
                         .folio-case__fact
                             dt Outcome
-                            dd Sixty-day pilot in 50 stores reported on-time expectations, door-to-door times under five minutes, and fewer fulfillment-switch calls (deck-stated, unverified)
+                            dd A 50-store, 60-day pilot reported clearer expectations and fewer calls to switch fulfillment
 
                 +caseSection({labelledby: "curb-field-title"})
-                    h2#curb-field-title The field made the variance obvious
-                    p In early 2020, Home Depot had to invent contactless pickup while regulations and customer habits changed week to week. Associates, signage, and email carried a lot of the experience. The failure mode I kept seeing was not only slow delivery—it was uncertainty. When customers did not get feedback after check-in, they left the car, called to change fulfillment, or assumed something was wrong.
-                    p I interviewed store managers, associates, and customers. Orders varied wildly in size and complexity. Store layout changed door-to-door time. Fulfillment-channel changes disrupted the floor. Customers expected a confirmation when they checked in, and they did not share one definition of “on time.”
-                    p Analysis added a few usable baselines: customers expected delivery in under five minutes, average door-to-door time was 3.5 minutes, and 30% of pickup customers called to change their pickup method.
+                    p.folio-eyebrow I — Inspiration
+                    h2#curb-field-title Customers could arrive without knowing what happened next
+                    p A customer could arrive, check in, and still wonder whether the store knew they were there. An average delivery time could describe operations without explaining that uncertainty. The problem was also about what happened between an arrival signal and a visible response.
+                    p Home Depot was building contactless pickup while operations and customer habits changed week to week. Associates, signage, and email carried much of the experience. Missing check-in feedback left customers unsure whether the store knew they were there.
+                    p I interviewed store managers, associates, and customers. Order complexity and store layout affected delivery time. Fulfillment changes disrupted the floor. Customers expected confirmation after check-in, but did not share one definition of “on time.”
+                    p Store-operations analysis and surveys gave us a starting point: customers expected delivery in under five minutes, average door-to-door time was 3.5 minutes, and 30% of pickup customers called to change their pickup method.
 
-                +caseSection({labelledby: "curb-align-title", tint: true})
-                    h2#curb-align-title Alignment started from a problem statement, not a finished journey
-                    p I told partners that missing feedback during pickup made customers feel uncertain and more likely to leave the designed process. I kept unfinished journey sketches out of the “finished artifact” column; expectation-setting belonged in communications, not only in associate heroics.
+                +imageBrief({"role": "Context", "title": "Two sides of the same wait", "composition": "Draw customer arrival and store preparation as parallel lanes with a missing check-in acknowledgement between them. No invented journey timings.", "purpose": "Establish the opening tension.", "caption": "Reconstructed feedback gap between customer and store.", "ratio": "16:9", "type": "Labeled reconstruction"})
+                +caseSection({labelledby: "curb-align-title", tint: true, prose: false})
+                    .folio-case__prose
+                        p.folio-eyebrow D — Design Process
+                        h2#curb-align-title The email became a way to share arrival timing
+                        p I framed the problem around missing feedback. Customers needed to know whether check-in worked and what to expect while waiting. Stores needed an arrival signal to help prioritize orders.
+                        p I designed those signals into the ready-for-pickup email and check-in confirmation. The flow needed explicit help and delay states, since successful check-in was not the only outcome.
+                    +storyFlow({id: "curb-flow-caption", title: "Arrival and pickup feedback", nodes: [{label: "Ready", detail: "Tell the customer when and where to collect."}, {label: "ETA", detail: "Let the customer share their arrival time."}, {label: "Check in", detail: "Confirm that the store received the signal."}, {label: "Wait or get help", detail: "Explain a delay or provide a call-store path."}], caption: "Arrival timing supports store preparation; confirmation reduces uncertainty for the customer."})
 
+
+                +imageBrief({"role": "Process", "title": "The decision and its alternatives", "composition": "Draw ready → ETA → check-in → acknowledgement, with delay and call-store branches. Show customer and store signals distinctly.", "purpose": "Make the research-to-decision connection visible.", "caption": "A reconstructed comparison of the choices described in this story.", "ratio": "3:2", "type": "Labeled reconstruction"})
+                +caseSection({labelledby: "curb-engagement"})
+                    p.folio-eyebrow E — Engagement
+                    h2#curb-engagement Connect the customer’s wait to the store’s work
+                    p Field interviews connected three perspectives: customers waiting for an order, associates preparing it, and managers coordinating the floor. A store’s layout and an order’s complexity affected the same promise customers were trying to interpret. The design needed to give both sides useful information without pretending every pickup was identical.
+                    p I used the missing-feedback problem to explain why expectation-setting belonged in the messages customers already received. An ETA could help the store prepare; a confirmation could tell the customer the signal had arrived. The point was a two-way exchange that supported the operation, rather than another instruction customers had to remember.
+                    p The constraint was a changing service with systems still catching up. I designed the pickup email and check-in messaging within that environment, keeping help and delay paths explicit. A successful check-in was only one state; an error or delay needed a useful response too.
                 +caseSection({labelledby: "curb-eta-title", prose: false})
                     .folio-case__prose
-                        h2#curb-eta-title ETA in the email, confirmation at check-in
-                        p The decision that changed the work was to make timing a two-way signal. The ready-for-pickup email said when and where to come, asked for an ETA, explained how to get help, offered Spanish, and avoided unrelated fulfillment options. Check-in confirmation told customers when they were successful, when to call the store, or when the order would take longer.
-                    +caseFigure({labelledby: "curb-email-caption", src: "/assets/img/folio/project--curbside-pickup/curbside-pickup--email-2x.png", alt: "Ready-for-pickup mobile message with ETA choices of 10, 15, 20, and 30 minutes and an I’m here button", width: "1000", height: "2000", loading: "lazy", caption: "Ready-for-pickup email: pickup window, ETA choices, and a way to say “I’m here.”", captionId: "curb-email-caption"})
-                    +caseFigure({labelledby: "curb-checkin-caption", src: "/assets/img/folio/project--curbside-pickup/curbside-pickup--checkin-2x.png", alt: "Three check-in confirmation states: success with a wait time, error asking the customer to call the store, and delay messaging", width: "1600", height: "1800", loading: "lazy", caption: "Check-in confirmation states for success, error, and delay—so customers are not left guessing.", captionId: "curb-checkin-caption"})
+                        p.folio-eyebrow A — Action
+                        h2#curb-eta-title Check-in confirmation had to cover delays and errors too
+                        p The email explained when and where to collect, asked for an ETA, provided help and Spanish-language access, and avoided unrelated fulfillment options.
+                        p Check-in messaging covered success, errors that required a call to the store, and an associate-reported delay. Each state gave the customer an expectation or a recovery path.
+                    +caseFigure({class: "folio-case__figure--portrait", labelledby: "curb-email-caption", src: "/assets/img/folio/project--curbside-pickup/curbside-pickup--email-complete-2x.png", alt: "Ready-for-pickup message with ETA choices of 10, 15, 20, and 30 minutes and an I’m here button", width: "900", height: "1940", loading: "lazy", caption: "The pickup email combines timing, arrival choices, and a check-in action.", captionId: "curb-email-caption"})
+                    +caseFigure({labelledby: "curb-checkin-caption", src: "/assets/img/folio/project--curbside-pickup/curbside-pickup--checkin-complete-2x.png", alt: "Check-in confirmation messages for success, a call-store error, and a delay", width: "1140", height: "1140", loading: "lazy", caption: "Success, error, and delay messages each explain what happens next.", captionId: "curb-checkin-caption"})
 
-                +caseOutcome("curb-outcome-title", "Fifty stores, sixty days")
-                    p After a 60-day pilot in 50 stores, about 90% of customers said the order arrived when they expected it. Average door-to-door time was 3.8 minutes with ETAs and 4.5 minutes without—both under the five-minute goal. Fewer than 10% of pilot customers called to switch fulfillment, against a prior baseline above 30%. Those figures are deck-stated and unverified in my career record.
-                    p My takeaway: when operations are inventing the channel, expectation design is not decoration. It is how you keep customers and associates in the same playbook.
+                +caseSection({labelledby: "curb-delivery-detail"})
+                    p.folio-eyebrow A — Action
+                    h2#curb-delivery-detail Confirmation was part of the service
+                    p The ready-for-pickup email was already a point of contact customers used. I brought timing and arrival choices into that message, alongside collection instructions, help, and Spanish-language access. Removing unrelated fulfillment choices kept attention on the pickup task.
+                    p The confirmation then had to answer the next question: what should I expect now? Success, a call-store error, and an associate-reported delay were different situations. Each needed an expectation or a recovery path. Designing those states together kept the experience from ending at the check-in button.
+                    p The reported pilot results should be read with the operational context intact. A 3.8-minute average with an ETA and a 4.5-minute average without one were both under the five-minute goal. They do not isolate the effect of my messaging from store preparation or other changes. The more useful result was the combination of reported expectations and fewer calls to switch fulfillment.
+                    p This was the same problem in two directions: the store needed an arrival signal, and the customer needed feedback. The message connected those needs without claiming to remove every source of delay.
 
-            +folioFooter(true, 'When the store is inventing the channel, the message has to carry the expectation the product cannot yet hold.', {href: '/price-adjustments.html', label: 'Next case: Price Adjustments'})
+                +caseOutcome("curb-outcome-title", "Clearer expectations in the store pilot")
+                    +caseResults([{value: "≈90%", label: "Reported that pickup arrived when expected"}, {value: "3.8 min", label: "Average door-to-door time with an ETA"}, {value: "<10%", label: "Called to switch fulfillment, versus a prior baseline above 30%"}], "Source: project presentation, 60-day pilot in 50 stores. Retrospective results have not been independently revalidated.")
+                    p The presentation reports 4.5 minutes without ETAs. Both averages were under the five-minute goal; the figures do not isolate the effect of messaging from operational changes.
+                    p My takeaway: an arrival signal helps the store prepare, and a confirmation helps the customer wait. Both sides need feedback when the process changes.
+                +imageBrief({"role": "Outcome", "title": "What the evidence supports", "composition": "Use only the results stated in this case. Keep population, timeframe, qualitative status, and any attribution limits beside the result.", "purpose": "Resolve the story without overstating impact.", "caption": "Evidence summary reconstructed from the documented account; no invented measurements.", "ratio": "16:9", "type": "Evidence summary"})
+            +folioFooter(false, 'I’m happy to discuss the field research and pickup communication flow.', {href: '/price-adjustments.html', label: 'Next: Price Adjustments'})

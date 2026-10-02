@@ -2,101 +2,93 @@ include includes/folio-shared.pug
 
 html(lang="en")
     head
-        +folioHead('Aaron Benjamin — Product Designer', 'I help teams make sense of complex problems. Then we ship something glorious.', '/')
-    body.folio
+        +folioHead('Aaron Benjamin | UX and product leader', 'I help teams make sense of complex problems. Then we ship something glorious.', '/')
+    body.folio.folio--home
         +folioShell
-
         +folioHeader('work')
-
         main#main.folio-main
             section.folio-hero(aria-labelledby="hero-title")
                 .folio-hero__inner
                     .folio-hero__copy
-                        .folio-hero__text
-                            h1.folio-hero__title#hero-title
-                                span.folio-hero__kicker I help teams make sense of complex problems.
-                                span.folio-hero__mark
-                                    | Then we ship something 
-                                    span.folio-hero__rotator(aria-hidden="true")
-                                        span.folio-hero__word glorious
-                                        span.folio-hero__word delightful
-                                        span.folio-hero__word outrageous
-                                        span.folio-hero__word splendid
-                                        span.folio-hero__word mischievous
-                                        span.folio-hero__word brilliant
-                                        span.folio-hero__word audacious
-                                        span.folio-hero__word exquisite
-                                        span.folio-hero__word scalable
-                                        span.folio-hero__word useful
-                                        span.folio-hero__word clear
-                                        span.folio-hero__word usable
-                                        span.folio-hero__word accessible
-                                        span.folio-hero__word engaging
-                                        span.folio-hero__word thoughtful
-                                        span.folio-hero__word intentional
-                                        span.folio-hero__word durable
-                                        span.folio-hero__word reliable
-                                        span.folio-hero__word humane
-                                        span.folio-hero__word focused
-                                        span.folio-hero__word simple
-                                        span.folio-hero__word sturdy
-                                        span.folio-hero__word precise
-                                        span.folio-hero__word inclusive
-                                        span.folio-hero__word coherent
-                                        span.folio-hero__word measurable
-                                        span.folio-hero__word considered
-                                        span.folio-hero__word legible
-                                        span.folio-hero__word user-centered
-                                        span.folio-hero__word ridiculous
-                                        span.folio-hero__word bonkers
-                                        span.folio-hero__word feral
-                                        span.folio-hero__word cheeky
-                                        span.folio-hero__word absurd
-                                        span.folio-hero__word chaotic
-                                        span.folio-hero__word spicy
-                                        span.folio-hero__word suspicious
-                                        span.folio-hero__word unhinged
-                                        span.folio-hero__word extra
-                                    span.visually-hidden glorious
-                            p.folio-hero__dek I'm a UX and product leader with 10+ years of experience turning complex problems into useful, scalable products for companies including Amazon, The Home Depot, HP, and AT&T.
-                        a.folio-btn(href="#work") Explore my work
+                        h1.folio-hero__title#hero-title
+                            span.folio-hero__kicker I help teams make sense of complex problems.
+                            span.folio-hero__statement
+                                | Then we ship something&#32;
+                                span.folio-hero__rotator(aria-hidden="true")
+                                    span.folio-hero__word.is-current glorious
+                                    span.folio-hero__word delightful
+                                    span.folio-hero__word outrageous
+                                    span.folio-hero__word splendid
+                                    span.folio-hero__word mischievous
+                                    span.folio-hero__word brilliant
+                                    span.folio-hero__word audacious
+                                    span.folio-hero__word exquisite
+                                    span.folio-hero__word scalable
+                                    span.folio-hero__word useful
+                                    span.folio-hero__word clear
+                                    span.folio-hero__word usable
+                                    span.folio-hero__word accessible
+                                    span.folio-hero__word engaging
+                                    span.folio-hero__word thoughtful
+                                    span.folio-hero__word intentional
+                                    span.folio-hero__word durable
+                                    span.folio-hero__word reliable
+                                    span.folio-hero__word humane
+                                    span.folio-hero__word focused
+                                    span.folio-hero__word simple
+                                    span.folio-hero__word sturdy
+                                    span.folio-hero__word precise
+                                    span.folio-hero__word inclusive
+                                    span.folio-hero__word coherent
+                                    span.folio-hero__word measurable
+                                    span.folio-hero__word considered
+                                    span.folio-hero__word legible
+                                    span.folio-hero__word user-centered
+                                    span.folio-hero__word ridiculous
+                                    span.folio-hero__word bonkers
+                                    span.folio-hero__word feral
+                                    span.folio-hero__word cheeky
+                                    span.folio-hero__word absurd
+                                    span.folio-hero__word chaotic
+                                    span.folio-hero__word spicy
+                                    span.folio-hero__word suspicious
+                                    span.folio-hero__word unhinged
+                                    span.folio-hero__word extra
+                                span.visually-hidden glorious
+                        p.folio-hero__dek I'm a UX and product leader with 10+ years of experience turning complex problems into useful, scalable products for companies including Amazon, The Home Depot, HP, and AT&T.
+                        button.folio-motion-toggle(type="button" hidden aria-pressed="false") Pause word rotation
                     .folio-hero__media
-                        img(src="assets/img/folio/hero-hi.png", alt="Illustrated portrait of Aaron Benjamin waving, with a speech bubble that says hi" width="238" height="250")
-
+                        img(src="assets/img/folio/hero-hi.png" alt="Illustrated portrait of Aaron Benjamin waving hello" width="238" height="250")
             section.folio-work#work(aria-labelledby="selected-work-title")
                 .folio-work__inner
-                    h2.folio-eyebrow#selected-work-title Selected work
-
-                    +projectCard({feature: true, href: "/classroom-assignment-management.html", image: {src: "assets/img/folio/work-classroom.png", alt: "Classroom assignment management interface showing student status and scores"}, status: "Renaissance · Senior UX Designer", title: "Classroom Assignment Management", dek: "Teachers could see how many students finished, not which ones. I replaced a table they had to sort with a priority view and worked with engineering to put student names on the page.", cta: "Read case study"})
-
-                    +projectCard({id: "green-loom", feature: true, href: "/green-loom.html", image: {src: "assets/img/folio/project--green-loom/green-loom--work-card-2x.png", alt: "Green Loom catalog with Peach Orchard Chew and stock states"}, status: "Green Loom · Co-founder", title: "Green Loom", dek: "A lab certificate can expire without changing the product. I designed a retail catalog for Georgia’s hemp rules that keeps those two facts apart.", cta: "Read case study"})
-
-                    +projectCard({id: "design-dash", feature: true, href: "/design-dash.html", image: {src: "assets/img/folio/project--design-dash/design-dash--work-card-2x.png", alt: "Design Dash logo"}, status: "Design Dash · Author", title: "Design Dash", dek: "A generated screen can land before anyone has defined the system. I built a workflow that ends in a plan a team can build from.", cta: "Read case study"})
-
-                    +projectCard({id: "many-hats", feature: true, href: "/many-hats.html", image: {src: "assets/img/folio/project--many-hats/many-hats--work-card-2x.png", alt: "Illustration of a mustached man wearing a tall stack of hats"}, status: "Many Hats · Author", title: "Many Hats", dek: "One chat was answering as the whole team. I built thirteen specialists who leave citable work, and I kept the decision.", cta: "Read case study"})
-
-                    +projectCard({id: "a-to-z-first-claim", feature: true, href: "/a-to-z-first-claim.html", image: {src: "assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--work-card-2x.png", alt: "Seller Central A-to-z claims list beside the redesigned first-claim email"}, status: "Amazon · UX Designer", title: "A-to-z First Claim", dek: "A seller’s first A-to-z email often felt like a penalty. I redesigned it to teach—claim details, first-claim coverage, and a short path to avoid the next one.", cta: "Read case study"})
-
-                    +projectCard({id: "curbside-pickup", feature: true, href: "/curbside-pickup.html", image: {src: "assets/img/folio/project--curbside-pickup/curbside-pickup--work-card-2x.png", alt: "Curbside ready-for-pickup mobile messages with ETA choices"}, status: "The Home Depot · Staff UX Designer", title: "Curbside Pickup", dek: "Contactless pickup was inventing itself in 2020. I put ETAs and check-in confirmation into the messages customers already got.", cta: "Read case study"})
-
-                    +projectCard({id: "price-adjustments", feature: true, href: "/price-adjustments.html", image: {src: "assets/img/folio/project--price-adjustments/price-adjustments--work-card-2x.png", alt: "Order Up Apply markdown fly-out on a shopping cart item"}, status: "The Home Depot · Staff UX Designer", title: "Price Adjustments", dek: "Associates had workarounds for damaged-item and competitor discounts. I put a markdown path in Order Up that kept the cart in view.", cta: "Read case study"})
-
-                    p.folio-work__also
-                        | Also shipped at Indeed, where I designed and analyzed more than 30 A/B tests for employer monetization.
-                        |
-                        a(href="mailto:hello@aaronbenjamin.design?subject=Indeed%20project") Ask me about Indeed
-
-            section.folio-claims#about(aria-labelledby="about-title")
-                .folio-claims__inner
-                    h2.folio-eyebrow.folio-claims__label#about-title How I work
-                    p.folio-claims__note I believe good design is facilitated, not produced by one person in isolation.
-                    +claim("01", "Make the system visible.")
-                        | Before screens, I map what the product is, with the people who have to build it. The product can be theirs. The model still comes first.
-                    +claim("02", "Decide what matters first.")
-                        | Research picks what is worth building first. The interface then makes that choice, instead of handing someone a pile of filters and wishing them luck.
-                    +claim("03", "Bring the team along.")
-                        | I stay in the room with product, research, and engineering until the decision is something they can build. The handoff is a shared model, not a file drop.
-
-            +folioFooter(true, 'If there’s a question your product should answer and can’t yet, send it my way.', null, true)
-
+                    .folio-section-head
+                        p.folio-eyebrow#selected-work-title Selected product stories
+                    +projectCard({"id": "classroom", "title": "Classroom Assignment Management", "status": "Renaissance · Senior UX Designer", "dek": "A priority view brought student identities into the assignment hub.", "outcome": "Shipped in six weeks; fewer trips to separate reports.", "href": "/classroom-assignment-management.html", "cta": "Read the story →", "feature": true, "image": {"src": "assets/img/folio/thumbnails/classroom.png", "alt": "Classroom assignments grouped by urgency, with overdue reading and math activities", "width": 880, "height": 660}, "hook": "Eight finished. Which two needed help?"})
+                    +projectCard({"id": "indeed-job-refresh", "title": "Job Refresh", "status": "Indeed · Senior UX Designer", "dek": "Employers could refresh an existing job instead of closing and reposting it.", "outcome": "Free for six months, then included in Sponsored Jobs.", "href": "/indeed-job-refresh.html", "cta": "Read the story →", "feature": true, "hook": "The job was still open. Its visibility had faded.", "image": {"src": "assets/img/folio/thumbnails/indeed-job-refresh.png", "alt": "Job Refresh prompt explaining eligibility and offering Refresh this job", "width": 880, "height": 660}})
+                    +projectCard({"id": "curbside-pickup", "title": "Curbside Pickup", "status": "The Home Depot · Staff-level product design", "dek": "A clearer check-in helped customers understand what happened next.", "outcome": "A 50-store pilot reported clearer expectations and fewer fulfillment-change calls.", "href": "/curbside-pickup.html", "cta": "Read the story →", "feature": true, "image": {"src": "assets/img/folio/thumbnails/curbside-pickup.png", "alt": "Home Depot pickup email on a phone with arrival-time choices", "width": 880, "height": 660}, "hook": "The wait was short. The uncertainty was not."})
+            section.folio-editorial-section(aria-labelledby="leadership-title")
+                .folio-section-head
+                    p.folio-eyebrow#leadership-title Leadership in practice
+                +projectCard({"id": "home-depot-design-leadership", "title": "Design Leadership at The Home Depot", "status": "The Home Depot · Staff-level influence", "dek": "Connected interns, mentors, and innovation projects—and helped teams put evidence and accessibility insights into practice.", "outcome": "Six to 16 project teams; three participants accepted UX-team roles.", "href": "/home-depot-design-leadership.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/home-depot-design-leadership.png", "alt": "UX MEOW illustration with a Home Depot cap and laptop", "width": 880, "height": 660}})
+            section.folio-editorial-section(aria-labelledby="more-work-title")
+                .folio-section-head
+                    p.folio-eyebrow#more-work-title More product work
+                .folio-work-list
+                        +projectCard({"id": "a-to-z-first-claim", "title": "Amazon A-to-z: First Claim", "status": "Amazon · UX Designer II", "dek": "A first-claim email became a learning opportunity with a practical next step.", "href": "/a-to-z-first-claim.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/a-to-z-first-claim.png", "alt": "Amazon A-to-z claims dashboard beside the first-claim email", "width": 880, "height": 660}})
+                        +projectCard({"id": "price-adjustments", "title": "Home Depot Price Adjustments", "status": "The Home Depot · Staff-level product design", "dek": "Price adjustments that preserved order context and supported associate judgment.", "href": "/price-adjustments.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/price-adjustments.png", "alt": "Home Depot markdown form showing amount, quantity, and Apply controls", "width": 880, "height": 660}})
+                        +projectCard({"id": "green-loom", "title": "Green Loom", "status": "Green Loom · Co-founder", "dek": "A catalog model connecting product identity, stock, store offers, and lab evidence.", "href": "/green-loom.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/green-loom.png", "alt": "Green Loom catalog concept showing product details beside stock status", "width": 880, "height": 660}})
+            section.folio-tools(aria-labelledby="tools-title")
+                .folio-section-head
+                    p.folio-eyebrow#tools-title Tools developed through my work
+                .folio-project-pair
+                        +projectCard({"id": "design-dash", "title": "Design Dash", "status": "Open-source method · Author", "dek": "Connect product evidence, models, requirements, and interface decisions.", "outcome": "Used in classroom workshops; the public method remains in development.", "href": "/design-dash.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/project--design-dash/design-dash--work-card-2x.png", "alt": "Design Dash wordmark"}})
+                        +projectCard({"id": "many-hats", "title": "Many Hats", "status": "Open-source agent system · Author", "dek": "Give specialists explicit responsibilities and keep decisions with the human.", "outcome": "Public v0.1 with a replayable fictional demonstration.", "href": "/many-hats.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/project--many-hats/many-hats--work-card-2x.png", "alt": "Many Hats illustration"}})
+            section.folio-editorial-section#about(aria-labelledby="about-title")
+                .folio-section-head
+                    p.folio-eyebrow About Aaron
+                    h2#about-title Close to the problem. Close to the craft.
+                    p My work has taken me through classrooms, marketplaces, stores, and enterprise tools. I’m currently a Senior UX Designer at Renaissance, connecting research and product models with the details people need to act.
+                    p I’m interested in Staff and Principal IC work where I can shape direction, stay involved in delivery, and help others make better decisions along the way.
+                    a.folio-text-link(href="/resume.html") Explore my experience →
+            +folioFooter(true, 'Have a complex problem your team is working through?', null, true)
         script(src="assets/js/hero-rotator.js" defer)

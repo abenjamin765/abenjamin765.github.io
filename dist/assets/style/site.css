@@ -607,12 +607,17 @@ main#main.site-main {
     grid-template-columns: 1fr;
   }
   .hdr__row {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-rows: auto auto;
   }
   .logo {
+    min-width: 0;
     grid-column: 1;
     grid-row: 1;
+  }
+  .logo__wordmark {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   .hdr__tools {
     grid-column: 2;

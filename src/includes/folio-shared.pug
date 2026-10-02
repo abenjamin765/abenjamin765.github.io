@@ -1,4 +1,13 @@
-mixin folioHead(pageTitle, description, pagePath, stylesheet, shareImage)
+//- Lucide static SVGs, vendored with their ISC/MIT license.
+mixin folioIcon(name)
+    if name === 'arrow-left'
+        include ../assets/icons/lucide/arrow-left.svg
+    else if name === 'arrow-right'
+        include ../assets/icons/lucide/arrow-right.svg
+    else if name === 'trash-2'
+        include ../assets/icons/lucide/trash-2.svg
+
+mixin folioHead(pageTitle, description, pagePath, stylesheet, shareImage, stylesheetVersion)
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title= pageTitle
@@ -11,7 +20,7 @@ mixin folioHead(pageTitle, description, pagePath, stylesheet, shareImage)
     meta(property="og:image", content='https://aaronbenjamin.design' + (shareImage || '/assets/img/folio/work-classroom.png'))
     meta(name="twitter:card", content="summary_large_image")
     link(rel="icon", type="image/svg+xml", href="/assets/img/folio/favicon.svg")
-    link(rel="stylesheet", href="/assets/style/" + (stylesheet || 'folio') + ".css")
+    link(rel="stylesheet", href="/assets/style/" + (stylesheet || 'folio') + ".css" + (stylesheetVersion ? '?v=' + stylesheetVersion : ''))
 
 //- Skip link and gold blob that every folio page pastes at the top of <body>.
 mixin folioShell
@@ -26,14 +35,13 @@ mixin folioHeader(active, projectTitle, backHref)
         .folio-hdr__inner
             if projectTitle
                 a.folio-hdr__name.folio-hdr__name--project(href=(backHref || '/#work') aria-label=`Back to selected work: ${projectTitle}`)
-                    span.folio-hdr__back-icon(aria-hidden="true") ←
+                    span.folio-hdr__back-icon(aria-hidden="true")
+                        +folioIcon('arrow-left')
                     span= projectTitle
             else
                 a.folio-hdr__name(href="/") Aaron Benjamin
             nav.folio-nav(aria-label="Primary")
-                a.folio-nav__a(href="/#work" aria-current=active === 'work' ? 'page' : null) Work
-                a.folio-nav__a(href="/#about" aria-current=active === 'about' ? 'page' : null) About
-                a.folio-nav__a(href="/resume.html" aria-current=active === 'resume' ? 'page' : null) Resume
+                a.folio-btn.folio-nav__cta(href="/resume.html" aria-current=active === 'resume' ? 'page' : null) Resume
 
 //- next is an optional { href, label } case link. portrait defaults off so case pages stay text-only.
 mixin folioFooter(showResume, lead, next, portrait)
@@ -46,37 +54,35 @@ mixin folioFooter(showResume, lead, next, portrait)
             if next
                 a.folio-footer__next(href=next.href)
                     = next.label
-                    span(aria-hidden="true")  →
-            if showResume !== false
+                    span(aria-hidden="true")
+                        +folioIcon('arrow-right')
+            if showResume !== false && !next
                 a.folio-footer__resume(href="/resume.html") View Resume
 
 //- ——— Homepage cards ———
 
 //- One card shape for a linked case (card.href + card.image) and an email preview
 //- (card.previewName + card.ctaHref). Copy stays in the caller as arguments.
-//- A linked case can pass card.placeholder { description, displaySize, exportSize,
-//- fileName, src, alt } in place of card.image until the exported file exists.
 mixin projectCard(card)
     article.folio-project(id=card.id class=card.feature ? 'folio-project--feature' : null)
         if card.href
             a.folio-project__link(href=card.href)
-                if card.placeholder
-                    .folio-project__media.folio-project__placeholder
-                        img.folio-project__placeholder-img(src=card.placeholder.src, alt=card.placeholder.alt, loading="lazy")
-                        .folio-project__placeholder-meta(aria-hidden="true")
-                            p.folio-project__placeholder-label Image placeholder
-                            p.folio-project__placeholder-desc= card.placeholder.description
-                            p.folio-project__placeholder-dims
-                                span Display #{card.placeholder.displaySize}
-                                span Export #{card.placeholder.exportSize}
-                            p.folio-project__placeholder-file= card.placeholder.fileName
-                else
-                    .folio-project__media
-                        img(src=card.image.src, alt=card.image.alt, loading="lazy")
+                .folio-project__media
+                    if card.image
+                        img(src=card.image.src, alt=card.image.alt, width=card.image.width, height=card.image.height, loading="lazy")
+                    else
+                        .folio-project__placeholder
+                            span Image to create
+                            strong= card.visual
+                            //- Detailed art direction lives in the case study and private briefs.
                 .folio-project__copy
-                    p.folio-project__status= card.status
                     h3.folio-project__title= card.title
+                    p.folio-project__status= card.status
+                    if card.hook
+                        p.folio-project__hook= card.hook
                     p.folio-project__dek= card.dek
+                    if card.outcome
+                        p.folio-project__proof= card.outcome
                     span.folio-project__cta= card.cta
         else
             .folio-project__media.folio-project__media--fill
@@ -131,9 +137,48 @@ mixin caseFigure(fig)
 mixin caseOutcome(id, title)
     section.folio-case__outcome(aria-labelledby=id)
         .folio-case__outcome-inner
-            p.folio-eyebrow Outcome
+            p.folio-eyebrow S — Success
             h2(id=id)= title
             block
+
+//- Text-native diagrams stay readable at enlarged text sizes and without images.
+//- opts: {id, title, nodes:[{label, detail}], caption, class}.
+mixin storyFlow(opts)
+    figure.folio-story-flow(class=opts.class aria-labelledby=opts.id)
+        .folio-story-flow__body
+            p.folio-story-flow__title= opts.title
+            ol.folio-story-flow__nodes
+                each node in opts.nodes
+                    li
+                        strong= node.label
+                        span= node.detail
+        figcaption(id=opts.id)= opts.caption
+
+//- opts: {id, title, columns:[{label, title, detail, items:[string]}], caption}.
+mixin storyComparison(opts)
+    figure.folio-story-compare(aria-labelledby=opts.id)
+        p.folio-story-flow__title= opts.title
+        .folio-story-compare__columns
+            each column in opts.columns
+                .folio-story-compare__column
+                    p.folio-story-compare__label= column.label
+                    p.folio-story-compare__heading= column.title
+                    if column.detail
+                        p.folio-story-compare__detail= column.detail
+                    if column.items
+                        ul
+                            each item in column.items
+                                li= item
+        figcaption(id=opts.id)= opts.caption
+
+mixin caseResults(items, source)
+    dl.folio-case-results
+        each item in items
+            div
+                dt= item.value
+                dd= item.label
+    if source
+        p.folio-case-results__source= source
 
 //- Back-to-work footer. href/label default to today's shared destination.
 mixin caseBack(href, label)
@@ -185,7 +230,6 @@ mixin objectPath(opts)
                         strong= item.term
                         span= item.detail
         figcaption(id=opts.captionId)= opts.caption
-
 //- Numbered workflow diagram.
 //- opts: { labelledby, variant, title, steps:[{term,detail}], note, caption, captionId }.
 mixin stepList(opts)
@@ -202,15 +246,21 @@ mixin stepList(opts)
                 p.green-case__diagram-note= opts.note
         figcaption(id=opts.captionId)= opts.caption
 
-//- Placeholder figure for a visual that must be produced outside the repo.
-//- Points at src so dropping the exported file in replaces the block.
-mixin figurePlaceholder(description, displaySize, exportSize, src, fileName, alt)
-    figure.folio-case__figure.folio-case__placeholder
-        .folio-case__placeholder-frame(role="img" aria-label=alt)
-            img.folio-case__placeholder-img(src=src alt=alt loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.classList.add('is-missing')")
-            .folio-case__placeholder-meta
-                p.folio-case__placeholder-desc= description
-                p.folio-case__placeholder-dims
-                    span Display #{displaySize}
-                    span Export #{exportSize}
-                p.folio-case__placeholder-file= fileName
+//- Visible production briefs; never represented as authentic research artifacts.
+mixin imageBrief(brief)
+    figure.folio-image-brief
+        .folio-image-brief__canvas
+            p.folio-image-brief__label Image to create · #{brief.role}
+            h3= brief.title
+            p= brief.composition
+            dl
+                div
+                    dt Format
+                    dd= brief.ratio
+                div
+                    dt Artifact
+                    dd= brief.type
+                div
+                    dt Purpose
+                    dd= brief.purpose
+        figcaption= brief.caption

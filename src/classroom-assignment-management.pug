@@ -3,8 +3,8 @@ include includes/assignment-demo.pug
 
 html(lang="en")
     head
-        +folioHead('Teachers could see how many finished, not who hadn’t | Aaron Benjamin', 'I redesigned the Renaissance Intelligence assignments page so K-12 teachers could see which students hadn’t started, not only how many had finished.', '/classroom-assignment-management.html')
-    body.folio.folio--case
+        +folioHead('Teachers see who needs support | Aaron Benjamin', 'A priority view and student-level progress data made Renaissance Intelligence assignments easier for teachers to act on.', '/classroom-assignment-management.html', 'folio', undefined, 'classroom-desktop-final-20261002')
+    body.folio.folio--case.folio--classroom
         +folioShell
 
         +folioHeader('work', 'Classroom Assignment Management')
@@ -12,115 +12,82 @@ html(lang="en")
         main#main.folio-main.folio-main--case
             article.folio-case
                 header.folio-case__hero
-                    figure.folio-case__hero-media
-                        img(src="assets/img/folio/project--assignment-management/assignment-management--hero.png", alt="Renaissance Intelligence assignment view with new, overdue, due soon, in-progress, and done groups, and The Long Winter listed as overdue" width="1920" height="1436" fetchpriority="high")
                     .folio-case__intro
-                        p.folio-eyebrow Case study
-                        h1 Teachers could see how many finished, not who hadn’t
-                        p.folio-case__dek My team and I set out to improve a table. What teachers needed was a student name the API didn’t send.
-                        p.folio-case__context
-                            | More than 40% of U.S. schools rely on&#32;
-                            a(href="https://www.renaissance.com/about-us/" target="_blank" rel="noopener noreferrer") Renaissance
-                            |  for learning data and insights.
+                        p.folio-eyebrow Renaissance · Classroom Assignment Management
+                        h1 Who needs my help today?
+                        p.folio-case__dek Our hub brought assignments together, but teachers still had to leave to find the students who needed help. I challenged the MVP, won support to test a new direction, and made the case to prioritize a view built around teacher attention.
+                    figure.folio-case__hero-media
+                        img(src="assets/img/folio/project--assignment-management/classroom-student-table-hero-2x.png" alt="Expanded overdue reading assignment showing named students who have not started, with working status and score columns" width="1800" height="720" fetchpriority="high")
                     +caseFacts
                         .folio-case__fact
                             dt Role
                             dd Senior UX Designer
                         .folio-case__fact
                             dt Team
-                            dd Product manager, product owner, three engineers, and UX research partners
+                            dd Six-person product team, with UX research partners
                         .folio-case__fact
                             dt Timeline
                             dd Four weeks of research and design, followed by two weeks of development
                         .folio-case__fact
                             dt Outcome
-                            dd Met the initiative’s hub-adoption goal. Teachers stayed on the Assignments page instead of opening each product’s report.
+                            dd Shipped in six weeks; fewer exits to individual-product reports observed over 60 days
                         .folio-case__fact
                             dt What I owned
-                            dd I co-authored the requirements with the product manager and owned the information architecture, interaction patterns, page content, states, prototypes, handoff, and launch planning.
+                            dd Made the case to prioritize Version 2; co-authored requirements with the product manager; owned information architecture, interaction design, prototypes, handoff, and launch planning.
 
                 +caseSection({labelledby: "belief-title"})
-                    h2#belief-title We assumed a better table would be enough
-                    p Version 1 of the Assignments page pulled work from several Renaissance products into one table. The team, me included, believed that a table with the right data would give teachers the most flexibility. If they could sort and filter, they could find anything.
-                    p Our UX research partners ran moderated sessions with five current Renaissance users and five teachers new to the product suite. Participants reviewed the existing page and two prototypes, looked for specific assignments, and talked through how they would use the page in class.
-                    p The flexibility was the problem. Teachers had to sort and filter before they could see who needed help. They ranked urgency by due date, and the table showed when work was assigned. It also showed “11/16” next to Fractions Practice and had no way to say which five.
+                    p.folio-eyebrow I — Inspiration
+                    h2#belief-title Our MVP brought the apps together. Teachers still had to leave.
+                    p We launched Version 1 quickly, with an MVP intended to remain in place until enhancements were prioritized. It consolidated assignments from several Renaissance products into one table. The team, me included, believed that sorting and filtering would give teachers the flexibility to find what they needed.
+                    p Early testing and user feedback exposed a gap in that definition of the MVP. The page did not answer the question teachers came with: “Who needs my help today?” A count such as “11/16” showed completion, but teachers had to open a separate product report to see who had finished and decide who needed attention.
+                    p I argued that this was a missing part of the core experience. We had reduced the friction of moving between apps, yet teachers still had to leave the hub to accomplish an expected task. We were falling short of our promise to “See every student.”
+                    p Assignments was the app’s most visited page and the page losing the most users to the individual products. That made the gap important to both teachers and the hub’s purpose.
 
-                +caseSection({labelledby: "turn-title", tint: true})
-                    h2#turn-title The API knew how many students finished, not who
-                    p Here is the situation we kept coming back to. It is an illustration, not one observed session: a teacher sees that eight of ten students finished an assignment and still can’t see which two didn’t. To find them, the teacher leaves the hub and opens that product’s own report.
-                    p No layout could fix that. The initial API returned aggregate completion counts only, so there were no names to show. With engineering and the API owners, I got student IDs added to the payload, along with completion time. With IDs, the page could show student names.
-                    p That changed the design question. It stopped being how to display counts and became which assignments and students a teacher should see first.
+                figure.folio-case__figure.folio-case__context-visual(aria-labelledby="classroom-context-caption")
+                    .folio-case__context-crop
+                        img(src="assets/img/folio/project--assignment-management/classroom-counts-without-names.png" alt="An In progress badge beside 11/16, circled in red with the question: Who are these students?" width="1032" height="580" loading="lazy")
+                    figcaption#classroom-context-caption Illustrative scenario: the count showed progress without identifying the students who needed support.
 
                 +caseSection({labelledby: "decision-title", prose: false})
                     .folio-case__prose
-                        h2#decision-title I replaced the table with a priority view
-                        p Once the names existed, I stopped trying to make the table smarter. The final design puts new assignments first, then groups the rest by overdue, due soon, in progress, and done. Teachers can expand or collapse any group, so the flexibility is still there. It just isn’t the first job.
-                        p All ten teachers in the study, five current users and five new to the suite, said the grouping matched how they expected to review assignments.
-                    +annotatedFrame({labelledby: "frame-caption", captionId: "frame-caption", images: [{src: "assets/img/folio/project--assignment-management/assignment-management--current-page.png", alt: "Version 1 of the Assignments and Assessments page: seven filter menus above a table of assignments with assigned dates and completion counts", width: 1760, height: 1210}, {src: "assets/img/folio/project--assignment-management/assignment-management--hero.png", alt: "The grouped view: new assignments, then overdue with The Long Winter, then due soon, in progress, and done", width: 1920, height: 1436}], callouts: ["Version 1: seven menus sit above the table. Teachers filtered before they could act.", "Version 1: a count like 11/16 said how many students finished. It couldn’t say who.", "Version 1 showed when work was assigned. The grouped view leads with when it’s due, which is how teachers ranked urgency.", "Grouped view: overdue work sits near the top, so The Long Winter shows up without a search.", "Grouped view: done stays collapsed, so finished work doesn’t push active work down the page."], caption: "Version 1 asked teachers to build their own priority list. The grouped view starts with one. The screenshot’s Done group is longer than the demo below, which shows three finished assignments so the list stays short."})
+                        p.folio-eyebrow D — Design Process
+                        h2#decision-title Test a view built around “Who needs my help today?”
+                        p I won support to test a new design that brought students into the page and explored how to direct attention across assignments. Our UX research partners ran moderated sessions with five current users and five teachers new to the product suite. Participants reviewed the existing page and two prototypes, found specific assignments, and explained how they would use the page in class.
+                        p Teachers organized their work by urgency, but the existing table led with assigned dates. I replaced it with groups: new assignments, overdue, due soon, in progress, and done. Teachers could start with the work that needed attention and expand or collapse groups as their priorities changed.
+                        p The layout alone could not solve the identity problem. The API returned completion counts, so I worked with engineering and the API owners to add student IDs and support the student-level view. Opening an assignment now revealed a table of its students, their working status, and outcomes appropriate to that assignment type.
+                        p The tests reinforced that student visibility and support for prioritizing work were missing from the existing experience. Teachers described the grouping as consistent with how they expected to review assignments. That qualitative feedback supported a direction organized around their next decision, with the student detail needed to act.
+                    include includes/assignment-comparison.pug
 
-                +pullQuote('“OMG, this is amazing.”', 'A study participant, after comparing the grouped design with Version 1')
+                +caseSection({labelledby: "classroom-engagement"})
+                    p.folio-eyebrow E — Engagement
+                    h2#classroom-engagement Make the case to prioritize the missing core experience
+                    p I brought the test findings to the product team and made the case to prioritize the new design. Teachers were leaving the hub because it still lacked information they needed; student visibility and assignment priorities belonged in the core experience. The team prioritized Version 2.
+                    p I co-authored the requirements with the product manager and connected the interface direction to its data dependencies in working sessions with engineering and the API owners. A running FAQ and decision record, weekly design feedback, and cross-team workshops kept requirements and open questions visible through delivery.
+                    p Prioritizing the work also meant drawing a boundary. We shipped the student table with working status and assignment-specific outcomes, while deferring a fuller performance summary. That kept the release focused on helping teachers identify assignments and students needing attention.
 
-                +caseSection({labelledby: "final-design-title", final: true, prose: false})
-                    .folio-case__prose
-                        h2#final-design-title Student names sit one click from each assignment
-                        p Teachers scan by urgency and open an assignment without leaving the page. The Long Winter is open below, sorted so students who haven’t started come first.
-                    .folio-demo(aria-label="Interactive reconstruction of the final assignments view")
-                        p.folio-demo__note Interactive reconstruction of the final design. Student names and results are illustrative.
-                        p.folio-demo__note Open an overdue assignment to see who hasn’t started.
-                        .folio-demo__canvas
-                            details.folio-demo__group(open)
-                                summary.folio-demo__group-summary
-                                    img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
-                                    span New assignments (1)
-                                .folio-demo__group-content
-                                    +assignment('Skill Practice: Symmetry & Transformations', '3 complete, 17 in progress, 8 not started', '9/27', 'lightbulb', false, false)
+                +caseSection({labelledby: "buildable-title", tint: true, figure: {src: "assets/img/folio/project--assignment-management/assignment-management--object-model.png", alt: "Assignment object model separating shared assignment attributes from live-lesson and reading-activity details", caption: "One shared assignment model kept the experience consistent while preserving product-specific detail.", loading: "lazy"}})
+                    p.folio-eyebrow A — Action
+                    h2#buildable-title Make one experience work across different products
+                    p Each product stored assignments differently. I facilitated an object-modeling workshop with product and engineering to define a shared assignment: title, type, assigned date, and due date, with product-specific detail such as questions answered or pages read alongside it.
+                    p That model shaped the interaction. Teachers scan the urgency groups, open an assignment, and review its student table. Working status helps them see who has not started or is still working; assignment-specific outcomes add context about the work. Students who have not started appear first, while labels and icons preserve the context of the source product.
+                    p Delivery had to fit an existing React app embedded in an Angular shell. I worked within those constraints and requested timeframe pre-filtering from the API to limit the student-level data loaded into the page.
+                    p I used #[a(href="/design-dash.html") Design Dash], the toolset I built, to run modeling and prototyping sessions. Prototypes with realistic mock data helped product, research, and engineering compare options together. I carried the agreed direction through interaction states, handoff, and launch planning.
 
-                            details.folio-demo__group(open)
-                                summary.folio-demo__group-summary
-                                    img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
-                                    span Overdue (2)
-                                .folio-demo__group-content.folio-demo__group-content--assignments
-                                    +assignment('Reading Activity: The Long Winter, Chapter 4', '14 complete, 3 in progress, 11 not started', '9/17', 'book-spine', false, true)
-                                    +assignment('Math Challenge: Area & Perimeter', '9 complete, 6 in progress, 13 not started', '9/19', 'calculator', false, false)
+                +caseOutcome("outcome-title", "Teachers made fewer trips to separate reports")
+                    p Version 2 shipped after four weeks of research and design and two weeks of development. Over a 60-day measurement period, we tracked traffic exiting Assignments for report pages in the individual products and observed fewer of those exits. The initiative met its hub-adoption goal; exact figures are confidential.
+                    p Reduced leakage mattered on the app’s most visited page. Together with the research feedback, it supported the direction: help teachers find the assignments and students needing attention within the hub.
+                    p This changed how I evaluated the MVP. Consolidating products was useful, but completeness depended on whether teachers could answer their primary question. A priority view helped them decide where to look; student identities helped them decide whom to help.
 
-                            details.folio-demo__group
-                                summary.folio-demo__group-summary
-                                    img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
-                                    span Due soon (3)
-                                .folio-demo__group-content.folio-demo__group-content--assignments
-                                    +assignment('Skill Practice: Equivalent Fractions', '12 complete, 10 in progress, 4 not started', '9/22', 'lightbulb', false, false)
-                                    +assignment('Reading Activity: The One and Only Ivan, Chapter 6', '15 complete, 7 in progress, 4 not started', '9/23', 'book-spine', false, false)
-                                    +assignment('Math Challenge: Ratios & Proportions', '8 complete, 11 in progress, 7 not started', '9/24', 'calculator', false, false)
-                            details.folio-demo__group
-                                summary.folio-demo__group-summary
-                                    img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
-                                    span In progress (5)
-                                .folio-demo__group-content.folio-demo__group-content--assignments
-                                    +assignment('Skill Practice: Adding Integers', '18 complete, 6 in progress, 2 not started', '9/15', 'lightbulb', false, false)
-                                    +assignment('Math Challenge: Algebraic Expressions', '13 complete, 9 in progress, 4 not started', '9/16', 'calculator', false, false)
-                                    +assignment('Skill Practice: Word Relationships', '16 complete, 8 in progress, 2 not started', '9/16', 'lightbulb', false, false)
-                                    +assignment('Reading Activity: Bud, Not Buddy, Chapter 8', '14 complete, 10 in progress, 2 not started', '9/17', 'book-spine', false, false)
-                                    +assignment('Math Challenge: Decimal Operations', '11 complete, 12 in progress, 3 not started', '9/18', 'calculator', false, false)
-                            details.folio-demo__group
-                                summary.folio-demo__group-summary
-                                    img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
-                                    span Done (3)
-                                .folio-demo__group-content.folio-demo__group-content--assignments
-                                    +assignment('Skill Practice: Vocabulary Review', '25 complete, 1 in progress, 0 not started', '9/16', 'lightbulb', false, false)
-                                    +assignment('Math Challenge: Volume', '26 complete, 0 in progress, 0 not started', '9/15', 'calculator', false, false)
-                                    +assignment('Reading Activity: The Giver, Chapter 1', '24 complete, 2 in progress, 0 not started', '9/14', 'book-spine', false, false)
-
-                +caseSection({labelledby: "buildable-title", tint: true, figure: {src: "assets/img/folio/project--assignment-management/assignment-management--object-model.png", alt: "Assignment object model showing shared assignment attributes alongside attributes specific to live lessons and reading activities", caption: "The object model separated the attributes every assignment shared from product-specific detail.", loading: "lazy"}})
-                    h2#buildable-title Making it buildable inside the product we had
-                    p Each practice and assessment product stored assignments its own way. I facilitated an object-modeling workshop with product and engineering to define one shared assignment object. Every assignment has a title, type, assigned date, and due date. Product-specific detail, such as questions answered or pages read, sits alongside. The interface shows the shared fields first and keeps product context in labels and icons.
-                    p The page ran as a React app inside an iframe in an Angular shell, which limited layout, filters, dialogs, and other interactions. Along with the student IDs, we requested timeframe pre-filtering from the API so loading student-level data wouldn’t slow the page.
-                    p I ran the working sessions with Design Dash, the object-modeling and prototyping toolset I built. AI-assisted prototypes with realistic mock data let product, research, and engineering compare options in the room and leave with decisions and open questions written down.
-                    p We deferred a fuller student-performance summary. Teachers wanted it, but it would have delayed the core fix: showing which assignments and students needed attention.
-
-                +caseOutcome("outcome-title", "Teachers stayed on one page instead of opening each product’s report")
-                    p Version 2 launched after four weeks of research and design and two weeks of development. It met the initiative’s goal of moving teachers from individual products into Renaissance Intelligence. Product behavior data showed fewer trips from the Assignments page out to individual product reports, which fits teachers finding the students they needed without leaving.
-                    p My takeaway: an opinionated default earns its place when it matches how people already rank their work, and it goes wrong fast when it doesn’t. That’s why we tested before we built, and why every group still opens and closes.
-
-            +folioFooter(true, 'We had to get student names through the assignment model and the API before any layout could show them.', {href: '/green-loom.html', label: 'Next case: Green Loom'})
+            footer.folio-footer.classroom-footer(aria-label="Contact and next case study")
+                .classroom-footer__contact
+                    h2 Discuss this project
+                    p I’m happy to discuss the research, data changes, or delivery tradeoffs.
+                    a.folio-btn.classroom-footer__email(href="mailto:hello@aaronbenjamin.design") Email Aaron
+                a.classroom-footer__next(href="/indeed-job-refresh.html")
+                    span.classroom-footer__label Next case study
+                    span.classroom-footer__title Indeed Job Refresh
+                    span.classroom-footer__arrow(aria-hidden="true")
+                        +folioIcon('arrow-right')
 
         script(src="assets/js/assignment-demo.js" defer)
+        script(src="assets/js/assignment-comparison.js?v=classroom-motion-20261002" defer)

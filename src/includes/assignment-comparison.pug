@@ -1,0 +1,86 @@
+figure.assignment-comparison#assignment-comparison(aria-labelledby="comparison-caption")
+    .assignment-comparison__tabs(hidden role="tablist" aria-label="Compare assignment designs")
+        button#comparison-before-tab(type="button" role="tab" aria-controls="comparison-before" aria-selected="true") Before
+        button#comparison-after-tab(type="button" role="tab" aria-controls="comparison-after" aria-selected="false" tabindex="-1") After
+    #comparison-before.assignment-comparison__panel(role="tabpanel" aria-labelledby="comparison-before-tab" tabindex="0")
+        h3.assignment-comparison__fallback-title Before
+        .assignment-comparison__table-scroll(tabindex="0" aria-label="Original assignment table. Scroll horizontally to see all columns.")
+            table.assignment-comparison__table
+                caption.visually-hidden Original assignments table with completion counts
+                thead
+                    tr
+                        each name in ['Name', 'Type', 'Assigned', 'Status', 'Assigned by']
+                            th(scope="col")
+                                span.assignment-comparison__column-name
+                                    | #{name}
+                                    if name === 'Status'
+                                        img.assignment-comparison__sort(src="assets/img/folio/project--assignment-management/comparison-icons/arrow.svg" alt="Sorted by status")
+                        th(scope="col")
+                            span.visually-hidden Actions
+                tbody
+                    - const originalRows = [['Long Division Practice', 'Skills Practice', 'Feb 2, 2026', 'Assigned', '0/16', 'Me (Jane Doe)', 'assigned'], ['Fractions Practice', 'Skills Practice', 'Feb 20, 2026', 'In progress', '11/16', 'Me (Jane Doe)', 'progress'], ['Multiplication Fluency', 'Skills Practice', 'Feb 15, 2026', 'In progress', '9/25', 'Fredrick Crane', 'progress'], ['Algebra: Basic Quiz', 'Knowledge Check', 'Feb 25, 2026', 'Complete', '25/25', 'Me (Jane Doe)', 'complete'], ['Place Value Review', 'Knowledge Check', 'Feb 9, 2026', 'Complete', '25/25', 'Kelly Green', 'complete']]
+                    each row, index in originalRows
+                        tr
+                            th(scope="row")= row[0]
+                            td= row[1]
+                            td= row[2]
+                            td
+                                .assignment-comparison__status-cell
+                                    span.assignment-comparison__badge(class='assignment-comparison__badge--' + row[6])
+                                        img(src='assets/img/folio/project--assignment-management/comparison-icons/' + row[6] + '.svg' alt="")
+                                        | #{row[3]}
+                                    span= row[4]
+                            td= row[5]
+                            td
+                                if index === 0
+                                    span.assignment-comparison__delete(role="img" aria-label="Delete action shown in original design")
+                                        +folioIcon('trash-2')
+        p.assignment-comparison__explanation Teachers assembled a priority list with filters and sorting. Completion counts did not identify the students who needed help.
+    #comparison-after.assignment-comparison__panel(role="tabpanel" aria-labelledby="comparison-after-tab" tabindex="0")
+        h3.assignment-comparison__fallback-title After
+        .folio-demo(aria-label="Interactive reconstruction of the final assignments view")
+            p.folio-demo__note Interactive reconstruction of the final design. Student names and results are illustrative.
+            .folio-demo__canvas
+                details.folio-demo__group(open)
+                    summary.folio-demo__group-summary
+                        img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
+                        span New assignments (1)
+                    .folio-demo__group-content
+                        +assignment('Skill Practice: Symmetry & Transformations', '3 complete, 17 in progress, 8 not started', '9/27', 'lightbulb', false, false)
+
+                details.folio-demo__group(open)
+                    summary.folio-demo__group-summary
+                        img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
+                        span Overdue (2)
+                    .folio-demo__group-content.folio-demo__group-content--assignments
+                        +assignment('Reading Activity: The Long Winter, Chapter 4', '14 complete, 3 in progress, 11 not started', '9/17', 'book-spine', false, true)
+                        +assignment('Math Challenge: Area & Perimeter', '9 complete, 6 in progress, 13 not started', '9/19', 'calculator', false, false)
+
+                details.folio-demo__group
+                    summary.folio-demo__group-summary
+                        img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
+                        span Due soon (3)
+                    .folio-demo__group-content.folio-demo__group-content--assignments
+                        +assignment('Skill Practice: Equivalent Fractions', '12 complete, 10 in progress, 4 not started', '9/22', 'lightbulb', false, false)
+                        +assignment('Reading Activity: The One and Only Ivan, Chapter 6', '15 complete, 7 in progress, 4 not started', '9/23', 'book-spine', false, false)
+                        +assignment('Math Challenge: Ratios & Proportions', '8 complete, 11 in progress, 7 not started', '9/24', 'calculator', false, false)
+                details.folio-demo__group
+                    summary.folio-demo__group-summary
+                        img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
+                        span In progress (5)
+                    .folio-demo__group-content.folio-demo__group-content--assignments
+                        +assignment('Skill Practice: Adding Integers', '18 complete, 6 in progress, 2 not started', '9/15', 'lightbulb', false, false)
+                        +assignment('Math Challenge: Algebraic Expressions', '13 complete, 9 in progress, 4 not started', '9/16', 'calculator', false, false)
+                        +assignment('Skill Practice: Word Relationships', '16 complete, 8 in progress, 2 not started', '9/16', 'lightbulb', false, false)
+                        +assignment('Reading Activity: Bud, Not Buddy, Chapter 8', '14 complete, 10 in progress, 2 not started', '9/17', 'book-spine', false, false)
+                        +assignment('Math Challenge: Decimal Operations', '11 complete, 12 in progress, 3 not started', '9/18', 'calculator', false, false)
+                details.folio-demo__group
+                    summary.folio-demo__group-summary
+                        img.folio-demo__angle(src="assets/img/folio/project--assignment-management/demo-icons/angle-down.svg", alt="")
+                        span Done (3)
+                    .folio-demo__group-content.folio-demo__group-content--assignments
+                        +assignment('Skill Practice: Vocabulary Review', '25 complete, 1 in progress, 0 not started', '9/16', 'lightbulb', false, false)
+                        +assignment('Math Challenge: Volume', '26 complete, 0 in progress, 0 not started', '9/15', 'calculator', false, false)
+                        +assignment('Reading Activity: The Giver, Chapter 1', '24 complete, 2 in progress, 0 not started', '9/14', 'book-spine', false, false)
+        p.assignment-comparison__explanation Urgency determines the starting order. Open an assignment to see which students need attention.
+    figcaption#comparison-caption HTML reconstructions of the original table and priority view. Assignment data, student names, and results are illustrative.
