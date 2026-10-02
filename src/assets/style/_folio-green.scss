@@ -313,97 +313,6 @@
   }
 }
 
-/* Placeholder figure. The img stays hidden until its onload adds .is-loaded,
-   so a missing file never covers the spec. No overflow clipping, so aspect-ratio
-   acts as a minimum and the frame grows when the spec text is taller than 960×660. */
-.folio-case__placeholder-frame {
-  position: relative;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  aspect-ratio: 960 / 660;
-  border: 2px dashed #9fb3a2;
-  border-radius: 8px;
-  background: #f4f7f2;
-}
-
-.folio-case__placeholder .folio-case__placeholder-img {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-  color: transparent;
-  font-size: 0;
-  visibility: hidden;
-}
-
-.folio-case__placeholder .folio-case__placeholder-img.is-loaded {
-  visibility: visible;
-}
-
-.folio-case__placeholder .folio-case__placeholder-img.is-missing {
-  display: none;
-}
-
-.folio-case__placeholder-meta {
-  display: grid;
-  gap: 16px;
-  max-width: 640px;
-  box-sizing: border-box;
-  padding: clamp(28px, 6vw, 64px);
-}
-
-.folio-case__placeholder-desc {
-  margin: 0;
-  color: $ink;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.folio-case__placeholder-desc::before {
-  content: "Image to export";
-  display: block;
-  margin-bottom: 8px;
-  color: #285d31;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.folio-case__placeholder-dims {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 20px;
-  margin: 0;
-  color: #3f5542;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.folio-case__placeholder-file {
-  margin: 0;
-  color: $muted;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 13px;
-  line-height: 1.45;
-  overflow-wrap: anywhere;
-}
-
-.folio-case__hero-media .folio-case__placeholder {
-  margin-top: 0;
-}
-
-.folio-case__hero-media .folio-case__placeholder-frame,
-.folio-case__hero-media .folio-case__placeholder .folio-case__placeholder-img {
-  border-radius: 0;
-}
-
 /* Certificate timeline. Steps 2 and 3 are the expired certificate and the
    stopped listing; the note is the product record that persists across them. */
 .green-case__diagram--timeline .green-case__steps li:nth-child(2),
@@ -413,8 +322,12 @@
 
 .green-case__diagram--timeline .green-case__diagram-note {
   padding: 14px 18px;
-  border-left: 4px solid #47714d;
   background: #fff;
   color: $ink !important;
   font-weight: 600;
+}
+
+.green-case__subheading {
+  margin-top: 40px !important;
+  font-size: 26px !important;
 }

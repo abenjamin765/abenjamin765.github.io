@@ -171,100 +171,6 @@ a.folio-nav__a:hover,
   line-height: normal;
 }
 
-// Each line scales with the column and stops at its design size.
-// The headline is sized to the longest adjective, "mischievous", so it stays one line.
-.folio-hero__kicker {
-  display: block;
-  color: #666;
-  font-weight: 400;
-  white-space: nowrap;
-  font-size: clamp(12px, 4.55cqi, 24px);
-}
-
-.folio-hero__mark {
-  display: block;
-  margin-top: 0;
-  color: $ink;
-  font-weight: 700;
-  line-height: 1.5;
-  white-space: nowrap;
-  font-size: clamp(13px, 5.35cqi, 38px);
-}
-
-.folio-hero__rotator {
-  display: inline-block;
-  position: relative;
-  height: 1.5em;
-  overflow: hidden;
-  vertical-align: bottom;
-  color: #f18309;
-  transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.folio-hero__word {
-  font-style: normal;
-  font-weight: 700;
-  white-space: nowrap;
-  color: #f18309;
-}
-
-.folio-hero__word:not(:first-child) {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-
-.folio-hero--motion .folio-hero__word {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transform: translateY(0.55em);
-  transition:
-    opacity 0.4s ease,
-    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.folio-hero--motion .folio-hero__word.is-current {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.folio-hero--motion .folio-hero__word.is-leaving {
-  opacity: 0;
-  transform: translateY(-0.55em);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .folio-hero__rotator {
-    transition: none;
-  }
-
-  .folio-hero--motion .folio-hero__word {
-    transition: none;
-  }
-}
-
-.folio-hero__kicker,
-.folio-hero__mark {
-  display: block;
-}
-
-.folio-hero__mark {
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.folio-hero__mark strong {
-  font-weight: 700;
-}
-
-.folio-hero__mark em {
-  font-style: italic;
-  font-weight: 400;
-}
-
 .folio-hero__dek {
   margin: 0;
   font-size: clamp(13px, 2.5cqi, 15px);
@@ -507,105 +413,6 @@ a.folio-nav__a:hover,
   gap: 40px;
 }
 
-/* ——— Homepage: "Also shipped at" line and How I work note ——— */
-
-.folio-work__also {
-  margin: 0;
-  padding-top: 32px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  font-size: 17px;
-  line-height: 1.5;
-  color: $body;
-}
-
-.folio-work__also a {
-  font-size: 15px;
-  font-weight: 700;
-  color: $ink;
-  white-space: nowrap;
-}
-
-.folio-claims__note {
-  grid-column: 1 / -1;
-  max-width: 40em;
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.5;
-  color: $body;
-}
-
-@media (max-width: 560px) {
-  .folio-claims__note {
-    font-size: 20px;
-  }
-}
-
-/* ——— Homepage card image placeholder ——— */
-
-/* aspect-ratio keeps the 880×360 slot. It only grows to fit the spec on narrow screens when overflow is visible. */
-.folio-project__placeholder {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  aspect-ratio: 880 / 360;
-  overflow: visible;
-  padding: 24px;
-  box-sizing: border-box;
-  background: #ededeb;
-  outline: 2px dashed rgba(0, 0, 0, 0.2);
-  outline-offset: -12px;
-}
-
-/* A loaded file covers the spec; a missing file stays transparent so the spec remains readable. */
-.folio-project__placeholder-img {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  object-fit: cover;
-  color: transparent;
-  font-size: 0;
-}
-
-.folio-project__placeholder-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 560px;
-  padding: 12px;
-  color: $body;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.folio-project__placeholder-meta p {
-  margin: 0;
-}
-
-.folio-project__placeholder-label {
-  color: $muted;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.folio-project__placeholder-dims {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 16px;
-  font-weight: 700;
-  color: $ink;
-}
-
-.folio-project__placeholder-file {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 13px;
-  overflow-wrap: anywhere;
-}
-
 /* ——— Footer close ——— */
 
 .folio-footer {
@@ -644,3 +451,9 @@ a.folio-nav__a:hover,
     font-size: 20px;
   }
 }
+
+/* Lucide navigation icons inherit the link color without a runtime dependency. */
+.folio-icon { display: inline-block; width: 20px; height: 20px; flex: none; vertical-align: middle; }
+.folio-hdr__back-icon { display: inline-flex; align-items: center; }
+.folio-footer__next > span { display: inline-flex; vertical-align: middle; margin-left: 6px; }
+.classroom-footer__arrow .folio-icon { width: 24px; height: 24px; }

@@ -2,61 +2,70 @@ include includes/folio-shared.pug
 
 html(lang="en")
     head
-        +folioHead('The screen arrived before the system was defined | Aaron Benjamin', 'I built Design Dash so a fuzzy product problem becomes a plan a team can build from, with evidence and assumptions labeled, before a generated screen is treated as the design.', '/design-dash.html', 'folio', '/assets/img/folio/project--design-dash/design-dash--hero-2x.png')
+        +folioHead('Design Dash: tracing a screen back to a decision | Aaron Benjamin', 'An open-source product-design workflow that connects evidence, objects, requirements, and interface decisions.', '/design-dash.html', 'folio', '/assets/img/folio/project--design-dash/design-dash--work-card-2x.png')
     body.folio.folio--case
         +folioShell
-
         +folioHeader('work', 'Design Dash', '/#design-dash')
-
         main#main.folio-main.folio-main--case
             article.folio-case
                 header.folio-case__hero
                     .folio-case__hero-media
-                        +figurePlaceholder('One glance at a Design Dash plan: a short phase strip from preconditions through learning, beside the three walk-away files — a pitch, requirements, and a monochrome wireframe. No consumer dashboard, no charts standing in for a product, no fake customer UI.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--hero-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--hero-2x.png', 'Design Dash plan: nine phases, with a pitch, requirements, and a monochrome wireframe as the outputs.')
+                        +storyFlow({id: "dash-hero-caption", title: "Design Dash · From a product question to a buildable plan", nodes: [{label: "Evidence", detail: "What do we know, and what are we assuming?"}, {label: "System", detail: "Which objects, actions, and rules make up the product?"}, {label: "Decision", detail: "Which approach is worth building, and why?"}, {label: "Plan", detail: "Requirements, wireframes, and a way to learn."}], caption: "Each interface decision must connect to the product reasoning behind it."})
                     .folio-case__intro
-                        p.folio-eyebrow Case study
-                        h1 The screen arrived before the system was defined
-                        p.folio-case__dek I built Design Dash, an open-source workflow that takes a fuzzy problem to a plan a team can build from. A generated interface is not that plan.
+                        p.folio-eyebrow Open-source method
+                        h1 The screen was ready before the team understood it.
+                        p.folio-case__dek I built Design Dash to connect product reasoning to interface decisions. Generating a screen is fast. Knowing what it should do takes more work.
                     +caseFacts
                         .folio-case__fact
                             dt Role
                             dd Author and facilitator
                         .folio-case__fact
-                            dt Form
-                            dd Open-source method, nine phases, runnable in a chat, an agent, or a workshop
+                            dt Scope
+                            dd Nine-phase workflow for chats, agents, and workshops
                         .folio-case__fact
-                            dt Used with
-                            dd Product, research, and engineering on the Renaissance Intelligence Assignments page
+                            dt Key decision
+                            dd One file-based model, with traceable decisions and generated views
                         .folio-case__fact
-                            dt Outcome
-                            dd A public method and an accepted file-based architecture. No public usage count.
+                            dt Evidence
+                            dd Used in Renaissance assignment workshops; public method and accepted architecture
 
                 +caseSection({labelledby: "dash-files-title", prose: false})
                     .folio-case__prose
-                        h2#dash-files-title A workshop could end as a stack of files
-                        p A dash could leave assumptions, a design spec, a flow, a wireframe, and a pitch site. The relationships lived in the prose. Asking why a control existed meant searching the folder.
-                        p I had already seen the other version of the same gap. A prompt can return cards, charts, and filters in seconds. The team still has not named the objects, the actions, or which claims are evidence and which are hopes.
-                        p On the Assignments page at Renaissance, I facilitated a session with product and engineering before we argued about layout. Every assignment shared a title, type, assigned date, and due date. Product-specific detail, such as questions answered or pages read, stayed beside those fields. That split is what let the page stay scannable.
-                    +figurePlaceholder('Two columns. Left: a stack of loosely named files — assumptions, spec, flow, wireframe, pitch — with no lines between them. Right: one chain reading evidence, insight, opportunity, requirement, object, decision, interface, outcome, with the last step feeding the first. Do not draw a product screen.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--trace-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--trace-2x.png', 'A stack of unlinked workshop files beside a chain from evidence through outcome.')
+                        p.folio-eyebrow I — Inspiration
+                        h2#dash-files-title The files existed. The reasoning was hard to follow.
+                        p A prototype can look coherent while the decisions behind it remain scattered across notes and conversations. I built Design Dash around a question the interface alone could not answer: how would a team trace this screen back to the problem and evidence that justified it?
+                        p A workshop could produce assumptions, a specification, a flow, a wireframe, and a pitch. Their relationships lived in the prose. To understand why a control existed, someone had to search the folder.
+                        p AI made the gap more obvious. A prompt could return cards and filters before the team had named the product’s objects or separated evidence from assumptions. I wanted the workflow to preserve those decisions, not just its outputs.
+                        p On the Renaissance Assignments page, I facilitated product and engineering workshops around a shared assignment model. Title, type, assigned date, and due date were common to every assignment. Pages read and questions answered remained product-specific. That distinction gave us a structure we could prototype and test.
+                    +storyComparison({id: "dash-trace-caption", title: "From separate deliverables to connected decisions", columns: [{label: "The gap", title: "A folder of outputs", items: ["Assumptions, specifications, and wireframes", "Relationships explained only in prose", "A screen can lose its rationale"]}, {label: "The direction", title: "An evidence trail", items: ["Opportunity → requirement → decision", "Objects define what the interface acts on", "A screen points back to a decision"]}], caption: "The method makes the relationships between artifacts explicit."})
 
+                +imageBrief({"role": "Context", "title": "Outputs scattered across a folder", "composition": "Arrange evidence, assumptions, requirements, and a screen as disconnected documents; ask which decision links them.", "purpose": "Establish the opening tension.", "caption": "Illustrative reconstruction of the traceability problem.", "ratio": "16:9", "type": "Labeled reconstruction"})
                 +caseSection({labelledby: "dash-rigor-title", tint: true, prose: false})
                     .folio-case__prose
-                        h2#dash-rigor-title I derived the rigor from the risk
-                        p I did not want the facilitator to choose how careful to be. Design Dash derives a tier from risk, reversibility, and reach.
-                        p Express is for low-risk, easily reversible, narrow work. It keeps an ethics floor, and any skipped gate is written down as evidence debt. Standard work requires evidence, a reconciliation between the system and the user’s mental model, a real comparison of concepts, an ethics review, and a learning plan. High-stakes work — hard to undo, broad in reach, or touching regulated, financial, or safety-related data — cannot waive those gates. A simulated reviewer does not count as sign-off.
-                        p Inside that path, the team names the objects and what a person can do with each before screens are treated as the source of truth.
-                    +figurePlaceholder('Three cards in a row labeled Express, Standard, and High-stakes. Express lists an ethics floor and recorded evidence debt. Standard lists evidence, reconciliation, selection, ethics, and learning. High-stakes shows the same five gates and the words “no waivers.” No logos, no people, no product UI.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--tiers-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--tiers-2x.png', 'Three Design Dash tiers: Express, Standard, and High-stakes, with the gates each one requires.')
+                        p.folio-eyebrow D — Design Process
+                        h2#dash-rigor-title Some decisions needed more review than others
+                        p I made the review tier depend on risk, reversibility, and reach. A narrow, reversible change should not require the same process as a regulated workflow. Every tier still has an ethics floor.
+                        p Standard work requires evidence, comparison of concepts, reconciliation with the user’s mental model, ethics review, and a learning plan. High-stakes work cannot waive those gates. Simulated reviewers do not count as specialist sign-off.
+                    +storyComparison({id: "dash-tiers-caption", title: "Three review tiers", columns: [{label: "Express", title: "Narrow and reversible", detail: "Keep an ethics floor. Record skipped gates as evidence debt."}, {label: "Standard", title: "Evidence and comparison", detail: "Require evidence, model reconciliation, selection, ethics, and learning."}, {label: "High-stakes", title: "No gate waivers", detail: "Use the full review path for broad, regulated, or hard-to-undo work."}], caption: "The tier changes the depth of review, not the obligation to record the decision."})
 
+
+                +imageBrief({"role": "Process", "title": "The decision and its alternatives", "composition": "Connect opportunity → requirement → decision → screen; show the Dash Model feeding a current plan and release snapshot.", "purpose": "Make the research-to-decision connection visible.", "caption": "A reconstructed comparison of the choices described in this story.", "ratio": "3:2", "type": "Labeled reconstruction"})
+                +caseSection({labelledby: "dash-engagement"})
+                    p.folio-eyebrow E — Engagement
+                    h2#dash-engagement Make the model usable in a working session
+                    p The Renaissance assignment workshops gave the approach a concrete use. I facilitated sessions with product and engineering around the shared assignment model, while UX research tested the resulting prototypes. People could discuss a product object, see its interface implications, and record unresolved questions in the same working session.
+                    p The method had to support that conversation without making a rich document or a particular toolchain compulsory. Keeping a linked file model as the source lets chats and workshops contribute to the same record. The living plan is a generated view, rather than another document everyone has to keep synchronized.
                 +caseSection({labelledby: "dash-store-title", prose: false})
                     .folio-case__prose
-                        h2#dash-store-title Plain files are the only thing anyone edits
-                        p An early version of the method treated a rich living-plan document as the source of truth whenever a local toolchain was available. Hand-authored summaries drift, and they leave out anyone working from a chat or a worksheet.
-                        p The architecture I accepted on 23 August 2026 inverts that. The Dash Model is plain files: Markdown with a small header, plus typed links. A generated graph can be rebuilt and must not be edited by hand. Chat can facilitate, but a product decision has to leave the transcript as a record. The Design Plan regenerates from the current files. A Story is a frozen snapshot for a release.
-                        p Three links are required. The interface points at a decision. The decision points at a requirement or an object. The requirement points at an opportunity. An open assumption at a gate stays visible. I rejected a database as the canonical store because the method has to run without one, including when there is no Node toolchain.
-                    +figurePlaceholder('A diagram with chat and a workshop writing into one store labeled Dash Model. Two outputs leave the store: a Design Plan marked as regenerating, and a Story marked as a frozen release. A note says nothing meaningful lives only in a view. No application chrome.', '960×660', '1920×1320', '/assets/img/folio/project--design-dash/design-dash--model-2x.png', 'src/assets/img/folio/project--design-dash/design-dash--model-2x.png', 'Chat and workshop write into the Dash Model, which generates the Design Plan and a frozen Story.')
+                        p.folio-eyebrow A — Action
+                        h2#dash-store-title A rich document couldn’t be the only way to use the method
+                        p An early approach treated a rich living-plan document as the source of truth when a local toolchain was available. That excluded people working in a chat or worksheet and created another summary that could drift.
+                        p I accepted a file-based architecture: Markdown records with small headers and typed links form the Dash Model. Chat and workshops write to those records. The Design Plan regenerates from them; a Story freezes a release snapshot. Neither view becomes a second editable source.
+                        p I rejected a database as the canonical store because the method needs to work without one. The tradeoff is that the files need explicit validation. An interface must link to a decision, the decision to a requirement or object, and the requirement to an opportunity.
+                    +storyFlow({id: "dash-model-caption", title: "One source, two kinds of output", nodes: [{label: "Chat or workshop", detail: "Capture evidence, assumptions, and decisions."}, {label: "Dash Model", detail: "Edit the linked, plain-file records."}, {label: "Design Plan", detail: "Regenerate the current working view."}, {label: "Story", detail: "Freeze a release snapshot."}], caption: "The plan and story derive from the model; they are not competing sources of truth."})
 
-                +caseOutcome("dash-outcome-title", "The Assignments session left a model the team could test")
-                    p A finished dash yields object guides, a stakeholder pitch, requirements, monochrome wireframes that include empty, loading, error, and permission states, and an evidence trail. On the Assignments work, the session produced the object notes, diagrams, wireframes, and low-fidelity prototype the team tested. The grouped priority view that later shipped came out of that shared model.
-                    p I do not have a public usage count for the repository. The Dash Model is an accepted architecture, and existing dashes still move onto it one at a time. My takeaway: documents stay aligned when there is one store, the views are generated, and a gate can fail a screen that cannot point back to a decision.
-
-            +folioFooter(true, 'A screen that cannot point back to a decision does not pass the gate.', {href: '/many-hats.html', label: 'Next case: Many Hats'})
+                +caseOutcome("dash-outcome-title", "The assignment workshops put the method into practice")
+                    p The Renaissance workshops produced object notes, diagrams, wireframes, and a low-fidelity prototype the team tested. The shipped assignment view came from that shared model.
+                    p The workflow is public. The file-based Dash Model is an accepted architecture, with existing dashes moving onto it incrementally. I have no public usage count. The useful test is whether a team can inspect a design decision and find the evidence and product rules behind it.
+                +imageBrief({"role": "Outcome", "title": "What the evidence supports", "composition": "Use only the results stated in this case. Keep population, timeframe, qualitative status, and any attribution limits beside the result.", "purpose": "Resolve the story without overstating impact.", "caption": "Evidence summary reconstructed from the documented account; no invented measurements.", "ratio": "16:9", "type": "Evidence summary"})
+            +folioFooter(false, 'I’m happy to walk through how the method fits a real product problem.', {href: '/many-hats.html', label: 'Next: Many Hats'})

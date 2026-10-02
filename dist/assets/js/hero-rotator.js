@@ -1,107 +1,52 @@
 (function () {
-  var rotator = document.querySelector(".folio-hero__rotator");
-  if (!rotator) return;
-
-  var words = Array.prototype.slice.call(rotator.querySelectorAll(".folio-hero__word"));
-  if (!words.length) return;
-
-  var mark = rotator.parentElement;
-  var text = rotator.closest(".folio-hero__text");
-  var kicker = text ? text.querySelector(".folio-hero__kicker") : null;
-  var dek = text ? text.querySelector(".folio-hero__dek") : null;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var index = 0;
-  var hold = 2200;
-  var lastSpace = -1;
-  var canvas = document.createElement("canvas");
-  var ctx = canvas.getContext("2d");
-
-  function widthOf(word) {
-    return word.getBoundingClientRect().width;
+  const slot = document.querySelector('.folio-hero__rotator');
+  if (!slot) return;
+  const words = Array.from(slot.querySelectorAll('.folio-hero__word'));
+  const toggle = document.querySelector('.folio-motion-toggle');
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const statement = document.querySelector('.folio-hero__statement');
+  const heading = document.querySelector('.folio-hero__title');
+  function fitStatement() {
+    if (!statement || !heading) return;
+    const style = window.getComputedStyle(heading);
+    const baseSize = parseFloat(style.fontSize);
+    const probe = document.createElement('span');
+    probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;pointer-events:none;';
+    probe.style.font = style.font;
+    probe.style.letterSpacing = style.letterSpacing;
+    document.body.appendChild(probe);
+    let widest = 0;
+    words.forEach(word => {
+      probe.textContent = 'Then we ship something ' + word.textContent.trim();
+      widest = Math.max(widest, probe.getBoundingClientRect().width);
+    });
+    probe.remove();
+    if (widest > 0) statement.style.fontSize = Math.min(baseSize, baseSize * (statement.clientWidth - 2) / widest) + 'px';
   }
-
-  function fit(word) {
-    rotator.style.width = Math.ceil(widthOf(word)) + "px";
+  if (statement) new ResizeObserver(fitStatement).observe(statement);
+  document.fonts.ready.then(fitStatement);
+  window.addEventListener('resize', fitStatement);
+  fitStatement();
+  let index = 0, timer = null, paused = false;
+  function stop() { window.clearInterval(timer); timer = null; }
+  function show(next) {
+    words.forEach((word, i) => word.classList.toggle('is-current', i === next));
+    index = next;
   }
-
-  function textWidth(font, value) {
-    ctx.font = font;
-    return ctx.measureText(value).width;
-  }
-
-  function fitType() {
-    if (!text) return;
-    var available = text.clientWidth;
-    if (!available) return;
-    lastSpace = available;
-
-    var headline = words.reduce(function (widest, word) {
-      var width = textWidth(
-        "700 38px \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-        "Then we ship something " + word.textContent.trim()
-      );
-      return Math.max(widest, width);
-    }, 0);
-
-    var markScale = headline > available ? (available / headline) * 0.98 : 1;
-    mark.style.whiteSpace = "nowrap";
-    mark.style.fontSize = Math.max(12, 38 * markScale) + "px";
-
-    if (kicker) {
-      var kickerWidth = textWidth(
-        "400 24px \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-        kicker.textContent.trim()
-      );
-      var kickerScale = kickerWidth > available ? (available / kickerWidth) * 0.98 : 1;
-      kicker.style.whiteSpace = "nowrap";
-      kicker.style.fontSize = Math.max(12, 24 * kickerScale) + "px";
+  function sync() {
+    stop();
+    if (preference.matches) show(0);
+    if (toggle) {
+      toggle.hidden = preference.matches;
+      toggle.setAttribute('aria-pressed', String(paused));
+      toggle.textContent = paused ? 'Resume word rotation' : 'Pause word rotation';
     }
-
-    if (dek) {
-      dek.style.fontSize = Math.max(13, 15 * markScale) + "px";
+    if (!preference.matches && !paused && !document.hidden) {
+      timer = window.setInterval(() => show((index + 1) % words.length), 2200);
     }
-
-    fit(words[index]);
   }
-
-  function start() {
-    fitType();
-    if (reduce) return;
-
-    words[0].classList.add("is-current");
-    rotator.classList.add("folio-hero--motion");
-    fit(words[0]);
-
-    window.setInterval(function () {
-      var previous = words[index];
-      index = (index + 1) % words.length;
-      var next = words[index];
-
-      previous.classList.remove("is-current");
-      previous.classList.add("is-leaving");
-      next.classList.remove("is-leaving");
-      next.classList.remove("is-current");
-      void next.offsetWidth;
-      next.classList.add("is-current");
-      fit(next);
-
-      window.setTimeout(function () {
-        previous.classList.remove("is-leaving");
-      }, 600);
-    }, hold);
-  }
-
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(start);
-  } else {
-    start();
-  }
-
-  if (text && window.ResizeObserver) {
-    new ResizeObserver(function () {
-      var available = text.clientWidth;
-      if (Math.abs(available - lastSpace) < 1) return;
-      fitType();
-    }).observe(text);
-  }
+  if (toggle) toggle.addEventListener('click', () => { paused = !paused; sync(); });
+  preference.addEventListener('change', sync);
+  document.addEventListener('visibilitychange', sync);
+  show(0); sync();
 })();

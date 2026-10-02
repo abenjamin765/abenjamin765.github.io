@@ -283,3 +283,7 @@ The test does not check copy, the word budget, the placeholder specs, or whether
 - Both Green Loom placeholder files are still missing. Until `green-loom--catalog-hero-2x.png` exists, the Green Loom share image points at a missing file.
 - Design Dash and Many Hats case-page images are not exported yet. Their pages point at the paths in the placeholder table. Dropping each file in place is the swap. Their homepage cards are done.
 - No hiring manager has read the current pages. Claims about what the pages make a reader feel are untested.
+
+
+## October 2026 narrative revision
+The homepage restores the original hero and complete adjective list. Featured stories are Classroom, Indeed Job Refresh, and Curbside, followed by a Home Depot leadership feature, other product work, tools, and About. All cases use IDEAS labels and meaningful narrative headings. Missing images use visible production briefs. The rotator reserves width for the longest word, wraps on small screens, has a pause control, stays static without JavaScript, and resets to glorious under reduced motion; no live announcements. The approved private evidence inventory and copy drafts remain in the separate portfolio workspace, outside the site/build.
