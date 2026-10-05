@@ -3904,8 +3904,12 @@ body.folio > .visually-hidden:focus {
 }
 
 .folio--home .folio-tools .folio-project__media {
-  height: 100px;
-  aspect-ratio: auto;
+  height: auto;
+  aspect-ratio: 21/5;
+}
+
+.folio--home .folio-tools .folio-project__media img {
+  object-fit: contain;
 }
 
 .folio--home .folio-tools .folio-project__title {
