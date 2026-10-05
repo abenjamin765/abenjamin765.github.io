@@ -9,6 +9,10 @@ mixin folioIcon(name)
         include ../assets/icons/lucide/arrow-right.svg
     else if name === 'chevron-down'
         include ../assets/icons/lucide/chevron-down.svg
+    else if name === 'expand'
+        include ../assets/icons/lucide/expand.svg
+    else if name === 'shrink'
+        include ../assets/icons/lucide/shrink.svg
     else if name === 'plus'
         include ../assets/icons/lucide/plus.svg
     else if name === 'minus'
@@ -23,13 +27,21 @@ mixin folioHead(pageTitle, description, pagePath, stylesheet, shareImage, styles
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title= pageTitle
     meta(name="description", content=description)
-    link(rel="canonical", href='https://aaronbenjamin.design' + pagePath)
+    link(rel="canonical", href=portfolioSite.baseUrl + pagePath)
     meta(property="og:type", content="website")
     meta(property="og:title", content=pageTitle)
     meta(property="og:description", content=description)
-    meta(property="og:url", content='https://aaronbenjamin.design' + pagePath)
-    meta(property="og:image", content='https://aaronbenjamin.design' + (shareImage || '/assets/img/folio/hero-portrait.png'))
+    meta(property="og:url", content=portfolioSite.baseUrl + pagePath)
+    meta(property="og:image", content=portfolioSite.baseUrl + (shareImage || portfolioSite.shareImage))
     meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:title" content=pageTitle)
+    meta(name="twitter:description" content=description)
+    meta(name="twitter:image" content=portfolioSite.baseUrl + (shareImage || portfolioSite.shareImage))
+    meta(property="og:image:alt" content=pageTitle)
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    meta(name="twitter:image:alt" content=pageTitle)
+    script(type="application/ld+json")!= JSON.stringify({"@context":"https://schema.org","@type":"WebPage",name:pageTitle,description,url:portfolioSite.baseUrl + pagePath,isPartOf:{"@type":"WebSite",name:portfolioSite.name,url:portfolioSite.baseUrl},author:{"@type":"Person",name:portfolioSite.name,url:portfolioSite.baseUrl,sameAs:portfolioSite.sameAs}}).replace(/</g, '\\u003c')
     link(rel="icon", type="image/svg+xml", href="/assets/img/folio/favicon.svg")
     link(rel="stylesheet", href="/assets/style/" + (stylesheet || 'folio') + ".css" + (stylesheetVersion ? '?v=' + stylesheetVersion : ''))
 
@@ -46,7 +58,7 @@ mixin folioHeader(active, projectTitle, backHref, action)
     header.folio-hdr
         .folio-hdr__inner
             if projectTitle
-                a.folio-hdr__name.folio-hdr__name--project(href=(backHref || '/#work') aria-label=projectTitle === "Selected work" ? "Back to selected work" : `Back to selected work: ${projectTitle}`)
+                a.folio-hdr__name.folio-hdr__name--project(href=(backHref || '/#work') aria-label=backHref === "/writing.html" ? "Back to Writing" : projectTitle === "Selected work" ? "Back to selected work" : `Back to selected work: ${projectTitle}`)
                     span.folio-hdr__back-icon(aria-hidden="true")
                         +folioIcon('arrow-left')
                     span= projectTitle
@@ -73,6 +85,9 @@ mixin folioFooter(showResume, lead, next, portrait)
                         +folioIcon('arrow-right')
             if showResume !== false && !next
                 a.folio-footer__resume(href="/resume.html") View Resume
+            nav.folio-footer__nav(aria-label="Footer")
+                a(href="/#work") Selected work
+                a(href="/writing.html") Writing
 
 //- Shared case-study closing component; each page supplies its invitation and next story.
 mixin caseStudyFooter(lead, next)
@@ -82,6 +97,9 @@ mixin caseStudyFooter(lead, next)
             h2 Discuss this project
             p= lead
             a.folio-btn.case-close__email(href="mailto:hello@aaronbenjamin.design") Email Aaron
+            nav.folio-footer__nav(aria-label="Footer")
+                a(href="/#work") Selected work
+                a(href="/writing.html") Writing
         a.case-close__next(href=next.href)
             span.case-close__label Next case study
             span.case-close__title= next.title
@@ -99,7 +117,7 @@ mixin projectCard(card)
             a.folio-project__link(href=card.href)
                 .folio-project__media
                     if card.image
-                        img(src=card.image.src, srcset=folioSrcset(card.image.src), sizes="(max-width: 600px) calc(100vw - 64px), 480px", alt=card.image.alt, width=card.image.width, height=card.image.height, loading="lazy")
+                        img(src=card.image.src, srcset=folioSrcset(card.image.src), sizes=card.feature ? "(max-width: 700px) calc(100vw - 72px), (max-width: 960px) 45vw, 443px" : "(max-width: 700px) calc(100vw - 72px), 280px", alt=card.image.alt, width=card.image.width, height=card.image.height, loading="lazy")
                     else
                         .folio-project__placeholder
                             span Project preview
@@ -163,11 +181,9 @@ mixin caseSection(opts)
 //- Simple image figure. fig: { class, labelledby, src, alt, width, height, loading,
 //- fetchpriority, caption, captionId }.
 mixin caseFigure(fig)
+    - const imageInfo = folioImageVariants["/" + fig.src.replace(/^\//, "")] || {}
     figure.folio-case__figure(id=fig.id class=fig.class aria-labelledby=fig.labelledby)
-        img(src=fig.src srcset=folioSrcset(fig.src) sizes=fig.sizes || "(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt=fig.alt width=fig.width height=fig.height loading=fig.loading fetchpriority=fig.fetchpriority)
-        if fig.caption
-            figcaption(id=fig.captionId)= fig.caption
-
+        img(src=fig.src srcset=folioSrcset(fig.src) sizes=fig.sizes || "(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt=fig.alt width=imageInfo.width || fig.width height=imageInfo.height || fig.height loading=fig.loading fetchpriority=fig.fetchpriority)
 //- Gold outcome block. The prose paragraphs stay in the caller as a block.
 mixin caseOutcome(id, title, label)
     section.folio-case__outcome(aria-labelledby=id)
@@ -179,20 +195,18 @@ mixin caseOutcome(id, title, label)
 //- Text-native diagrams stay readable at enlarged text sizes and without images.
 //- opts: {id, title, nodes:[{label, detail}], caption, class}.
 mixin storyFlow(opts)
-    figure.folio-story-flow(class=opts.class aria-labelledby=opts.id)
+    figure.folio-story-flow(id=opts.id class=opts.class aria-labelledby=opts.id + "-title")
         .folio-story-flow__body
-            p.folio-story-flow__title= opts.title
+            p.folio-story-flow__title(id=opts.id + "-title")= opts.title
             ol.folio-story-flow__nodes
                 each node in opts.nodes
                     li
                         strong= node.label
                         span= node.detail
-        figcaption(id=opts.id)= opts.caption
-
 //- opts: {id, title, columns:[{label, title, detail, items:[string]}], caption}.
 mixin storyComparison(opts)
-    figure.folio-story-compare(aria-labelledby=opts.id)
-        p.folio-story-flow__title= opts.title
+    figure.folio-story-compare(id=opts.id aria-labelledby=opts.id + "-title")
+        p.folio-story-flow__title(id=opts.id + "-title")= opts.title
         .folio-story-compare__columns
             each column in opts.columns
                 .folio-story-compare__column
@@ -204,8 +218,6 @@ mixin storyComparison(opts)
                         ul
                             each item in column.items
                                 li= item
-        figcaption(id=opts.id)= opts.caption
-
 mixin caseResults(items, source)
     dl.folio-case-results
         each item in items
@@ -243,9 +255,6 @@ mixin annotatedFrame(opts)
             ol.folio-case__frame-callouts
                 each callout in opts.callouts
                     li.folio-case__frame-callout= callout
-        if opts.caption
-            figcaption(id=opts.captionId)= opts.caption
-
 //- Green Loom object-relationship diagram.
 //- opts: { labelledby, kicker, mark, nodes:[{label,detail}], support:[{term,detail}], caption, captionId }.
 mixin objectPath(opts)
@@ -264,14 +273,13 @@ mixin objectPath(opts)
                     p
                         strong= item.term
                         span= item.detail
-        figcaption(id=opts.captionId)= opts.caption
 //- Numbered workflow diagram.
 //- opts: { labelledby, variant, title, steps:[{term,detail}], note, caption, captionId }.
 mixin stepList(opts)
-    figure.folio-case__figure.green-case__figure(aria-labelledby=opts.labelledby)
+    figure.folio-case__figure.green-case__figure(id=opts.captionId aria-labelledby=opts.captionId + "-title")
         .green-case__diagram(class=opts.variant)
             if opts.title
-                p.green-case__diagram-title= opts.title
+                p.green-case__diagram-title(id=opts.captionId + "-title")= opts.title
             ol.green-case__steps
                 each step in opts.steps
                     li
@@ -279,4 +287,46 @@ mixin stepList(opts)
                         span= step.detail
             if opts.note
                 p.green-case__diagram-note= opts.note
-        figcaption(id=opts.captionId)= opts.caption
+//- Shared devices for layered reading, exact interface states, and prototype boundaries.
+mixin caseDisclosure(label)
+    details.case-disclosure
+        summary
+            span.case-disclosure__label= label
+            span.case-disclosure__icon(aria-hidden="true")
+                span.case-disclosure__expand
+                    +folioIcon('expand')
+                span.case-disclosure__shrink
+                    +folioIcon('shrink')
+        .case-disclosure__body
+            block
+
+mixin artifactStates(opts)
+    figure.artifact-states(id=opts.id)
+        .artifact-states__columns
+            each state in opts.states
+                section.artifact-state(aria-label=state.name)
+                    p.artifact-state__label= state.name
+                    h3= state.title
+                    p.artifact-state__status= state.status
+                    p= state.detail
+                    span.artifact-state__action= state.action
+mixin prototypeFrame(opts)
+    figure.green-prototype(id=opts.id aria-labelledby=opts.titleId)
+        .folio-case__prose
+            p.folio-eyebrow Interactive example
+            h3(id=opts.titleId)= opts.title
+            p= opts.instructions
+        iframe.green-prototype__frame(src=opts.src title=opts.frameTitle loading="lazy")
+        noscript
+            p= opts.fallback
+
+
+//- Readable annotations stay useful when a screenshot is too dense to inspect.
+mixin evidenceExcerpt(opts)
+    aside.evidence-excerpt(aria-labelledby=opts.id)
+        h3(id=opts.id)= opts.title
+        dl
+            each item in opts.items
+                div
+                    dt= item.term
+                    dd= item.detail

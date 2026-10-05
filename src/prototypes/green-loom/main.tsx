@@ -10,6 +10,23 @@ function Demo(){
  const [products,setProducts]=useState(()=>structuredClone(SAMPLE_PRODUCTS));
  const [activeTab,setActiveTab]=useState('product'); const [segment,setSegment]=useState('published'); const [search,setSearch]=useState(''); const [selected,setSelected]=useState(null); const [message,setMessage]=useState('');
  const detailPane=useRef(null);
+ // The upstream dialog is controlled rather than paired with a DialogTrigger.
+ // Restore its launch control after cancellation or the stock-save remount.
+ useEffect(()=>{
+  let launcher=null;let wasOpen=false;let timer;
+  const remember=e=>{const button=e.target.closest?.('button');if(button&&!button.closest('[role="dialog"]')&&button.textContent.trim()==='Adjust stock')launcher=button;};
+  const observer=new MutationObserver(()=>{
+   const open=Boolean(document.querySelector('[role="dialog"]'));
+   if(wasOpen&&!open)timer=setTimeout(()=>{
+    const target=launcher?.isConnected?launcher:Array.from(document.querySelectorAll('.demo-detail button')).find(b=>b.textContent.trim()==='Adjust stock');
+    target?.focus();
+   },0);
+   wasOpen=open;
+  });
+  document.addEventListener('click',remember,true);document.addEventListener('focusin',remember,true);
+  observer.observe(document.body,{childList:true,subtree:true});
+  return()=>{clearTimeout(timer);observer.disconnect();document.removeEventListener('click',remember,true);document.removeEventListener('focusin',remember,true);};
+ },[]);
  useEffect(()=>{detailPane.current?.scrollTo({top:0});},[selected,activeTab]);
  const detail=products.find(p=>p.id===selected);
  const items=products.filter(p=>p.summary.publicationSegment===segment&&p.name.toLowerCase().includes(search.toLowerCase()));

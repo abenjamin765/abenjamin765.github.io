@@ -1,71 +1,59 @@
-include includes/folio-shared.pug
+extends includes/case-layout.pug
 
-html(lang="en")
-    head
-        +folioHead('Price Adjustments: workarounds for a routine discount | Aaron Benjamin', 'I designed Home Depot Order Up markdowns to preserve order context while keeping manager-approval rules explicit.', '/price-adjustments.html', 'folio', '/assets/img/folio/project--price-adjustments/hero-price-adjustments.png', 'price-buttons-v11-20261003')
-    body.folio.folio--case.folio--price
-        +folioShell
-        +folioHeader('work', 'Price Adjustments', '/#price-adjustments')
-        main#main.folio-main.folio-main--case
-            article.folio-case
-                +caseHero
-                    .folio-case__intro
-                        p.folio-eyebrow The Home Depot · Price Adjustments
-                        h1 A routine discount had become a workaround.
-                        p.folio-case__dek To apply a routine discount, associates printed a receipt, aborted the order, and rebuilt it in another app. I designed a markdown workflow in Order Up around how associates actually worked: switching tasks, returning to an order, and explaining the price to a customer.
-                    figure.folio-case__hero-media
-                        img(src="/assets/img/folio/project--price-adjustments/hero-price-adjustments.png" srcset=folioSrcset("/assets/img/folio/project--price-adjustments/hero-price-adjustments.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Order Up markdown interfaces showing percentage and dollar discounts, the order summary, and an item-level damaged-product markdown" width="1800" height="720" fetchpriority="high")
-                    +caseFacts
-                        .folio-case__fact
-                            dt Role
-                            dd Staff UX Designer
-                        .folio-case__fact
-                            dt Scope
-                            dd Discovery across 12 stores, markdown interactions, and usability testing
-                        .folio-case__fact
-                            dt Key decision
-                            dd A fly-out preserves cart context while an associate applies a markdown
-                        .folio-case__fact
-                            dt Outcome
-                            dd A 50-store pilot followed by chain-wide rollout; reported impact remains directional
+block caseConfig
+    - const caseId = "price-adjustments"
+    - const caseProject = portfolioProjects[caseId]
+    - const caseClasses = "folio--price"
+    - const caseInvitation = "I’m happy to walk through the prototypes, store testing, and business constraints."
 
-                +caseSection({labelledby: "pa-stores-title"})
-                    p.folio-eyebrow I — Inspiration
-                    h2#pa-stores-title An everyday discount meant starting checkout again
-                    p A competitor price match or damaged-item discount was a routine customer request. Order Up did not give associates a consistent way to handle it, and the official reason codes did not cover the situations they encountered.
-                    p Most often, associates printed a receipt, aborted the order, opened another order-management app, and scanned the receipt to repopulate the order. Only then could they apply the price adjustment and finish checkout.
-                    p Observation and interviews across 12 stores revealed both the workaround and the judgment behind it. Managers trusted associates to make good calls; the product needed to make those calls easier to carry out.
+block caseIntro
+    .folio-case__intro
+        p.folio-eyebrow The Home Depot · Price Adjustments
+        h1 A routine discount had become a workaround.
+        p.folio-case__dek To apply a routine discount, associates printed a receipt, aborted the order, and rebuilt it in another app. I designed a markdown workflow in Order Up around how associates actually worked: switching tasks, returning to an order, and explaining the price to a customer.
 
-                .price-context
-                    figure.folio-case__figure#price-markdown-workaround
-                        img(src="/assets/img/folio/project--price-adjustments/markdown-workaround.png" srcset=folioSrcset("/assets/img/folio/project--price-adjustments/markdown-workaround.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="An associate prints an order receipt, switches checkout applications, then scans the receipt to reload the order and complete the markdown while the customer waits." width="1672" height="941" loading="lazy")
-                +caseSection({labelledby: "pa-usability-title", tint: true, prose: false})
-                    .folio-case__prose
-                        p.folio-eyebrow D — Design Process
-                        h2#pa-usability-title Testing favored a fly-out that kept the order visible
-                        p The key decision was the form factor. I prototyped modals, fly-outs, inline inputs, and separate pages, then took the options to stores to test with associates.
-                        p An associate might leave the order screen to use another app or take a phone call, then return to finish the transaction. They needed to recognize the item and recover their place quickly. Modals and some fly-outs covered the item being adjusted, making that harder.
-                        p Testing favored an anchored fly-out that kept the relevant item visible. I refined the layout around that finding and used “markdown,” the term associates already knew, rather than “adjustment.”
+block caseMedia
+    figure.folio-case__hero-media
+        img(src="/assets/img/folio/project--price-adjustments/hero-price-adjustments.png" srcset=folioSrcset("/assets/img/folio/project--price-adjustments/hero-price-adjustments.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt="Order Up markdown interfaces showing percentage and dollar discounts, the order summary, and an item-level damaged-product markdown" width="1800" height="720" fetchpriority="high")
 
-                .price-context
-                    figure.folio-case__figure#price-markdown-iterations
-                        img(src="/assets/img/folio/project--price-adjustments/markdown-iterations.png" srcset=folioSrcset("/assets/img/folio/project--price-adjustments/markdown-iterations.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Markdown design iterations: explore modal, item-form, fly-out, and inline controls; test with store associates; then refine an anchored markdown form that keeps the item and order summary visible. A feedback arrow connects testing to exploration." width="1672" height="941" loading="lazy")
-                        figcaption Explore alternative forms → test in stores → refine an anchored form that keeps the item and order summary visible.
-                +caseSection({labelledby: "pa-engagement"})
-                    p.folio-eyebrow E — Engagement
-                    h2#pa-engagement Keep associate judgment and business controls together
-                    p Operations partners supplied the rules the interaction had to preserve: manager approval above $50, a store satisfaction budget, and allocation across SKUs for an order-level markdown. Those constraints were part of the experience, not details to append after the interface was chosen.
-                    p I worked within those rules while preserving the flexibility managers expected associates to have. The design needed to handle both item-level and order-level markdowns, show the resulting calculation, and make approval requirements clear.
-                +caseSection({labelledby: "pa-action", prose: false})
-                    .folio-case__prose
-                        p.folio-eyebrow A — Action
-                        h2#pa-action Keep the calculation beside the conversation
-                        p I developed apply, update, and remove paths for item-level and order-level markdowns. The cart retained the original price, discount, and updated total so associates could review the change and explain it to the customer.
-                    include includes/price-markdown-demo.pug
-                +caseOutcome("pa-outcome-title", "From a 50-store pilot to chain-wide rollout")
-                    p The markdown feature was piloted in 50 stores, then rolled out to all Home Depot stores. At 30, 60, and 90 days after launch, reported outcomes included lower transaction times, reduced shrink, stronger standard-procedure adoption, and associates feeling more empowered.
-                    p.folio-case-results__source Reported outcomes were directional; exact figures are unavailable.
-                    p My takeaway: preserving order context and using the associate’s terminology made the approval rules easier to work within. Flexibility and business controls belonged in the same workflow.
-            +caseStudyFooter('I’m happy to walk through the prototypes, store testing, and business constraints.', folioProjects[folioProjects['price-adjustments'].next])
+block caseStory
+    +caseSection({labelledby: "pa-stores-title"})
+        p.folio-eyebrow I — Inspiration
+        h2#pa-stores-title An everyday discount meant starting checkout again
+        p A competitor price match or damaged-item discount was a routine customer request. Order Up did not give associates a consistent way to handle it, and the official reason codes did not cover the situations they encountered.
+        p Most often, associates printed a receipt, aborted the order, opened another order-management app, and scanned the receipt to repopulate the order. Only then could they apply the price adjustment and finish checkout.
+        p Observation and interviews across 12 stores revealed both the workaround and the judgment behind it. Managers trusted associates to make good calls; the product needed to make those calls easier to carry out.
 
-        script(src="/assets/js/price-markdown-demo.js?v=order-summary-20261003" defer)
+    .price-context
+        figure.folio-case__figure#price-markdown-workaround
+            img(src="/assets/img/folio/project--price-adjustments/markdown-workaround.png" srcset=folioSrcset("/assets/img/folio/project--price-adjustments/markdown-workaround.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt="An associate prints an order receipt, switches checkout applications, then scans the receipt to reload the order and complete the markdown while the customer waits." width="1672" height="941" loading="lazy")
+    +caseSection({labelledby: "pa-usability-title", tint: true, prose: false})
+        .folio-case__prose
+            p.folio-eyebrow D — Design Process
+            h2#pa-usability-title Testing favored a fly-out that kept the order visible
+            p The key decision was the form factor. I prototyped modals, fly-outs, inline inputs, and separate pages, then took the options to stores to test with associates.
+            p An associate might leave the order screen to use another app or take a phone call, then return to finish the transaction. They needed to recognize the item and recover their place quickly. Modals and some fly-outs covered the item being adjusted, making that harder.
+            p Testing favored an anchored fly-out that kept the relevant item visible. I refined the layout around that finding and used “markdown,” the term associates already knew, rather than “adjustment.”
+
+    .price-context#price-markdown-iterations
+        +storyComparison({id: "price-options-caption", title: "Four forms explored; one context requirement", columns: [{label: "Modal", title: "A separate task", detail: "A dialog could cover the item being adjusted."}, {label: "Separate page", title: "Leave the cart", detail: "The associate would need to recover the order context on return."}, {label: "Inline inputs", title: "Edit within the row", detail: "An alternative explored within the existing cart."}, {label: "Chosen: anchored flyout", title: "Keep the item in view", detail: "Testing favored a form beside the item, with the order still visible."}], caption: "Illustrative example: reconstructed comparison of the tested form factors, not original research documentation."})
+
+    +caseSection({labelledby: "pa-engagement"})
+        p.folio-eyebrow E — Engagement
+        h2#pa-engagement Keep associate judgment and business controls together
+        p Operations partners supplied the rules the interaction had to preserve: manager approval above $50, a store satisfaction budget, and allocation across SKUs for an order-level markdown. Those constraints were part of the experience, not details to append after the interface was chosen.
+        p I worked within those rules while preserving the flexibility managers expected associates to have. The design needed to handle both item-level and order-level markdowns, show the resulting calculation, and make approval requirements clear.
+    +caseSection({labelledby: "pa-action", prose: false})
+        .folio-case__prose
+            p.folio-eyebrow A — Action
+            h2#pa-action Keep the calculation beside the conversation
+            p I developed apply, update, and remove paths for item-level and order-level markdowns. The cart retained the original price, discount, and updated total so associates could review the change and explain it to the customer.
+        include includes/price-markdown-demo.pug
+    +caseOutcome("pa-outcome-title", "From a 50-store pilot to chain-wide rollout")
+        p The markdown feature was piloted in 50 stores, then rolled out to all Home Depot stores. At 30, 60, and 90 days after launch, reported outcomes included lower transaction times, reduced shrink, stronger standard-procedure adoption, and associates feeling more empowered.
+        p.folio-case-results__source Reported outcomes were directional; exact figures are unavailable.
+        p My takeaway: preserving order context and using the associate’s terminology made the approval rules easier to work within. Flexibility and business controls belonged in the same workflow.
+
+block caseScripts
+
+    script(src="/assets/js/price-markdown-demo.js?v=order-summary-20261003" defer)

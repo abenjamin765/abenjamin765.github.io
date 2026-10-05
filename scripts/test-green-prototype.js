@@ -5,10 +5,10 @@ const path=require('node:path');
 (async()=>{
  const app=express();app.use(express.static(path.resolve(__dirname,'../dist')));
  const server=await new Promise(resolve=>{const s=app.listen(0,'127.0.0.1',()=>resolve(s))});
- const browser=await puppeteer.launch({headless:true});
+ const browser=await puppeteer.launch({headless:true,browser:process.env.PORTFOLIO_TEST_BROWSER || 'chrome'});
  try {
   const page=await browser.newPage();await page.setViewport({width:1100,height:900});const errors=[];page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(`http://127.0.0.1:${server.address().port}/prototypes/green-loom/index.html`, {waitUntil:"domcontentloaded"});
+  await page.goto(`http://127.0.0.1:${server.address().port}/prototypes/green-loom/index.html`, {waitUntil:"load"});
   await page.waitForSelector('[data-slot="catalog-card"]');
   assert.equal(await page.$$eval('[data-slot="catalog-card"]',es=>es.length),8,'Eight published sample products');
   await page.waitForFunction(()=>[...document.querySelectorAll('[data-slot="catalog-card"] img')].every(img=>img.complete&&img.naturalWidth>0));

@@ -1,0 +1,537 @@
+@charset "UTF-8";
+/* ——— Interactive assignments demo (Classroom case) ——— */
+.folio-demo {
+  max-width: 800px;
+  margin: 48px auto 0;
+  color: #333;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.folio-demo__note {
+  max-width: 640px;
+  margin: 0 0 16px;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  color: #53606c !important;
+}
+
+.folio-demo__canvas {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 24px 16px;
+  background: #fff;
+}
+
+.folio-demo__group {
+  margin: 0;
+}
+
+.folio-demo__group.folio-demo__disclosure--animating {
+  transition: height 240ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__group.folio-demo__disclosure--animating.folio-demo__disclosure--closing {
+  transition-delay: 60ms;
+}
+
+.folio-demo__group + .folio-demo__group {
+  margin-top: 32px;
+}
+
+.folio-demo__group-summary,
+.folio-demo__assignment-summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.folio-demo__group-summary::-webkit-details-marker,
+.folio-demo__assignment-summary::-webkit-details-marker {
+  display: none;
+}
+
+.folio-demo__group-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  color: #666;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.folio-demo__angle {
+  display: block;
+  flex: 0 0 auto;
+  transform: rotate(-90deg);
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__group[open] > .folio-demo__group-summary .folio-demo__angle {
+  transform: rotate(0deg);
+}
+
+.folio-demo__group-content {
+  margin-top: 24px;
+}
+
+.folio-demo__assignment {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+  background: #fff;
+  transition: box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), border-radius 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__assignment + .folio-demo__assignment {
+  margin-top: 8px;
+}
+
+.folio-demo__assignment[open] {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+.folio-demo__assignment.folio-demo__disclosure--animating {
+  transition: height 240ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), border-radius 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.folio-demo__assignment.folio-demo__disclosure--animating.folio-demo__disclosure--closing {
+  transition-delay: 60ms, 0ms, 0ms;
+}
+
+.folio-demo__assignment-summary {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  padding: 16px;
+  transition: background-color 160ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .folio-demo__assignment-summary:hover {
+    background: #fafafa;
+  }
+}
+.folio-demo__assignment-main {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.folio-demo__icon-tile {
+  display: flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.folio-demo__icon-tile {
+  background: #eee;
+}
+
+.folio-demo__icon-tile img {
+  filter: brightness(0);
+  opacity: 0.78;
+}
+
+.folio-demo__assignment[open] .folio-demo__icon-tile {
+  background: rgba(20, 110, 179, 0.08);
+}
+
+.folio-demo__assignment[open] .folio-demo__icon-tile img {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(41%) saturate(1160%) hue-rotate(164deg) brightness(88%) contrast(88%);
+  opacity: 1;
+}
+
+.folio-demo__assignment-body {
+  min-width: 0;
+}
+
+.folio-demo__assignment-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.folio-demo__ellipsis,
+.folio-demo__lock {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.folio-demo__assignment-title,
+.folio-demo__assignment-meta,
+.folio-demo__due {
+  margin: 0;
+  color: #333 !important;
+}
+
+.folio-demo__assignment-title {
+  display: block;
+  overflow: hidden;
+  font-size: 16px !important;
+  font-weight: 700;
+  line-height: 1.4 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.folio-demo__assignment-meta {
+  display: block;
+  margin-top: 0;
+  color: #666 !important;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.4 !important;
+}
+
+.folio-demo__due {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #666 !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1 !important;
+  white-space: nowrap;
+}
+
+.folio-demo__student-progress {
+  padding: 8px 16px 16px;
+}
+
+.folio-demo__table-wrap {
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.folio-demo__table-wrap:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 3px;
+}
+
+.folio-demo__table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.folio-demo__table th,
+.folio-demo__table td {
+  padding: 8px 16px;
+  border-top: 1px solid #eee;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.folio-demo__table thead th {
+  border-top: 0;
+  background: #f4f4f4;
+  color: #666;
+  font-weight: 700;
+}
+
+.folio-demo__table th:first-child {
+  width: 140px;
+}
+
+.folio-demo__table th:last-child,
+.folio-demo__table td:last-child {
+  width: 130px;
+  text-align: right;
+}
+
+.folio-demo__table tbody th,
+.folio-demo__table tbody td {
+  font-weight: 500;
+}
+
+.folio-demo__table-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folio-demo__table-heading--score {
+  justify-content: flex-end;
+}
+
+.folio-demo__sort-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: inherit;
+}
+
+.folio-demo__sort-button:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 3px;
+}
+
+.folio-demo__status {
+  font-weight: 500;
+}
+
+.folio-demo__status--not-started {
+  color: #cf3a4e;
+}
+
+.folio-demo__status--in-progress {
+  color: #666;
+  font-style: italic;
+}
+
+.folio-demo__group-summary:focus-visible,
+.folio-demo__assignment-summary:focus-visible {
+  outline: 3px solid #0b67b2;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .folio-demo__angle {
+    transition: none;
+  }
+}
+@media (max-width: 560px) {
+  .folio-demo {
+    margin-top: 32px;
+  }
+  .folio-demo__canvas {
+    padding: 24px 0;
+  }
+  .folio-demo__assignment,
+  .folio-demo__assignment-summary {
+    gap: 12px;
+  }
+  .folio-demo__assignment-actions {
+    gap: 8px;
+  }
+  .folio-demo__icon-tile {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    transform: scale(0.82);
+    transform-origin: left center;
+  }
+  .folio-demo__assignment-title {
+    white-space: normal;
+  }
+}
+/* HTML before/after comparison: Figma 166:20831. */
+.assignment-comparison {
+  margin: 48px 0;
+  min-width: 0;
+}
+
+.assignment-comparison__tabs {
+  display: flex;
+  width: fit-content;
+  gap: 4px;
+  padding: 2px;
+  border-radius: 40px;
+  background: rgba(33, 33, 36, 0.04);
+  margin: 0 auto 32px;
+}
+
+.assignment-comparison__tabs[hidden], .assignment-comparison__panel[hidden] {
+  display: none;
+}
+
+.assignment-comparison__tabs button {
+  width: 100px;
+  padding: 4px 14px;
+  border: 0;
+  border-radius: 40px;
+  color: #64748b;
+  background: transparent;
+  font: 500 14px/1.6 "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+
+.assignment-comparison__tabs button[aria-selected=true] {
+  color: #fff;
+  background: transparent;
+}
+
+.assignment-comparison button:focus-visible, .assignment-comparison [tabindex]:focus-visible {
+  outline: 3px solid #146eb3;
+  outline-offset: 4px;
+}
+
+.assignment-comparison--enhanced .assignment-comparison__fallback-title {
+  display: none;
+}
+
+.assignment-comparison__panel {
+  min-width: 0;
+}
+
+.assignment-comparison__table-scroll {
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.assignment-comparison__table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  font: 400 14px/1.5 Roboto, Arial, sans-serif;
+  color: #000;
+}
+
+.assignment-comparison__table th, .assignment-comparison__table td {
+  padding: 12.5px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.assignment-comparison__table thead th {
+  color: #54585e;
+  font-weight: 700;
+}
+
+.assignment-comparison__table tbody tr {
+  border-top: 1px solid #ccc;
+}
+
+.assignment-comparison__table tbody tr:nth-child(2), .assignment-comparison__table tbody tr:nth-child(3) {
+  background: #fafafa;
+}
+
+.assignment-comparison__table tbody th {
+  color: #146eb3;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.assignment-comparison__table th:nth-child(-n+5) {
+  width: 19%;
+}
+
+.assignment-comparison__sort {
+  vertical-align: middle;
+  margin-left: 7px;
+}
+
+.assignment-comparison__status-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.assignment-comparison__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 32px;
+  padding: 4.7px 10.9px;
+  font-weight: 500;
+  background: rgba(102, 104, 106, 0.08);
+}
+
+.assignment-comparison__badge--progress {
+  background: rgba(43, 135, 255, 0.08);
+}
+
+.assignment-comparison__badge--complete {
+  background: rgba(65, 195, 149, 0.08);
+}
+
+.assignment-comparison__delete {
+  color: #146eb3;
+  font-size: 15px;
+}
+
+.assignment-comparison .folio-demo {
+  max-width: none;
+  margin: 0;
+}
+
+.assignment-comparison .folio-demo__note {
+  display: none;
+}
+
+.assignment-comparison__explanation {
+  margin: 20px 0 0;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #555;
+}
+
+.assignment-comparison figcaption {
+  margin-top: 20px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.assignment-comparison__column-name {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Comparison motion: the selection moves with the direction of the reveal. */
+.assignment-comparison__tabs {
+  position: relative;
+  isolation: isolate;
+  --comparison-index: 0;
+}
+
+.assignment-comparison__tabs::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 2px auto 2px 2px;
+  width: 100px;
+  border-radius: 40px;
+  background: #212124;
+  transform: translateX(calc(var(--comparison-index) * 104px));
+  transition: transform 240ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.assignment-comparison--instant .assignment-comparison__tabs::before {
+  transition: none;
+}
+
+.assignment-comparison__stage {
+  position: relative;
+}
+
+.assignment-comparison__panel--leaving {
+  position: absolute;
+  inset: 0 0 auto;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .assignment-comparison__tabs::before {
+    transition: none;
+  }
+}
+.assignment-comparison__delete .folio-icon {
+  width: 15px;
+  height: 15px;
+}

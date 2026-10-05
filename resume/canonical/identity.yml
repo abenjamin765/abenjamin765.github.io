@@ -74,7 +74,7 @@ identity:
     # src/resume.pug line 19 (.resume-summary, hardcoded in the template).
     # Reconciliation section 9 id: claim-identity-summary-variant
     - id: summary-resume-page
-      text: "I lead design for complex product systems, connecting research, shared models, and shipped interfaces. My work spans marketplaces, education, commerce, and internal tools, with a focus on decisions teams can carry through implementation."
+      text: "I lead design for complex product systems, turning research into product decisions and shared models into shipped interfaces. Across marketplaces, education, commerce, and internal tools, I help teams clarify direction, work through constraints, and carry decisions into delivery."
       length: medium
       audience: human
     # src/resume.pug line 5 (folioHead meta description, hardcoded)

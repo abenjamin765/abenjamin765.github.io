@@ -1,86 +1,35 @@
+include includes/folio-shared.pug
 - const featured = writingPosts[0]
 - const remaining = writingPosts.slice(1)
 
+doctype html
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Writing | Aaron Benjamin
-        meta(name="description", content="Essays on product design by Aaron Benjamin.")
-        link(rel="canonical", href="https://aaronbenjamin.design/writing.html")
-        meta(property="og:type", content="website")
-        meta(property="og:title", content="Writing | Aaron Benjamin")
-        meta(property="og:description", content="Essays on product design by Aaron Benjamin.")
-        meta(property="og:url", content="https://aaronbenjamin.design/writing.html")
-        meta(property="og:image", content="https://aaronbenjamin.design/assets/img/folio/hero-portrait.png")
-        meta(name="twitter:card", content="summary_large_image")
-        link(rel="icon", type="image/svg+xml", href="/assets/img/folio/favicon.svg")
-        link(rel="stylesheet", href="assets/style/site.css")
-    body.site
-        a.visually-hidden(href="#main") skip to content
-
-        header.hdr
-            .hdr__row
-                a.logo(href="/", aria-label="Aaron Benjamin home")
-                    span.logo__mark(aria-hidden="true")
-                        span.logo__dot
-                    span.logo__wordmark Aaron Benjamin
-                nav.nav(aria-label="Primary")
-                    a.nav__a.is-active(href="/writing.html", aria-current="page") writing
-                    a.nav__a(href="/") portfolio
-                .hdr__tools
-                    a.btn.btn--solid(href="mailto:hello@aaronbenjamin.design") contact
-
-        main#main
-            #top
+        +folioHead('Writing | Aaron Benjamin — product design', 'Essays on product systems, design judgment, and responsible use of AI in product work.', '/writing.html')
+    body.folio.folio--writing
+        +folioShell
+        +folioHeader('writing', 'Selected work', '/#work')
+        main#main.folio-main.folio-main--case.writing-main
+            header.writing-intro
+                p.folio-eyebrow Thinking behind the work
+                h1 Writing
+                p Essays on product systems, design judgment, and how teams use AI.
             if featured
-                section.hero(aria-labelledby="hero-title")
-                    a.hero__media(href=featured.href, aria-label='Read: ' + featured.title)
-                    .hero__body
-                        .hero__meta
-                            span Featured essay
-                            span.meta-sep(aria-hidden="true") ·
+                article.writing-feature(aria-labelledby="featured-essay-title")
+                    img(src="/assets/img/hero-ai.png" srcset=folioSrcset("/assets/img/hero-ai.png") sizes="(max-width: 600px) calc(100vw - 72px), (max-width: 900px) calc(44.4444vw - 65.7778px), (max-width: 960px) calc(44.4444vw - 51.5556px), 375px" fetchpriority="high" alt="Illustrated interface sketch for a teacher dashboard" width="1600" height="900")
+                    .writing-feature__body
+                        p.writing-meta
                             time(datetime=featured.isoDate)= featured.displayDate
-                            span.meta-sep(aria-hidden="true") ·
-                            span= featured.readingMinutes + ' min read'
-                        h1.hero__title#hero-title= featured.title
-                        p.hero__dek= featured.description
-                        .hero__cta
-                            a.btn.btn--solid(href=featured.href) Read the essay
-            else
-                section.hero
-                    h1 Writing
-                    p Essays on product design by Aaron Benjamin.
-
+                            | &#32;· #{featured.readingMinutes} min read
+                        h2#featured-essay-title= featured.title
+                        p= featured.description
+                        a.folio-btn(href=featured.href) Read the essay
             if remaining.length
-                section.section.section--latest#latest(aria-labelledby="latest-title")
-                    .section__head
-                        h2.section__title#latest-title More essays
-                    .feed
-                        each post in remaining
-                            a.card.card--feature(href=post.href)
-                                .card__body
-                                    span.tag Essay
-                                    h3.card__title= post.title
-                                    p.card__dek= post.description
-                                    .card__meta
-                                        time(datetime=post.isoDate)= post.displayDate
-                                        span.meta-sep(aria-hidden="true") ·
-                                        span= post.readingMinutes + ' min read'
-
-        footer.ftr
-            .ftr__inner
-                p.ftr__legal © 2026 Aaron Benjamin
-                nav.ftr__nav(aria-label="Footer")
-                    a(href="/resume.html") resume
-                    a(href="mailto:hello@aaronbenjamin.design") contact
-
-        script.
-            document.addEventListener("DOMContentLoaded", function () {
-                var hdr = document.querySelector(".hdr");
-                function onScroll() {
-                    if (hdr) hdr.classList.toggle("hdr--scrolled", window.scrollY > 8);
-                }
-                onScroll();
-                window.addEventListener("scroll", onScroll, { passive: true });
-            });
+                section.writing-more(aria-labelledby="latest-title")
+                    h2#latest-title More essays
+                    each post in remaining
+                        article
+                            h3
+                                a(href=post.href)= post.title
+                            p= post.description
+            +folioFooter(false)

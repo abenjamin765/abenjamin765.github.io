@@ -64,7 +64,15 @@ function calendarParts(value) {
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({"src/prototypes/green-loom/index.html": "prototypes/green-loom/index.html", "src/prototypes/green-loom/prototype.js": "prototypes/green-loom/prototype.js", "src/prototypes/green-loom/prototype.css": "prototypes/green-loom/prototype.css"});
+  const pug = require('pug');
+  const portfolioData = require('./lib/portfolio-data');
+  const sharedFile = path.join(PROJECT_ROOT, 'src/includes/folio-shared.pug');
+  const renderChrome = (call, locals) => pug.render(`include folio-shared.pug\n${call}`, {filename: sharedFile, ...portfolioData(), ...locals});
+  eleventyConfig.addShortcode('folioHeader', (active, title, href) => renderChrome("+folioHeader(active, projectTitle, backHref)", {active, projectTitle:title, backHref:href}));
+  eleventyConfig.addShortcode('folioFooter', () => renderChrome("+folioFooter(false)", {}));
+  eleventyConfig.addFilter('jsonLd', value => JSON.stringify(value).replace(/</g, '\\u003c'));
+
+  eleventyConfig.addPassthroughCopy({"src/prototypes/green-loom/index.html": "prototypes/green-loom/index.html", "src/prototypes/green-loom/prototype.js": "prototypes/green-loom/prototype.js", "src/prototypes/green-loom/prototype.css": "prototypes/green-loom/prototype.css", "src/prototypes/green-loom/polish.css": "prototypes/green-loom/polish.css"});
   eleventyConfig.addFilter("isoDate", function (value) {
     const parts = calendarParts(value);
     if (!parts) return "";
@@ -130,7 +138,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       output: "dist",
     },
-    templateFormats: ["md", "njk", "html"],
+    templateFormats: ["md", "njk", "html", "11ty.js"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };

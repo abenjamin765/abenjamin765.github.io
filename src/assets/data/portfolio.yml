@@ -1,0 +1,276 @@
+{
+  "portfolioSite": {
+    "name": "Aaron Benjamin",
+    "baseUrl": "https://www.aaronbenjamin.design",
+    "email": "hello@aaronbenjamin.design",
+    "description": "UX and product designer connecting research, complex systems, and shipped interfaces. Exploring Staff and Principal individual contributor opportunities.",
+    "shareImage": "/assets/img/folio/share/portfolio.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/aaronbenjamindesign/",
+      "https://github.com/abenjamin765"
+    ]
+  },
+  "portfolioProjects": {
+    "classroom": {
+      "id": "classroom",
+      "title": "Classroom Assignment Management",
+      "href": "/classroom-assignment-management.html",
+      "next": "indeed-job-refresh",
+      "group": "featured",
+      "seoTitle": "Classroom: prioritizing teacher attention | Aaron Benjamin",
+      "description": "I challenged the assignment hub MVP and helped deliver urgency groups and student visibility across Renaissance products in six weeks.",
+      "shareImage": "/assets/img/folio/share/classroom.jpg",
+      "heroImage": "/assets/img/folio/project--assignment-management/classroom-student-table-hero-2x.png",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Senior UX Designer"
+        },
+        {
+          "label": "Scope",
+          "value": "Six-person product team, teacher research, and cross-product delivery"
+        },
+        {
+          "label": "Key decision",
+          "value": "Ship urgency groups and student visibility; defer the fuller performance summary"
+        },
+        {
+          "label": "Outcome",
+          "value": "Shipped in six weeks; fewer exits to individual-product reports observed over 60 days"
+        }
+      ]
+    },
+    "indeed-job-refresh": {
+      "id": "indeed-job-refresh",
+      "title": "Job Refresh",
+      "href": "/indeed-job-refresh.html",
+      "next": "curbside-pickup",
+      "group": "featured",
+      "seoTitle": "Indeed Job Refresh: changing a reposting workaround | Aaron Benjamin",
+      "description": "Employer research revealed a close-and-repost workaround. I proposed meaningful job updates that preserve the existing record and help employers maintain active posts.",
+      "shareImage": "/assets/img/folio/share/indeed-job-refresh.jpg",
+      "heroImage": "/assets/img/folio/project--job-refresh/hero-job-refresh.png",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Senior UX Designer"
+        },
+        {
+          "label": "Scope",
+          "value": "User testing, cross-team proposal, information architecture, interaction design, messaging, and prototypes"
+        },
+        {
+          "label": "Key decision",
+          "value": "Refresh the existing job through meaningful updates instead of recreating it"
+        },
+        {
+          "label": "Outcome",
+          "value": "Employers reported less time and effort than closing and reposting"
+        }
+      ]
+    },
+    "curbside-pickup": {
+      "id": "curbside-pickup",
+      "title": "Curbside Pickup",
+      "href": "/curbside-pickup.html",
+      "next": "price-adjustments",
+      "group": "featured",
+      "seoTitle": "Home Depot Curbside: arrival and acknowledgment | Aaron Benjamin",
+      "description": "Field research exposed a curbside feedback gap. I won support for email arrival timing and app acknowledgment in a 50-store pilot.",
+      "shareImage": "/assets/img/folio/share/curbside-pickup.jpg",
+      "heroImage": "/assets/img/folio/project--curbside-pickup/hero-curbside.png",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Staff UX Designer"
+        },
+        {
+          "label": "Scope",
+          "value": "Field research, pilot proposal, pickup email, and app notifications"
+        },
+        {
+          "label": "Key decision",
+          "value": "Pair accessible arrival timing with feedback from the store"
+        },
+        {
+          "label": "Outcome",
+          "value": "A 50-store, 60-day pilot reported clearer expectations and fewer calls to switch fulfillment"
+        }
+      ]
+    },
+    "price-adjustments": {
+      "id": "price-adjustments",
+      "title": "Price Adjustments",
+      "href": "/price-adjustments.html",
+      "next": "green-loom",
+      "group": "systems",
+      "seoTitle": "Home Depot Price Adjustments: preserving cart context | Aaron Benjamin",
+      "description": "I translated an associate workaround into markdown interactions that keep the order visible, from 12-store discovery to a chain-wide rollout.",
+      "shareImage": "/assets/img/folio/share/price-adjustments.jpg",
+      "heroImage": "/assets/img/folio/project--price-adjustments/hero-price-adjustments.png",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Staff UX Designer"
+        },
+        {
+          "label": "Scope",
+          "value": "Discovery across 12 stores, markdown interactions, and usability testing"
+        },
+        {
+          "label": "Key decision",
+          "value": "A fly-out preserves cart context while an associate applies a markdown"
+        },
+        {
+          "label": "Outcome",
+          "value": "A 50-store pilot followed by chain-wide rollout; reported impact remains directional"
+        }
+      ]
+    },
+    "green-loom": {
+      "id": "green-loom",
+      "title": "Green Loom",
+      "href": "/green-loom.html",
+      "next": "design-dash",
+      "group": "systems",
+      "seoTitle": "Green Loom: separating catalog records and workflows | Aaron Benjamin",
+      "description": "I designed a retail catalog around distinct product, stock, listing, and lab-evidence lifecycles, with original wireframes and a public product schema.",
+      "shareImage": "/assets/img/folio/share/green-loom.jpg",
+      "heroImage": "/assets/img/folio/project--green-loom/hero-green-loom.png",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Co-founder"
+        },
+        {
+          "label": "Scope",
+          "value": "Retail catalog model and operator workflow"
+        },
+        {
+          "label": "Key decision",
+          "value": "Separate product identity from store operations and lab evidence"
+        },
+        {
+          "label": "Outcome",
+          "value": "Completed catalog with COA import and publication blocks; public schema; operator outcomes unvalidated"
+        }
+      ]
+    },
+    "design-dash": {
+      "id": "design-dash",
+      "title": "The Design Dash",
+      "href": "/design-dash.html",
+      "next": "many-hats",
+      "group": "practice",
+      "seoTitle": "The Design Dash: from evidence to implementation plan | Aaron Benjamin",
+      "description": "An open design process connects OOUX, an Object Library, Object Guides, wireframes, technical requirements, and validation. Explore a fictional tool-library example.",
+      "shareImage": "/assets/img/folio/share/design-dash.jpg",
+      "heroImage": "/assets/img/folio/project--design-dash/dash-example-hero.png",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Process designer and author"
+        },
+        {
+          "label": "Scope",
+          "value": "An open process for product design and planning"
+        },
+        {
+          "label": "Key decision",
+          "value": "Connect evidence and object definitions to screens and technical requirements"
+        },
+        {
+          "label": "Outcome",
+          "value": "Published method and illustrative artifacts; broader usefulness remains to be validated"
+        }
+      ]
+    },
+    "many-hats": {
+      "id": "many-hats",
+      "title": "Many Hats",
+      "href": "/many-hats.html",
+      "next": "a-to-z-first-claim",
+      "group": "practice",
+      "seoTitle": "Many Hats: responsible collaboration with AI | Aaron Benjamin",
+      "description": "Role contracts, shared context, independent critique, and human decisions structure AI-assisted work. A fictional example makes the review trail inspectable.",
+      "shareImage": "/assets/img/folio/share/many-hats.jpg",
+      "heroImage": "/assets/img/folio/thumbnails/tile-many-hats.jpg",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Author"
+        },
+        {
+          "label": "Scope",
+          "value": "Role contracts, shared knowledge, and independent review"
+        },
+        {
+          "label": "Key decision",
+          "value": "Separate roles, practice, knowledge, and project work"
+        },
+        {
+          "label": "Outcome",
+          "value": "Public v0.1 with a replayable fictional demonstration; adoption unmeasured"
+        }
+      ]
+    },
+    "a-to-z-first-claim": {
+      "id": "a-to-z-first-claim",
+      "title": "Amazon A-to-z: First Claim",
+      "href": "/a-to-z-first-claim.html",
+      "next": "home-depot-design-leadership",
+      "group": "systems",
+      "seoTitle": "Amazon A-to-z: making a first claim actionable | Aaron Benjamin",
+      "description": "I redesigned Amazon’s first-claim email around claim details, expectations, coverage, and prevention, with clear limits on the program’s reported results.",
+      "shareImage": "/assets/img/folio/share/a-to-z-first-claim.jpg",
+      "heroImage": "/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--hero-2x.jpg",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "UX Designer II, Amazon Seller Central"
+        },
+        {
+          "label": "Scope",
+          "value": "Seller research, coverage proposal, claims-process mapping, and first-claim email"
+        },
+        {
+          "label": "Key decision",
+          "value": "Cover eligible first claims under $50 and use the event to teach prevention"
+        },
+        {
+          "label": "Outcome",
+          "value": "Reported higher seller confidence and lower A-to-z support-call volume after 60 days in the U.S."
+        }
+      ]
+    },
+    "home-depot-design-leadership": {
+      "id": "home-depot-design-leadership",
+      "title": "Design Leadership at The Home Depot",
+      "href": "/home-depot-design-leadership.html",
+      "next": "classroom",
+      "group": "leadership",
+      "seoTitle": "MEOW: developing designers through mentorship | Aaron Benjamin",
+      "description": "I co-founded Home Depot’s MEOW initiative and trained mentors to guide team projects through checkpoints and feedback, including a remote adaptation.",
+      "shareImage": "/assets/img/folio/share/home-depot-design-leadership.jpg",
+      "heroImage": "/assets/img/folio/project--home-depot-design-leadership/leadership-program.png",
+      "facts": [
+        {
+          "label": "Role",
+          "value": "Staff UX Designer · program co-founder and mentor trainer"
+        },
+        {
+          "label": "Scope",
+          "value": "Project sourcing, mentor training, and a guided team sprint"
+        },
+        {
+          "label": "Key decision",
+          "value": "Support mentors with a guided sprint, check-ins, and shared feedback"
+        },
+        {
+          "label": "Outcome",
+          "value": "Six to 16 project teams; three participants accepted full-time UX-team roles"
+        }
+      ]
+    }
+  }
+}

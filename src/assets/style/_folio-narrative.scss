@@ -3,13 +3,13 @@
 .folio-hero__copy { max-width: 600px; min-width: 0; gap: 8px; }
 .folio-hero__title { font-size: 38px; font-weight: 700; line-height: 1.5; letter-spacing: normal; text-wrap: initial; width: 100%; }
 .folio-hero__kicker { display: block; max-width: 530px; font-size: 24px; font-weight: 400; line-height: normal; letter-spacing: normal; color: #666; margin-bottom: 0; }
-.folio-hero__statement { display: block; white-space: nowrap; }
-.folio-hero__rotator { display: inline; color: #f18309; }
+.folio-hero__statement { display: block; white-space: normal; font-size: clamp(24px, 3.2vw, 38px); line-height: 1.2; min-height: 2.4em; }
+.folio-hero__rotator { display: inline; color: #9a4e00; }
 .folio-hero__word { display: none; overflow-wrap: anywhere; }
 .folio-hero__word.is-current { display: inline; }
 .folio-hero__dek { max-width: 530px; font-size: 15px; font-weight: 400; line-height: 1.5; color: #333; }
 .folio-hero__cta { width: fit-content; margin-top: 10px; }
-.folio-motion-toggle { appearance: none; border: 0; padding: 8px 0; background: none; color: #666; font: inherit; font-size: 12px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.folio-motion-toggle { appearance: none; border: 0; padding: 10px 0; min-height: 44px; background: none; color: #666; font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .folio-motion-toggle[hidden] { display: none; }
 .folio-editorial-section { padding: 64px 40px; background: #fff; }
 .folio-editorial-section:nth-of-type(odd) { background: #f3f3ef; }
@@ -19,7 +19,6 @@
 .folio-project__placeholder > span { font-size: 12px; color: #666; }
 .folio-project__placeholder strong { font-size: clamp(24px, 4vw, 40px); line-height: 1.15; letter-spacing: -.035em; }
 .folio-project__placeholder small { max-width: 48ch; font-size: 13px; line-height: 1.5; color: #666; }
-.folio-case__prose { max-width: 65ch; }
 .folio-case__prose p { line-height: 1.7; text-wrap: pretty; }
 .folio-case__prose h2 { font-size: clamp(27px, 3.6vw, 38px); line-height: 1.18; margin-bottom: 24px; }
 .folio-case__prose > .folio-eyebrow { text-transform: none; letter-spacing: .02em; font-weight: 500; }
