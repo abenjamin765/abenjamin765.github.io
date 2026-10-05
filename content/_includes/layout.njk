@@ -2,77 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }}{% else %}blog{% endif %} | Aaron Benjamin</title>
-  {% if description %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title | e }} | Aaron Benjamin</title>
   <meta name="description" content="{{ description | e }}">
-  <meta property="og:description" content="{{ description | e }}">
-  {% endif %}
+  <link rel="canonical" href="{{ portfolio.portfolioSite.baseUrl }}{{ page.url }}">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{{ title | e }} | Aaron Benjamin">
-  <link rel="canonical" href="https://aaronbenjamin.design{{ page.url }}">
-  <meta property="og:url" content="https://aaronbenjamin.design{{ page.url }}">
-  <meta property="og:image" content="https://aaronbenjamin.design{{ shareImage }}">
+  <meta property="og:description" content="{{ description | e }}">
+  <meta property="og:url" content="{{ portfolio.portfolioSite.baseUrl }}{{ page.url }}">
+  <meta property="og:image" content="{{ portfolio.portfolioSite.baseUrl }}{{ shareImage }}">
+  <meta property="og:image:alt" content="{{ title | e }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image:alt" content="{{ title | e }}">
   <meta property="article:published_time" content="{{ page.date | isoDate }}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | e }}">
+  <meta name="twitter:description" content="{{ description | e }}">
+  <meta name="twitter:image" content="{{ portfolio.portfolioSite.baseUrl }}{{ shareImage }}">
   <link rel="icon" type="image/svg+xml" href="/assets/img/folio/favicon.svg">
-  <link rel="stylesheet" href="{{ '/assets/style/site.css' | relativeFromSiteRoot(page) }}">
+  <link rel="stylesheet" href="/assets/style/folio.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ title | jsonLd | safe }},"description":{{ description | jsonLd | safe }},"url":{{ (portfolio.portfolioSite.baseUrl + page.url) | jsonLd | safe }},"image":{{ (portfolio.portfolioSite.baseUrl + shareImage) | jsonLd | safe }},"datePublished":{{ (page.date | isoDate) | jsonLd | safe }},"author":{"@type":"Person","name":"Aaron Benjamin","url":{{ portfolio.portfolioSite.baseUrl | jsonLd | safe }}}}</script>
 </head>
-<body class="site">
-  <a class="visually-hidden" href="#main">skip to content</a>
-
-  <header class="hdr">
-    <div class="hdr__row">
-      <a class="logo" href="/" aria-label="Aaron Benjamin home">
-        <span class="logo__mark" aria-hidden="true"><span class="logo__dot"></span></span>
-        <span class="logo__wordmark">Aaron Benjamin</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__a" href="/writing.html">writing</a>
-        <a class="nav__a" href="/">portfolio</a>
-      </nav>
-      <div class="hdr__tools">
-        <a class="btn btn--solid" href="mailto:hello@aaronbenjamin.design">contact</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main" class="site-main">
-    {% if isPost %}
+<body class="folio folio--writing">
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  {% folioHeader 'writing', 'Writing', '/writing.html' %}
+  <main id="main" class="folio-main folio-main--case writing-main">
     <article class="post">
-      {% if page.date %}
-      <p class="post-meta">
-        <time class="post-meta__time" datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
-        <span class="post-meta__sep" aria-hidden="true">·</span>
-        <span class="post-meta__kind">Essay · {{ readingMinutes }} min read</span>
-      </p>
-      {% endif %}
+      <p class="post-meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time> · Essay · {{ readingMinutes }} min read</p>
       {{ content | safe }}
+      <aside class="writing-related" aria-labelledby="related-work-title">
+        <h2 id="related-work-title">See the thinking in practice</h2>
+        <p><a href="/design-dash.html">The Design Dash</a> connects product evidence and object definitions to an implementation plan. <a href="/many-hats.html">Many Hats</a> makes responsibilities, independent critique, and human decisions explicit.</p>
+      </aside>
     </article>
-    {% else %}
-    {{ content | safe }}
-    {% endif %}
+    {% folioFooter %}
   </main>
-
-  <footer class="ftr">
-    <div class="ftr__inner">
-      <p class="ftr__legal">© 2026 Aaron Benjamin</p>
-      <nav class="ftr__nav" aria-label="Footer">
-        <a href="/resume.html">resume</a>
-        <a href="mailto:hello@aaronbenjamin.design">contact</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var hdr = document.querySelector(".hdr");
-      function onScroll() {
-        if (hdr) hdr.classList.toggle("hdr--scrolled", window.scrollY > 8);
-      }
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    });
-  </script>
 </body>
 </html>

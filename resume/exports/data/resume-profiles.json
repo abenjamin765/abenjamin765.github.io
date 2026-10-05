@@ -200,7 +200,7 @@
               {
                 "claim_id": "claim-indeed-ux-working-group",
                 "variant_id": null,
-                "text": "Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.",
+                "text": "Founded and operated a cross-functional UX working group to test, refine, and teach design methods company-wide.",
                 "status": "unverified"
               },
               {
@@ -314,7 +314,7 @@
               {
                 "claim_id": "claim-home-depot-curbside-pilot",
                 "variant_id": null,
-                "text": "For a 60-day curbside pickup pilot in 50 stores, about 90% of customers said the order arrived when they expected it, door-to-door time averaged 3.8 minutes with ETAs versus 4.5 without, and calls to change fulfillment fell from a 30%+ baseline to under 10%.",
+                "text": "Designed curbside communication for a 60-day, 50-store pilot that reported about 90% of customers saying their order arrived when expected, 3.8-minute pickup with ETAs versus 4.5 without, and fulfillment-change calls under 10% versus a 30%+ baseline.",
                 "status": "unverified",
                 "metric": {
                   "wording": "about 90% said the order arrived when expected; 3.8 vs 4.5 minutes door-to-door; fulfillment-change calls under 10% from a 30%+ baseline, after a 60-day pilot in 50 stores"
@@ -323,7 +323,7 @@
               {
                 "claim_id": "claim-home-depot-price-adjustments",
                 "variant_id": null,
-                "text": "After a 50-store pilot, price adjustments rolled out to all stores. At 30, 60, and 90 days, order transaction times decreased, associates reported feeling more empowered to help customers, shrink decreased, and SOP adoption for price adjustments increased.",
+                "text": "Designed item-level price adjustments, piloted in 50 stores before chain-wide rollout. Reviews at 30, 60, and 90 days reported faster transactions, reduced shrink, stronger SOP adoption, and greater associate empowerment; exact figures are unavailable.",
                 "status": "unverified",
                 "metric": {
                   "wording": "50-store pilot then all stores; directional only at 30, 60, and 90 days (transaction time, associate empowerment, shrink, SOP adoption)"
@@ -852,7 +852,7 @@
         "reader": "human",
         "allow_unverified": true,
         "length_budget": 19,
-        "headline_id": "headline-ux-designer",
+        "headline_id": "headline-ux-and-product-designer",
         "summary_id": "summary-resume-page",
         "email_id": "email-hello",
         "location_id": "location-powder-springs",
@@ -991,12 +991,12 @@
         "identity": {
           "name": "Aaron Benjamin",
           "headline": {
-            "id": "headline-ux-designer",
-            "text": "UX Designer"
+            "id": "headline-ux-and-product-designer",
+            "text": "UX & Product Designer"
           },
           "summary": {
             "id": "summary-resume-page",
-            "text": "I lead design for complex product systems, connecting research, shared models, and shipped interfaces. My work spans marketplaces, education, commerce, and internal tools, with a focus on decisions teams can carry through implementation."
+            "text": "I lead design for complex product systems, turning research into product decisions and shared models into shipped interfaces. Across marketplaces, education, commerce, and internal tools, I help teams clarify direction, work through constraints, and carry decisions into delivery."
           },
           "emails": [
             {
@@ -1074,7 +1074,7 @@
               {
                 "claim_id": "claim-indeed-ux-working-group",
                 "variant_id": null,
-                "text": "Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.",
+                "text": "Founded and operated a cross-functional UX working group to test, refine, and teach design methods company-wide.",
                 "status": "unverified"
               }
             ]
@@ -1126,7 +1126,7 @@
               {
                 "claim_id": "claim-home-depot-curbside-pilot",
                 "variant_id": null,
-                "text": "For a 60-day curbside pickup pilot in 50 stores, about 90% of customers said the order arrived when they expected it, door-to-door time averaged 3.8 minutes with ETAs versus 4.5 without, and calls to change fulfillment fell from a 30%+ baseline to under 10%.",
+                "text": "Designed curbside communication for a 60-day, 50-store pilot that reported about 90% of customers saying their order arrived when expected, 3.8-minute pickup with ETAs versus 4.5 without, and fulfillment-change calls under 10% versus a 30%+ baseline.",
                 "status": "unverified",
                 "metric": {
                   "wording": "about 90% said the order arrived when expected; 3.8 vs 4.5 minutes door-to-door; fulfillment-change calls under 10% from a 30%+ baseline, after a 60-day pilot in 50 stores"
@@ -1135,7 +1135,7 @@
               {
                 "claim_id": "claim-home-depot-price-adjustments",
                 "variant_id": null,
-                "text": "After a 50-store pilot, price adjustments rolled out to all stores. At 30, 60, and 90 days, order transaction times decreased, associates reported feeling more empowered to help customers, shrink decreased, and SOP adoption for price adjustments increased.",
+                "text": "Designed item-level price adjustments, piloted in 50 stores before chain-wide rollout. Reviews at 30, 60, and 90 days reported faster transactions, reduced shrink, stronger SOP adoption, and greater associate empowerment; exact figures are unavailable.",
                 "status": "unverified",
                 "metric": {
                   "wording": "50-store pilot then all stores; directional only at 30, 60, and 90 days (transaction time, associate empowerment, shrink, SOP adoption)"

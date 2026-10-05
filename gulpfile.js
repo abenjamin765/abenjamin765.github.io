@@ -83,7 +83,7 @@ function compilePug() {
     .src(["src/*.pug", "!" + BUILDER_PAGE])
     .pipe(
       data(function () {
-        const yamlData = getYamlData();
+        const yamlData = {...getYamlData(), ...require("./lib/portfolio-data")()};
         yamlData.resume = JSON.parse(fs.readFileSync(RESUME_PROFILE_EXPORT, "utf8"));
         yamlData.writingPosts = getWritingPosts();
         return yamlData;
@@ -129,7 +129,7 @@ function compileBuilderPage() {
 
 function compileBuilderSass() {
   return gulp
-    .src("src/assets/style/folio.scss")
+    .src(["src/assets/style/folio.scss", "src/assets/style/classroom-demo.scss", "src/assets/style/markdown-demo.scss", "src/assets/style/resume-builder.scss"])
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest(path.join(BUILDER_OUT, "assets/style")));
 }
@@ -174,7 +174,7 @@ function compileResumeSass() {
 
 function compileFolioSass() {
   return gulp
-    .src("src/assets/style/folio.scss")
+    .src(["src/assets/style/folio.scss", "src/assets/style/classroom-demo.scss", "src/assets/style/markdown-demo.scss", "src/assets/style/resume-builder.scss"])
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("dist/assets/style"))
     .pipe(browserSync.stream({ match: "**/folio.css" }));
@@ -203,12 +203,12 @@ function compileEleventy(done) {
 
 // Copy and optimize images
 async function copyImages() {
-  const { default: imagemin, gifsicle, optipng, svgo } = await import("gulp-imagemin");
+  const { default: imagemin, gifsicle, svgo } = await import("gulp-imagemin");
   await pipeline(
     // Keep provenance, prompts, and local debug files in source.
     gulp.src("src/assets/img/**/*.{png,jpg,jpeg,gif,svg,webp,avif,ico}", { encoding: false }),
-    // JPEGs are exported at final quality; mozjpeg's default would re-encode them near quality 75.
-    imagemin([gifsicle(), optipng(), svgo()]),
+    // Preserve supplied PNG/JPEG originals. Responsive WebP files own delivery compression.
+    imagemin([gifsicle(), svgo()]),
     gulp.dest("dist/assets/img")
   );
 }

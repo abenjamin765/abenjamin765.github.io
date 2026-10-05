@@ -4,12 +4,9 @@
 .folio-section-head > p:not(.folio-eyebrow) { margin: 18px 0 0; font-size: 18px; line-height: 1.55; color: $muted; }
 
 .folio-hero__inner { padding-top: 56px; align-items: flex-end; }
-.folio-hero__copy { max-width: 570px; container-type: normal; }
 .folio-hero__media { align-self: flex-end; }
 .folio-hero__media img { object-position: center bottom; }
 .folio-nav__cta { flex-shrink: 0; height: auto; min-height: 40px; padding: 10px 18px; line-height: 1.25; }
-.folio-hero__title { font-size: clamp(36px, 5vw, 52px); font-weight: 700; line-height: 1.07; letter-spacing: -.035em; text-wrap: pretty; }
-.folio-hero__dek { font-size: 19px; line-height: 1.5; max-width: 30em; }
 .folio-hero__experience { font-size: 14px; line-height: 1.5; color: $muted; margin: 0; }
 .folio-work { background: #fff; }
 .folio-work__inner { gap: 56px; padding-top: 56px; padding-bottom: 56px; }
@@ -47,7 +44,6 @@
 .folio-case__facts { max-width: 704px; margin-top: 36px; gap: 24px 40px; }
 .folio-case__fact:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .folio-case__hero { padding-bottom: 56px; }
-.folio-case__section { padding-top: 64px; padding-bottom: 64px; }
 .folio-case__prose h2, .folio-case__outcome h2 { letter-spacing: -.025em; }
 .folio-case__figure figcaption, .folio-story-flow figcaption, .folio-story-compare figcaption { font-size: 14px; line-height: 1.5; color: $muted; }
 .folio-case__figure img { max-height: 760px; object-fit: contain; }
@@ -84,7 +80,6 @@
 .folio-case__hero-media .folio-story-flow__body { background: none; padding: 0; }
 .folio-case__hero-media .folio-story-flow__title { font-size: 15px; }
 .folio-case__hero-media .folio-story-flow__nodes strong { font-size: clamp(24px, 3vw, 36px); }
-.folio-case__hero-media figcaption { margin-top: 32px; }
 .folio-case-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 24px; margin: 32px 0; }
 .folio-case-results dt { font-size: clamp(30px, 4vw, 42px); font-weight: 700; letter-spacing: -.035em; line-height: 1.1; }
 .folio-case-results dd { margin: 12px 0 0; font-size: 15px; line-height: 1.5; }
@@ -124,7 +119,7 @@
   .folio-footer--portrait { grid-template-columns: minmax(0, 1fr); padding-bottom: 0; }
   .folio-footer--portrait .folio-footer__body { grid-row: 1; padding-bottom: 0; }
   .folio-footer--portrait .folio-footer__portrait { grid-row: 2; justify-self: start; }
-  .folio-case__section { padding: 44px 20px; }
+  .folio-case__section { padding: 40px 20px; }
   .folio-case__intro, .folio-case__facts { width: calc(100% - 40px); }
   .folio-case__intro { margin-top: 32px; }
   .folio-case__facts { margin-top: 28px; }
@@ -140,7 +135,7 @@
 /* Shared case opening: live headline, inset media, then facts. */
 .folio--case .folio-case__hero { padding-top: 40px; }
 .folio--case .folio-case__intro { margin-top: 0; }
-.folio--case .folio-case__hero-media { width: calc(100% - 80px); max-width: 1100px; margin: 32px auto 0; border-radius: 8px; overflow: hidden; }
+.folio--case .folio-case__hero-media { width: calc(100% - 80px); max-width: 880px; margin: 32px auto 0; border-radius: 8px; overflow: hidden; }
 .folio--case .folio-case__hero-media img { display: block; width: 100%; height: auto; }
 @media (max-width: 600px) {
   .folio--case .folio-case__hero { padding-top: 28px; }
@@ -245,4 +240,3 @@
 
 .folio-case__prose ul { font-size: clamp(17px, 2vw, 20px); line-height: 1.7; padding-left: 24px; }
 .folio-case__prose li + li { margin-top: 8px; }
-.folio-case__hero-media > figcaption { padding: 0 20px 20px; font-size: 14px; line-height: 1.5; color: #666; }

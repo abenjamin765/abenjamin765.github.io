@@ -37,7 +37,7 @@
 .markdown-demo__error { color: #9a3700; }
 .markdown-demo__form-actions { display: flex; gap: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #ddd; }
 .markdown-demo__form-actions button { flex: 1; padding: 10px; border: 1px solid #d65000; color: #a34000; background: #fff; }
-.markdown-demo__form-actions .markdown-demo__apply { background: #df5700; color: #fff; }
+.markdown-demo__form-actions .markdown-demo__apply { background: #b94300; color: #fff; }
 .markdown-demo__apply:disabled { cursor: not-allowed; background: #eee; border-color: #ccc; color: #777; }
 .markdown-demo__summary { align-self: start; padding: 20px 16px; background: #fff; border: 1px solid #d9dbde; border-radius: 4px; }
 .markdown-demo__summary dl { margin: 0; font-size: 13px; }
@@ -84,7 +84,7 @@
 .markdown-demo__selected .markdown-demo__price strong { display: inline; font-size: 14px; color: #216337; }
 .markdown-demo__price s { color: #777; font-weight: 400; margin-right: 4px; }
 .markdown-demo__discount { max-width: 215px; font-size: 11px; line-height: 1.5; margin-top: 5px; }
-.markdown-demo__open { background: #f96302; color: #fff; border-color: #f96302; padding: 8px 12px; }
+.markdown-demo__open { background: #b94300; color: #fff; border-color: #b94300; padding: 8px 12px; }
 .markdown-demo__remove { font-size: 11px !important; margin-top: 12px; }
 .markdown-demo__editor { top: -128px; right: 10px; width: 260px; padding: 16px; font-size: 12px; transform-origin: left 165px; transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1); }
 @starting-style { .markdown-demo__editor { opacity: 0; transform: translateX(-4px) scale(.98); } }
@@ -94,7 +94,7 @@
 .markdown-demo__editor label { margin-top: 12px; }
 .markdown-demo__editor input, .markdown-demo__editor select { min-height: 36px; }
 .markdown-demo__form-actions { margin-top: 16px; padding-top: 12px; gap: 8px; }
-.markdown-demo__form-actions .markdown-demo__apply { background: #f96302; border-color: #f96302; }
+.markdown-demo__form-actions .markdown-demo__apply { background: #b94300; border-color: #b94300; }
 .markdown-demo__summary { padding: 16px 14px; }
 .markdown-demo__summary h4 { font-size: 16px; font-weight: 600; margin-bottom: 16px; }
 .markdown-demo__summary dl { font-size: 12px; }
@@ -122,7 +122,7 @@
 .markdown-demo__selected { grid-template-columns: minmax(0, 1fr) 88px 28px; }
 .markdown-demo__quantity { display: flex; height: 30px; }
 .markdown-demo__quantity button, .markdown-demo__quantity input { width: 30px; min-width: 0; padding: 0; border: 1px solid #ddd; background: #fff; border-radius: 0; text-align: center; font-size: 12px; }
-.markdown-demo__quantity button { color: #f96302; display: grid; place-items: center; }
+.markdown-demo__quantity button { color: #b94300; display: grid; place-items: center; }
 .markdown-demo__quantity button:disabled { color: #ccc; cursor: default; }
 .markdown-demo__quantity input { appearance: textfield; margin-inline: -1px; }
 .markdown-demo__quantity input::-webkit-inner-spin-button { appearance: none; }
@@ -169,18 +169,18 @@
 .markdown-demo__summary { padding: 0; border-radius: 2px; box-shadow: 0 2px 5px rgba(0,0,0,.12); }
 .markdown-demo__checkout { padding: 14px; border-bottom: 1px solid #e5e5e5; }
 .markdown-demo__summary button { width: 100%; min-height: 36px; border-radius: 2px; font-size: 12px; font-weight: 600; cursor: pointer; }
-.markdown-demo__place { color: white; background: #ed6c26; border: 1px solid #ed6c26; box-shadow: 0 2px 4px rgba(0,0,0,.18); }
-.markdown-demo__place:hover { background: #d95c19; }
+.markdown-demo__place { color: white; background: #b94300; border: 1px solid #b94300; box-shadow: 0 2px 4px rgba(0,0,0,.18); }
+.markdown-demo__place:hover { background: #963600; }
 .markdown-demo__summary-body { padding: 18px 14px; }
 .markdown-demo__summary h4 { font-size: 18px; font-weight: 400; margin: 0 0 20px; }
 .markdown-demo__summary dl > div { gap: 8px; margin-top: 18px; }
 .markdown-demo__summary dl > div:first-child { margin-top: 0; }
-.markdown-demo__adjustments dt { color: #e96926; }
+.markdown-demo__adjustments dt { color: #a23d00; }
 .markdown-demo__pretax dd { padding-top: 12px; border-top: 2px dotted #dedede; }
 .markdown-demo__pretax dt { align-self: flex-end; }
 .markdown-demo__total { padding-top: 16px; border-top: 2px dotted #dedede; font-weight: 700; }
 .markdown-demo__order-actions { display: grid; gap: 14px; padding: 14px; border-top: 1px solid #e5e5e5; }
-.markdown-demo__order-actions button { background: #fafafa; color: #e96926; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,.12); }
+.markdown-demo__order-actions button { background: #fafafa; color: #a23d00; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,.12); }
 .markdown-demo__order-actions button:hover { background: #fff4eb; }
 
 @media (min-width: 701px) {
@@ -205,7 +205,7 @@
 .markdown-demo__summary { box-shadow: 0 1px 3px rgba(0,0,0,.10); }
 .markdown-demo__summary-body { padding: 18px 16px; }
 .markdown-demo__checkout, .markdown-demo__order-actions { padding: 14px 16px; }
-.markdown-demo__place { background: #f96302; border-color: #f96302; box-shadow: 0 1px 3px rgba(0,0,0,.16); }
+.markdown-demo__place { background: #b94300; border-color: #b94300; box-shadow: 0 1px 3px rgba(0,0,0,.16); }
 .markdown-demo__order-actions button { box-shadow: 0 1px 3px rgba(0,0,0,.10); }
 .markdown-demo__editor { border-color: #cbd0d4; border-radius: 3px; box-shadow: 0 6px 20px rgba(0,0,0,.14), 0 1px 3px rgba(0,0,0,.08); transform-origin: left var(--pointer-top, 165px); }
 .markdown-demo__editor-item { font-size: 11px; line-height: 1.45; }
@@ -219,7 +219,7 @@
 .markdown-demo button:active:not(:disabled) { transform: scale(.98); }
 @media (hover: hover) and (pointer: fine) {
   .markdown-demo__quantity button:hover:not(:disabled) { background: #fff2e9; }
-  .markdown-demo__place:hover, .markdown-demo__apply:hover:not(:disabled) { background: #e65a00; }
+  .markdown-demo__place:hover, .markdown-demo__apply:hover:not(:disabled) { background: #963600; }
 }
 @media (prefers-reduced-motion: reduce) {
   .markdown-demo button { transition: background-color 120ms ease; }
@@ -230,17 +230,17 @@
 .markdown-demo button.markdown-demo__button {
   min-height: 38px;
   padding: 9px 12px;
-  border: 1px solid #f96302;
+  border: 1px solid #b94300;
   border-radius: 2px;
   font-size: 12px !important;
   font-weight: 600;
   line-height: 1.4;
   box-shadow: none;
 }
-.markdown-demo button.markdown-demo__button.markdown-demo__button--primary { background: #f96302; color: #fff; }
+.markdown-demo button.markdown-demo__button.markdown-demo__button--primary { background: #b94300; color: #fff; }
 .markdown-demo button.markdown-demo__button.markdown-demo__button--secondary { background: #fff; color: #b84700; }
 .markdown-demo button.markdown-demo__button:disabled { background: #eee; border-color: #d7dadd; color: #777; }
 @media (hover: hover) and (pointer: fine) {
-  .markdown-demo button.markdown-demo__button.markdown-demo__button--primary:hover:not(:disabled) { background: #e65a00; border-color: #e65a00; }
+  .markdown-demo button.markdown-demo__button.markdown-demo__button--primary:hover:not(:disabled) { background: #963600; border-color: #963600; }
   .markdown-demo button.markdown-demo__button.markdown-demo__button--secondary:hover:not(:disabled) { background: #fff2e9; }
 }

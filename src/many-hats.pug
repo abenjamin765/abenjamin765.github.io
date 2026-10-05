@@ -1,66 +1,54 @@
-include includes/folio-shared.pug
+extends includes/case-layout.pug
 
-html(lang="en")
-    head
-        +folioHead('Many Hats: one agent was doing every job | Aaron Benjamin', 'I built a portable AI product team with distinct responsibilities, shared project facts, and human-owned decisions.', '/many-hats.html', 'folio', '/assets/img/folio/project--many-hats/many-hats--work-card-2x.png')
-    body.folio.folio--case
-        +folioShell
-        +folioHeader('work', 'Many Hats', '/#many-hats')
-        main#main.folio-main.folio-main--case
-            article.folio-case
-                +caseHero
-                    .folio-case__intro
-                        p.folio-eyebrow Open-source agent system
-                        h1 Agreement was easy. Accountability needed a structure.
-                        p.folio-case__dek I built Many Hats to give AI-assisted product work distinct roles, shared facts, and an independent critic. The human remains accountable for the decision.
-                    .folio-case__hero-media
-                        +storyComparison({id: "hats-hero-caption", title: "Many Hats · A product team with explicit boundaries", columns: [{label: "Specialists", title: "Prepare the work", items: ["Direction and domain model", "Flows, language, and interface", "Engineering, evidence, and review"]}, {label: "Independent critic", title: "Challenge the plan", items: ["Inspect the evidence", "Question scope and assumptions", "Record objections"]}, {label: "Human owner", title: "Make the decision", items: ["Choose the tradeoffs", "Approve consequential actions", "Own the outcome"]}], caption: "Roles can recommend and prepare. They cannot turn agreement in a chat into approval."})
-                    +caseFacts
-                        .folio-case__fact
-                            dt Role
-                            dd Author
-                        .folio-case__fact
-                            dt Scope
-                            dd Thirteen agents and fifteen portable skills
-                        .folio-case__fact
-                            dt Key decision
-                            dd Separate roles, practice, knowledge, and project work
-                        .folio-case__fact
-                            dt Outcome
-                            dd Public v0.1 and a replayable, fictional Library Holds demo
+block caseConfig
+    - const caseId = "many-hats"
+    - const caseProject = portfolioProjects[caseId]
+    - const caseClasses = ""
+    - const caseInvitation = "I’m happy to discuss the role boundaries and the fictional demonstration."
 
-                +caseSection({labelledby: "hats-methods-title"})
-                    p.folio-eyebrow I — Inspiration
-                    h2#hats-methods-title Strategy and product rules arrived as one voice
-                    p When one agent frames the opportunity, defines the product, and reviews its own recommendation, a confident answer can conceal several different responsibilities. Many Hats began with the need to make those responsibilities visible and keep the consequential decision with the human.
-                    p Design Dash contained 53 stage-oriented methods. They worked in facilitated workshops, but ongoing product work needed clearer responsibility: someone to frame the problem, someone to define the domain, and someone to challenge the plan.
-                    p I reviewed public agent collections for role boundaries and verification patterns, then wrote original contracts for the team. Each role has a defined job, evidence expectations, and limits on what it can approve.
+block caseIntro
+    .folio-case__intro
+        p.folio-eyebrow Open-source agent system
+        h1 Agreement was easy. Accountability needed a structure.
+        p.folio-case__dek I built Many Hats to give AI-assisted product work distinct roles, shared facts, and an independent critic. The human remains accountable for the decision.
 
-                +caseSection({labelledby: "hats-split-title", tint: true, prose: false})
-                    .folio-case__prose
-                        p.folio-eyebrow D — Design Process
-                        h2#hats-split-title Stable roles needed a place apart from project work
-                        p I separated stable roles from reusable skills, shared product facts, and project deliverables. This makes a correction easier to route. A product-specific rule stays with that project; a reusable practice change needs a motivating case, evaluation, and human approval.
-                        p The shared object library belongs in Knowledge, where every role can cite it. The domain specialist stewards it. Projects can reference or fork an object without silently rewriting it for everyone else.
-                        p I mapped the 53 Design Dash methods to accountable roles and consolidated them into fifteen portable skills. The original methods remain as references.
-                    +storyFlow({id: "hats-planes-caption", title: "Four parts of the system", nodes: [{label: "People", detail: "Stable roles with responsibilities and boundaries."}, {label: "Practice", detail: "Portable skills with testable contracts."}, {label: "Knowledge", detail: "Shared objects, evidence, decisions, and terminology."}, {label: "Work", detail: "Citable artifacts for a specific project."}], caption: "Project corrections stay local. Reusable changes return through a reviewed practice update."})
+block caseMedia
+    .folio-case__hero-media
+        +storyComparison({id: "hats-hero-caption", showProvenance: false, title: "Many Hats · A product team with explicit boundaries", columns: [{label: "Specialists", title: "Prepare the work", items: ["Direction and domain model", "Flows, language, and interface", "Engineering, evidence, and review"]}, {label: "Independent critic", title: "Challenge the plan", items: ["Inspect the evidence", "Question scope and assumptions", "Record objections"]}, {label: "Human owner", title: "Make the decision", items: ["Choose the tradeoffs", "Approve consequential actions", "Own the outcome"]}], caption: "Roles can recommend and prepare. They cannot turn agreement in a chat into approval."})
 
-                +caseSection({labelledby: "hats-engagement"})
-                    p.folio-eyebrow E — Engagement
-                    h2#hats-engagement Let the critic keep its independence
-                    p The fictional Library Holds demonstration made the challenge and the response inspectable. The independent critic reviewed the proposed direction without inheriting responsibility for delivering it.
-                    p This is a demonstration of collaboration contracts, not a claim that simulated agreement replaces feedback from users or specialists. The human owns the tradeoffs and external actions. Each role prepares evidence and recommendations within a defined responsibility, so a challenge can remain visible even after the direction is accepted.
-                +caseSection({labelledby: "hats-demo-title", prose: false})
-                    .folio-case__prose
-                        p.folio-eyebrow A — Action
-                        h2#hats-demo-title The critic challenged features the MVP didn’t need
-                        p Library Holds is a fictional demo of a holds-and-pickup workflow. The tempting scope included branch transfers, waitlist incentives, and a notification preference center. The core problem was simpler: patrons needed to know when a book was ready and when to collect it.
-                        p The product lead proposed a small Hold MVP. The domain specialist defined Hold, Patron, Item, and Pickup Window. Flow and content roles worked from that model. The independent critic challenged the extra features; the accepted direction cited that challenge and left them out.
-                    +storyFlow({id: "hats-holds-caption", title: "Library Holds · Fictional demo", nodes: [{label: "Frame", detail: "A reliable holds-and-pickup loop."}, {label: "Model", detail: "Hold, Patron, Item, and Pickup Window."}, {label: "Challenge", detail: "Transfers and preference management exceed the core need."}, {label: "Decide", detail: "Place, cancel, ready, fulfill, and expire. One notice channel."}], caption: "The challenge changes the scope and remains part of the decision record."})
+block caseStory
+    +caseSection({labelledby: "hats-methods-title"})
+        p.folio-eyebrow I — Inspiration
+        h2#hats-methods-title Strategy and product rules arrived as one voice
+        p When one agent frames the opportunity, defines the product, and reviews its own recommendation, a confident answer can conceal several different responsibilities. Many Hats began with the need to make those responsibilities visible and keep the consequential decision with the human.
+        p The Design Dash offered stage-oriented methods. Ongoing product work needed responsibility to remain clear between stages: who frames the problem, who defines the domain, and who challenges the plan?
+        p I reviewed public agent collections for role boundaries and verification patterns, then wrote original contracts for the team. Each role has a defined job, evidence expectations, and limits on what it can approve.
 
-                +caseOutcome("hats-outcome-title", "v0.1 made the approach public and replayable")
-                    p v0.1 is public and cloneable. A builder can replay the demo from direction through objects, flow, language, and independent review. Host adapters change how tools discover the skills, not their contracts.
-                    p I have no adoption count, and the demo is not a field study. The repository demonstrates the architecture: a specialist leaves a citable artifact, stays within its role, and keeps approval with the human owner.
-                    p
-                        a(href="https://github.com/abenjamin765/many-hats" target="_blank" rel="noopener noreferrer") Explore Many Hats on GitHub
-            +caseStudyFooter('I’m happy to discuss the role boundaries and the fictional demonstration.', folioProjects[folioProjects['many-hats'].next])
+    +caseSection({labelledby: "hats-split-title", tint: true, prose: false})
+        .folio-case__prose
+            p.folio-eyebrow D — Design Process
+            h2#hats-split-title Stable roles needed a place apart from project work
+            p I separated stable roles from reusable skills, shared product facts, and project deliverables. This makes a correction easier to route. A product-specific rule stays with that project; a reusable practice change needs a motivating case, evaluation, and human approval.
+            p The shared object library belongs in Knowledge, where every role can cite it. The domain specialist stewards it. Projects can reference or fork an object without silently rewriting it for everyone else.
+            +caseDisclosure("Implementation detail: roles and skills")
+            p I mapped 53 Design Dash methods into fifteen portable skills and thirteen role contracts. The original methods remain references. This adds coordination and maintenance: selecting roles and maintaining shared context is work, so specialization needs to justify that cost.
+        +storyFlow({id: "hats-planes-caption", title: "Four parts of the system", nodes: [{label: "People", detail: "Stable roles with responsibilities and boundaries."}, {label: "Practice", detail: "Portable skills with testable contracts."}, {label: "Knowledge", detail: "Shared objects, evidence, decisions, and terminology."}, {label: "Work", detail: "Citable artifacts for a specific project."}], caption: "Project corrections stay local. Reusable changes return through a reviewed practice update."})
+
+    +caseSection({labelledby: "hats-engagement"})
+        p.folio-eyebrow E — Engagement
+        h2#hats-engagement Let the critic keep its independence
+        p The fictional Library Holds demonstration made the challenge and the response inspectable. The independent critic reviewed the proposed direction without inheriting responsibility for delivering it.
+        p This is a demonstration of collaboration contracts, not a claim that simulated agreement replaces feedback from users or specialists. The human owns the tradeoffs and external actions. Each role prepares evidence and recommendations within a defined responsibility, so a challenge can remain visible even after the direction is accepted.
+    +caseSection({labelledby: "hats-demo-title", prose: false})
+        .folio-case__prose
+            p.folio-eyebrow A — Action
+            h2#hats-demo-title The critic challenged features the MVP didn’t need
+            p Library Holds is a fictional demo of a holds-and-pickup workflow. The tempting scope included branch transfers, waitlist incentives, and a notification preference center. The core problem was simpler: patrons needed to know when a book was ready and when to collect it.
+            p The product lead proposed a small Hold MVP. The domain specialist defined Hold, Patron, Item, and Pickup Window. Flow and content roles worked from that model. The independent critic challenged the extra features; the accepted direction cited that challenge and left them out.
+        +storyFlow({id: "hats-holds-caption", title: "Library Holds · A visible decision trail", nodes: [{label: "Proposal", detail: "A holds-and-pickup MVP, with transfers and preference management considered."}, {label: "Independent critique", detail: "Those additions exceed the core need: know when the book is ready and when to collect it."}, {label: "Revision", detail: "Keep place, cancel, ready, fulfill, and expire; use one notice channel."}, {label: "Human decision", detail: "Accept the smaller direction with the critique retained in the record."}], caption: "Illustrative example: paraphrased fictional demonstration, not user research or verbatim stakeholder quotations."})
+
+    +caseOutcome("hats-outcome-title", "v0.1 made the approach public and replayable")
+        p v0.1 is public and cloneable. A builder can replay the demo from direction through objects, flow, language, and independent review. Host adapters change how tools discover the skills, not their contracts.
+        p I have no adoption count, and the demo is not a field study. The repository demonstrates the architecture: a specialist leaves a citable artifact, stays within its role, and keeps approval with the human owner.
+        p
+            a(href="https://github.com/abenjamin765/many-hats" target="_blank" rel="noopener noreferrer") Explore Many Hats on GitHub

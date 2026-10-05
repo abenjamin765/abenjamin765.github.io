@@ -17,6 +17,7 @@ include includes/folio-shared.pug
     const earlierRoles = resume.experience.slice(PRINT_ROLE_LIMIT).map((role) => role.company)
     const skillSectionIds = { focus: 'focusAreas', capability: 'hardSkills' }
 
+doctype html
 html(lang="en")
     head
         +folioHead('Aaron Benjamin | Résumé', 'Aaron Benjamin is a product designer who leads complex UX work across marketplaces, education, commerce, and internal tools.', '/resume.html')
@@ -59,7 +60,7 @@ html(lang="en")
                     each phone in identity.phones
                         a(href='tel:' + phone.number.replace(/[^0-9+]/g, ''))= phone.number
                     if identity.website
-                        a(href='https://' + identity.website.replace(/^https?:\/\//, ''))= identity.website
+                        a(href=portfolioSite.baseUrl + '/')= identity.website
                     if identity.linkedin
                         a(href=identity.linkedin) LinkedIn
                     each location in identity.locations

@@ -1,101 +1,88 @@
-include includes/folio-shared.pug
+extends includes/case-layout.pug
 
-html(lang="en")
-    head
-        +folioHead('Curbside Pickup: what happened after check-in? | Aaron Benjamin', 'I designed Home Depot pickup emails and app notifications to make arrival timing accessible and give customers feedback after check-in.', '/curbside-pickup.html', 'folio', '/assets/img/folio/project--curbside-pickup/hero-curbside.png', 'curbside-polish-20261003')
-    body.folio.folio--case.folio--curbside
-        +folioShell
-        +folioHeader('work', 'Curbside Pickup', '/#curbside-pickup')
-        main#main.folio-main.folio-main--case
-            article.folio-case
-                +caseHero
-                    .folio-case__intro
-                        p.folio-eyebrow The Home Depot · Curbside Pickup
-                        h1 The wait was short. The uncertainty was not.
-                        p.folio-case__dek Customers parked and waited without knowing whether the store knew they were there. I won support for a pilot that made arrival timing accessible through pickup emails and added check-in feedback to the app.
-                    figure.folio-case__hero-media
-                        img(src="/assets/img/folio/project--curbside-pickup/hero-curbside.png" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/hero-curbside.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Home Depot curbside pickup email on two phone mockups, showing collection instructions, arrival-time choices, and an I’m here check-in button" width="1800" height="720" fetchpriority="high")
-                    +caseFacts
-                        .folio-case__fact
-                            dt Role
-                            dd Staff UX Designer
-                        .folio-case__fact
-                            dt Scope
-                            dd Field research, pilot proposal, pickup email, and app notifications
-                        .folio-case__fact
-                            dt Key decision
-                            dd Pair accessible arrival timing with feedback from the store
-                        .folio-case__fact
-                            dt Outcome
-                            dd A 50-store, 60-day pilot reported clearer expectations and fewer calls to switch fulfillment
+block caseConfig
+    - const caseId = "curbside-pickup"
+    - const caseProject = portfolioProjects[caseId]
+    - const caseClasses = "folio--curbside"
+    - const caseInvitation = "I’m happy to discuss the field research and pickup communication flow."
 
-                +caseSection({labelledby: "curb-field-title"})
-                    p.folio-eyebrow I — Inspiration
-                    h2#curb-field-title Customers could arrive without knowing what happened next
-                    p In store visits, I repeatedly saw customers park in a curbside space, wait, then walk to the service desk to switch to in-store pickup. That switch could send associates moving an order from one end of the store to the other. Our goals were to reduce missed pickups and fulfillment changes, improve the customer experience, and shorten fulfillment times.
-                    p I talked with customers, associates, and store managers. Customers described waiting, sometimes calling the store or opening the app, without receiving a signal that their arrival had been acknowledged or their order was on its way.
-                    p A Wi-Fi gate could signal arrival to the store if a customer had the app, was logged in, and connected to Wi-Fi. Even that small cohort received no confirmation back from the store. The system could detect an arrival without resolving the customer’s uncertainty.
-                    p Customers expected pickup in under five minutes, yet about 30% called to change their pickup method. The opportunity was to make the wait more predictable and reduce the disruption those changes created.
+block caseIntro
+    .folio-case__intro
+        p.folio-eyebrow The Home Depot · Curbside Pickup
+        h1 The wait was short. The uncertainty was not.
+        p.folio-case__dek Customers parked and waited without knowing whether the store knew they were there. I won support for a pilot that made arrival timing accessible through pickup emails and added check-in feedback to the app.
 
-                .curbside-context
-                    figure.folio-case__figure#curbside-two-sides
-                        img(src="/assets/img/folio/project--curbside-pickup/two-sides-of-the-same-wait-v2.png" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/two-sides-of-the-same-wait-v2.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Two illustrated journeys show the customer parking, waiting without confirmation, then going inside for help, while the store sees an arrival signal, prepares the order, and moves it after a pickup change. A broken orange arrow highlights the missing confirmation back to the customer." width="1672" height="941" loading="lazy")
+block caseMedia
+    figure.folio-case__hero-media
+        img(src="/assets/img/folio/project--curbside-pickup/hero-curbside.png" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/hero-curbside.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt="Home Depot curbside pickup email on two phone mockups, showing collection instructions, arrival-time choices, and an I’m here check-in button" width="1800" height="720" fetchpriority="high")
 
-                +caseSection({labelledby: "curb-align-title", tint: true, prose: false})
-                    .folio-case__prose
-                        p.folio-eyebrow D — Design Process
-                        h2#curb-align-title Separate arrival access from customer feedback
-                        p The running strategy was to market the mobile app and encourage more customers to log in. That could help operations, but it left the feedback gap open. Weak parking-lot cell and Wi-Fi signals could prevent check-in, and customers sometimes crossed the arrival gate before running errands nearby.
-                        p I proposed two complementary changes: pickup emails would let customers share an ETA and check in without downloading the app; app notifications would confirm check-in, provide a recovery path when it failed, and announce that an order was coming out.
+block caseStory
+    +caseSection({labelledby: "curb-field-title"})
+        p.folio-eyebrow I — Inspiration
+        h2#curb-field-title Customers could arrive without knowing what happened next
+        p In store visits, I repeatedly saw customers park in a curbside space, wait, then walk to the service desk to switch to in-store pickup. That switch could send associates moving an order from one end of the store to the other. Our goals were to reduce missed pickups and fulfillment changes, improve the customer experience, and shorten fulfillment times.
+        p I talked with customers, associates, and store managers. Customers described waiting, sometimes calling the store or opening the app, without receiving a signal that their arrival had been acknowledged or their order was on its way.
+        p A Wi-Fi gate could signal arrival to the store if a customer had the app, was logged in, and connected to Wi-Fi. Even that small cohort received no confirmation back from the store. The system could detect an arrival without resolving the customer’s uncertainty.
+        p Customers expected pickup in under five minutes, yet about 30% called to change their pickup method. The opportunity was to make the wait more predictable and reduce the disruption those changes created.
 
-                +caseSection({labelledby: "curb-engagement"})
-                    p.folio-eyebrow E — Engagement
-                    h2#curb-engagement Win support for a pilot beyond the app
-                    p Making pickup easier through email could reduce the incentive to download the app. I built a proposal that weighed that concern against customers’ uncertainty and the operational cost of changing pickup methods.
-                    p I won support for a limited regional pilot of the email improvements and app notifications. That let the team evaluate the customer and store benefits before committing to a broader change.
-                .curbside-context
-                    figure.curbside-decision#curbside-decision(aria-labelledby="curbside-decision-title")
-                        figcaption#curbside-decision-title The decision and its alternatives
-                        .curbside-decision__options
-                            .curbside-decision__option
-                                p.curbside-diagram-label Existing strategy
-                                h3 Expand app adoption
-                                p Encourage more customers to download the app and log in.
-                                .curbside-decision__benefit
-                                    strong More visibility for the store
-                                    p More eligible customers could send arrival signals.
-                                .curbside-decision__limit
-                                    strong The gap remains
-                                    p Customers still need a response after check-in.
-                            .curbside-decision__option.curbside-decision__option--chosen
-                                p.curbside-diagram-label Chosen for the pilot
-                                h3 Improve pickup across channels
-                                dl.curbside-decision__channels
-                                    div
-                                        dt Email
-                                        dd Selected pickup method, ETA choices, and check-in access.
-                                    div
-                                        dt App
-                                        dd Arrival acknowledgement, failure recovery, and order progress.
-                                .curbside-decision__limit
-                                    strong The tradeoff
-                                    p Easier pickup through email could reduce the incentive to download the app.
+    .curbside-context
+        figure.folio-case__figure#curbside-two-sides
+            img(src="/assets/img/folio/project--curbside-pickup/two-sides-of-the-same-wait-v2.png" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/two-sides-of-the-same-wait-v2.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt="Two illustrated journeys show the customer parking, waiting without confirmation, then going inside for help, while the store sees an arrival signal, prepares the order, and moves it after a pickup change. A broken orange arrow highlights the missing confirmation back to the customer." width="1672" height="941" loading="lazy")
+    +caseSection({labelledby: "curb-align-title", tint: true, prose: false})
+        .folio-case__prose
+            p.folio-eyebrow D — Design Process
+            h2#curb-align-title Separate arrival access from customer feedback
+            p The running strategy was to market the mobile app and encourage more customers to log in. That could help operations, but it left the feedback gap open. Weak parking-lot cell and Wi-Fi signals could prevent check-in, and customers sometimes crossed the arrival gate before running errands nearby.
+            p I proposed two complementary changes: pickup emails would let customers share an ETA and check in without downloading the app; app notifications would confirm check-in, provide a recovery path when it failed, and announce that an order was coming out.
 
-                +caseSection({labelledby: "curb-eta-title", prose: false})
-                    .folio-case__prose
-                        p.folio-eyebrow A — Action
-                        h2#curb-eta-title Make arrival easier, then close the feedback loop
-                        p The existing curbside confirmation email advertised other pickup options, making it unclear which method was selected and encouraging a switch that inconvenienced customers and associates. I focused the updated email on the selected pickup method, collection instructions, ETA choices, help, and Spanish-language access.
-                    figure.folio-case__figure#curbside-email-board
-                        img(src="/assets/img/folio/project--curbside-pickup/pickup-email-explained.png" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/pickup-email-explained.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Pickup email presentation highlighting three decisions: clarify the selected curbside method and store, offer arrival-time choices, and keep check-in and store support in the same message." width="1536" height="1024" loading="lazy")
-                    .folio-case__prose.curbside-app-intro
-                        h3 Closing the loop for app users
-                        p Alongside the email improvements, we added app notifications that gave customers an expectation or a recovery path after check-in.
-                    figure.folio-case__figure#curbside-app-notifications
-                        img(src="/assets/img/folio/project--curbside-pickup/app-pickup-notifications.jpg" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/app-pickup-notifications.jpg") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Three device mockups show Home Depot app notifications: arrival acknowledged with a ten-minute expectation, check-in failed with instructions to call the store, and an update that the order will be out soon." width="3072" height="1822" loading="lazy")
+    +caseSection({labelledby: "curb-engagement"})
+        p.folio-eyebrow E — Engagement
+        h2#curb-engagement Win support for a pilot beyond the app
+        p Making pickup easier through email could reduce the incentive to download the app. I built a proposal that weighed that concern against customers’ uncertainty and the operational cost of changing pickup methods.
+        p I won support for a limited regional pilot of the email improvements and app notifications. That let the team evaluate the customer and store benefits before committing to a broader change.
+    .curbside-context
+        figure.curbside-decision#curbside-decision(aria-labelledby="curbside-decision-title")
+            p.curbside-decision__title#curbside-decision-title The decision and its alternatives
+            .curbside-decision__options
+                .curbside-decision__option
+                    p.curbside-diagram-label Existing strategy
+                    h3 Expand app adoption
+                    p Encourage more customers to download the app and log in.
+                    .curbside-decision__benefit
+                        strong More visibility for the store
+                        p More eligible customers could send arrival signals.
+                    .curbside-decision__limit
+                        strong The gap remains
+                        p Customers still need a response after check-in.
+                .curbside-decision__option.curbside-decision__option--chosen
+                    p.curbside-diagram-label Chosen for the pilot
+                    h3 Improve pickup across channels
+                    dl.curbside-decision__channels
+                        div
+                            dt Email
+                            dd Selected pickup method, ETA choices, and check-in access.
+                        div
+                            dt App
+                            dd Arrival acknowledgement, failure recovery, and order progress.
+                    .curbside-decision__limit
+                        strong The tradeoff
+                        p Easier pickup through email could reduce the incentive to download the app.
 
-                +caseOutcome("curb-outcome-title", "Clearer expectations in the store pilot")
-                    +caseResults([{value: "≈90%", label: "Reported that pickup arrived when expected"}, {value: "3.8 min", label: "Average door-to-door time with an ETA"}, {value: "<10%", label: "Called to change pickup method, versus about 30% before the pilot"}], "Reported results from a 60-day pilot in 50 stores; retrospective figures have not been independently revalidated.")
-                    p During the pilot, average door-to-door time was 3.8 minutes for customers who shared an ETA, compared with 4.5 minutes for those who didn’t.
-                    p My takeaway: an arrival signal helps the store prepare, and a confirmation helps the customer wait. Both sides need feedback when the process changes.
-            +caseStudyFooter('I’m happy to discuss the field research and pickup communication flow.', folioProjects[folioProjects['curbside-pickup'].next])
+    +caseSection({labelledby: "curb-eta-title", prose: false})
+        .folio-case__prose
+            p.folio-eyebrow A — Action
+            h2#curb-eta-title Make arrival easier, then close the feedback loop
+            p The existing curbside confirmation email advertised other pickup options, making it unclear which method was selected and encouraging a switch that inconvenienced customers and associates. I focused the updated email on the selected pickup method, collection instructions, ETA choices, help, and Spanish-language access.
+        figure.folio-case__figure#curbside-email-board
+            img(src="/assets/img/folio/project--curbside-pickup/pickup-email-explained.png" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/pickup-email-explained.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt="Pickup email presentation highlighting three decisions: clarify the selected curbside method and store, offer arrival-time choices, and keep check-in and store support in the same message." width="1536" height="1024" loading="lazy")
+        .folio-case__prose.curbside-app-intro
+            h3 Closing the loop for app users
+            p Alongside the email improvements, we added app notifications that gave customers an expectation or a recovery path after check-in.
+        figure.folio-case__figure#curbside-app-notifications
+            img(src="/assets/img/folio/project--curbside-pickup/app-pickup-notifications.jpg" srcset=folioSrcset("/assets/img/folio/project--curbside-pickup/app-pickup-notifications.jpg") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt="Three device mockups show Home Depot app notifications: arrival acknowledged with a ten-minute expectation, check-in failed with instructions to call the store, and an update that the order will be out soon." width="3072" height="1822" loading="lazy")
+        +evidenceExcerpt({id: "curbside-state-excerpt", title: "Three states answer three different questions", note: "Readable explanation of the reconstructed app sequence above.", items: [{term: "Arrival acknowledged", detail: "The store knows you are here. The notification gives a ten-minute expectation."}, {term: "Check-in failed", detail: "The arrival was not confirmed. Call the store to recover."}, {term: "Order coming out", detail: "The order is on its way. Wait at the selected pickup location."}]})
+
+    +caseOutcome("curb-outcome-title", "Clearer expectations in the store pilot")
+        +caseResults([{value: "≈90%", label: "Reported that pickup arrived when expected"}, {value: "3.8 min", label: "Average door-to-door time with an ETA"}, {value: "<10%", label: "Called to change pickup method, versus about 30% before the pilot"}], "Reported results from a 60-day pilot in 50 stores; retrospective figures have not been independently revalidated.")
+        p During the pilot, average door-to-door time was 3.8 minutes for customers who shared an ETA, compared with 4.5 minutes for those who didn’t.
+        p My takeaway: an arrival signal helps the store prepare, and a confirmation helps the customer wait. Both sides need feedback when the process changes.

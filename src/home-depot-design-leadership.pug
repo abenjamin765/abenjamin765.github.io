@@ -1,63 +1,56 @@
-include includes/folio-shared.pug
+extends includes/case-layout.pug
 
-html(lang="en")
-    head
-        +folioHead("UX MEOW: a place to practice design leadership. | Aaron Benjamin", "I co-founded UX MEOW to connect interns, designer mentors, and innovation opportunities. The program gave teams real problems to explore and designers a supported way to practice mentoring and leadership.", "/home-depot-design-leadership.html", "folio", "/assets/img/folio/project--home-depot-design-leadership/leadership-program.png")
-    body.folio.folio--case
-        +folioShell
-        +folioHeader("work", "Home Depot Design Leadership", "/#home-depot-design-leadership")
-        main#main.folio-main.folio-main--case
-            article.folio-case
-                +caseHero
-                    .folio-case__intro
-                        p.folio-eyebrow The Home Depot · UX MEOW
-                        h1 UX MEOW: a place to practice design leadership.
-                        p.folio-case__dek I co-founded UX MEOW to connect interns, designer mentors, and innovation opportunities. The program gave teams real problems to explore and designers a supported way to practice mentoring and leadership.
-                    figure.folio-case__hero-media
-                        img(src="/assets/img/folio/project--home-depot-design-leadership/leadership-program.png" srcset=folioSrcset("/assets/img/folio/project--home-depot-design-leadership/leadership-program.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Illustrative UX MEOW program model connecting innovation opportunities, intern teams, and designer mentors" width="1536" height="1024" fetchpriority="high")
-                        figcaption Illustrative program model: innovation opportunities, intern teams, and designer mentors. This is a conceptual reconstruction.
-                    +caseFacts
-                        .folio-case__fact
-                            dt Role
-                            dd Staff UX Designer · program co-founder and mentor trainer
-                        .folio-case__fact
-                            dt Scope
-                            dd Project sourcing, mentor training, and a guided team sprint
-                        .folio-case__fact
-                            dt Delivery status
-                            dd Co-founded and helped run UX MEOW, 2019–2022
-                        .folio-case__fact
-                            dt Outcome
-                            dd Six to 16 project teams; three participants accepted full-time UX-team roles
+block caseConfig
+    - const caseId = "home-depot-design-leadership"
+    - const caseProject = portfolioProjects[caseId]
+    - const caseClasses = ""
+    - const caseInvitation = "I’m happy to discuss UX MEOW, mentor training, and building opportunities to practice design leadership."
 
-                +caseSection({labelledby: "home-depot-design-leadership-0"})
-                    p.folio-eyebrow I — Inspiration
-                    h2#home-depot-design-leadership-0 Connect three needs through one program
-                    p OrangeWorks Engineering sometimes lacked real projects for summer interns. Innovation ideas waited for resources. UX designers wanted opportunities to develop their mentoring skills.
-                    p A fellow Staff Designer approached me about creating mentor training. Together, we developed UX MEOW: designer-led teams that paired interns with mentors to explore real innovation opportunities. Interns gained practical experience, mentors practiced small-group leadership, and project champions had a team to help develop their ideas.
+block caseIntro
+    .folio-case__intro
+        p.folio-eyebrow The Home Depot · UX MEOW
+        h1 UX MEOW: a place to practice design leadership.
+        p.folio-case__dek I co-founded UX MEOW to connect interns, designer mentors, and innovation opportunities. The program gave teams real problems to explore and designers a supported way to practice mentoring and leadership.
 
-                +caseSection({labelledby: "home-depot-design-leadership-1"})
-                    p.folio-eyebrow D — Design Process
-                    h2#home-depot-design-leadership-1 Give mentors and teams a shared starting point
-                    p I developed mentor training materials, led workshops, and sourced projects. My co-founder and I met with innovation champions to clarify their ideas and turn them into practical starting points for design sprints.
-                    p We built a guided collaboration board around the GV design sprint process, with activity instructions and supporting resources. The first cohort brought 12 interns and 12 designer mentors together in six teams. An unpacking day introduced research, technical constraints, stakeholder interview transcripts, and experts so teams could understand the opportunity before proposing solutions.
+block caseMedia
+    figure.folio-case__hero-media
+        img(src="/assets/img/folio/project--home-depot-design-leadership/leadership-program.png" srcset=folioSrcset("/assets/img/folio/project--home-depot-design-leadership/leadership-program.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 880px" alt="Illustrative UX MEOW program model connecting innovation opportunities, intern teams, and designer mentors" width="1536" height="1024" fetchpriority="high")
 
-                +storyFlow({id: "leadership-sprint-caption", title: "UX MEOW · Guided team sprint", nodes: [{label: "Unpack", detail: "Bring research, constraints, stakeholder input, and experts together."}, {label: "Explore", detail: "Frame the problem, sketch alternatives, and prototype."}, {label: "Review", detail: "Present the opportunity and decisions to champions and stakeholders."}, {label: "Revise and test", detail: "Use feedback to revise, code, and test with customers and employees."}], caption: "Reconstructed summary of the program process. Teams created working explorations and field tests."})
+block caseStory
+    +caseSection({labelledby: "home-depot-design-leadership-0"})
+        p.folio-eyebrow I — Inspiration
+        h2#home-depot-design-leadership-0 Connect three needs through one program
+        p OrangeWorks Engineering sometimes lacked real projects for summer interns. Innovation ideas waited for resources. UX designers wanted opportunities to develop their mentoring skills.
+        p A fellow Staff Designer approached me about creating mentor training. Together, we developed UX MEOW: designer-led teams that paired interns with mentors to explore real innovation opportunities. Interns gained practical experience, mentors practiced small-group leadership, and project champions had a team to help develop their ideas.
 
-                +caseSection({labelledby: "home-depot-design-leadership-2"})
-                    p.folio-eyebrow E — Engagement
-                    h2#home-depot-design-leadership-2 Make feedback part of the work
-                    p Teams developed problem statements, explored alternatives through Crazy 8s and sketches, and built low-fidelity prototypes. At the midpoint, they presented the opportunity, business goals, and design decisions to champions and stakeholders.
-                    p That review gave teams a chance to explain their reasoning and respond to feedback. They revised prototypes, coded solutions, and tested with Home Depot customers and employees. The work produced working explorations and field tests; it did not establish production launches.
+    +caseSection({labelledby: "home-depot-design-leadership-1"})
+        p.folio-eyebrow D — Design Process
+        h2#home-depot-design-leadership-1 Give mentors and teams a shared starting point
+        p I developed mentor training materials, led workshops, and sourced projects. My co-founder and I worked with innovation champions to turn their ideas into practical starting points. The training addressed a specific leadership habit: mentors needed to invite uncertainty, rather than wait for someone to volunteer that they were stuck.
+        p We built a guided collaboration board around the GV design sprint process, with activity instructions and supporting resources. The first cohort brought 12 interns and 12 designer mentors together in six teams. An unpacking day introduced research, technical constraints, stakeholder interview transcripts, and experts so teams could understand the opportunity before proposing solutions.
 
-                +caseSection({labelledby: "home-depot-design-leadership-3"})
-                    p.folio-eyebrow A — Action
-                    h2#home-depot-design-leadership-3 Help the program carry forward
-                    p I co-founded and helped run UX MEOW from 2019 through my departure in 2022. We adapted it for remote work in 2020, and returning mentors helped train others and update the materials.
-                    p The program expanded across engineering, UX, and product management, then opened to employees interested in technical roles. Its structure gave participants a way to build experience while contributing to a real project.
+    +storyFlow({id: "leadership-sprint-caption", title: "UX MEOW · Guided team sprint", nodes: [{label: "Unpack", detail: "Bring research, constraints, stakeholder input, and experts together."}, {label: "Explore", detail: "Frame the problem, sketch alternatives, and prototype."}, {label: "Review", detail: "Present the opportunity and decisions to champions and stakeholders."}, {label: "Revise and test", detail: "Use feedback to revise, code, and test with customers and employees."}], caption: "Reconstructed summary of the program process. Teams created working explorations and field tests."})
 
-                +caseOutcome("home-depot-design-leadership-success", "From six teams to a broader opportunity")
-                    +caseResults([{value: "6 → 16", label: "Project teams as UX MEOW expanded"}, {value: "3", label: "Participants who accepted full-time UX-team roles"}], "Reported program outcomes. The first cohort had 12 interns and 12 designer mentors across six teams.")
-                    p UX MEOW grew from six to 16 project teams. Three participants from non-technical backgrounds applied for and accepted full-time UX-team positions. These were shared program outcomes, supported by my co-founder, mentors, project champions, and the teams involved.
-                    p My takeaway: leadership development needs a place to practice. MEOW combined real work, guidance, and feedback so participants could contribute while developing the skills to lead others.
-            +caseStudyFooter("I’m happy to discuss UX MEOW, mentor training, and building opportunities to practice design leadership.", folioProjects[folioProjects['home-depot-design-leadership'].next])
+    +caseSection({labelledby: "meow-checkin-title", tint: true, prose: false})
+        .folio-case__prose
+            h2#meow-checkin-title Make it easier to say where the work is stuck
+            p We taught mentors to go beyond “Does anyone need help?” and prompt each person about their work. My program partners and I modeled that practice by joining check-ins, listening, and asking questions.
+        +caseFigure({id: "meow-mentor-practice", src: "/assets/img/folio/project--home-depot-design-leadership/mentor-checkin-v2.png", alt: "Conceptual illustration of a mentor listening as two adult interns discuss paper wireframes.", width: "1672", height: "941", loading: "lazy", provenance: "AI-generated illustration", caption: "A conceptual mentoring scene, not a record of actual participants.", fullSize: false})
+        +storyComparison({id: "meow-prompts-caption", title: "Mentor check-in prompts", columns: [{label: "Surface the obstacle", title: "Where did you get stuck?", detail: "Give each person room to identify what they need help with."}, {label: "Invite reflection", title: "How do you feel about the last module?", detail: "Ask about the learning experience, not only task completion."}, {label: "Understand the next step", title: "What are you working through now?", detail: "Make the current question visible to the mentor and team."}], caption: "Illustrative example: reconstructed from Aaron’s documented account of the mentor training. The prompts are training examples, not participant quotations."})
+
+    +caseSection({labelledby: "home-depot-design-leadership-2"})
+        p.folio-eyebrow E — Engagement
+        h2#home-depot-design-leadership-2 Make feedback part of the work
+        p Teams developed problem statements, explored alternatives through Crazy 8s and sketches, and built low-fidelity prototypes. At the midpoint, they presented the opportunity, business goals, and design decisions to champions and stakeholders.
+        p That review gave teams a chance to explain their reasoning and respond to feedback. They revised prototypes, coded solutions, and tested with Home Depot customers and employees. The work produced working explorations and field tests; it did not establish production launches.
+
+    +caseSection({labelledby: "home-depot-design-leadership-3"})
+        p.folio-eyebrow A — Action
+        h2#home-depot-design-leadership-3 Help the program carry forward
+        p I co-founded and helped run UX MEOW from 2019 through my departure in 2022. We adapted it for remote work in 2020, and returning mentors helped train others and update the materials.
+        p The program expanded across engineering, UX, and product management, then opened to employees interested in technical roles. Its structure gave participants a way to build experience while contributing to a real project.
+
+    +caseOutcome("home-depot-design-leadership-success", "From six teams to a broader opportunity")
+        +caseResults([{value: "6 → 16", label: "Project teams as UX MEOW expanded"}, {value: "3", label: "Participants who accepted full-time UX-team roles"}], "Reported program outcomes. The first cohort had 12 interns and 12 designer mentors across six teams.")
+        p UX MEOW grew from six to 16 project teams. Three participants from non-technical backgrounds applied for and accepted full-time UX-team positions. These were shared program outcomes, supported by my co-founder, mentors, project champions, and the teams involved.
+        p My takeaway: leadership development needs a place to practice. MEOW combined real work, guidance, and feedback so participants could contribute while developing the skills to lead others.

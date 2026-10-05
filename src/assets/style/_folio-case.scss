@@ -1,6 +1,7 @@
 /* ——— Case study shell (Classroom + Green Loom) ——— */
 
 .folio-main--case {
+  margin-bottom: clamp(24px, 4vw, 48px);
   background: #fff;
 }
 
@@ -106,7 +107,7 @@
 }
 
 .folio-case__section {
-  padding: 80px $pad;
+  padding: 64px $pad;
 }
 
 .folio-case__section--tint {
@@ -156,7 +157,7 @@
 
 .folio-case__callout {
   margin: 0;
-  padding: 80px $pad;
+  padding: 64px $pad;
   background: #333;
 }
 
@@ -176,7 +177,7 @@
 }
 
 .folio-case__outcome {
-  padding: 80px $pad;
+  padding: 64px $pad;
   background: #f8b731;
 }
 

@@ -1,0 +1,28 @@
+include folio-shared.pug
+block caseConfig
+
+doctype html
+html(lang="en")
+    head
+        +folioHead(caseProject.seoTitle, caseProject.description, caseProject.href, 'folio', caseProject.shareImage)
+        if caseId === 'classroom'
+            link(rel="stylesheet" href="/assets/style/classroom-demo.css")
+        if caseId === 'price-adjustments'
+            link(rel="stylesheet" href="/assets/style/markdown-demo.css")
+    body.folio.folio--case(class=caseClasses)
+        +folioShell
+        +folioHeader('work', caseProject.title, '/#' + caseId)
+        main#main.folio-main.folio-main--case
+            article.folio-case(class=caseId === 'green-loom' ? 'green-case' : null)
+                +caseHero
+                    block caseIntro
+                    +caseFacts
+                        each fact in caseProject.facts
+                            .folio-case__fact
+                                dt= fact.label
+                                dd= fact.value
+                    block caseMedia
+                block caseStory
+            +caseStudyFooter(caseInvitation, folioProjects[caseProject.next])
+        script(src="/assets/js/case-disclosures.js" defer)
+        block caseScripts

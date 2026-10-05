@@ -35,12 +35,13 @@ let css=fs.readFileSync(app+'/app/tokens.css','utf8').replaceAll('../app/',app+'
 const result=await postcss([tailwind({base:app})]).process(css,{from:app+'/app/tokens.css'});
 const extra=`html,body,#root{height:100%;margin:0}body{font-family:Arial,sans-serif;color:#212124}.demo{height:100%;display:flex;flex-direction:column;background:#fafafa}.demo-nav{height:64px;flex-shrink:0;background:#212124;color:white;display:flex;align-items:center;gap:16px;padding:0 24px}.demo-nav>span{margin-left:auto;font-size:13px;color:#cbd5e1}.demo-nav button{color:white}.demo-workspace{display:grid;grid-template-columns:330px minmax(0,1fr);flex:1;min-height:0}.demo-list{display:flex;flex-direction:column;min-height:0;border-right:1px solid #e2e8f0;background:#fff}.demo-store{padding:20px;display:grid;gap:4px;border-bottom:1px solid #e2e8f0}.demo-store span{color:#64748b;font-size:12px}.demo-collection{flex:1;min-height:0}.demo-detail{padding:28px;overflow:auto;min-width:0}.demo-empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;max-width:340px;margin:auto}.demo-empty h1{font-size:22px;font-weight:600}.demo-empty p{font-size:14px;color:#64748b;line-height:1.6}.demo-back{display:none}.demo-message{font-size:13px;color:#166534;margin-top:16px}.catalog-tab-slide{overflow:hidden}@media(max-width:650px){.demo-workspace{display:block;position:relative}.demo-list{height:100%;border-right:0}.demo-detail{display:none;height:100%;padding:20px}.has-detail .demo-list{display:none}.has-detail .demo-detail{display:block}.demo-back{display:inline-flex;margin-bottom:20px}.demo-nav{padding:0 16px}.demo-nav>span{font-size:12px}}`;
 const emitted=fs.existsSync(out+'/resume.css')?fs.readFileSync(out+'/resume.css','utf8'):'';
-fs.writeFileSync(out+'/prototype.css',result.css+'\n'+emitted+'\n'+extra+'\n'+fs.readFileSync(dir+'/polish.css','utf8'));
+fs.writeFileSync(out+'/prototype.css',result.css+'\n'+emitted+'\n'+extra);
 fs.copyFileSync(dir+'/index.html',out+'/index.html');
+fs.copyFileSync(dir+'/polish.css',out+'/polish.css');
 fs.copyFileSync(out+'/prototype.css',dir+'/prototype.css');
 fs.copyFileSync(out+'/prototype.js',dir+'/prototype.js');
 const imagePath='/assets/img/folio/project--green-loom/catalog-sample.jpg';
-fs.writeFileSync(out+'/prototype.js',fs.readFileSync(out+'/prototype.js','utf8').replaceAll('/demo/catalog-sample.jpg',imagePath));
+fs.writeFileSync(out+'/prototype.js',fs.readFileSync(out+'/prototype.js','utf8').replaceAll('/demo/catalog-sample.jpg',imagePath).replace(/[ \t]+$/gm,''));
 fs.copyFileSync(out+'/prototype.js',dir+'/prototype.js');
 fs.mkdirSync(repo+'/dist/assets/img/folio/project--green-loom',{recursive:true});
 fs.copyFileSync(app+'/public/demo/catalog-sample.jpg',repo+'/dist'+imagePath);

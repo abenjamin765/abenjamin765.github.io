@@ -13,6 +13,6 @@ module.exports = {
   layout: "layout.njk",
   tags: "post",
   isPost: true,
-  shareImage: "/assets/img/folio/hero-portrait.png",
+  shareImage: "/assets/img/folio/share/writing.jpg",
   eleventyComputed: { readingMinutes },
 };

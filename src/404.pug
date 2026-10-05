@@ -1,0 +1,20 @@
+include includes/folio-shared.pug
+doctype html
+html(lang="en")
+    head
+        +folioHead('Page not found | Aaron Benjamin', 'Return to Aaron Benjamin’s selected work, writing, or résumé.', '/404.html')
+        meta(name="robots" content="noindex,follow")
+    body.folio
+        +folioShell
+        +folioHeader('work', 'Selected work', '/#work')
+        main#main.folio-main.folio-main--case.writing-main
+            .writing-intro
+                p.folio-eyebrow 404
+                h1 This page has moved or doesn’t exist.
+                p You can return to the portfolio or explore another part of the site.
+                a.folio-btn(href="/#work") View selected work
+                p
+                    a.evidence-link(href="/writing.html") Read my writing
+                p
+                    a.evidence-link(href="/resume.html") View my résumé
+            +folioFooter(false)

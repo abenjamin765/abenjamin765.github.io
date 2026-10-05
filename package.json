@@ -15,7 +15,10 @@
     "resume:validate": "node scripts/validate-resume.js",
     "resume:builder": "gulp resumeBuilder",
     "images:variants": "python3 scripts/build-image-variants.py",
-    "test:green": "node scripts/test-green-prototype.js"
+    "test:green": "node scripts/test-green-prototype.js",
+    "images:share": "node scripts/build-share-images.js",
+    "test:readiness": "node scripts/test-employer-readiness.js",
+    "test:prototype-a11y": "node scripts/test-prototype-accessibility.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.5",
+    "axe-core": "^4.14.0",
     "browser-sync": "^3.0.4",
     "express": "^5.1.0",
     "gulp": "^5.0.1",

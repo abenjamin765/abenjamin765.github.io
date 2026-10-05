@@ -2,6 +2,7 @@
   "/assets/img/folio/hero-hi.png": {
     "width": 361,
     "height": 380,
+    "sourceHash": "5b3698a1bd2b0f25b50b3882922f5152e04a4bcab81a841c8a85780b70b15f70",
     "variants": [
       {
         "src": "/assets/img/folio/responsive/hero-hi.png-240.webp",
@@ -16,6 +17,7 @@
   "/assets/img/folio/hero-portrait.png": {
     "width": 714,
     "height": 750,
+    "sourceHash": "e620bd6826e2387b76df2331a71cf3376266a6c9a3a5986be2559f817c6721e3",
     "variants": [
       {
         "src": "/assets/img/folio/responsive/hero-portrait.png-240.webp",
@@ -34,6 +36,7 @@
   "/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--email-2x.png": {
     "width": 2220,
     "height": 1826,
+    "sourceHash": "6c0ef1e3c3b3dd567d46a26974a2dd7bb9c1011eff5fe54be5a45fb7070eb21e",
     "variants": [
       {
         "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--email-2x.png-240.webp",
@@ -60,6 +63,7 @@
   "/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--hero-2x.jpg": {
     "width": 1920,
     "height": 1320,
+    "sourceHash": "24da4780b4c17e042011d7a05b38fc3ef9b5cfd2104ffee0378fb66356d97fc2",
     "variants": [
       {
         "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--hero-2x.jpg-240.webp",
@@ -86,6 +90,7 @@
   "/assets/img/folio/project--assignment-management/assignment-management--object-model.png": {
     "width": 1760,
     "height": 846,
+    "sourceHash": "da6ac958b6ca7e6326b8de72e2a6d01e89112e242b264f2ad75175106d245f31",
     "variants": [
       {
         "src": "/assets/img/folio/project--assignment-management/responsive/assignment-management--object-model.png-240.webp",
@@ -112,6 +117,7 @@
   "/assets/img/folio/project--assignment-management/classroom-counts-without-names.png": {
     "width": 1032,
     "height": 580,
+    "sourceHash": "ad733443f37d3805e42452f61c784bf95e5546895de261ead4448582e7c6e1a0",
     "variants": [
       {
         "src": "/assets/img/folio/project--assignment-management/responsive/classroom-counts-without-names.png-240.webp",
@@ -134,6 +140,7 @@
   "/assets/img/folio/project--assignment-management/classroom-student-table-hero-2x.png": {
     "width": 1800,
     "height": 720,
+    "sourceHash": "2721266e6a36ab675e2666f53015edbb617dcce04fa3ecaed4b2ab37e57e8d29",
     "variants": [
       {
         "src": "/assets/img/folio/project--assignment-management/responsive/classroom-student-table-hero-2x.png-240.webp",
@@ -160,6 +167,7 @@
   "/assets/img/folio/project--curbside-pickup/app-pickup-notifications.jpg": {
     "width": 3072,
     "height": 1822,
+    "sourceHash": "30d00bfa0649590b58965567a5a3b3f777232f9dc0982e36c906254279a50ca4",
     "variants": [
       {
         "src": "/assets/img/folio/project--curbside-pickup/responsive/app-pickup-notifications.jpg-240.webp",
@@ -186,6 +194,7 @@
   "/assets/img/folio/project--curbside-pickup/hero-curbside.png": {
     "width": 1800,
     "height": 720,
+    "sourceHash": "2fb6fcbfa1c97d3377439da6bd7fa323289d41086391bd0f58a48292eeec74bd",
     "variants": [
       {
         "src": "/assets/img/folio/project--curbside-pickup/responsive/hero-curbside.png-240.webp",
@@ -212,6 +221,7 @@
   "/assets/img/folio/project--curbside-pickup/pickup-email-explained.png": {
     "width": 1536,
     "height": 1024,
+    "sourceHash": "0c35458c3faaf65c2ede4b11fd6f8b91df98ec84da2e7877121e515e2afb6a54",
     "variants": [
       {
         "src": "/assets/img/folio/project--curbside-pickup/responsive/pickup-email-explained.png-240.webp",
@@ -238,6 +248,7 @@
   "/assets/img/folio/project--curbside-pickup/two-sides-of-the-same-wait-v2.png": {
     "width": 1672,
     "height": 941,
+    "sourceHash": "379d4a621bcbc38e986251d0f7e0d70008381c346b009e2f6b87861b2359c29b",
     "variants": [
       {
         "src": "/assets/img/folio/project--curbside-pickup/responsive/two-sides-of-the-same-wait-v2.png-240.webp",
@@ -264,6 +275,7 @@
   "/assets/img/folio/project--design-dash/dash-connected-plan.png": {
     "width": 1536,
     "height": 1024,
+    "sourceHash": "99952afd4496df9031e560c6b9f2b622523e58b2caaf53b495c63a7d02d0029b",
     "variants": [
       {
         "src": "/assets/img/folio/project--design-dash/responsive/dash-connected-plan.png-240.webp",
@@ -290,6 +302,7 @@
   "/assets/img/folio/project--design-dash/dash-example-hero.png": {
     "width": 1672,
     "height": 941,
+    "sourceHash": "202cf174123a20d6ad8192ff006ba46ddc3a06be3ac7cd73cc81997fd10768e8",
     "variants": [
       {
         "src": "/assets/img/folio/project--design-dash/responsive/dash-example-hero.png-240.webp",
@@ -316,6 +329,7 @@
   "/assets/img/folio/project--design-dash/dash-object-guides.png": {
     "width": 1536,
     "height": 1024,
+    "sourceHash": "08fe3b3aa6ca48ac00253b24843863a3e8e08bc8c1682b82904e51837f5f2372",
     "variants": [
       {
         "src": "/assets/img/folio/project--design-dash/responsive/dash-object-guides.png-240.webp",
@@ -342,6 +356,7 @@
   "/assets/img/folio/project--green-loom/catalog-model.png": {
     "width": 1536,
     "height": 1024,
+    "sourceHash": "a6dc5d7c973c10c285be1f465a8383991aa6c4e6c758c065617929ef249c5afb",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/responsive/catalog-model.png-240.webp",
@@ -368,6 +383,7 @@
   "/assets/img/folio/project--green-loom/hero-green-loom.png": {
     "width": 1800,
     "height": 720,
+    "sourceHash": "98692640c84542168f9327bade4b0a9be007eaaffac587d132af0dcac01c66f1",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/responsive/hero-green-loom.png-240.webp",
@@ -394,6 +410,7 @@
   "/assets/img/folio/project--green-loom/products/edible.png": {
     "width": 512,
     "height": 512,
+    "sourceHash": "5a382413903721d587f2c6c815356e1bfa2e37df2c1df741447840a33ee52ecc",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/products/responsive/edible.png-240.webp",
@@ -412,6 +429,7 @@
   "/assets/img/folio/project--green-loom/products/flower.png": {
     "width": 512,
     "height": 512,
+    "sourceHash": "d14873b3cc1d8a1e8dfaab7d973a515bdd355304549bccf975cd78c9c1edd9cb",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/products/responsive/flower.png-240.webp",
@@ -430,6 +448,7 @@
   "/assets/img/folio/project--green-loom/products/preroll.png": {
     "width": 512,
     "height": 512,
+    "sourceHash": "656421cb576e5cf5f850a339073e6d00cfb06782d31222f65d984d10978ea430",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/products/responsive/preroll.png-240.webp",
@@ -448,6 +467,7 @@
   "/assets/img/folio/project--green-loom/products/tincture.png": {
     "width": 512,
     "height": 512,
+    "sourceHash": "33a0c60bd1308f8ee06be6c7e32d03cb99e1f017dd11058f5bd3825c9966ab0e",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/products/responsive/tincture.png-240.webp",
@@ -466,6 +486,7 @@
   "/assets/img/folio/project--green-loom/products/topical.png": {
     "width": 512,
     "height": 512,
+    "sourceHash": "4a80081d629216d94e9238e11a61743c84e36a806382f232a4f77ce961eb65fd",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/products/responsive/topical.png-240.webp",
@@ -484,6 +505,7 @@
   "/assets/img/folio/project--green-loom/products/vape.png": {
     "width": 512,
     "height": 512,
+    "sourceHash": "597bc8d877c8961adcbb8420b4e24cdef7bcc793d6d883a424eb8af87f18fe98",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/products/responsive/vape.png-240.webp",
@@ -502,6 +524,7 @@
   "/assets/img/folio/project--green-loom/schema-model.png": {
     "width": 1536,
     "height": 1024,
+    "sourceHash": "c8f0be87218d77eece9d174314015a9b1b2d5847989f797d4ffeefc75abb84c1",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/responsive/schema-model.png-240.webp",
@@ -528,6 +551,7 @@
   "/assets/img/folio/project--green-loom/wireframe-evidence.png": {
     "width": 1260,
     "height": 760,
+    "sourceHash": "6d09774b193733fb961155cf0ab73694445bb6a883177138896f2a1a466a6596",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/responsive/wireframe-evidence.png-240.webp",
@@ -554,6 +578,7 @@
   "/assets/img/folio/project--green-loom/wireframe-stock.png": {
     "width": 1260,
     "height": 760,
+    "sourceHash": "21ca4b81a7c3fcdeb7bc90cbb4e47d575b9279f4fd3d19df3d07dbd8a019e39b",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/responsive/wireframe-stock.png-240.webp",
@@ -580,6 +605,7 @@
   "/assets/img/folio/project--green-loom/work-paths.png": {
     "width": 1536,
     "height": 1024,
+    "sourceHash": "18365ad8d90a75be8016bb3283cc4102220367aae910047ce4405822493db141",
     "variants": [
       {
         "src": "/assets/img/folio/project--green-loom/responsive/work-paths.png-240.webp",
@@ -606,6 +632,7 @@
   "/assets/img/folio/project--home-depot-design-leadership/leadership-program.png": {
     "width": 1536,
     "height": 1024,
+    "sourceHash": "d0d2461333e0e7197c9090e77f472c8274becc5be13b36465a8878e7cee78647",
     "variants": [
       {
         "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/leadership-program.png-240.webp",
@@ -629,9 +656,37 @@
       }
     ]
   },
+  "/assets/img/folio/project--home-depot-design-leadership/mentor-checkin-v2.png": {
+    "width": 1672,
+    "height": 941,
+    "sourceHash": "2402aef4a03ed17b247482eaef6d5d03f7140759fcb4fdc2d53f4ac48857bf74",
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/mentor-checkin-v2.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/mentor-checkin-v2.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/mentor-checkin-v2.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/mentor-checkin-v2.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/mentor-checkin-v2.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
   "/assets/img/folio/project--job-refresh/employer-reposting-journey.png": {
     "width": 1800,
     "height": 596,
+    "sourceHash": "94060d379b5e7a720d3f83893e09b9bb651c71d84f7f73df211fc6ea0c5592c3",
     "variants": [
       {
         "src": "/assets/img/folio/project--job-refresh/responsive/employer-reposting-journey.png-240.webp",
@@ -658,6 +713,7 @@
   "/assets/img/folio/project--job-refresh/freeware-strategy.png": {
     "width": 800,
     "height": 600,
+    "sourceHash": "25f2e0944f8d1cad7066f4ddc166dff9d6d2c8141b676af924d2354fa68ab10e",
     "variants": [
       {
         "src": "/assets/img/folio/project--job-refresh/responsive/freeware-strategy.png-240.webp",
@@ -676,6 +732,7 @@
   "/assets/img/folio/project--job-refresh/hero-job-refresh.png": {
     "width": 1800,
     "height": 720,
+    "sourceHash": "1a341c63aeedecfaf78ee7cea9e99b1b06e81e9b4579cad4f6953e78d1cdfdd1",
     "variants": [
       {
         "src": "/assets/img/folio/project--job-refresh/responsive/hero-job-refresh.png-240.webp",
@@ -702,6 +759,7 @@
   "/assets/img/folio/project--job-refresh/screen-refresh.png": {
     "width": 1800,
     "height": 720,
+    "sourceHash": "a1d37bcbb0568132b47119d53189de83dfe2e50ac4628ea6a1fdb470656a48f7",
     "variants": [
       {
         "src": "/assets/img/folio/project--job-refresh/responsive/screen-refresh.png-240.webp",
@@ -728,6 +786,7 @@
   "/assets/img/folio/project--many-hats/many-hats--work-card-2x.png": {
     "width": 1760,
     "height": 720,
+    "sourceHash": "1afb1c7ddda95cfff0f2813a32760c6f9ed1e5a590e27bc3def6969d1ed7b281",
     "variants": [
       {
         "src": "/assets/img/folio/project--many-hats/responsive/many-hats--work-card-2x.png-240.webp",
@@ -754,6 +813,7 @@
   "/assets/img/folio/project--price-adjustments/hero-price-adjustments.png": {
     "width": 1800,
     "height": 720,
+    "sourceHash": "87b2b501541bfd48435bc5c7f370f786a05e5709f9c551260dac179ffda4c432",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/hero-price-adjustments.png-240.webp",
@@ -780,6 +840,7 @@
   "/assets/img/folio/project--price-adjustments/markdown-iterations.png": {
     "width": 1672,
     "height": 941,
+    "sourceHash": "c9ce19d11e021102db37e14a09b318a9ca566503144545ebcc65646d6770e6ba",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-iterations.png-240.webp",
@@ -806,6 +867,7 @@
   "/assets/img/folio/project--price-adjustments/markdown-workaround.png": {
     "width": 1672,
     "height": 941,
+    "sourceHash": "5bfe189e63a2efd182bd48bd9d38d96386d4b6c6bffd4f4e202f9ae17331dfd0",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-workaround.png-240.webp",
@@ -832,6 +894,7 @@
   "/assets/img/folio/project--price-adjustments/product-bridge-transparent.png": {
     "width": 1254,
     "height": 1254,
+    "sourceHash": "7e066f0bb027d9b724b8c51eea302bbbcb0c74d33d459b25a317142033aa3795",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/product-bridge-transparent.png-240.webp",
@@ -858,6 +921,7 @@
   "/assets/img/folio/project--price-adjustments/product-bulb-transparent.png": {
     "width": 1254,
     "height": 1254,
+    "sourceHash": "e691ffaab57f3b4407c2f9f73e5c2c6230d5f11d2ffb57ef8b8093d0c4069ead",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/product-bulb-transparent.png-240.webp",
@@ -884,6 +948,7 @@
   "/assets/img/folio/project--price-adjustments/product-doorbell-transparent.png": {
     "width": 1254,
     "height": 1254,
+    "sourceHash": "6b63f0a5e739b62e2aa30cf612603d1b7d4b4bbfd281db98ca61928ca75d9319",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/product-doorbell-transparent.png-240.webp",
@@ -910,6 +975,7 @@
   "/assets/img/folio/project--price-adjustments/product-speaker-transparent.png": {
     "width": 1254,
     "height": 1254,
+    "sourceHash": "a2db545e015f49b6269549a0e4a15efa1f0d0cc7265f9ca37ef205ba1e95eb77",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/product-speaker-transparent.png-240.webp",
@@ -936,6 +1002,7 @@
   "/assets/img/folio/project--price-adjustments/product-thermostat-transparent.png": {
     "width": 1254,
     "height": 1254,
+    "sourceHash": "27d7ed3919f594d7a5bde554a22b62f4a37de167a12a757ff1708ec6023cb6e0",
     "variants": [
       {
         "src": "/assets/img/folio/project--price-adjustments/responsive/product-thermostat-transparent.png-240.webp",
@@ -962,6 +1029,7 @@
   "/assets/img/folio/thumbnails/a-to-z-first-claim.png": {
     "width": 880,
     "height": 660,
+    "sourceHash": "9413445d27c80b01929cafcb12b9e0c0d8169a4e7e62ff9278a830d0bf5f8720",
     "variants": [
       {
         "src": "/assets/img/folio/thumbnails/responsive/a-to-z-first-claim.png-240.webp",
@@ -984,6 +1052,7 @@
   "/assets/img/folio/thumbnails/classroom.png": {
     "width": 880,
     "height": 660,
+    "sourceHash": "8cd064b5931569563abb198ee3c386a138ee8b7e4e919a26d17b93b6024bdfef",
     "variants": [
       {
         "src": "/assets/img/folio/thumbnails/responsive/classroom.png-240.webp",
@@ -1006,6 +1075,7 @@
   "/assets/img/folio/thumbnails/curbside-pickup.png": {
     "width": 880,
     "height": 660,
+    "sourceHash": "096337156d98f6dbc53bea7728c5a74da061c0ef6660b5b6ea1e07632ac3e36e",
     "variants": [
       {
         "src": "/assets/img/folio/thumbnails/responsive/curbside-pickup.png-240.webp",
@@ -1028,6 +1098,7 @@
   "/assets/img/folio/thumbnails/green-loom.png": {
     "width": 880,
     "height": 660,
+    "sourceHash": "f3133da3c314f2fa7bb48af854dd68be3d58e40706bff4e8fbb661bdef224ca8",
     "variants": [
       {
         "src": "/assets/img/folio/thumbnails/responsive/green-loom.png-240.webp",
@@ -1050,6 +1121,7 @@
   "/assets/img/folio/thumbnails/home-depot-design-leadership.png": {
     "width": 880,
     "height": 660,
+    "sourceHash": "9d32c79f09a9863ad05ccc35c929eca1482d3f0ee423357d04c2cd7eb9bb2286",
     "variants": [
       {
         "src": "/assets/img/folio/thumbnails/responsive/home-depot-design-leadership.png-240.webp",
@@ -1072,6 +1144,7 @@
   "/assets/img/folio/thumbnails/indeed-job-refresh.png": {
     "width": 880,
     "height": 660,
+    "sourceHash": "8527de88ee507b6047281dbbfd375f8615d48bd3e77fbf408a2801ddbf5d91f6",
     "variants": [
       {
         "src": "/assets/img/folio/thumbnails/responsive/indeed-job-refresh.png-240.webp",
@@ -1094,6 +1167,7 @@
   "/assets/img/folio/thumbnails/price-adjustments.png": {
     "width": 880,
     "height": 660,
+    "sourceHash": "7db3978b340de9eff30b010de0a21b23261f71b079fb366d49fdc5ba9e721bd4",
     "variants": [
       {
         "src": "/assets/img/folio/thumbnails/responsive/price-adjustments.png-240.webp",
@@ -1113,9 +1187,56 @@
       }
     ]
   },
+  "/assets/img/folio/thumbnails/tile-design-dash.jpg": {
+    "width": 840,
+    "height": 200,
+    "sourceHash": "192e9c2fbb08731e876ce747f93eb376d3fa537f10cad3a6318170047214a895",
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-840.webp",
+        "width": 840
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/tile-many-hats.jpg": {
+    "width": 840,
+    "height": 200,
+    "sourceHash": "3aaf71b67696a352e6da8bc90182513496da0e97eca1ddeffd9f5c5722ab3178",
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-840.webp",
+        "width": 840
+      }
+    ]
+  },
   "/assets/img/folio/work-classroom.png": {
     "width": 2640,
     "height": 1080,
+    "sourceHash": "96b0dd068bade2948e8d0f20f820b1361e363653b1d516a1d218a340f3bc6376",
     "variants": [
       {
         "src": "/assets/img/folio/responsive/work-classroom.png-240.webp",
@@ -1139,47 +1260,30 @@
       }
     ]
   },
-  "/assets/img/folio/thumbnails/tile-design-dash.jpg": {
-    "width": 840,
-    "height": 200,
+  "/assets/img/hero-ai.png": {
+    "width": 1600,
+    "height": 900,
+    "sourceHash": "b73d4855116c7a848ebc2e47b49488ed712286ca32aab77dfe45646c25b0fa52",
     "variants": [
       {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-240.webp",
+        "src": "/assets/img/responsive/hero-ai.png-240.webp",
         "width": 240
       },
       {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-480.webp",
+        "src": "/assets/img/responsive/hero-ai.png-480.webp",
         "width": 480
       },
       {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-800.webp",
+        "src": "/assets/img/responsive/hero-ai.png-800.webp",
         "width": 800
       },
       {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-840.webp",
-        "width": 840
-      }
-    ]
-  },
-  "/assets/img/folio/thumbnails/tile-many-hats.jpg": {
-    "width": 840,
-    "height": 200,
-    "variants": [
-      {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-240.webp",
-        "width": 240
+        "src": "/assets/img/responsive/hero-ai.png-1100.webp",
+        "width": 1100
       },
       {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-480.webp",
-        "width": 480
-      },
-      {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-800.webp",
-        "width": 800
-      },
-      {
-        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-840.webp",
-        "width": 840
+        "src": "/assets/img/responsive/hero-ai.png-1600.webp",
+        "width": 1600
       }
     ]
   }
