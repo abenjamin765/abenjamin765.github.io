@@ -1,0 +1,36 @@
+/* Portfolio embed refinements; original application components remain intact. */
+.demo-workspace{grid-template-columns:300px minmax(0,1fr)}
+.demo-detail{padding:0 24px 28px;scrollbar-gutter:stable;background:#f7f8f6;overscroll-behavior:contain}
+.demo-detail-heading{position:sticky;top:0;z-index:20;background:#f7f8f6;padding:24px 0 16px;border-bottom:1px solid #dde2db;margin-bottom:20px;display:grid;gap:18px}
+.demo-detail-heading h1{font-size:24px;line-height:1.25;white-space:normal;letter-spacing:-.5px}
+.demo-detail-heading [data-slot="detail-object-header"]>div{min-width:0}
+.demo-detail-heading [data-slot="detail-object-header"] p{font-size:13px;line-height:1.5;color:#667166}
+.demo-detail [data-slot="catalog-detail-form-row"]{gap:12px;padding-top:12px;padding-bottom:12px}
+.demo-detail [data-slot="catalog-detail-form-label"]{width:124px;padding-left:0;font-size:12px;color:#586358}
+.demo-detail [data-slot="catalog-detail-form-control"]{font-size:13px}
+.demo-detail input,.demo-detail textarea,.demo-detail [role="combobox"]{font-size:13px;box-shadow:none}
+.demo-detail input[readonly]{background:#eef1ec;color:#586358;border-color:#dce2d8}
+.demo-detail input:disabled,.demo-detail button:disabled{opacity:.75}
+.demo-detail [data-slot="catalog-detail-form"]{overflow-wrap:anywhere}
+.demo-detail [role="tabpanel"][data-state="active"]>div>h2{padding-left:0;color:#333e33;font-size:14px}
+.demo-detail button:focus-visible,.demo-list a:focus-visible{outline:2px solid #427654;outline-offset:3px}
+.demo-detail a,.demo-detail button.text-primary{color:#286440}
+.demo-message:empty{display:none}
+.demo-message:not(:empty){padding:12px 14px;border:1px solid #cedece;border-radius:8px;background:#eef5ed;line-height:1.5}
+.demo-nav{height:58px}
+.demo-store{padding:18px 20px}
+@media(max-width:650px){
+ .demo-workspace{display:block}.demo-detail{padding:0 18px 24px}
+ .demo-back{margin:14px 0 0}.demo-detail-heading{padding-top:16px;gap:14px}
+ .demo-detail-heading h1{font-size:22px}
+ .demo-detail [data-slot="catalog-detail-form-label"]{width:108px}
+}
+@media(max-width:420px){
+ .demo-detail [data-slot="catalog-detail-form-row"]{flex-direction:column;gap:8px}
+ .demo-detail [data-slot="catalog-detail-form-label"]{width:auto;padding-top:0}
+ .demo-detail [data-slot="catalog-detail-form-control"]{width:100%}
+}
+
+/* Let each category follow its current contents rather than a cached Radix height. */
+.demo-collection [data-slot="accordion-content"]>div{height:auto}
+.demo-collection [data-slot="accordion"]{gap:16px}

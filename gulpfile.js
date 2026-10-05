@@ -52,6 +52,31 @@ const BUILDER_PAGE = "src/resume-builder.pug";
 const BUILDER_SCRIPT = "src/assets/js/resume-builder.js";
 const BUILDER_OUT = path.join(__dirname, "resume/exports/builder");
 
+// Essay metadata comes from the same source as the article.
+function getWritingPosts() {
+  const dir = path.join(__dirname, "content/blog");
+  const blogData = require("./content/blog/blog.11tydata.js");
+  return fs.readdirSync(dir).filter(name => name.endsWith(".md")).map(name => {
+    const inputPath = path.join(dir, name);
+    const raw = fs.readFileSync(inputPath, "utf8");
+    const frontMatter = raw.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+    if (!frontMatter) throw new Error(`Essay front matter missing: ${name}`);
+    const meta = yaml.load(frontMatter[1]);
+    const date = new Date(meta.date);
+    if (!meta.title || !meta.description || Number.isNaN(date.getTime())) {
+      throw new Error(`Essay title, description, or date missing: ${name}`);
+    }
+    return {
+      title: meta.title,
+      description: meta.description,
+      href: `/blog/${path.basename(name, ".md")}/`,
+      isoDate: date.toISOString().slice(0, 10),
+      displayDate: date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }),
+      readingMinutes: blogData.eleventyComputed.readingMinutes({ page: { inputPath } }),
+    };
+  }).sort((a, b) => b.isoDate.localeCompare(a.isoDate));
+}
+
 // Compile Pug templates
 function compilePug() {
   return gulp
@@ -60,6 +85,7 @@ function compilePug() {
       data(function () {
         const yamlData = getYamlData();
         yamlData.resume = JSON.parse(fs.readFileSync(RESUME_PROFILE_EXPORT, "utf8"));
+        yamlData.writingPosts = getWritingPosts();
         return yamlData;
       })
     )
@@ -179,7 +205,8 @@ function compileEleventy(done) {
 async function copyImages() {
   const { default: imagemin, gifsicle, optipng, svgo } = await import("gulp-imagemin");
   await pipeline(
-    gulp.src("src/assets/img/**/*", { encoding: false }),
+    // Keep provenance, prompts, and local debug files in source.
+    gulp.src("src/assets/img/**/*.{png,jpg,jpeg,gif,svg,webp,avif,ico}", { encoding: false }),
     // JPEGs are exported at final quality; mozjpeg's default would re-encode them near quality 75.
     imagemin([gifsicle(), optipng(), svgo()]),
     gulp.dest("dist/assets/img")

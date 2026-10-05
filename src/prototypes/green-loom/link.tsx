@@ -1,0 +1,1 @@
+import React from 'react'; export default function Link({href,scroll,prefetch,...props}) {return <a href={href} {...props} onClick={event=>{event.preventDefault();props.onClick?.(event)}}/>}

@@ -17,6 +17,8 @@ Jul 2024 – Present · Remote
 Senior UX Designer, Indeed
 Oct 2022 – Jul 2024 · Remote
 Ownership of monetization and growth employer experience focused on driving revenue
+- Designed Job Refresh, owning information architecture, interaction design, messaging, prototypes, and stakeholder alignment; it became part of Sponsored Jobs after six months of free availability.
+- Addressed employers’ closing-and-reposting workaround with a flow requiring substantially updated job information; employers reported less time and effort than reposting.
 - Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.
 - Partnered with leadership to shape and execute the companys marketplace monetization strategy.
 - Delivered end-to-end design from discovery through launch, influencing product development across multiple teams.
@@ -27,7 +29,7 @@ Ownership of monetization and growth employer experience focused on driving reve
 - Hosted recurring team events to build morale and strengthen organizational culture.
 - Contributed to a comprehensive service blueprint mapping all internal systems and user touchpoints.
 
-Senior Product Designer, Redfin
+Senior Product Designer II, Redfin
 Feb 2022 – Sep 2022 · Remote
 Strategic partner for vision and roadmap development
 - Influenced product roadmap and strategy by delivering user research that realigned business priorities toward customer-first features.
@@ -64,7 +66,7 @@ Lead agile design process for cross-functional team
 - Led a customer cohort analysis across three channels, informing roadmap direction.
 - Redesigned the donation experience for a high school fundraising platform, improving conversion rates.
 
-UX Designer, Amazon
+UX Designer II, Amazon
 Aug 2016 – Dec 2017 · Seattle, WA
 Lead the design of customer-facing tools from concept to delivery.
 - Redesigned the first A-to-z claim notification. In the 60 days after the U.S. update, 88% of sellers who opened the email felt confident they could avoid future claims, related Seller Support call volume fell 14%, and seller-initiated refunds trended toward a 30% year-over-year increase.
@@ -116,7 +118,7 @@ Design collateral for digital marketing campaigns including landing pages, email
 - Develop strategic style guides to support product life-cycle events.
 
 EDUCATION
-FullSail University — Winter Park, FL · 2008
+Full Sail University — Winter Park, FL · 2009
 
 SKILLS
 Focus: Accessibility & Inclusive Design, UX Leadership & Strategy, AI-Enhanced Design

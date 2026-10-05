@@ -1,0 +1,18 @@
+Generated with the built-in image generation tool.
+Reference image: cart-product-thumbnails.png
+Transparency: enabled; verified RGBA alpha range 0–255 for every output.
+
+/Users/aaron/Sites/abenjamin765.github.io/src/assets/img/folio/project--price-adjustments/product-thermostat-transparent.png
+Use case: background-extraction. Edit target: the supplied five-product image. Extract ONLY the thermostat (first product on the left) as one individual product cutout. Preserve its existing appearance and perspective. Remove all other products, the white background, ground plane, and cast shadow. Output a square PNG with genuine transparent alpha background. Center the entire product, fully visible, with at least 15 percent transparent padding around every edge. No cropping, no extra items, no labels. This is a small cart thumbnail; crisp clean edges and an uncropped silhouette are essential.
+
+/Users/aaron/Sites/abenjamin765.github.io/src/assets/img/folio/project--price-adjustments/product-speaker-transparent.png
+Use case: background-extraction. Edit target: the supplied five-product image. Extract ONLY the speaker (second product) as one individual product cutout. Preserve its existing appearance and perspective. Remove all other products, the white background, ground plane, and cast shadow. Output a square PNG with genuine transparent alpha background. Center the entire product, fully visible, with at least 15 percent transparent padding around every edge. No cropping, no extra items, no labels. This is a small cart thumbnail; crisp clean edges and an uncropped silhouette are essential.
+
+/Users/aaron/Sites/abenjamin765.github.io/src/assets/img/folio/project--price-adjustments/product-bulb-transparent.png
+Use case: background-extraction. Edit target: the supplied five-product image. Extract ONLY the light bulb (third product) as one individual product cutout. Preserve its existing appearance and perspective. Remove all other products, the white background, ground plane, and cast shadow. Output a square PNG with genuine transparent alpha background. Center the entire product, fully visible, with at least 15 percent transparent padding around every edge. No cropping, no extra items, no labels. This is a small cart thumbnail; crisp clean edges and an uncropped silhouette are essential.
+
+/Users/aaron/Sites/abenjamin765.github.io/src/assets/img/folio/project--price-adjustments/product-bridge-transparent.png
+Use case: background-extraction. Edit target: the supplied five-product image. Extract ONLY the white Hue bridge (fourth product) as one individual product cutout. Preserve its existing appearance and perspective. Remove all other products, the white background, ground plane, and cast shadow. Output a square PNG with genuine transparent alpha background. Center the entire product, fully visible, with at least 15 percent transparent padding around every edge. No cropping, no extra items, no labels. This is a small cart thumbnail; crisp clean edges and an uncropped silhouette are essential.
+
+/Users/aaron/Sites/abenjamin765.github.io/src/assets/img/folio/project--price-adjustments/product-doorbell-transparent.png
+Use case: background-extraction. Edit target: the supplied five-product image. Extract ONLY the video doorbell (fifth product on the right) as one individual product cutout. Preserve its existing appearance and perspective. Remove all other products, the white background, ground plane, and cast shadow. Output a square PNG with genuine transparent alpha background. Center the entire product, fully visible, with at least 15 percent transparent padding around every edge. No cropping, no extra items, no labels. This is a small cart thumbnail; crisp clean edges and an uncropped silhouette are essential.

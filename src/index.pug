@@ -58,7 +58,7 @@ html(lang="en")
                         p.folio-hero__dek I'm a UX and product leader with 10+ years of experience turning complex problems into useful, scalable products for companies including Amazon, The Home Depot, HP, and AT&T.
                         button.folio-motion-toggle(type="button" hidden aria-pressed="false") Pause word rotation
                     .folio-hero__media
-                        img(src="assets/img/folio/hero-hi.png" alt="Illustrated portrait of Aaron Benjamin waving hello" width="238" height="250")
+                        img(src="assets/img/folio/hero-hi.png" srcset=folioSrcset("assets/img/folio/hero-hi.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Illustrated portrait of Aaron Benjamin waving hello" width="238" height="250")
             section.folio-work#work(aria-labelledby="selected-work-title")
                 .folio-work__inner
                     .folio-section-head
@@ -69,7 +69,7 @@ html(lang="en")
             section.folio-editorial-section(aria-labelledby="leadership-title")
                 .folio-section-head
                     p.folio-eyebrow#leadership-title Leadership in practice
-                +projectCard({"id": "home-depot-design-leadership", "title": "Design Leadership at The Home Depot", "status": "The Home Depot · Staff-level influence", "dek": "Connected interns, mentors, and innovation projects—and helped teams put evidence and accessibility insights into practice.", "outcome": "Six to 16 project teams; three participants accepted UX-team roles.", "href": "/home-depot-design-leadership.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/home-depot-design-leadership.png", "alt": "UX MEOW illustration with a Home Depot cap and laptop", "width": 880, "height": 660}})
+                +projectCard({"id": "home-depot-design-leadership", "title": "Design Leadership at The Home Depot", "status": "The Home Depot · UX MEOW", "dek": "Co-founded UX MEOW to connect interns, designer mentors, and innovation projects through a guided team sprint.", "outcome": "Six to 16 project teams; three participants accepted UX-team roles.", "href": "/home-depot-design-leadership.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/home-depot-design-leadership.png", "alt": "UX MEOW illustration with a Home Depot cap and laptop", "width": 880, "height": 660}})
             section.folio-editorial-section(aria-labelledby="more-work-title")
                 .folio-section-head
                     p.folio-eyebrow#more-work-title More product work
@@ -81,7 +81,7 @@ html(lang="en")
                 .folio-section-head
                     p.folio-eyebrow#tools-title Tools developed through my work
                 .folio-project-pair
-                        +projectCard({"id": "design-dash", "title": "Design Dash", "status": "Open-source method · Author", "dek": "Connect product evidence, models, requirements, and interface decisions.", "outcome": "Used in classroom workshops; the public method remains in development.", "href": "/design-dash.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/tile-design-dash.jpg", "alt": "The Design Dash logo", "width": 840, "height": 200}})
+                        +projectCard({"id": "design-dash", "title": "The Design Dash", "status": "Open-source process · Author", "dek": "Connect product evidence, models, requirements, and interface decisions.", "outcome": "A connected plan with Object Guides, wireframes, and technical requirements.", "href": "/design-dash.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/tile-design-dash.jpg", "alt": "The Design Dash logo", "width": 840, "height": 200}})
                         +projectCard({"id": "many-hats", "title": "Many Hats", "status": "Open-source agent system · Author", "dek": "Give specialists explicit responsibilities and keep decisions with the human.", "outcome": "Public v0.1 with a replayable fictional demonstration.", "href": "/many-hats.html", "cta": "Read the story →", "feature": false, "image": {"src": "assets/img/folio/thumbnails/tile-many-hats.jpg", "alt": "A person wearing a stack of hats beside the tagline: Specialized skills for all those voices in your laptop.", "width": 840, "height": 200}})
             section.folio-editorial-section#about(aria-labelledby="about-title")
                 .folio-section-head
@@ -90,5 +90,7 @@ html(lang="en")
                     p My work has taken me through classrooms, marketplaces, stores, and enterprise tools. I’m currently a Senior UX Designer at Renaissance, connecting research and product models with the details people need to act.
                     p I’m interested in Staff and Principal IC work where I can shape direction, stay involved in delivery, and help others make better decisions along the way.
                     a.folio-text-link(href="/resume.html") Explore my experience →
+                    p
+                        a.folio-text-link(href="/writing.html") Read my writing →
             +folioFooter(true, 'Have a complex problem your team is working through?', null, true)
         script(src="assets/js/hero-rotator.js" defer)

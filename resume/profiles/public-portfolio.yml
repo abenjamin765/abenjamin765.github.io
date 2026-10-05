@@ -24,8 +24,8 @@ roles:
       - claim_id: claim-renaissance-ooux
   - role_id: role-indeed-senior-ux-designer
     claims:
-      - claim_id: claim-indeed-monetization-growth
-      - claim_id: claim-indeed-ab-tests
+      - claim_id: claim-indeed-refresh-delivery
+      - claim_id: claim-indeed-refresh-feedback
       - claim_id: claim-indeed-ux-working-group
   - role_id: role-redfin-senior-product-designer
     claims:
@@ -48,7 +48,7 @@ roles:
       - claim_id: claim-amazon-seller-tools
   - role_id: role-hp-ux-lead
     claims:
-      - claim_id: claim-hp-team-size
+      - claim_id: claim-hp-grommet
   - role_id: role-att-senior-ux-designer
     claims:
       - claim_id: claim-att-responsive-experiences

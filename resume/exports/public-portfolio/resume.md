@@ -22,11 +22,11 @@ I lead design for complex product systems, connecting research, shared models, a
 
 *Oct 2022 – Jul 2024 · Remote*
 
-- Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.
-- Generated new revenue streams and cost savings by designing and analyzing over 30 A/B tests for employer monetization initiatives.
+- Designed Job Refresh, owning information architecture, interaction design, messaging, prototypes, and stakeholder alignment; it became part of Sponsored Jobs after six months of free availability.
+- Addressed employers’ closing-and-reposting workaround with a flow requiring substantially updated job information; employers reported less time and effort than reposting.
 - Scaled new design methods company-wide by founding a cross-functional UX working group, improving design craft and consistency.
 
-### Senior Product Designer — Redfin
+### Senior Product Designer II — Redfin
 
 *Feb 2022 – Sep 2022 · Remote*
 
@@ -50,7 +50,7 @@ I lead design for complex product systems, connecting research, shared models, a
 
 - Led end-to-end design in agile, cross-functional teams, supporting a portfolio of fundraising products.
 
-### UX Designer — Amazon
+### UX Designer II — Amazon
 
 *Aug 2016 – Dec 2017 · Seattle, WA*
 
@@ -61,7 +61,7 @@ I lead design for complex product systems, connecting research, shared models, a
 
 *Sep 2015 – Aug 2016 · Alpharetta, GA*
 
-- Managed and supported a team of four designers and a UX researcher.
+- Contributed to the Grommet design system, enhancing accessibility and reusability across HP products.
 
 ### Senior UX Designer — AT&T
 
@@ -71,7 +71,7 @@ I lead design for complex product systems, connecting research, shared models, a
 
 ## Education
 
-- FullSail University — Winter Park, FL · 2008
+- Full Sail University — Winter Park, FL · 2009
 
 ## Skills
 

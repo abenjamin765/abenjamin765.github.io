@@ -93,6 +93,18 @@
       },
       "bullets": [
         {
+          "claim_id": "claim-indeed-refresh-delivery",
+          "variant_id": null,
+          "text": "Designed Job Refresh, owning information architecture, interaction design, messaging, prototypes, and stakeholder alignment; it became part of Sponsored Jobs after six months of free availability.",
+          "status": "unverified"
+        },
+        {
+          "claim_id": "claim-indeed-refresh-feedback",
+          "variant_id": null,
+          "text": "Addressed employers’ closing-and-reposting workaround with a flow requiring substantially updated job information; employers reported less time and effort than reposting.",
+          "status": "unverified"
+        },
+        {
           "claim_id": "claim-indeed-monetization-growth",
           "variant_id": null,
           "text": "Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.",
@@ -156,7 +168,7 @@
     {
       "role_id": "role-redfin-senior-product-designer",
       "company": "Redfin",
-      "title": "Senior Product Designer",
+      "title": "Senior Product Designer II",
       "title_variant_id": null,
       "location": "Remote",
       "start": "2022-02",
@@ -371,7 +383,7 @@
     {
       "role_id": "role-amazon-ux-designer",
       "company": "Amazon",
-      "title": "UX Designer",
+      "title": "UX Designer II",
       "title_variant_id": null,
       "location": "Seattle, WA",
       "start": "2016-08",
@@ -702,10 +714,10 @@
   "education": [
     {
       "id": "education-full-sail",
-      "institution": "FullSail University",
+      "institution": "Full Sail University",
       "credential": null,
       "location": "Winter Park, FL",
-      "year": "2008",
+      "year": "2009",
       "honors": [],
       "status": "unverified"
     }
@@ -761,8 +773,8 @@
   ],
   "stats": {
     "roles": 9,
-    "bullets": 73,
-    "unverified_bullets": 73,
+    "bullets": 75,
+    "unverified_bullets": 75,
     "excluded_by_status": 0,
     "truncated_by_budget": 0
   }

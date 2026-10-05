@@ -87,6 +87,20 @@ experience:
           - path: archive/resume2/index.html
             locator: "line 56"
     claims:
+      - id: claim-indeed-refresh-delivery
+        kind: craft
+        text: Designed Job Refresh, owning information architecture, interaction design, messaging, prototypes, and stakeholder alignment; it became part of Sponsored Jobs after six months of free availability.
+        status: unverified
+        sources:
+          - path: https://docs.google.com/document/d/1vgy_c0gTg9EC0mgCxsc8YRGNYOjpj1Ol/edit
+            locator: Aaron's direct account, September 30, 2026; Delivered feature Job Refresh
+      - id: claim-indeed-refresh-feedback
+        kind: impact
+        text: Addressed employers’ closing-and-reposting workaround with a flow requiring substantially updated job information; employers reported less time and effort than reposting.
+        status: unverified
+        sources:
+          - path: https://docs.google.com/document/d/1vgy_c0gTg9EC0mgCxsc8YRGNYOjpj1Ol/edit
+            locator: Candidate-confirmed qualitative employer feedback; no quantified savings
       - id: claim-indeed-monetization-growth
         kind: impact
         text: Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.
@@ -180,7 +194,7 @@ experience:
 
   - id: role-redfin-senior-product-designer
     company: Redfin
-    title: Senior Product Designer
+    title: Senior Product Designer II
     title_variants:
       - id: redfin-title-current-site
         title: Senior Product Designer
@@ -528,7 +542,7 @@ experience:
 
   - id: role-amazon-ux-designer
     company: Amazon
-    title: UX Designer
+    title: UX Designer II
     title_variants:
       - id: amazon-title-current-site
         title: UX Designer

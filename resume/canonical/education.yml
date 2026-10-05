@@ -2,9 +2,9 @@
 # Every other source wording is an alternate. No winner is chosen.
 education:
   - id: education-full-sail
-    institution: FullSail University
+    institution: Full Sail University
     location: Winter Park, FL
-    year: "2008"
+    year: "2009"
     status: unverified
     sources:
       - path: src/assets/data/education.yml

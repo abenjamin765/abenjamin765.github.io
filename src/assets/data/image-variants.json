@@ -1,0 +1,1186 @@
+{
+  "/assets/img/folio/hero-hi.png": {
+    "width": 361,
+    "height": 380,
+    "variants": [
+      {
+        "src": "/assets/img/folio/responsive/hero-hi.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/responsive/hero-hi.png-361.webp",
+        "width": 361
+      }
+    ]
+  },
+  "/assets/img/folio/hero-portrait.png": {
+    "width": 714,
+    "height": 750,
+    "variants": [
+      {
+        "src": "/assets/img/folio/responsive/hero-portrait.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/responsive/hero-portrait.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/responsive/hero-portrait.png-714.webp",
+        "width": 714
+      }
+    ]
+  },
+  "/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--email-2x.png": {
+    "width": 2220,
+    "height": 1826,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--email-2x.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--email-2x.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--email-2x.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--email-2x.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--email-2x.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--a-to-z-first-claim/a-to-z-first-claim--hero-2x.jpg": {
+    "width": 1920,
+    "height": 1320,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--hero-2x.jpg-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--hero-2x.jpg-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--hero-2x.jpg-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--hero-2x.jpg-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--a-to-z-first-claim/responsive/a-to-z-first-claim--hero-2x.jpg-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--assignment-management/assignment-management--object-model.png": {
+    "width": 1760,
+    "height": 846,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/assignment-management--object-model.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/assignment-management--object-model.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/assignment-management--object-model.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/assignment-management--object-model.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/assignment-management--object-model.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--assignment-management/classroom-counts-without-names.png": {
+    "width": 1032,
+    "height": 580,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-counts-without-names.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-counts-without-names.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-counts-without-names.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-counts-without-names.png-1032.webp",
+        "width": 1032
+      }
+    ]
+  },
+  "/assets/img/folio/project--assignment-management/classroom-student-table-hero-2x.png": {
+    "width": 1800,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-student-table-hero-2x.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-student-table-hero-2x.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-student-table-hero-2x.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-student-table-hero-2x.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--assignment-management/responsive/classroom-student-table-hero-2x.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--curbside-pickup/app-pickup-notifications.jpg": {
+    "width": 3072,
+    "height": 1822,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/app-pickup-notifications.jpg-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/app-pickup-notifications.jpg-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/app-pickup-notifications.jpg-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/app-pickup-notifications.jpg-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/app-pickup-notifications.jpg-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--curbside-pickup/hero-curbside.png": {
+    "width": 1800,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/hero-curbside.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/hero-curbside.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/hero-curbside.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/hero-curbside.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/hero-curbside.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--curbside-pickup/pickup-email-explained.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/pickup-email-explained.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/pickup-email-explained.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/pickup-email-explained.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/pickup-email-explained.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/pickup-email-explained.png-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/folio/project--curbside-pickup/two-sides-of-the-same-wait-v2.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/two-sides-of-the-same-wait-v2.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/two-sides-of-the-same-wait-v2.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/two-sides-of-the-same-wait-v2.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/two-sides-of-the-same-wait-v2.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--curbside-pickup/responsive/two-sides-of-the-same-wait-v2.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--design-dash/dash-connected-plan.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-connected-plan.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-connected-plan.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-connected-plan.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-connected-plan.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-connected-plan.png-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/folio/project--design-dash/dash-example-hero.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-example-hero.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-example-hero.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-example-hero.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-example-hero.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-example-hero.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--design-dash/dash-object-guides.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-object-guides.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-object-guides.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-object-guides.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-object-guides.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--design-dash/responsive/dash-object-guides.png-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/catalog-model.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/catalog-model.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/catalog-model.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/catalog-model.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/catalog-model.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/catalog-model.png-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/hero-green-loom.png": {
+    "width": 1800,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/hero-green-loom.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/hero-green-loom.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/hero-green-loom.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/hero-green-loom.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/hero-green-loom.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/products/edible.png": {
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/edible.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/edible.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/edible.png-512.webp",
+        "width": 512
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/products/flower.png": {
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/flower.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/flower.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/flower.png-512.webp",
+        "width": 512
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/products/preroll.png": {
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/preroll.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/preroll.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/preroll.png-512.webp",
+        "width": 512
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/products/tincture.png": {
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/tincture.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/tincture.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/tincture.png-512.webp",
+        "width": 512
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/products/topical.png": {
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/topical.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/topical.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/topical.png-512.webp",
+        "width": 512
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/products/vape.png": {
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/vape.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/vape.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/products/responsive/vape.png-512.webp",
+        "width": 512
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/schema-model.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/schema-model.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/schema-model.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/schema-model.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/schema-model.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/schema-model.png-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/wireframe-evidence.png": {
+    "width": 1260,
+    "height": 760,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-evidence.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-evidence.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-evidence.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-evidence.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-evidence.png-1260.webp",
+        "width": 1260
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/wireframe-stock.png": {
+    "width": 1260,
+    "height": 760,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-stock.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-stock.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-stock.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-stock.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/wireframe-stock.png-1260.webp",
+        "width": 1260
+      }
+    ]
+  },
+  "/assets/img/folio/project--green-loom/work-paths.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/work-paths.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/work-paths.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/work-paths.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/work-paths.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--green-loom/responsive/work-paths.png-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/folio/project--home-depot-design-leadership/leadership-program.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/leadership-program.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/leadership-program.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/leadership-program.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/leadership-program.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--home-depot-design-leadership/responsive/leadership-program.png-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/folio/project--job-refresh/employer-reposting-journey.png": {
+    "width": 1800,
+    "height": 596,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/employer-reposting-journey.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/employer-reposting-journey.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/employer-reposting-journey.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/employer-reposting-journey.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/employer-reposting-journey.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--job-refresh/freeware-strategy.png": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/freeware-strategy.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/freeware-strategy.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/freeware-strategy.png-800.webp",
+        "width": 800
+      }
+    ]
+  },
+  "/assets/img/folio/project--job-refresh/hero-job-refresh.png": {
+    "width": 1800,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/hero-job-refresh.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/hero-job-refresh.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/hero-job-refresh.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/hero-job-refresh.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/hero-job-refresh.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--job-refresh/screen-refresh.png": {
+    "width": 1800,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/screen-refresh.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/screen-refresh.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/screen-refresh.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/screen-refresh.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--job-refresh/responsive/screen-refresh.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--many-hats/many-hats--work-card-2x.png": {
+    "width": 1760,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--many-hats/responsive/many-hats--work-card-2x.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--many-hats/responsive/many-hats--work-card-2x.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--many-hats/responsive/many-hats--work-card-2x.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--many-hats/responsive/many-hats--work-card-2x.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--many-hats/responsive/many-hats--work-card-2x.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/hero-price-adjustments.png": {
+    "width": 1800,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/hero-price-adjustments.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/hero-price-adjustments.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/hero-price-adjustments.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/hero-price-adjustments.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/hero-price-adjustments.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/markdown-iterations.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-iterations.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-iterations.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-iterations.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-iterations.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-iterations.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/markdown-workaround.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-workaround.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-workaround.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-workaround.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-workaround.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/markdown-workaround.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/product-bridge-transparent.png": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bridge-transparent.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bridge-transparent.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bridge-transparent.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bridge-transparent.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bridge-transparent.png-1254.webp",
+        "width": 1254
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/product-bulb-transparent.png": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bulb-transparent.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bulb-transparent.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bulb-transparent.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bulb-transparent.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-bulb-transparent.png-1254.webp",
+        "width": 1254
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/product-doorbell-transparent.png": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-doorbell-transparent.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-doorbell-transparent.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-doorbell-transparent.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-doorbell-transparent.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-doorbell-transparent.png-1254.webp",
+        "width": 1254
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/product-speaker-transparent.png": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-speaker-transparent.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-speaker-transparent.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-speaker-transparent.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-speaker-transparent.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-speaker-transparent.png-1254.webp",
+        "width": 1254
+      }
+    ]
+  },
+  "/assets/img/folio/project--price-adjustments/product-thermostat-transparent.png": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-thermostat-transparent.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-thermostat-transparent.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-thermostat-transparent.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-thermostat-transparent.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/project--price-adjustments/responsive/product-thermostat-transparent.png-1254.webp",
+        "width": 1254
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/a-to-z-first-claim.png": {
+    "width": 880,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/a-to-z-first-claim.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/a-to-z-first-claim.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/a-to-z-first-claim.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/a-to-z-first-claim.png-880.webp",
+        "width": 880
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/classroom.png": {
+    "width": 880,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/classroom.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/classroom.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/classroom.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/classroom.png-880.webp",
+        "width": 880
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/curbside-pickup.png": {
+    "width": 880,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/curbside-pickup.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/curbside-pickup.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/curbside-pickup.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/curbside-pickup.png-880.webp",
+        "width": 880
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/green-loom.png": {
+    "width": 880,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/green-loom.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/green-loom.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/green-loom.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/green-loom.png-880.webp",
+        "width": 880
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/home-depot-design-leadership.png": {
+    "width": 880,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/home-depot-design-leadership.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/home-depot-design-leadership.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/home-depot-design-leadership.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/home-depot-design-leadership.png-880.webp",
+        "width": 880
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/indeed-job-refresh.png": {
+    "width": 880,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/indeed-job-refresh.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/indeed-job-refresh.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/indeed-job-refresh.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/indeed-job-refresh.png-880.webp",
+        "width": 880
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/price-adjustments.png": {
+    "width": 880,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/price-adjustments.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/price-adjustments.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/price-adjustments.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/price-adjustments.png-880.webp",
+        "width": 880
+      }
+    ]
+  },
+  "/assets/img/folio/work-classroom.png": {
+    "width": 2640,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/assets/img/folio/responsive/work-classroom.png-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/responsive/work-classroom.png-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/responsive/work-classroom.png-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/responsive/work-classroom.png-1100.webp",
+        "width": 1100
+      },
+      {
+        "src": "/assets/img/folio/responsive/work-classroom.png-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/tile-design-dash.jpg": {
+    "width": 840,
+    "height": 200,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-design-dash.jpg-840.webp",
+        "width": 840
+      }
+    ]
+  },
+  "/assets/img/folio/thumbnails/tile-many-hats.jpg": {
+    "width": 840,
+    "height": 200,
+    "variants": [
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-800.webp",
+        "width": 800
+      },
+      {
+        "src": "/assets/img/folio/thumbnails/responsive/tile-many-hats.jpg-840.webp",
+        "width": 840
+      }
+    ]
+  }
+}
