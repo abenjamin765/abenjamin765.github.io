@@ -11,3 +11,7 @@ node_modules
 
 # Local-only résumé builder (embeds the full career record)
 resume/exports/builder/
+
+# Local OS metadata and editor debug output
+.DS_Store
+.cursor/debug-*.log

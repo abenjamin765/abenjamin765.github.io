@@ -2,19 +2,19 @@ include includes/folio-shared.pug
 
 html(lang="en")
     head
-        +folioHead('Green Loom: a product record was doing too many jobs | Aaron Benjamin', 'I designed a retail catalog that separates products, store listings, stock, and lab evidence, with Georgia’s hemp rules shaping publication.', '/green-loom.html', 'folio', '/assets/img/folio/project--green-loom/green-loom--work-card-2x.png')
+        +folioHead('Green Loom: a product record was doing too many jobs | Aaron Benjamin', 'I designed a retail catalog that separates products, store listings, stock, and lab evidence, with Georgia’s hemp rules shaping publication.', '/green-loom.html', 'folio', '/assets/img/folio/project--green-loom/hero-green-loom.png', 'green-images-20261003')
     body.folio.folio--case.folio--green-case
         +folioShell
         +folioHeader('work', 'Green Loom', '/#green-loom')
         main#main.folio-main.folio-main--case
             article.folio-case.green-case
-                header.folio-case__hero
-                    figure.folio-case__hero-media.green-case__hero-media
-                        img(src="/assets/img/folio/project--green-loom/green-loom--work-card-2x.png" alt="Green Loom catalog concept showing Peach Orchard Chew, product identity, and stock states for The Corner Store" width="1760" height="720" fetchpriority="high")
+                +caseHero
                     .folio-case__intro
                         p.folio-eyebrow Green Loom · Retail catalog
-                        h1 What changed: the product, or permission to sell it?
-                        p.folio-case__dek A product, its store listing, its stock, and its lab certificate change for different reasons. As co-founder, I designed a catalog model and publishing workflow that keeps those responsibilities clear.
+                        h1 The product stayed the same. Everything around it changed.
+                        p.folio-case__dek A store can run out of stock, change a price, or need a new lab certificate without changing the product itself. As Green Loom’s co-founder, I designed a retail catalog that lets operators manage those changes without rebuilding the product.
+                    figure.folio-case__hero-media.green-case__hero-media
+                        img(src="/assets/img/folio/project--green-loom/hero-green-loom.png" srcset=folioSrcset("/assets/img/folio/project--green-loom/hero-green-loom.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Green Loom catalog concept showing Peach Orchard Chew, product identity, and stock states for The Corner Store" width="1800" height="720" fetchpriority="high")
                     +caseFacts
                         .folio-case__fact
                             dt Role
@@ -31,78 +31,77 @@ html(lang="en")
 
                 +caseSection({labelledby: "green-rule-title"})
                     p.folio-eyebrow I — Inspiration
-                    h2#green-rule-title One product carried several different responsibilities
-                    p A lab certificate can expire while the product itself stays exactly the same. If both facts live in one undifferentiated record, a catalog can make a change in eligibility look like a change in identity. That distinction became a useful starting point for the catalog model.
-                    p A retail catalog looks like a list of products until an operator has to manage it. One product can have multiple packages, different prices and stock at each store, and lab evidence that affects whether it can be offered at all.
-                    p Research into the operating workflow, CMS wireframes, product definitions, and external formats exposed conflicting vocabularies. Product form was mixed with regulatory classification. Potency appeared editable on the product even though the laboratory result should be its source. Price and quantity sat beside shared content but changed independently by location.
+                    h2#green-rule-title A product page wasn’t enough to run the catalog
+                    p The catalog needed to describe what a product was and help a store decide whether it could sell it. Those are different jobs. A product might have several packages, a different price at each store, and lab evidence that expires while its description stays the same.
+                    p Reviewing the operating workflow, CMS wireframes, and product definitions exposed the problem: facts with different sources and lifecycles were treated as product attributes. Potency appeared editable even though it came from a lab result. Store prices and quantities sat beside content shared across locations.
                     p Georgia’s consumable-hemp rules made these distinctions consequential. Retail sale of hemp flower and leaves is prohibited. Products need a publicly available full-panel certificate of analysis, or COA, contracted within the last 12 months. Labels must provide the results or QR access to them.
                     p.green-case__source-note
                         a(href="https://www.agr.georgia.gov/hemp-retail-consumable-hemp-licenses" target="_blank" rel="noopener noreferrer") Georgia Department of Agriculture retail guidance
                         | &#32;informed the product-form, evidence, and labeling requirements.
 
-                +imageBrief({"role": "Context", "title": "A product and its changing evidence", "composition": "Show an unchanged product beside current and expired certificates and the corresponding listing eligibility. Use invented product details.", "purpose": "Establish the opening tension.", "caption": "Designed eligibility behavior; not a validated operator result.", "ratio": "16:9", "type": "Labeled reconstruction"})
                 +caseSection({labelledby: "green-evidence-title", tint: true, prose: false})
                     .folio-case__prose
                         p.folio-eyebrow D — Design Process
-                        h2#green-evidence-title A certificate can expire without changing the product
-                        p I gave the certificate its own Lab Result record and validity period. In the designed publication check, expired evidence blocks the store listing and explains why. The product keeps its identity and content.
-                        p Linking replacement evidence should restore eligibility without asking the operator to recreate the product. This separates the rule for offering an item from the record describing what the item is.
+                        h2#green-evidence-title Block the listing, not the product’s identity
+                        p I gave lab evidence its own record and validity period. When a certificate expires, the designed publication check blocks the affected store listing and tells the operator what needs attention. The product’s description and packages remain intact.
+                        p The recovery path is to review and link replacement evidence, then check the listing again. The operator fixes the fact that changed instead of recreating the product.
                     +stepList({labelledby: "green-timeline-caption", variant: "green-case__diagram--timeline", title: "Certificate validity and listing eligibility", steps: [{term: "Evidence linked", detail: "A current Lab Result supports the listing."}, {term: "Evidence expires", detail: "The certificate is past its validity period."}, {term: "Listing blocked", detail: "The publication check names the missing evidence."}, {term: "Product retained", detail: "Identity, content, and packages remain unchanged."}, {term: "Evidence replaced", detail: "A new Lab Result restores eligibility for review."}], note: "The certificate and listing status change. The product does not.", caption: "An evidence lifecycle affects the store listing without rewriting product identity.", captionId: "green-timeline-caption"})
 
                 +caseSection({labelledby: "green-direction-title", prose: false})
                     .folio-case__prose
                         p.folio-eyebrow D — Design Process
-                        h2#green-direction-title Stock, listings, and lab results change independently
-                        p Product holds shared identity and content. Variant identifies a sellable package. Listing controls how a variant is offered at a store. Inventory records quantity and availability. Lab Result holds the certificate.
-                        p The interface can bring these facts together while keeping their ownership separate. Changing stock should not require editing the product. Replacing a certificate should not require recreating a store listing.
-                    +objectPath({labelledby: "green-model-caption", kicker: "Green Loom catalog model", mark: "Illustrative records", nodes: [{label: "Product", detail: "Shared identity and content"}, {label: "Variant", detail: "A sellable package"}, {label: "Listing", detail: "A store’s price and publication state"}], support: [{term: "Lab Result", detail: "Evidence with its own validity period"}, {term: "Inventory", detail: "Quantity and availability at a store"}], caption: "The product-to-listing relationship carries shared content into a local offer. Lab evidence and stock retain their own lifecycles.", captionId: "green-model-caption"})
+                        h2#green-direction-title Give each kind of change its own place
+                        p I separated the catalog into five records, so every update did not have to become a product edit:
+                        ul
+                            li Product holds the shared identity and content; Variant describes a sellable package.
+                            li Listing is a store’s offer; Inventory tracks that variant’s stock at the store.
+                            li Lab Result supplies testing evidence for the applicable product or variant.
+                    +caseFigure({id: "green-catalog-model", class: "green-case__illustration", src: "/assets/img/folio/project--green-loom/catalog-model.png", alt: "Product identity connects to a sellable variant and a store listing. A separate lab certificate supports the variant, while inventory tracks stock at the store.", width: "1536", height: "1024", loading: "lazy"})
                     .folio-case__prose
-                        h2.green-case__subheading What could the catalog learn from a lab certificate?
-                        p The COA capture workflow begins with the source document. Operators review the extracted results, link them to the applicable product or variant, and use lab-sourced values to seed catalog data. Potency stays traceable to evidence instead of becoming an unrelated editable field.
+                        h2.green-case__subheading Use the certificate as a source, not just an attachment
+                        p I designed the COA capture flow to turn lab evidence into traceable catalog data. An operator adds the certificate, reviews the extracted results, and links them to the applicable product or variant. Values such as potency stay connected to the lab result that supplied them.
                     +storyFlow({id: "green-coa-caption", title: "COA-to-catalog workflow", nodes: [{label: "Capture", detail: "Add the certificate and its source details."}, {label: "Review", detail: "Check extracted results and coverage."}, {label: "Link", detail: "Associate evidence with the product or variant."}, {label: "Derive", detail: "Seed catalog values from the lab result."}, {label: "Check", detail: "Explain publication blockers."}], caption: "Lab-sourced values remain tied to the evidence from which they were derived."})
 
 
-                +imageBrief({"role": "Process", "title": "The decision and its alternatives", "composition": "Draw Product → Variant → Store Listing, with Inventory and Lab Result as distinct related records. Explain their independent lifecycles.", "purpose": "Make the research-to-decision connection visible.", "caption": "A reconstructed comparison of the choices described in this story.", "ratio": "3:2", "type": "Labeled reconstruction"})
-                +caseSection({labelledby: "green-engagement"})
-                    p.folio-eyebrow E — Engagement
-                    h2#green-engagement Give the model and the workflow a shared vocabulary
-                    p Working through the operating workflow and wireframe baseline connected the catalog vocabulary to the decisions an operator needed to make. A shared description, a sellable package, a store offer, stock, and lab evidence could appear together on screen while still having separate responsibilities.
-                    p I used those distinctions to connect the product model, publishing checks, and the public schema. The selected design direction and approved baseline supplied a common point of reference. They did not establish that operators had validated the complete workflow; that remained the next step.
+                +caseSection({labelledby: "green-engagement", prose: false})
+                    .folio-case__prose
+                        p.folio-eyebrow E — Engagement
+                        h2#green-engagement Use the wireframes to make the model concrete
+                        p The wireframes brought the model into everyday tasks: adding a package, preparing a store offer, checking evidence, and updating stock. I used the same vocabulary across the screens and publishing checks so each action had a clear home.
+                        p These explorations made the boundaries visible: lab evidence explains publication readiness, while a stock adjustment belongs to a specific variant and location.
+                    +caseFigure({id: "green-wireframe-evidence", class: "green-case__illustration", src: "/assets/img/folio/project--green-loom/wireframe-evidence.png", alt: "Original catalog wireframe showing the Lab tab with certificate status, test outcome, variant coverage, and an unresolved public-link check.", width: "1260", height: "760", loading: "lazy", caption: "Catalog exploration: review evidence coverage and see what still needs attention before publication. Original project wireframe, September 2026; sample data."})
+                    +caseFigure({id: "green-wireframe-stock", class: "green-case__illustration", src: "/assets/img/folio/project--green-loom/wireframe-stock.png", alt: "Original inventory wireframe confirming the store, variant, back-room location, current quantity of 8, adjustment of 2, cycle-count reason, and resulting quantity of 10.", width: "1260", height: "760", loading: "lazy", caption: "Inventory exploration: confirm the store, variant, location, reason, and resulting quantity before changing stock. Original project wireframe, September 2026; sample data."})
+
                 +caseSection({labelledby: "green-work-title", tint: true, prose: false})
                     .folio-case__prose
                         p.folio-eyebrow A — Action
-                        h2#green-work-title A first publication and a stock update needed different paths
-                        p We compared an object-first approach with a journey-led launchpad and a cross-object work queue. I chose a guided first-publish path with direct catalog and inventory workspaces for returning operators.
-                        p First use needs to explain unfamiliar records in a sensible order. Routine work needs fast access to the record that changed. The tradeoff is maintaining both paths without turning every update into another trip through the wizard.
-                    +storyComparison({id: "green-speed-caption", title: "One model, two speeds of work", columns: [{label: "First publication", title: "Guided setup", items: ["Introduce records in context", "Capture and review evidence", "Explain what remains before publication"]}, {label: "Returning operator", title: "Direct workspaces", items: ["Find the product or store listing", "Update price, stock, or evidence", "See the effect on availability"]}], caption: "Both paths use the same records. The amount of guidance changes with the task."})
-                    +caseFigure({class: "green-case__figure green-case__mobile-figure", labelledby: "green-mobile-caption", src: "/assets/img/folio/project--green-loom/green-loom--mobile-catalog-2x.png", alt: "Mobile catalog concept with published and draft groups, stock states, search, and an add-product control", width: "402", height: "874", loading: "lazy", caption: "The mobile catalog groups products by publication state and puts stock status beside each item.", captionId: "green-mobile-caption"})
+                        h2#green-work-title Guide the first publication. Speed up the next update.
+                        p We compared browsing by record type, a guided launchpad, and a queue of work spanning the catalog. I chose guided setup for the first publication, with direct catalog and inventory workspaces for returning operators.
+                        p Both paths use the same records; the guidance changes with the task:
+                        ul
+                            li First publication: add the product, review its evidence, and resolve readiness checks.
+                            li Stock update: find the item, adjust its stock, and review availability.
+                    +caseFigure({id: "green-work-paths", class: "green-case__illustration", src: "/assets/img/folio/project--green-loom/work-paths.png", alt: "First publication guides an operator through adding a product, reviewing evidence, and checking readiness. A returning operator finds the item, updates stock, and sees availability. Both paths use the same catalog.", width: "1536", height: "1024", loading: "lazy"})
+                    figure.green-prototype#green-catalog-demo(aria-labelledby="green-prototype-title")
+                        .folio-case__prose
+                            p.folio-case__eyebrow Interactive example
+                            h3#green-prototype-title Explore the catalog. Update the stock.
+                            p Choose a product, open Variants, and adjust its stock. Product identity, store availability, and lab evidence remain separate.
+                        iframe.green-prototype__frame(src="/prototypes/green-loom/index.html" title="Interactive Green Loom catalog with sample products" loading="lazy")
+                        figcaption Sample catalog. Changes stay in this example; reset to start again.
 
                 +caseSection({labelledby: "green-schema-title", prose: false})
                     .folio-case__prose
                         p.folio-eyebrow A — Action
-                        h2#green-schema-title Existing data formats didn’t describe the catalog we needed
+                        h2#green-schema-title Make the data portable without dictating the interface
                         p Research into existing standards and vendor formats did not yield a complete product-data contract for this catalog. We developed and published the versioned&#32;
                             a(href="https://github.com/greenloom/cannabis-product-schema" target="_blank" rel="noopener noreferrer") Cannabis Product Schema
                             | . Its neutral core describes Product, Package, LabResult, Label, and Party. A Georgia hemp profile adds local constraints without embedding them in the core.
-                        p The schema validates exchanged data. The Retail application still needs its own operator-facing records for editing, publishing, and adjusting stock. Keeping those jobs separate avoids making a data format dictate the entire workflow.
-                    figure.folio-case__figure.green-case__figure(aria-labelledby="green-schema-caption")
-                        .green-case__diagram.green-case__diagram--schema
-                            .green-case__schema-core
-                                p.green-case__diagram-title Jurisdiction-neutral core
-                                ul
-                                    li Product
-                                    li Package
-                                    li LabResult
-                                    li Label
-                                    li Party
-                            .green-case__schema-profile
-                                p.green-case__diagram-title Georgia hemp profile
-                                p Product forms, testing evidence, labeling, and potency constraints
-                                span.green-case__schema-rule Applied to core data, not embedded in core
-                        figcaption#green-schema-caption The core defines five document types. A separate profile applies state-specific constraints.
+                        p The Georgia profile applies product-form, testing, labeling, and potency constraints to that shared data.
+                        p The schema defines exchanged data; the retail application organizes the operator’s work. Keeping those responsibilities separate lets the interface support editing, publishing, and stock updates without being constrained by the shape of an import file.
+                    +caseFigure({id: "green-schema-model", class: "green-case__illustration", src: "/assets/img/folio/project--green-loom/schema-model.png", alt: "The shared schema core contains Product, Package, LabResult, Label, and Party documents. A separate Georgia hemp profile applies product-form, testing, labeling, and potency constraints to shared data.", width: "1536", height: "1024", loading: "lazy"})
 
-                +caseOutcome("green-outcome-title", "We had a selected direction and a published schema")
-                    p The work produced a selected information architecture, an approved wireframe baseline, and a published schema. COA import and the complete publication gate remain designed workflows; later high-fidelity work is a candidate for operator validation.
-                    p The next test is whether operators can create and maintain the right records without losing the connection to their evidence. My takeaway: a regulated workflow gets clearer when each record has a distinct job and the interface explains what blocks the next action.
-                +imageBrief({"role": "Outcome", "title": "What the evidence supports", "composition": "Use only the results stated in this case. Keep population, timeframe, qualitative status, and any attribution limits beside the result.", "purpose": "Resolve the story without overstating impact.", "caption": "Evidence summary reconstructed from the documented account; no invented measurements.", "ratio": "16:9", "type": "Evidence summary"})
-            +folioFooter(false, 'I’m happy to walk through the catalog model or the publishing decisions.', {href: '/design-dash.html', label: 'Next: Design Dash'})
+                +caseOutcome("green-outcome-title", "A working foundation for the catalog", "S — Status and next steps")
+                    p The work produced a selected information architecture, an approved wireframe baseline, and a published Cannabis Product Schema. The next step is operator validation of the complete publication flow, including COA import and the checks that determine whether a listing is ready.
+                    p My design intent is to help operators see what changed, where to fix it, and what that means for the store’s offer. Operator testing still needs to establish whether those boundaries make the catalog easier to manage.
+            +caseStudyFooter('I’m happy to walk through the catalog model, publishing flow, and design decisions.', folioProjects[folioProjects['green-loom'].next])

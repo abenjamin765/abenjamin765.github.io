@@ -25,6 +25,8 @@ For more than 10 years, I've helped global brands design and build products that
 
 Ownership of monetization and growth employer experience focused on driving revenue
 
+- Designed Job Refresh, owning information architecture, interaction design, messaging, prototypes, and stakeholder alignment; it became part of Sponsored Jobs after six months of free availability.
+- Addressed employers’ closing-and-reposting workaround with a flow requiring substantially updated job information; employers reported less time and effort than reposting.
 - Led monetization and growth design initiatives for the employer experience, contributing directly to revenue expansion.
 - Partnered with leadership to shape and execute the companys marketplace monetization strategy.
 - Delivered end-to-end design from discovery through launch, influencing product development across multiple teams.
@@ -35,7 +37,7 @@ Ownership of monetization and growth employer experience focused on driving reve
 - Hosted recurring team events to build morale and strengthen organizational culture.
 - Contributed to a comprehensive service blueprint mapping all internal systems and user touchpoints.
 
-### Senior Product Designer — Redfin
+### Senior Product Designer II — Redfin
 
 *Feb 2022 – Sep 2022 · Remote*
 
@@ -81,7 +83,7 @@ Lead agile design process for cross-functional team
 - Led a customer cohort analysis across three channels, informing roadmap direction.
 - Redesigned the donation experience for a high school fundraising platform, improving conversion rates.
 
-### UX Designer — Amazon
+### UX Designer II — Amazon
 
 *Aug 2016 – Dec 2017 · Seattle, WA*
 
@@ -146,7 +148,7 @@ Design collateral for digital marketing campaigns including landing pages, email
 
 ## Education
 
-- FullSail University — Winter Park, FL · 2008
+- Full Sail University — Winter Park, FL · 2009
 
 ## Skills
 

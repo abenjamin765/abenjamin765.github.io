@@ -3,7 +3,7 @@ include includes/assignment-demo.pug
 
 html(lang="en")
     head
-        +folioHead('Teachers see who needs support | Aaron Benjamin', 'A priority view and student-level progress data made Renaissance Intelligence assignments easier for teachers to act on.', '/classroom-assignment-management.html', 'folio', undefined, 'classroom-desktop-final-20261002')
+        +folioHead('Teachers see who needs support | Aaron Benjamin', 'A priority view and student-level progress data made Renaissance Intelligence assignments easier for teachers to act on.', '/classroom-assignment-management.html', 'folio', undefined, 'shared-footer-20261003')
     body.folio.folio--case.folio--classroom
         +folioShell
 
@@ -11,13 +11,13 @@ html(lang="en")
 
         main#main.folio-main.folio-main--case
             article.folio-case
-                header.folio-case__hero
+                +caseHero
                     .folio-case__intro
                         p.folio-eyebrow Renaissance · Classroom Assignment Management
                         h1 Who needs my help today?
                         p.folio-case__dek Our hub brought assignments together, but teachers still had to leave to find the students who needed help. I challenged the MVP, won support to test a new direction, and made the case to prioritize a view built around teacher attention.
                     figure.folio-case__hero-media
-                        img(src="assets/img/folio/project--assignment-management/classroom-student-table-hero-2x.png" alt="Expanded overdue reading assignment showing named students who have not started, with working status and score columns" width="1800" height="720" fetchpriority="high")
+                        img(src="assets/img/folio/project--assignment-management/classroom-student-table-hero-2x.png" srcset=folioSrcset("assets/img/folio/project--assignment-management/classroom-student-table-hero-2x.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Expanded overdue reading assignment showing named students who have not started, with working status and score columns" width="1800" height="720" fetchpriority="high")
                     +caseFacts
                         .folio-case__fact
                             dt Role
@@ -45,7 +45,7 @@ html(lang="en")
 
                 figure.folio-case__figure.folio-case__context-visual(aria-labelledby="classroom-context-caption")
                     .folio-case__context-crop
-                        img(src="assets/img/folio/project--assignment-management/classroom-counts-without-names.png" alt="An In progress badge beside 11/16, circled in red with the question: Who are these students?" width="1032" height="580" loading="lazy")
+                        img(src="assets/img/folio/project--assignment-management/classroom-counts-without-names.png" srcset=folioSrcset("assets/img/folio/project--assignment-management/classroom-counts-without-names.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="An In progress badge beside 11/16, circled in red with the question: Who are these students?" width="1032" height="580" loading="lazy")
                     figcaption#classroom-context-caption Illustrative scenario: the count showed progress without identifying the students who needed support.
 
                 +caseSection({labelledby: "decision-title", prose: false})
@@ -78,16 +78,7 @@ html(lang="en")
                     p Reduced leakage mattered on the app’s most visited page. Together with the research feedback, it supported the direction: help teachers find the assignments and students needing attention within the hub.
                     p This changed how I evaluated the MVP. Consolidating products was useful, but completeness depended on whether teachers could answer their primary question. A priority view helped them decide where to look; student identities helped them decide whom to help.
 
-            footer.folio-footer.classroom-footer(aria-label="Contact and next case study")
-                .classroom-footer__contact
-                    h2 Discuss this project
-                    p I’m happy to discuss the research, data changes, or delivery tradeoffs.
-                    a.folio-btn.classroom-footer__email(href="mailto:hello@aaronbenjamin.design") Email Aaron
-                a.classroom-footer__next(href="/indeed-job-refresh.html")
-                    span.classroom-footer__label Next case study
-                    span.classroom-footer__title Indeed Job Refresh
-                    span.classroom-footer__arrow(aria-hidden="true")
-                        +folioIcon('arrow-right')
+            +caseStudyFooter("I’m happy to discuss the research, data changes, or delivery tradeoffs.", folioProjects[folioProjects['classroom'].next])
 
         script(src="assets/js/assignment-demo.js" defer)
         script(src="assets/js/assignment-comparison.js?v=classroom-motion-20261002" defer)

@@ -13,7 +13,9 @@
     "test": "node scripts/test-portfolio.js",
     "resume:export": "node scripts/export-resume.js",
     "resume:validate": "node scripts/validate-resume.js",
-    "resume:builder": "gulp resumeBuilder"
+    "resume:builder": "gulp resumeBuilder",
+    "images:variants": "python3 scripts/build-image-variants.py",
+    "test:green": "node scripts/test-green-prototype.js"
   },
   "keywords": [],
   "author": "",

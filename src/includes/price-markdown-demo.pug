@@ -1,0 +1,91 @@
+mixin cartQuantity(name, count, cents, target)
+    .markdown-demo__quantity(data-price=cents data-target=target ? 'true' : undefined)
+        button(type="button" data-step="-1" aria-label='Decrease quantity: ' + name)
+            +folioIcon('minus')
+        input(type="number" min="1" max="99" value=count data-initial=count aria-label='Quantity: ' + name)
+        button(type="button" data-step="1" aria-label='Increase quantity: ' + name)
+            +folioIcon('plus')
+
+figure.markdown-demo#price-markdown-demo(aria-labelledby="markdown-demo-title")
+    .markdown-demo__intro
+        div
+            p.markdown-demo__eyebrow Interactive example
+            h3#markdown-demo-title Try a markdown without leaving the order
+            p Open the light bulb’s more menu to apply a markdown, then update or remove it.
+        button.markdown-demo__reset.markdown-demo__button.markdown-demo__button--secondary(type="button") Reset demo
+    .markdown-demo__app
+        .markdown-demo__bar Shopping Cart
+        .markdown-demo__layout
+            .markdown-demo__items
+                each item in [{id:'thermostat',name:'Nest Smart Learning Thermostat',detail:'Stainless steel',sku:'1001531430',price:30000,qty:1},{id:'speaker',name:'Portable wireless speaker',detail:'Bluetooth',sku:'302578061',price:3000,qty:1},{id:'bulb',name:'Philips Hue A19 smart light bulb',detail:'60W equivalent',sku:'1001531430',price:5000,qty:6},{id:'bridge',name:'Philips Hue Smart Bridge',detail:'Smart lighting hub',sku:'303070022',price:6000,qty:1},{id:'doorbell',name:'Ring Video Doorbell 2',detail:'Video doorbell',sku:'1001531430',price:19900,qty:1}]
+                    .markdown-demo__target(data-item=item.id data-name=item.name data-price=item.price)
+                        .markdown-demo__row
+                            .markdown-demo__product
+                                - const productImage = '/assets/img/folio/project--price-adjustments/product-' + item.id + '-transparent.png'
+                                img.markdown-demo__thumb(src=productImage srcset=folioSrcset(productImage) sizes='60px' alt='' width='44' height='62')
+                                div
+                                    span.markdown-demo__sku= 'SKU #' + item.sku
+                                    strong= item.name
+                                    p.markdown-demo__discount(hidden)
+                            span.markdown-demo__price(id=item.id === 'bulb' ? 'markdown-item-price' : undefined)= '$' + (item.price / 100).toFixed(2) + ' each'
+                            +cartQuantity(item.id === 'bulb' ? 'light bulbs' : item.id, item.qty, item.price, item.id === 'bulb')
+                            .markdown-demo__item-actions
+                                button.markdown-demo__more(type="button" aria-label='More actions: ' + item.name aria-expanded="false" aria-controls=item.id === 'bulb' ? 'markdown-item-menu' : 'markdown-menu-' + item.id)
+                                    +folioIcon('ellipsis-vertical')
+                                .markdown-demo__menu(hidden id=item.id === 'bulb' ? 'markdown-item-menu' : 'markdown-menu-' + item.id)
+                                    button.markdown-demo__open(type="button" aria-controls="markdown-editor") Apply markdown
+                                    button.markdown-demo__remove(type="button" hidden) Remove markdown
+                form.markdown-demo__editor#markdown-editor(hidden aria-labelledby="markdown-editor-title")
+                    h4#markdown-editor-title Apply markdown
+                    p.markdown-demo__editor-item Philips Hue A19 · $50.00 each · Qty 6
+                    label(for="markdown-reason") Reason for markdown
+                    .markdown-demo__select
+                        select#markdown-reason(name="reason")
+                            option(value="Damaged") Damaged
+                            option(value="Competitor match") Competitor match
+                            option(value="Customer satisfaction") Customer satisfaction
+                        +folioIcon('chevron-down')
+                    label(for="markdown-type") Markdown type
+                    .markdown-demo__select
+                        select#markdown-type(name="type")
+                            option(value="dollars") Dollar amount
+                            option(value="percent") Percentage
+                            option(value="price") New price
+                        +folioIcon('chevron-down')
+                    .markdown-demo__fields
+                        div
+                            label#markdown-value-label(for="markdown-value") Amount ($)
+                            input#markdown-value(name="amount" type="number" min="0.01" step="0.01" value="5" required)
+                        div
+                            label(for="markdown-quantity") Qty (of 6)
+                            input#markdown-quantity(name="quantity" type="number" min="1" max="6" step="1" value="3" required)
+                    p.markdown-demo__preview#markdown-preview
+                    p.markdown-demo__error#markdown-error(role="status" hidden)
+                    .markdown-demo__form-actions
+                        button.markdown-demo__cancel.markdown-demo__button.markdown-demo__button--secondary(type="button") Cancel
+                        button.markdown-demo__apply.markdown-demo__button.markdown-demo__button--primary(type="submit") Apply
+            aside.markdown-demo__summary(aria-label="Order summary")
+                .markdown-demo__checkout
+                    button.markdown-demo__place.markdown-demo__button.markdown-demo__button--primary(type="button") Place order
+                .markdown-demo__summary-body
+                    h4 Order summary
+                    dl
+                        div
+                            dt#markdown-summary-count 5 items
+                            dd#markdown-summary-subtotal $889.00
+                        div.markdown-demo__adjustments
+                            dt Adjustments
+                            dd#markdown-summary-discount ($0.00)
+                        div.markdown-demo__pretax
+                            dt Pre-tax total
+                            dd#markdown-summary-total $889.00
+                        div
+                            dt Estimated tax
+                            dd#markdown-summary-tax $62.23
+                        div.markdown-demo__total
+                            dt Order total
+                            dd#markdown-order-total $951.23
+                .markdown-demo__order-actions
+                    button.markdown-demo__quote.markdown-demo__button.markdown-demo__button--secondary(type="button") Save as a quote
+                    button.markdown-demo__cancel-order.markdown-demo__button.markdown-demo__button--secondary(type="button") Cancel order
+    figcaption.markdown-demo__status(aria-live="polite" aria-atomic="true") The item and order summary stay in view as you work.

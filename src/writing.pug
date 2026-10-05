@@ -1,9 +1,19 @@
+- const featured = writingPosts[0]
+- const remaining = writingPosts.slice(1)
+
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title inside thoughts — aaron benjamin
+        title Writing | Aaron Benjamin
         meta(name="description", content="Essays on product design by Aaron Benjamin.")
+        link(rel="canonical", href="https://aaronbenjamin.design/writing.html")
+        meta(property="og:type", content="website")
+        meta(property="og:title", content="Writing | Aaron Benjamin")
+        meta(property="og:description", content="Essays on product design by Aaron Benjamin.")
+        meta(property="og:url", content="https://aaronbenjamin.design/writing.html")
+        meta(property="og:image", content="https://aaronbenjamin.design/assets/img/folio/hero-portrait.png")
+        meta(name="twitter:card", content="summary_large_image")
         link(rel="icon", type="image/svg+xml", href="/assets/img/folio/favicon.svg")
         link(rel="stylesheet", href="assets/style/site.css")
     body.site
@@ -11,50 +21,56 @@ html(lang="en")
 
         header.hdr
             .hdr__row
-                a.logo(href="/writing.html", aria-label="inside thoughts home")
+                a.logo(href="/", aria-label="Aaron Benjamin home")
                     span.logo__mark(aria-hidden="true")
                         span.logo__dot
-                    span.logo__wordmark inside thoughts
+                    span.logo__wordmark Aaron Benjamin
                 nav.nav(aria-label="Primary")
-                    a.nav__a.is-active(href="#latest") latest
+                    a.nav__a.is-active(href="/writing.html", aria-current="page") writing
                     a.nav__a(href="/") portfolio
                 .hdr__tools
                     a.btn.btn--solid(href="mailto:hello@aaronbenjamin.design") contact
 
         main#main
             #top
-            section.hero(aria-labelledby="hero-title")
-                a.hero__media(href="/blog/ai-is-exposing-ux-design/", aria-label="read: ai is exposing ux design")
-                .hero__body
-                    .hero__meta
-                        span featured · opinion
-                        span.meta-sep(aria-hidden="true") ·
-                        time(datetime="2026-05-06") may 6, 2026
-                        span.meta-sep(aria-hidden="true") ·
-                        span 8 min read
-                    h1.hero__title#hero-title ai is exposing ux design
-                    p.hero__dek there’s a growing narrative that ai is transforming ux design. here’s a calmer starting point for what actually changes—and what doesn’t—in how we shape products.
-                    .hero__cta
-                        a.btn.btn--solid(href="/blog/ai-is-exposing-ux-design/") read the essay
+            if featured
+                section.hero(aria-labelledby="hero-title")
+                    a.hero__media(href=featured.href, aria-label='Read: ' + featured.title)
+                    .hero__body
+                        .hero__meta
+                            span Featured essay
+                            span.meta-sep(aria-hidden="true") ·
+                            time(datetime=featured.isoDate)= featured.displayDate
+                            span.meta-sep(aria-hidden="true") ·
+                            span= featured.readingMinutes + ' min read'
+                        h1.hero__title#hero-title= featured.title
+                        p.hero__dek= featured.description
+                        .hero__cta
+                            a.btn.btn--solid(href=featured.href) Read the essay
+            else
+                section.hero
+                    h1 Writing
+                    p Essays on product design by Aaron Benjamin.
 
-            section.section.section--latest#latest(aria-labelledby="latest-title")
-                .section__head
-                    h2.section__title#latest-title latest
-                .feed
-                    a.card.card--feature(href="/blog/ai-is-exposing-ux-design/")
-                        .ph.ph--soft(style="aspect-ratio:16/10")
-                        .card__body
-                            span.tag opinion
-                            h3.card__title ai is exposing ux design
-                            p.card__dek a closer look at what changes, and what does not, when ai enters the design process.
-                            .card__meta
-                                span may 6, 2026
-                                span.meta-sep ·
-                                span 8 min
+            if remaining.length
+                section.section.section--latest#latest(aria-labelledby="latest-title")
+                    .section__head
+                        h2.section__title#latest-title More essays
+                    .feed
+                        each post in remaining
+                            a.card.card--feature(href=post.href)
+                                .card__body
+                                    span.tag Essay
+                                    h3.card__title= post.title
+                                    p.card__dek= post.description
+                                    .card__meta
+                                        time(datetime=post.isoDate)= post.displayDate
+                                        span.meta-sep(aria-hidden="true") ·
+                                        span= post.readingMinutes + ' min read'
 
         footer.ftr
             .ftr__inner
-                p.ftr__legal © 2026 aaron benjamin
+                p.ftr__legal © 2026 Aaron Benjamin
                 nav.ftr__nav(aria-label="Footer")
                     a(href="/resume.html") resume
                     a(href="mailto:hello@aaronbenjamin.design") contact

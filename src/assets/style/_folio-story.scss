@@ -101,7 +101,9 @@
 }
 @media (max-width: 600px) {
   .folio-hdr__inner { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 16px; }
-  .folio-hdr__name--project { max-width: calc(100% - 104px); font-size: 14px; }
+  .folio-hdr__name--project { flex: 1; max-width: none; font-size: 14px; }
+  .folio--case .folio-hdr__inner { flex-wrap: nowrap; }
+  .folio--case .folio-nav { flex: none; }
   .folio-nav { flex-wrap: wrap; gap: 14px; }
   .folio-nav__a { font-size: 14px; padding-block: 10px; }
   .folio-main { width: calc(100% - 24px); border-radius: 10px; }
@@ -135,13 +137,14 @@
   .folio-case-results { grid-template-columns: 1fr; }
 }
 
-/* Classroom opening: live headline followed by the student-detail hero. */
-.folio--classroom .folio-case__hero { padding-top: 40px; }
-.folio--classroom .folio-case__intro { margin-top: 0; }
-.folio--classroom .folio-case__hero-media { width: calc(100% - 80px); max-width: 1100px; margin: 32px auto 0; border-radius: 8px; }
+/* Shared case opening: live headline, inset media, then facts. */
+.folio--case .folio-case__hero { padding-top: 40px; }
+.folio--case .folio-case__intro { margin-top: 0; }
+.folio--case .folio-case__hero-media { width: calc(100% - 80px); max-width: 1100px; margin: 32px auto 0; border-radius: 8px; overflow: hidden; }
+.folio--case .folio-case__hero-media img { display: block; width: 100%; height: auto; }
 @media (max-width: 600px) {
-  .folio--classroom .folio-case__hero { padding-top: 28px; }
-  .folio--classroom .folio-case__hero-media { width: calc(100% - 40px); margin-top: 24px; }
+  .folio--case .folio-case__hero { padding-top: 28px; }
+  .folio--case .folio-case__hero-media { width: calc(100% - 40px); margin-top: 24px; }
 }
 
 /* Classroom desktop review: focused evidence and an intentional close. */
@@ -152,21 +155,9 @@
   .folio--classroom .folio-case__context-crop { aspect-ratio: 1032 / 440; }
   .folio--classroom .folio-case__context-crop img { margin-top: -10.66%; }
 }
-.folio--classroom .classroom-footer { display: grid; gap: 40px; padding: 48px 40px; border-top: 1px solid #deded6; background: #f6f6f3; }
-.classroom-footer__contact h2 { margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -.025em; }
-.classroom-footer__contact p { max-width: 35ch; margin: 16px 0 24px; font-size: 17px; line-height: 1.6; }
-.folio--classroom .classroom-footer__email { display: inline-flex; padding: 12px 20px; color: #fff; background: #333; border-radius: 6px; }
-.folio--classroom .classroom-footer__email:hover { background: #171717; }
-.folio--classroom .classroom-footer__next { display: grid; grid-template-columns: minmax(0, 1fr) 40px; gap: 14px 20px; align-content: center; padding: 28px; border: 1px solid #d8d8ce; border-radius: 8px; background: #fff; color: #333; transition: border-color .15s ease, background-color .15s ease; }
-.classroom-footer__label { grid-column: 1 / -1; color: #666; font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; }
-.classroom-footer__title { align-self: center; font-size: 25px; line-height: 1.2; letter-spacing: -.025em; }
-.classroom-footer__arrow { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #fdefc8; font-size: 24px; }
-.folio--classroom .classroom-footer__next:hover { border-color: #a65a00; background: #fffdf5; }
-@media (min-width: 901px) { .folio--classroom .classroom-footer { grid-template-columns: 1.4fr 1fr; } }
+
 
 /* Indeed desktop: show the behavioral proposal, then its cross-team rationale. */
-.folio--indeed .folio-case__hero { padding-top: 40px; }
-.folio--indeed .folio-case__intro { margin-top: 0; }
 .indeed-hero { margin: 32px 40px 0; padding: 32px; border-radius: 8px; background: #f5f5f1; }
 .indeed-hero__label { margin: 0 0 24px; font-size: 15px; font-weight: 500; color: #555; }
 .indeed-path { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-top: 1px solid #d6d6cd; }
@@ -177,26 +168,81 @@
 .indeed-hero figcaption { margin: 24px 0 0; font-size: 13px; line-height: 1.5; color: #666; }
 .indeed-evidence { padding: 0 40px 48px; }
 .indeed-evidence .folio-story-compare, .indeed-evidence .folio-story-flow { margin-top: 0; }
-.folio--indeed .case-close__arrow .folio-icon { width: 24px; height: 24px; }
+.case-close .case-close__arrow .folio-icon { width: 24px; height: 24px; }
 @media (max-width: 700px) { .indeed-hero { margin-inline: 20px; padding: 24px; } .indeed-path { grid-template-columns: 1fr; gap: 12px; } .indeed-path__steps { gap: 10px; font-size: 14px; } .indeed-path__steps strong { font-size: 16px; } .indeed-evidence { padding-inline: 20px; } }
-.folio--indeed .case-close { display: grid; gap: 40px; padding: 48px 40px; border-top: 1px solid #deded6; background: #f6f6f3; }
+.folio-footer.case-close { display: grid; gap: 40px; padding: 48px 40px; border-top: 1px solid #deded6; background: #f6f6f3; }
 .case-close__contact h2 { margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -.025em; }
 .case-close__contact p { max-width: 35ch; margin: 16px 0 24px; font-size: 17px; line-height: 1.6; }
-.folio--indeed .case-close__email { display: inline-flex; padding: 12px 20px; color: #fff; background: #333; border-radius: 6px; }
-.folio--indeed .case-close__email:hover { background: #171717; }
-.folio--indeed .case-close__next { display: grid; grid-template-columns: minmax(0, 1fr) 40px; gap: 14px 20px; align-content: center; padding: 28px; border: 1px solid #d8d8ce; border-radius: 8px; background: #fff; color: #333; transition: border-color .15s ease, background-color .15s ease; }
+.case-close .case-close__email { display: inline-flex; padding: 12px 20px; color: #fff; background: #333; border-radius: 6px; }
+.case-close .case-close__email:hover { background: #171717; }
+.case-close .case-close__next { display: grid; grid-template-columns: minmax(0, 1fr) 40px; gap: 14px 20px; align-content: center; padding: 28px; border: 1px solid #d8d8ce; border-radius: 8px; background: #fff; color: #333; transition: border-color .15s ease, background-color .15s ease; }
 .case-close__label { grid-column: 1 / -1; color: #666; font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; }
 .case-close__title { align-self: center; font-size: 25px; line-height: 1.2; letter-spacing: -.025em; }
 .case-close__arrow { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #fdefc8; font-size: 24px; }
-.folio--indeed .case-close__next:hover { border-color: #a65a00; background: #fffdf5; }
-@media (min-width: 901px) { .folio--indeed .case-close { grid-template-columns: 1.4fr 1fr; } }
+.case-close .case-close__next:hover { border-color: #a65a00; background: #fffdf5; }
+@media (min-width: 901px) { .folio-footer.case-close { grid-template-columns: 1.4fr 1fr; } }
 
-/* Indeed supplied hero follows the Classroom image composition. */
-.folio--indeed .folio-case__hero-media { width: calc(100% - 80px); max-width: 1100px; margin: 32px auto 0; border-radius: 8px; overflow: hidden; }
-.folio--indeed .folio-case__hero-media img { display: block; width: 100%; height: auto; }
-@media (max-width: 600px) { .folio--indeed .folio-case__hero-media { width: calc(100% - 40px); margin-top: 24px; } }
+/* Supplied landscape heroes follow the Classroom image composition. */
 
 .folio--indeed .indeed-journey { margin: 0 40px; }
 @media (max-width: 600px) { .folio--indeed .indeed-journey { margin-inline: 20px; } }
 
 .folio--indeed .indeed-freeware { margin: 32px 0; }
+
+.folio--indeed .indeed-refresh { margin: 0 0 40px; }
+.folio--indeed .indeed-refresh figcaption { text-align: center; }
+
+.folio--curbside .curbside-context { padding: 0 40px 48px; }
+.folio--curbside .curbside-context .folio-case__figure { margin: 0; }
+.folio--curbside .curbside-context figcaption { text-align: center; }
+@media (max-width: 600px) { .folio--curbside .curbside-context { padding-inline: 20px; } }
+
+.folio--curbside .curbside-app-intro { margin-top: 48px; }
+.folio--curbside .curbside-app-intro h3 { margin: 0 0 20px; font-size: 28px; line-height: 1.2; letter-spacing: -.025em; }
+
+/* Curbside diagrams: customer uncertainty, then the choice of channels. */
+.curbside-journey, .curbside-decision { margin: 0; padding: 32px; border-radius: 8px; background: #f6f6f3; }
+.curbside-journey > figcaption, .curbside-decision > figcaption { margin: 0 0 28px; color: #333; font-size: 25px; font-weight: 700; line-height: 1.2; letter-spacing: -.025em; text-align: left !important; }
+.curbside-journey__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.curbside-journey__stage { display: grid; grid-template-rows: 40px minmax(110px, auto) 44px minmax(130px, auto); }
+.curbside-journey__step { display: flex; gap: 10px; align-items: center; border-bottom: 1px solid #d5d5ce; padding-bottom: 14px; }
+.curbside-journey__step > span { color: #777; font-size: 12px; }
+.curbside-journey__step > strong { font-size: 16px; }
+.curbside-journey__step .folio-icon { margin-left: auto; width: 18px; height: 18px; color: #777; }
+.curbside-journey__customer, .curbside-journey__store { padding: 20px 14px; }
+.curbside-diagram-label { display: block; margin: 0 0 12px; color: #666; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.curbside-journey h3 { margin: 0; font-size: 19px; line-height: 1.25; letter-spacing: -.02em; }
+.curbside-journey p { margin: 10px 0 0; font-size: 13px; line-height: 1.5; color: #666; }
+.curbside-journey__bridge { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px; color: #666; font-size: 12px; line-height: 1.3; border-block: 1px solid #d5d5ce; text-align: center; }
+.curbside-journey__stage--gap { border-radius: 6px; background: #fff1e3; }
+.curbside-journey__stage--gap .curbside-journey__customer h3 { color: #9b4200; }
+.curbside-journey__bridge--missing { border-block: 1px dashed #c55a0b; color: #9b4200; font-weight: 700; }
+.curbside-decision__options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.curbside-decision__option { padding: 24px; border-top: 3px solid #c9c9c1; background: #fff; }
+.curbside-decision__option--chosen { border-color: #f56600; }
+.curbside-decision__option--chosen > .curbside-diagram-label { color: #9b4200; }
+.curbside-decision h3 { margin: 0 0 16px; font-size: 25px; letter-spacing: -.025em; line-height: 1.2; }
+.curbside-decision__option > p:not(.curbside-diagram-label), .curbside-decision__option div p, .curbside-decision dd { margin: 8px 0 0; font-size: 15px; line-height: 1.5; }
+.curbside-decision__benefit { margin-top: 24px; }
+.curbside-decision__limit { margin-top: 24px; padding-top: 20px; border-top: 1px solid #deded6; }
+.curbside-decision strong, .curbside-decision dt { font-size: 15px; font-weight: 700; }
+.curbside-decision__channels { margin: 0; }
+.curbside-decision__channels > div + div { margin-top: 20px; }
+@media (max-width: 600px) {
+  .curbside-journey, .curbside-decision { padding: 24px 20px; }
+  .curbside-journey__grid, .curbside-decision__options { grid-template-columns: 1fr; }
+  .curbside-journey__stage { grid-template-rows: auto; }
+  .curbside-journey__customer, .curbside-journey__store { padding: 16px 12px; }
+  .curbside-journey__step { padding: 12px; }
+}
+
+.price-context { padding: 0 40px 48px; }
+.price-context .folio-case__figure { margin: 0; }
+@media (max-width: 600px) { .price-context { padding-inline: 20px; } }
+
+/* Design Dash illustrations use the same inset, rounded treatment as case evidence. */
+.folio--dash .folio-case__figure img { border-radius: 8px; }
+
+.folio-case__prose ul { font-size: clamp(17px, 2vw, 20px); line-height: 1.7; padding-left: 24px; }
+.folio-case__prose li + li { margin-top: 8px; }
+.folio-case__hero-media > figcaption { padding: 0 20px 20px; font-size: 14px; line-height: 1.5; color: #666; }

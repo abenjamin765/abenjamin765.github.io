@@ -2,19 +2,19 @@ include includes/folio-shared.pug
 
 html(lang="en")
     head
-        +folioHead("The job was still open. Its visibility had faded. | Aaron Benjamin", "Employers were closing and reposting stale jobs to get noticed again. I designed Job Refresh around that existing need—and the information that needed to change with it.", "/indeed-job-refresh.html", "folio", "/assets/img/folio/project--job-refresh/hero-job-refresh.png", "indeed-freeware-20261002")
+        +folioHead("The job was still open. Its visibility had faded. | Aaron Benjamin", "Employers were closing and reposting stale jobs to get noticed again. I designed Job Refresh around that existing need—and the information that needed to change with it.", "/indeed-job-refresh.html", "folio", "/assets/img/folio/project--job-refresh/hero-job-refresh.png", "shared-footer-20261003")
     body.folio.folio--case.folio--indeed
         +folioShell
         +folioHeader("work", "Indeed Job Refresh", "/#indeed-job-refresh")
         main#main.folio-main.folio-main--case
             article.folio-case
-                header.folio-case__hero
+                +caseHero
                     .folio-case__intro
                         p.folio-eyebrow Indeed · Indeed Job Refresh
                         h1 The job was still open. Its visibility had faded.
                         p.folio-case__dek Employers recreated jobs to make them look active again. I connected that research finding to a platform initiative and proposed Refresh: support the behavior employers wanted while giving job seekers more current information.
                     figure.folio-case__hero-media
-                        img(src="assets/img/folio/project--job-refresh/hero-job-refresh.png" alt="Job Refresh eligibility message with a Refresh this job action, framed by illustrations from the freemium strategy deck" width="1800" height="720" fetchpriority="high")
+                        img(src="assets/img/folio/project--job-refresh/hero-job-refresh.png" srcset=folioSrcset("assets/img/folio/project--job-refresh/hero-job-refresh.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Job Refresh eligibility message with a Refresh this job action, framed by illustrations from the freemium strategy deck" width="1800" height="720" fetchpriority="high")
                     +caseFacts
                         .folio-case__fact
                             dt Role
@@ -37,7 +37,7 @@ html(lang="en")
                     p I also created an illustrated deck comparing seven freemium models: premium features, access for more users, paid removal of friction, complementary products, alternative products, ecosystems, and network effects. A shared ice-cream metaphor made the differences concrete. These were strategy references, distinct from the three Indeed directions we prototyped.
                     p We leaned toward the Freeware approach: offer feature add-ons to the core product. That gave the exploration a direction—look for additional capabilities employers would value alongside the free experience.
                     figure.folio-case__figure.indeed-freeware#indeed-freeware(aria-labelledby="indeed-freeware-caption")
-                        img(src="assets/img/folio/project--job-refresh/freeware-strategy.png" alt="Freeware slide from my strategy deck: an ice-cream cone represents the free core product, while toppings represent paid additions that complement it. Historical examples include Skype, Evernote, and AVG." width="800" height="600" loading="lazy")
+                        img(src="assets/img/folio/project--job-refresh/freeware-strategy.png" srcset=folioSrcset("assets/img/folio/project--job-refresh/freeware-strategy.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Freeware slide from my strategy deck: an ice-cream cone represents the free core product, while toppings represent paid additions that complement it. Historical examples include Skype, Evernote, and AVG." width="800" height="600" loading="lazy")
                         figcaption#indeed-freeware-caption From my original strategy deck: a free core offering with paid additions that complement the experience.
                     p When an employer first posted a job, the promise of more visibility could be hard to sell. In the product context we were working with, new posts initially appeared on the first page. Many employers said their free posts already produced too many applicants. The Monetization team wanted to increase Sponsored Jobs adoption, but the posting flow was a delicate place to introduce another decision.
                     p I worked with my product owner and lead engineer on three monetization strategies to test. We followed a thread exploring how to add value to Sponsored Jobs, primarily through UI enhancements, advanced filtering, and application management. The opportunity was to connect the paid offering to useful work after a job had been posted.
@@ -50,7 +50,7 @@ html(lang="en")
                     p Duplication affected the whole marketplace. Job seekers applied to stale posts that employers were no longer attending to. Some employers recreated expired jobs to avoid paying for sponsorship. Duplicate records also confounded reporting. Refresh could connect employer demand for renewed visibility to better-maintained job information.
 
                 figure.folio-case__figure.indeed-journey#indeed-current-state
-                    img(src="assets/img/folio/project--job-refresh/employer-reposting-journey.png" alt="Illustration of the employer workaround described during research: an employer sees an old job post and recreates it, producing a fresh-looking post and another duplicate record." width="1800" height="596" loading="lazy")
+                    img(src="assets/img/folio/project--job-refresh/employer-reposting-journey.png" srcset=folioSrcset("assets/img/folio/project--job-refresh/employer-reposting-journey.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Illustration of the employer workaround described during research: an employer sees an old job post and recreates it, producing a fresh-looking post and another duplicate record." width="1800" height="596" loading="lazy")
 
                 +caseSection({labelledby: "indeed-job-refresh-2"})
                     p.folio-eyebrow E — Engagement
@@ -58,30 +58,23 @@ html(lang="en")
                     p I connected with the engineers working on the separate duplicate-reduction initiative. They were exploring a technical solution to identify and de-duplicate posts, but identifying true duplicates was difficult. Archiving or merging jobs that were actually distinct was a risk we could not take.
                     p I proposed addressing the behavior that produced duplicates: employers wanted their job to look new and active to job seekers. Giving them a way to refresh the existing post could serve that need while preserving the job record. It offered another approach alongside the technical work.
                     p I wrote a proposal deck for my team to collaborate on a solution: offer job-post refreshes on a trial basis, then fold the feature into Sponsored Jobs. The proposal connected employer value, the platform’s data problem, and fresher information signaling that an employer was still actively reviewing applications.
-                    p I partnered with my product owner and lead engineer on the work and owned stakeholder alignment for the Refresh design. My role extended from testing concepts to identifying the shared opportunity and proposing how the teams could pursue it.
+                    p I partnered with my product owner and lead engineer to align stakeholders around the Refresh proposal and how the teams could pursue it.
                 .indeed-evidence
                     +storyComparison({id: "indeed-approaches-caption", title: "Two ways to address the same platform problem", columns: [{label: "Separate engineering initiative", title: "Identify duplicates after posting", detail: "Detect records that represent the same job.", items: ["True duplicates were difficult to identify.", "Distinct jobs could not safely be archived or merged."]}, {label: "My Refresh proposal", title: "Change the behavior before duplication", detail: "Let employers renew an existing post through meaningful updates.", items: ["Support the intent behind recreating a job.", "Preserve the existing record and improve its information."]}], caption: "Conceptual summary of the approaches. Refresh complemented the technical initiative; duplicate reduction is not quantified here."})
 
                 +caseSection({labelledby: "indeed-job-refresh-3"})
                     p.folio-eyebrow A — Action
                     h2#indeed-job-refresh-3 Keep the job. Improve the information.
-                    p For Job Refresh, I owned information architecture, interaction design, messaging, prototyping, and stakeholder alignment. The flow needed to make its proposition understandable: update a stale job with meaningful information rather than close it and start again.
+                    p I designed the information architecture, interaction flow, and messaging, using prototypes to make the proposition understandable: update a stale job with meaningful information rather than close it and start again.
                     p Refresh required substantial, recent updates, such as compensation, job-description details, or company information. Renewed visibility had to be connected to more current information. Resurfacing an unchanged listing would have left job seekers with the same potentially outdated description.
-                    p I partnered with my product owner and lead engineer throughout the work. I owned the design and alignment, with implementation and rollout carried by the wider team.
                 .indeed-evidence
+                    figure.folio-case__figure.indeed-refresh#indeed-refresh-screen(aria-labelledby="indeed-refresh-screen-caption")
+                        img(src="assets/img/folio/project--job-refresh/screen-refresh.png" srcset=folioSrcset("assets/img/folio/project--job-refresh/screen-refresh.png") sizes="(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt="Employer jobs dashboard mockup showing a Refresh eligibility banner beneath the relevant job, with a Refresh this job button alongside its status and applicant counts." width="1800" height="720" loading="lazy")
+                        figcaption#indeed-refresh-screen-caption Refresh in context: an eligibility message and action alongside the existing job, giving employers a path to renew it without creating another post.
                     +storyFlow({id: "indeed-delivery-caption", title: "From trial to Sponsored Jobs", nodes: [{label: "Six-month free trial", detail: "Available to a segment of free job posts; employers reported less time and effort."}, {label: "Sponsored Jobs feature", detail: "Refresh became part of the paid offering after the trial."}], caption: "Delivery timeline and qualitative employer feedback. Revenue lift and changes in duplicate volume are not quantified."})
 
                 +caseOutcome("indeed-job-refresh-success", "A benefit employers had already been seeking")
                     p The team made Refresh available to a segment of free job posts. Employers gave positive feedback that it saved time and effort compared with closing and reposting. It remained free for six months, then became a Sponsored Jobs feature.
                     p Employer feedback was qualitative. Revenue lift, paid adoption, changes in duplicate-job volume, and job-seeker outcomes are not quantified in this account. The applicant-management tools remained prototype exploration in this story.
                     p My takeaway is to investigate the intent behind a workaround. Employers wanted their jobs to look active; duplication was one way they pursued that goal. Connecting that intent to another team’s constraints let me propose a product path that supported the desired behavior at its source.
-            footer.folio-footer.case-close(aria-label="Contact and next case study")
-                .case-close__contact
-                    h2 Discuss this project
-                    p I’m happy to discuss the research, cross-team proposal, and product tradeoffs.
-                    a.folio-btn.case-close__email(href="mailto:hello@aaronbenjamin.design") Email Aaron
-                a.case-close__next(href="/curbside-pickup.html")
-                    span.case-close__label Next case study
-                    span.case-close__title Curbside Pickup
-                    span.case-close__arrow(aria-hidden="true")
-                        +folioIcon('arrow-right')
+            +caseStudyFooter("I’m happy to discuss the research, cross-team proposal, and product tradeoffs.", folioProjects[folioProjects['indeed-job-refresh'].next])

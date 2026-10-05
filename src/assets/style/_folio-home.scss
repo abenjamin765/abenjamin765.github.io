@@ -30,7 +30,8 @@
 .folio--home .folio-work-list { border: 0; padding-top: 24px; gap: 32px; }
 .folio--home .folio-tools .folio-project-pair { margin-top: 24px; gap: 32px; }
 .folio--home .folio-tools .folio-project__link { gap: 16px; }
-.folio--home .folio-tools .folio-project__media { height: 100px; aspect-ratio: auto; }
+.folio--home .folio-tools .folio-project__media { height: auto; aspect-ratio: 21 / 5; }
+.folio--home .folio-tools .folio-project__media img { object-fit: contain; }
 .folio--home .folio-tools .folio-project__title { font-size: 22px; line-height: 1.2; }
 .folio--home .folio-tools .folio-project__status { display: none; }
 .folio--home #about .folio-section-head { max-width: 640px; }

@@ -1,9 +1,20 @@
+include project-catalog.pug
+include image-variants.pug
+
 //- Lucide static SVGs, vendored with their ISC/MIT license.
 mixin folioIcon(name)
     if name === 'arrow-left'
         include ../assets/icons/lucide/arrow-left.svg
     else if name === 'arrow-right'
         include ../assets/icons/lucide/arrow-right.svg
+    else if name === 'chevron-down'
+        include ../assets/icons/lucide/chevron-down.svg
+    else if name === 'plus'
+        include ../assets/icons/lucide/plus.svg
+    else if name === 'minus'
+        include ../assets/icons/lucide/minus.svg
+    else if name === 'ellipsis-vertical'
+        include ../assets/icons/lucide/ellipsis-vertical.svg
     else if name === 'trash-2'
         include ../assets/icons/lucide/trash-2.svg
 
@@ -17,7 +28,7 @@ mixin folioHead(pageTitle, description, pagePath, stylesheet, shareImage, styles
     meta(property="og:title", content=pageTitle)
     meta(property="og:description", content=description)
     meta(property="og:url", content='https://aaronbenjamin.design' + pagePath)
-    meta(property="og:image", content='https://aaronbenjamin.design' + (shareImage || '/assets/img/folio/work-classroom.png'))
+    meta(property="og:image", content='https://aaronbenjamin.design' + (shareImage || '/assets/img/folio/hero-portrait.png'))
     meta(name="twitter:card", content="summary_large_image")
     link(rel="icon", type="image/svg+xml", href="/assets/img/folio/favicon.svg")
     link(rel="stylesheet", href="/assets/style/" + (stylesheet || 'folio') + ".css" + (stylesheetVersion ? '?v=' + stylesheetVersion : ''))
@@ -30,18 +41,22 @@ mixin folioShell
         img.folio__decor-img(src="assets/img/folio/blob.svg", alt="")
 
 //- backHref defaults to /#work so existing pages keep the current destination.
-mixin folioHeader(active, projectTitle, backHref)
+mixin folioHeader(active, projectTitle, backHref, action)
+    - projectTitle = folioProjects[(backHref || "").replace("/#", "")]?.title || projectTitle
     header.folio-hdr
         .folio-hdr__inner
             if projectTitle
-                a.folio-hdr__name.folio-hdr__name--project(href=(backHref || '/#work') aria-label=`Back to selected work: ${projectTitle}`)
+                a.folio-hdr__name.folio-hdr__name--project(href=(backHref || '/#work') aria-label=projectTitle === "Selected work" ? "Back to selected work" : `Back to selected work: ${projectTitle}`)
                     span.folio-hdr__back-icon(aria-hidden="true")
                         +folioIcon('arrow-left')
                     span= projectTitle
             else
                 a.folio-hdr__name(href="/") Aaron Benjamin
             nav.folio-nav(aria-label="Primary")
-                a.folio-btn.folio-nav__cta(href="/resume.html" aria-current=active === 'resume' ? 'page' : null) Resume
+                if action
+                    a.folio-btn.folio-nav__cta(href=action.href download=action.download ? true : null)= action.label
+                else
+                    a.folio-btn.folio-nav__cta(href="/resume.html" aria-current=active === 'resume' ? 'page' : null) Resume
 
 //- next is an optional { href, label } case link. portrait defaults off so case pages stay text-only.
 mixin folioFooter(showResume, lead, next, portrait)
@@ -59,20 +74,35 @@ mixin folioFooter(showResume, lead, next, portrait)
             if showResume !== false && !next
                 a.folio-footer__resume(href="/resume.html") View Resume
 
+//- Shared case-study closing component; each page supplies its invitation and next story.
+mixin caseStudyFooter(lead, next)
+    - next = {...next, title: folioProjectForUrl(next.href)?.title || next.title}
+    footer.folio-footer.case-close(aria-label="Contact and next case study")
+        .case-close__contact
+            h2 Discuss this project
+            p= lead
+            a.folio-btn.case-close__email(href="mailto:hello@aaronbenjamin.design") Email Aaron
+        a.case-close__next(href=next.href)
+            span.case-close__label Next case study
+            span.case-close__title= next.title
+            span.case-close__arrow(aria-hidden="true")
+                +folioIcon('arrow-right')
+
 //- ——— Homepage cards ———
 
 //- One card shape for a linked case (card.href + card.image) and an email preview
 //- (card.previewName + card.ctaHref). Copy stays in the caller as arguments.
 mixin projectCard(card)
+    - card = {...card, ...(folioProjects[card.id] ? {title: folioProjects[card.id].title, href: folioProjects[card.id].href} : {})}
     article.folio-project(id=card.id class=card.feature ? 'folio-project--feature' : null)
         if card.href
             a.folio-project__link(href=card.href)
                 .folio-project__media
                     if card.image
-                        img(src=card.image.src, alt=card.image.alt, width=card.image.width, height=card.image.height, loading="lazy")
+                        img(src=card.image.src, srcset=folioSrcset(card.image.src), sizes="(max-width: 600px) calc(100vw - 64px), 480px", alt=card.image.alt, width=card.image.width, height=card.image.height, loading="lazy")
                     else
                         .folio-project__placeholder
-                            span Image to create
+                            span Project preview
                             strong= card.visual
                             //- Detailed art direction lives in the case study and private briefs.
                 .folio-project__copy
@@ -104,6 +134,11 @@ mixin claim(num, title)
 
 //- ——— Case study devices ———
 
+//- Shared opening: title and dek, media, then facts supplied by the page.
+mixin caseHero
+    header.folio-case__hero
+        block
+
 //- Definition list wrapper; the caller supplies .folio-case__fact items as a block
 //- so every label and value stays literal in the page.
 mixin caseFacts
@@ -128,16 +163,16 @@ mixin caseSection(opts)
 //- Simple image figure. fig: { class, labelledby, src, alt, width, height, loading,
 //- fetchpriority, caption, captionId }.
 mixin caseFigure(fig)
-    figure.folio-case__figure(class=fig.class aria-labelledby=fig.labelledby)
-        img(src=fig.src alt=fig.alt width=fig.width height=fig.height loading=fig.loading fetchpriority=fig.fetchpriority)
+    figure.folio-case__figure(id=fig.id class=fig.class aria-labelledby=fig.labelledby)
+        img(src=fig.src srcset=folioSrcset(fig.src) sizes=fig.sizes || "(max-width: 600px) calc(100vw - 64px), (max-width: 900px) calc(100vw - 112px), 1100px" alt=fig.alt width=fig.width height=fig.height loading=fig.loading fetchpriority=fig.fetchpriority)
         if fig.caption
             figcaption(id=fig.captionId)= fig.caption
 
 //- Gold outcome block. The prose paragraphs stay in the caller as a block.
-mixin caseOutcome(id, title)
+mixin caseOutcome(id, title, label)
     section.folio-case__outcome(aria-labelledby=id)
         .folio-case__outcome-inner
-            p.folio-eyebrow S — Success
+            p.folio-eyebrow= label || "S — Success"
             h2(id=id)= title
             block
 
@@ -245,22 +280,3 @@ mixin stepList(opts)
             if opts.note
                 p.green-case__diagram-note= opts.note
         figcaption(id=opts.captionId)= opts.caption
-
-//- Visible production briefs; never represented as authentic research artifacts.
-mixin imageBrief(brief)
-    figure.folio-image-brief
-        .folio-image-brief__canvas
-            p.folio-image-brief__label Image to create · #{brief.role}
-            h3= brief.title
-            p= brief.composition
-            dl
-                div
-                    dt Format
-                    dd= brief.ratio
-                div
-                    dt Artifact
-                    dd= brief.type
-                div
-                    dt Purpose
-                    dd= brief.purpose
-        figcaption= brief.caption

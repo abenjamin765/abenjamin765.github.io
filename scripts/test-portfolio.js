@@ -6,6 +6,23 @@ const puppeteer = require("puppeteer");
 
 async function main() {
   const dist = path.resolve(__dirname, "..", "dist");
+  // Publishing safeguards apply to the output, including responsive candidates.
+  const filesUnder = directory => fs.readdirSync(directory, {withFileTypes:true}).flatMap(entry => {
+    const file = path.join(directory, entry.name);
+    return entry.isDirectory() ? filesUnder(file) : [file];
+  });
+  for (const file of filesUnder(path.join(dist, 'assets/img'))) {
+    assert.ok(!/\.(json|txt|log)$|\.DS_Store$/i.test(file), `Source sidecar must not be published: ${file}`);
+  }
+  for (const file of filesUnder(dist).filter(file => file.endsWith('.html'))) {
+    for (const match of fs.readFileSync(file, 'utf8').matchAll(/srcset="([^"]+)"/g)) {
+      for (const candidate of match[1].split(',')) {
+        const url = candidate.trim().split(/\s+/)[0];
+        if (url.startsWith('/assets/')) assert.ok(fs.existsSync(path.join(dist, url)), `Missing responsive image: ${url}`);
+      }
+    }
+  }
+
   const externalOrigin = process.env.PORTFOLIO_TEST_ORIGIN;
   let server;
   if (!externalOrigin) {
@@ -79,6 +96,96 @@ async function main() {
         assert.equal(await page.$$eval("h1", (nodes) => nodes.length), 1, `${route} should have one page heading`);
       }
 
+      // Markdown demo: drafts must not change the order until applied.
+      await page.goto(origin + '/price-adjustments.html', {waitUntil: 'domcontentloaded'});
+      const openDemo = async () => {await page.click('[data-item=bulb] .markdown-demo__more'); await page.click('[data-item=bulb] .markdown-demo__open');};
+      const demoValue = selector => page.$eval(selector, node => node.textContent.trim());
+      const setDemo = (selector, value) => page.$eval(selector, (node, value) => {
+        node.value = value;
+        node.dispatchEvent(new Event('input', {bubbles: true}));
+      }, value);
+      const baseHeight = await page.$eval('.markdown-demo__app', n => n.getBoundingClientRect().height);
+      await openDemo();
+      assert.equal(await page.$eval('.markdown-demo__app', n => n.getBoundingClientRect().height), baseHeight, 'Opening the overlay must not expand the cart');
+      assert.equal(await page.$$eval('.markdown-demo__select svg', n => n.length), 2, 'Both selects use Lucide chevrons');
+      assert.equal(await demoValue('#markdown-summary-total'), '$889.00');
+      await page.click('.markdown-demo__apply');
+      assert.equal(await demoValue('#markdown-summary-discount'), '($15.00)');
+      assert.equal(await demoValue('#markdown-summary-total'), '$874.00');
+      await openDemo();
+      await page.select('#markdown-type', 'percent');
+      await setDemo('#markdown-value', '20');
+      await setDemo('#markdown-quantity', '2');
+      assert.equal(await demoValue('#markdown-summary-total'), '$874.00');
+      await page.click('.markdown-demo__apply');
+      assert.equal(await demoValue('#markdown-summary-total'), '$869.00');
+      await openDemo();
+      await setDemo('#markdown-value', '100');
+      assert.equal(await page.$eval('.markdown-demo__apply', n => n.disabled), true);
+      assert.match(await demoValue('#markdown-error'), /manager approval/);
+      await page.keyboard.press('Escape');
+      assert.equal(await page.$eval('#markdown-editor', n => n.hidden), true);
+      assert.equal(await page.$eval('[data-item=bulb] .markdown-demo__more', n => n === document.activeElement), true);
+      assert.equal(await demoValue('#markdown-summary-total'), '$869.00');
+      await page.click('[data-item=bulb] .markdown-demo__more');
+      await page.click('[data-item=bulb] .markdown-demo__remove');
+      assert.equal(await demoValue('#markdown-summary-total'), '$889.00');
+      await openDemo();
+      await page.select('#markdown-type', 'price');
+      await setDemo('#markdown-value', '45');
+      await setDemo('#markdown-quantity', '7');
+      assert.equal(await page.$eval('.markdown-demo__apply', n => n.disabled), true);
+      await setDemo('#markdown-quantity', '3');
+      await page.click('.markdown-demo__apply');
+      assert.equal(await demoValue('#markdown-summary-total'), '$874.00');
+      await openDemo();
+      await setDemo('#markdown-value', '49');
+      await page.click('.markdown-demo__cancel');
+      assert.equal(await demoValue('#markdown-summary-total'), '$874.00');
+      await page.click('.markdown-demo__reset');
+      assert.equal(await demoValue('#markdown-summary-total'), '$889.00');
+      await page.click('.markdown-demo__quantity [data-step="1"]');
+      assert.equal(await demoValue('#markdown-summary-subtotal'), '$1,189.00');
+      assert.equal(await demoValue('#markdown-summary-total'), '$1,189.00');
+      await page.click('.markdown-demo__reset');
+      assert.equal(await demoValue('#markdown-summary-subtotal'), '$889.00');
+      await page.click('[data-item=bulb] .markdown-demo__more');
+      await page.keyboard.press('Escape');
+      assert.equal(await page.$eval('#markdown-item-menu', n => n.hidden), true);
+      assert.equal(await page.$eval('[data-item=bulb] .markdown-demo__more', n => n === document.activeElement), true);
+      for (const width of widths) {
+        await page.setViewport({width, height: 900});
+        await openDemo();
+        assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `Open markdown editor overflows at ${width}px`);
+        await page.click('.markdown-demo__cancel');
+      }
+      await page.click('[data-item=thermostat] .markdown-demo__more');
+      await page.click('[data-item=thermostat] .markdown-demo__open');
+      await page.click('.markdown-demo__apply');
+      assert.equal(await demoValue('#markdown-summary-total'), '$884.00');
+      await openDemo();
+      await page.click('.markdown-demo__apply');
+      assert.equal(await demoValue('#markdown-summary-discount'), '($20.00)');
+      assert.equal(await demoValue('#markdown-summary-total'), '$869.00');
+      await page.click('[data-item=thermostat] .markdown-demo__more');
+      await page.click('[data-item=thermostat] .markdown-demo__remove');
+      assert.equal(await demoValue('#markdown-summary-total'), '$874.00');
+      await page.click('.markdown-demo__reset');
+      assert.equal(await demoValue('#markdown-summary-tax'), '$62.23');
+      assert.equal(await demoValue('#markdown-order-total'), '$951.23');
+      await openDemo();
+      await page.click('.markdown-demo__apply');
+      assert.equal(await demoValue('#markdown-summary-tax'), '$61.18');
+      assert.equal(await demoValue('#markdown-order-total'), '$935.18');
+      await page.click('.markdown-demo__quote');
+      assert.match(await demoValue('.markdown-demo__status'), /Demo quote saved.*935.18/);
+      await page.click('.markdown-demo__place');
+      assert.match(await demoValue('.markdown-demo__status'), /Demo order placed.*935.18/);
+      await page.click('.markdown-demo__cancel-order');
+      assert.equal(await demoValue('#markdown-order-total'), '$951.23');
+      assert.equal(await demoValue('#markdown-summary-discount'), '($0.00)');
+      console.log('Markdown calculations, per-item menus, independent discounts, cancellation, approval limit, quantities, reset, and open layouts passed');
+
       await page.setViewport({ width: 390, height: 900 });
       for (const route of routes) {
         await page.goto(origin + route, { waitUntil: "domcontentloaded", timeout: 60000 });
@@ -134,14 +241,14 @@ async function main() {
       for (const image of ["green-loom--figma-hero-2x.png", "green-loom--mobile-catalog-2x.png"]) {
         assert.ok(fs.existsSync(path.join(dist, "assets", "img", "folio", "project--green-loom", image)), `Green Loom Figma image missing: ${image}`);
       }
-      assert.ok((await page.$eval(".green-case__hero-media img", (node) => node.getAttribute("src"))).includes("green-loom--work-card-2x.png"), "Green Loom should use the existing catalog crop");
+      assert.ok((await page.$eval(".green-case__hero-media img", (node) => node.getAttribute("src"))).includes("hero-green-loom.png"), "Green Loom should use the supplied hero");
       console.log("Green Loom case-study structure passed");
 
       await page.goto(origin + "/design-dash.html", { waitUntil: "domcontentloaded", timeout: 60000 });
       assert.equal(await page.$$eval("h1", (nodes) => nodes.length), 1, "Design Dash should have one page heading");
-      assert.equal(await page.$eval(".folio-hdr__name--project", (node) => node.textContent.trim()), "Design Dash");
+      assert.equal(await page.$eval(".folio-hdr__name--project", (node) => node.textContent.trim()), "The Design Dash");
       assert.equal(await page.$eval(".folio-hdr__name--project", (node) => node.getAttribute("href")), "/#design-dash");
-      assert.ok(await page.$(".folio-case__hero-media figure figcaption"), "Design Dash hero should be a labeled, text-native diagram");
+      assert.ok(await page.$(".folio-case__hero-media img"), "Design Dash should have a project hero image");
       console.log("Design Dash case-study structure passed");
 
       await page.goto(origin + "/many-hats.html", { waitUntil: "domcontentloaded", timeout: 60000 });
@@ -184,7 +291,7 @@ async function main() {
       for (const retail of [
         {
           route: "/a-to-z-first-claim.html",
-          title: "A-to-z First Claim",
+          title: "Amazon A-to-z: First Claim",
           back: "/#a-to-z-first-claim",
           hero: "a-to-z-first-claim--hero-2x.jpg",
           assets: ["a-to-z-first-claim--hero-2x.jpg", "a-to-z-first-claim--work-card-2x.png", "a-to-z-first-claim--email-2x.png"],
@@ -194,16 +301,16 @@ async function main() {
           route: "/curbside-pickup.html",
           title: "Curbside Pickup",
           back: "/#curbside-pickup",
-          hero: "curbside-pickup--email-complete-2x.png",
-          assets: ["curbside-pickup--email-complete-2x.png", "curbside-pickup--work-card-2x.png", "curbside-pickup--checkin-complete-2x.png"],
+          hero: "hero-curbside.png",
+          assets: ["hero-curbside.png", "pickup-email-explained.png", "app-pickup-notifications.jpg"],
           folder: "project--curbside-pickup",
         },
         {
           route: "/price-adjustments.html",
           title: "Price Adjustments",
           back: "/#price-adjustments",
-          hero: "price-adjustments--cart-2x.png",
-          assets: ["price-adjustments--cart-2x.png", "price-adjustments--update-complete-2x.png"],
+          hero: "hero-price-adjustments.png",
+          assets: ["hero-price-adjustments.png", "price-adjustments--cart-2x.png", "price-adjustments--update-complete-2x.png"],
           folder: "project--price-adjustments",
         },
       ]) {
@@ -244,10 +351,48 @@ async function main() {
             assert.ok(await page.$(selector), `Indeed visual missing: ${selector}`);
           }
           assert.equal(await page.$('.folio-image-brief'), null, 'Indeed supplied visuals replace production placeholders');
-        } else {
-          assert.ok(await page.$('.folio-image-brief'), `${route}: missing art direction`);
+        } else if (route === '/curbside-pickup.html') {
+          for (const selector of ['#curbside-two-sides img', '.curbside-decision', '#curbside-email-board img', '#curbside-app-notifications img']) {
+            assert.ok(await page.$(selector), `Curbside visual missing: ${selector}`);
+          }
+          assert.equal(await page.$('.folio-image-brief'), null, 'Completed Curbside story has no production placeholders');
+        } else if (route === '/price-adjustments.html') {
+          for (const selector of ['#price-markdown-workaround img', '#price-markdown-iterations img', '.case-close']) {
+            assert.ok(await page.$(selector), `Price Adjustments artifact missing: ${selector}`);
+          }
+          assert.equal(await page.$('.folio-image-brief'), null, 'Completed Price Adjustments story has no production placeholders');
+        } else if (route === '/green-loom.html') {
+          for (const selector of ['.green-case__hero-media img', '#green-catalog-demo iframe', '#green-catalog-model img', '#green-work-paths img', '#green-schema-model img', '.case-close']) {
+            assert.ok(await page.$(selector), `Green Loom artifact missing: ${selector}`);
+          }
+          assert.equal(await page.$('.folio-image-brief'), null, 'Green Loom uses existing visuals without duplicate production placeholders');
+        } else if (route === '/design-dash.html') {
+          assert.ok(await page.$('#dash-screen-record img'), 'Design Dash fictional example illustration is present');
+          assert.equal(await page.$('.folio-image-brief'), null, 'Design Dash illustrations replace production placeholders');
         }
+        assert.equal(await page.$('.folio-image-brief'), null, `${route}: no public production briefs`);
+        assert.ok(await page.$('.case-close'), `${route}: shared contact and next-story footer`);
+        assert.deepEqual(await page.$$eval('.folio-case__hero > *', nodes => nodes.map(node => node.classList.contains('folio-case__intro') ? 'intro' : node.classList.contains('folio-case__hero-media') ? 'media' : node.classList.contains('folio-case__facts') ? 'facts' : 'unexpected')), ['intro', 'media', 'facts'], `${route}: introduction precedes media and facts`);
       }
+      // Follow the actual rendered recommendations: all nine stories before returning.
+      const visitedStories = new Set();
+      let nextStory = '/classroom-assignment-management.html';
+      while (!visitedStories.has(nextStory)) {
+        assert.ok(caseRoutes.includes(nextStory), `Next link reaches a case study: ${nextStory}`);
+        visitedStories.add(nextStory);
+        await page.goto(origin + nextStory, {waitUntil: 'domcontentloaded'});
+        nextStory = await page.$eval('.case-close__next', node => node.getAttribute('href'));
+      }
+      assert.equal(visitedStories.size, caseRoutes.length, 'Reading sequence includes every case study');
+      assert.equal(nextStory, '/classroom-assignment-management.html', 'Reading sequence returns to the first story');
+      for (const width of [320, 390, 768, 1440]) {
+        await page.setViewport({width, height:900});
+        await page.goto(origin + '/blog/ai-is-exposing-ux-design/', {waitUntil:'domcontentloaded'});
+        assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `Essay fits at ${width}px`);
+      }
+      await page.goto(origin + '/', {waitUntil:'domcontentloaded'});
+      assert.ok(await page.$('a[href="/writing.html"]'), 'Writing is reachable from the portfolio');
+      console.log('Shared case openings, complete reading sequence, and essay layouts passed');
       await page.goto(origin + '/', {waitUntil: 'domcontentloaded'});
       assert.deepEqual(await page.$$eval('#work .folio-project', nodes => nodes.map(n => n.id)), ['classroom', 'indeed-job-refresh', 'curbside-pickup']);
       const heroWords = await page.$$eval('.folio-hero__word', nodes => nodes.map(n => n.textContent.trim()));

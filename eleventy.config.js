@@ -64,6 +64,7 @@ function calendarParts(value) {
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({"src/prototypes/green-loom/index.html": "prototypes/green-loom/index.html", "src/prototypes/green-loom/prototype.js": "prototypes/green-loom/prototype.js", "src/prototypes/green-loom/prototype.css": "prototypes/green-loom/prototype.css"});
   eleventyConfig.addFilter("isoDate", function (value) {
     const parts = calendarParts(value);
     if (!parts) return "";

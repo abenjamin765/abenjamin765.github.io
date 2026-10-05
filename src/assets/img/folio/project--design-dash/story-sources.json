@@ -1,0 +1,12 @@
+{
+  "personal_dashes": [
+    "/Users/aaron/Sites/attention-map/dashes/aegis",
+    "/Users/aaron/Sites/the-new-aba/screen-reader/dashes/cli-web-reader"
+  ],
+  "object_library": "/Users/aaron/Sites/design-dash/library/objects",
+  "wireframe_source": "/Users/aaron/Sites/attention-map/dashes/aegis/wireframe.html#ab04",
+  "method_sources": [
+    "/Users/aaron/Sites/design-dash/GETTING_STARTED.md",
+    "/Users/aaron/Sites/design-dash/docs/adr/0007-object-library-reference-fork-promote.md"
+  ]
+}

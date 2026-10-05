@@ -23,10 +23,7 @@ html(lang="en")
         link(rel="stylesheet", href="/assets/style/resume.css")
     body.folio.folio--resume
         a.visually-hidden(href="#main") Skip to content
-        +folioHeader('resume')
-
-        .resume-actions.no-print
-            a.resume-actions__pdf(href="/assets/Aaron-Benjamin-Resume.pdf" download) Download PDF
+        +folioHeader('resume', 'Selected work', '/#work', {label: 'Download PDF', href: '/assets/Aaron-Benjamin-Resume.pdf', download: true})
 
         main#wrapper
             .resume-main#main
