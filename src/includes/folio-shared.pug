@@ -111,7 +111,7 @@ mixin caseStudyFooter(lead, next)
 //- One card shape for a linked case (card.href + card.image) and an email preview
 //- (card.previewName + card.ctaHref). Copy stays in the caller as arguments.
 mixin projectCard(card)
-    - card = {...card, ...(folioProjects[card.id] ? {title: folioProjects[card.id].title, href: folioProjects[card.id].href} : {})}
+    - card = {...card, ...(folioProjects[card.id] ? {title: folioProjects[card.id].cardTitle || folioProjects[card.id].title, href: folioProjects[card.id].href} : {})}
     article.folio-project(id=card.id class=card.feature ? 'folio-project--feature' : null)
         if card.href
             a.folio-project__link(href=card.href)

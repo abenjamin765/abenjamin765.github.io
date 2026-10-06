@@ -159,6 +159,7 @@
     "design-dash": {
       "id": "design-dash",
       "title": "The Design Dash",
+      "cardTitle": "Design Dash",
       "href": "/design-dash.html",
       "next": "many-hats",
       "group": "practice",
