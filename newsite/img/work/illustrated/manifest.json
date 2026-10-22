@@ -1,0 +1,324 @@
+{
+  "approvedBy": "Author approval in portfolio conversation: Nice, let’s use these",
+  "provenance": "AI-generated conceptual illustrations; not actual project photographs, screenshots or research evidence.",
+  "originals": "/Users/aaron/Documents/ChatGPT/portfolio/output/case-study-imagery/illustrated",
+  "generationTool": "built-in image_gen",
+  "encoding": "Lossless WebP, transparent background preserved",
+  "usage": "Three companion heroes in the homepage Work showcase; nine thumbnails on work.html; other heroes retained for future case-study interiors.",
+  "assets": [
+    {
+      "project": "Renaissance — Assignment Management",
+      "key": "classroom",
+      "role": "thumbnail",
+      "file": "classroom-thumbnail-v1.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "classroom-thumbnail-v1.png",
+      "concept": "A few assignment stacks and one unfinished folder invite closer attention.",
+      "prompt": "Use case: illustration-story.\nStyle reference: Image 1 is the portfolio's original Hi illustration. Match its friendly 2D cartoon language: bold dark charcoal/near-black clean outlines, warm flat color fills, confident simple silhouettes, expressive but restrained human gestures, and only a small amount of soft cel shading. Similar visual weight and finish to a custom Bitmoji-style editorial spot illustration. Use Image 1 for style ONLY: do not repeat its waving man, facial identity, Hi lettering, speech balloon, pose or crop.\nArt direction: much simpler than a scene illustration. A compact group of a few large objects with generous clear space. Transparent background, no room, classroom, storefront facade, furniture-filled interior or scenic backdrop. A small desk or counter segment is permitted only when essential to the action. Black outlines with warm ivory, mustard yellow, muted sage, orange, peach and graphite fills, using each case's accent sparingly. No photorealism, elaborate textures, gradients, glossy 3D rendering, tiny decorative clutter, giant flat background panels or busy infographic arrows.\nText: no text, letters, numbers, logos, branding, headlines, readable interfaces, records, metrics or seals. Paper may contain a few simple nonverbal marks. No watermarks, image borders or rounded rectangular frames.\nHuman figures: simple anonymous fictional cartoon characters in the reference's friendly style, with plausible hands and facial structure; no photoreal faces. Every important hand and object is complete inside the frame. Illustration is conceptual, not evidence or a screenshot.\nAsset type: simple editorial spot-illustration thumbnail. Horizontal 2:1 canvas, target 2048 x 1024 pixels. Transparent background. Keep the whole identifying subject inside the central 60 percent of width, surrounded by clear transparent breathing room, so a centered 120x80 or 88x64 crop still makes sense. Use thick readable outlines and a handful of large shapes.\nPrimary request: Two uneven stacks of ivory school worksheets on mustard and sage folders, with one open folder and a loose unfinished worksheet between them. A large pencil rests across the open folder. Use just these few large shapes, not hundreds of paper edges. The open unfinished work interrupts the otherwise orderly stacks. No teacher or classroom in the thumbnail.",
+      "referenceImages": [
+        "intro-hi-style-reference.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Home Depot — Price Adjustments",
+      "key": "price-adjustments",
+      "role": "thumbnail",
+      "file": "price-adjustments-thumbnail-v1.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "price-adjustments-thumbnail-v1.png",
+      "concept": "One receipt connects two checkout stations for a single basket.",
+      "prompt": "Use case: illustration-story.\nStyle reference: Image 1 is the portfolio's original Hi illustration. Match its friendly 2D cartoon language: bold dark charcoal/near-black clean outlines, warm flat color fills, confident simple silhouettes, expressive but restrained human gestures, and only a small amount of soft cel shading. Similar visual weight and finish to a custom Bitmoji-style editorial spot illustration. Use Image 1 for style ONLY: do not repeat its waving man, facial identity, Hi lettering, speech balloon, pose or crop.\nArt direction: much simpler than a scene illustration. A compact group of a few large objects with generous clear space. Transparent background, no room, classroom, storefront facade, furniture-filled interior or scenic backdrop. A small desk or counter segment is permitted only when essential to the action. Black outlines with warm ivory, mustard yellow, muted sage, orange, peach and graphite fills, using each case's accent sparingly. No photorealism, elaborate textures, gradients, glossy 3D rendering, tiny decorative clutter, giant flat background panels or busy infographic arrows.\nText: no text, letters, numbers, logos, branding, headlines, readable interfaces, records, metrics or seals. Paper may contain a few simple nonverbal marks. No watermarks, image borders or rounded rectangular frames.\nHuman figures: simple anonymous fictional cartoon characters in the reference's friendly style, with plausible hands and facial structure; no photoreal faces. Every important hand and object is complete inside the frame. Illustration is conceptual, not evidence or a screenshot.\nAsset type: simple editorial spot-illustration thumbnail. Horizontal 2:1 canvas, target 2048 x 1024 pixels. Transparent background. Keep the whole identifying subject inside the central 60 percent of width, surrounded by clear transparent breathing room, so a centered 120x80 or 88x64 crop still makes sense. Use thick readable outlines and a handful of large shapes.\nPrimary request: One orange shopping basket with two simple unbranded home-improvement supplies inside. A long curling ivory receipt lies in front, bridging two small graphite checkout-terminal silhouettes on either side. Keep one basket and one order, with the receipt as the connecting visual. Terminals are blank simple shapes, no interface. No counter background or people; only a subtle counter line if needed.",
+      "referenceImages": [
+        "intro-hi-style-reference.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Home Depot — Price Adjustments",
+      "key": "price-adjustments",
+      "role": "hero",
+      "file": "price-adjustments-hero-v1.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "price-adjustments-hero-v1.png",
+      "concept": "An associate handles an unnecessary checkout detour while the order stays put.",
+      "prompt": "Use case: illustration-story.\nStyle reference: Image 1 is the portfolio's original Hi illustration. Match its friendly 2D cartoon language: bold dark charcoal/near-black clean outlines, warm flat color fills, confident simple silhouettes, expressive but restrained human gestures, and only a small amount of soft cel shading. Similar visual weight and finish to a custom Bitmoji-style editorial spot illustration. Use Image 1 for style ONLY: do not repeat its waving man, facial identity, Hi lettering, speech balloon, pose or crop.\nArt direction: much simpler than a scene illustration. A compact group of a few large objects with generous clear space. Transparent background, no room, classroom, storefront facade, furniture-filled interior or scenic backdrop. A small desk or counter segment is permitted only when essential to the action. Black outlines with warm ivory, mustard yellow, muted sage, orange, peach and graphite fills, using each case's accent sparingly. No photorealism, elaborate textures, gradients, glossy 3D rendering, tiny decorative clutter, giant flat background panels or busy infographic arrows.\nText: no text, letters, numbers, logos, branding, headlines, readable interfaces, records, metrics or seals. Paper may contain a few simple nonverbal marks. No watermarks, image borders or rounded rectangular frames.\nHuman figures: simple anonymous fictional cartoon characters in the reference's friendly style, with plausible hands and facial structure; no photoreal faces. Every important hand and object is complete inside the frame. Illustration is conceptual, not evidence or a screenshot.\nAsset type: simple editorial spot-illustration case hero. Wide horizontal 2.5:1 canvas, target 2400 x 960 pixels. Transparent background. Image 2 is the companion thumbnail and supplies the exact subject styling, palette and object shapes. Expand the story with a few purposeful extra elements, while remaining a simple spot illustration rather than a detailed room scene. Important elements remain well inside the frame, and the main action remains clear at phone width.\nPrimary request: Image 2 is the companion thumbnail. Retain the orange basket, same supplies, two blank checkout terminals and curling receipt. Add one friendly anonymous cartoon associate, waist-up, holding the same long receipt between the terminals while the basket stays on a minimal counter segment. A small questioning expression communicates unnecessary extra work. Keep limbs clear and plausible; no additional customer, extra basket or full retail interior.",
+      "referenceImages": [
+        "intro-hi-style-reference.png",
+        "price-adjustments-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "The Design Dash",
+      "key": "design-dash",
+      "role": "thumbnail",
+      "file": "design-dash-thumbnail-v1.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "design-dash-thumbnail-v1.png",
+      "concept": "A rough idea acquires a clear planning structure.",
+      "prompt": "Use case: illustration-story.\nStyle reference: Image 1 is the portfolio's original Hi illustration. Match its friendly 2D cartoon language: bold dark charcoal/near-black clean outlines, warm flat color fills, confident simple silhouettes, expressive but restrained human gestures, and only a small amount of soft cel shading. Similar visual weight and finish to a custom Bitmoji-style editorial spot illustration. Use Image 1 for style ONLY: do not repeat its waving man, facial identity, Hi lettering, speech balloon, pose or crop.\nArt direction: much simpler than a scene illustration. A compact group of a few large objects with generous clear space. Transparent background, no room, classroom, storefront facade, furniture-filled interior or scenic backdrop. A small desk or counter segment is permitted only when essential to the action. Black outlines with warm ivory, mustard yellow, muted sage, orange, peach and graphite fills, using each case's accent sparingly. No photorealism, elaborate textures, gradients, glossy 3D rendering, tiny decorative clutter, giant flat background panels or busy infographic arrows.\nText: no text, letters, numbers, logos, branding, headlines, readable interfaces, records, metrics or seals. Paper may contain a few simple nonverbal marks. No watermarks, image borders or rounded rectangular frames.\nHuman figures: simple anonymous fictional cartoon characters in the reference's friendly style, with plausible hands and facial structure; no photoreal faces. Every important hand and object is complete inside the frame. Illustration is conceptual, not evidence or a screenshot.\nAsset type: simple editorial spot-illustration thumbnail. Horizontal 2:1 canvas, target 2048 x 1024 pixels. Transparent background. Keep the whole identifying subject inside the central 60 percent of width, surrounded by clear transparent breathing room, so a centered 120x80 or 88x64 crop still makes sense. Use thick readable outlines and a handful of large shapes.\nPrimary request: A rough ivory sketch sheet beneath a translucent planning sheet, one large graphite pencil and a mustard tab. The sheets show a few very simple nonverbal planning shapes: a small drill silhouette inside one object card, a member silhouette in another, and a borrowing-record card, plus a short row of three simple unlettered wireframe blocks. Not an engineering drawing of a drill. Simplify for thumbnail readability; planning structure is the subject, with no tiny lines or readable interface.",
+      "referenceImages": [
+        "intro-hi-style-reference.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "The Design Dash",
+      "key": "design-dash",
+      "role": "hero",
+      "file": "design-dash-hero-v1.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "design-dash-hero-v1.png",
+      "concept": "A fictional tool-library idea becomes a model, wireframe and usable plan.",
+      "prompt": "Use case: illustration-story.\nStyle reference: Image 1 is the portfolio's original Hi illustration. Match its friendly 2D cartoon language: bold dark charcoal/near-black clean outlines, warm flat color fills, confident simple silhouettes, expressive but restrained human gestures, and only a small amount of soft cel shading. Similar visual weight and finish to a custom Bitmoji-style editorial spot illustration. Use Image 1 for style ONLY: do not repeat its waving man, facial identity, Hi lettering, speech balloon, pose or crop.\nArt direction: much simpler than a scene illustration. A compact group of a few large objects with generous clear space. Transparent background, no room, classroom, storefront facade, furniture-filled interior or scenic backdrop. A small desk or counter segment is permitted only when essential to the action. Black outlines with warm ivory, mustard yellow, muted sage, orange, peach and graphite fills, using each case's accent sparingly. No photorealism, elaborate textures, gradients, glossy 3D rendering, tiny decorative clutter, giant flat background panels or busy infographic arrows.\nText: no text, letters, numbers, logos, branding, headlines, readable interfaces, records, metrics or seals. Paper may contain a few simple nonverbal marks. No watermarks, image borders or rounded rectangular frames.\nHuman figures: simple anonymous fictional cartoon characters in the reference's friendly style, with plausible hands and facial structure; no photoreal faces. Every important hand and object is complete inside the frame. Illustration is conceptual, not evidence or a screenshot.\nAsset type: simple editorial spot-illustration case hero. Wide horizontal 2.5:1 canvas, target 2400 x 960 pixels. Transparent background. Image 2 is the companion thumbnail and supplies the exact subject styling, palette and object shapes. Expand the story with a few purposeful extra elements, while remaining a simple spot illustration rather than a detailed room scene. Important elements remain well inside the frame, and the main action remains clear at phone width.\nPrimary request: Image 2 is the companion thumbnail. Retain the sketch sheets, pencil and mustard tab. Widen to a simple three-part progression on a minimal tabletop segment: loose rough idea sheets, a small tangible tool-library model with a wooden person and shelf, and an organized plan folder with one simple wireframe sheet. Include a small unbranded cordless drill near the center as a concrete object being borrowed, not a product being engineered. Few large clear shapes, no detailed UI, words, dense connectors or room.",
+      "referenceImages": [
+        "intro-hi-style-reference.png",
+        "design-dash-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Renaissance — Assignment Management",
+      "key": "classroom",
+      "role": "hero",
+      "file": "classroom-hero-v2.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "classroom-hero-v2.png",
+      "concept": "A schoolteacher sorts assignments to identify work needing attention.",
+      "prompt": "Use case: illustration-story. Edit the supplied illustration in its existing friendly cartoon style: thick charcoal outlines, warm flat fills, minimal cel shading, simple large readable shapes. Preserve transparent background. No branding or watermark. No photorealism or detailed scenery. All subjects complete inside frame with generous clear space. This is conceptual illustration. Replace the man entirely with an anonymous female schoolteacher: medium-brown skin, dark shoulder-length hair, sage cardigan. She is examining worksheets and sorting the same mustard and sage folders. No beard, no glasses, no yellow shirt, no resemblance to the original male avatar. Keep desk, stacks, composition and all object styling. All eyes use the same simple dark oval cartoon style.",
+      "referenceImages": [
+        "classroom-hero-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Indeed — Job Refresh",
+      "key": "indeed-job-refresh",
+      "role": "thumbnail",
+      "file": "indeed-job-refresh-thumbnail-v2.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "indeed-job-refresh-thumbnail-v2.png",
+      "concept": "An old, curled job post stands among crisp new job posts.",
+      "prompt": "Use case: illustration-story. Edit the supplied illustration in its existing friendly cartoon style: thick charcoal outlines, warm flat fills, minimal cel shading, simple large readable shapes. Preserve transparent background. No branding or watermark. No photorealism or detailed scenery. All subjects complete inside frame with generous clear space. This is conceptual illustration. Recompose as a compact corkboard group of THREE separate job notices, clearly adjacent with little overlap: center old notice yellowed, curled and ragged; on either side fresh bright ivory notices with straight crisp edges. Each has a muted blue header, simple people icon and three nonverbal gray bars. Center old notice visibly stands out against the fresh posts. No hands or readable words. 2:1 wide canvas.",
+      "referenceImages": [
+        "indeed-job-refresh-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Home Depot — Curbside Pickup",
+      "key": "curbside-pickup",
+      "role": "thumbnail",
+      "file": "curbside-pickup-thumbnail-v2.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "curbside-pickup-thumbnail-v2.png",
+      "concept": "An associate brings an order to the empty car while its customer walks to the store.",
+      "prompt": "Use case: illustration-story. Edit the supplied illustration in its existing friendly cartoon style: thick charcoal outlines, warm flat fills, minimal cel shading, simple large readable shapes. Preserve transparent background. No branding or watermark. No photorealism or detailed scenery. All subjects complete inside frame with generous clear space. This is conceptual illustration. Show the actual missed connection: gray parked car at left, a puzzled store associate in orange apron standing RIGHT BESIDE THE CAR holding the customer's order (paint can and small tool carton), palm up looking into the empty car; customer in yellow walks AWAY from the car toward a store doorway at right, back turned to associate. Associate is at car, NOT at door. Customer and associate moving apart. Simple compact scene, no text or speech bubbles. 2:1 wide.",
+      "referenceImages": [
+        "curbside-pickup-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Green Loom",
+      "key": "green-loom",
+      "role": "thumbnail",
+      "file": "green-loom-thumbnail-v2.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "green-loom-thumbnail-v2.png",
+      "concept": "A catalog product diagram calls out its distinct attributes.",
+      "prompt": "Use case: illustration-story. Edit the supplied illustration in its existing friendly cartoon style: thick charcoal outlines, warm flat fills, minimal cel shading, simple large readable shapes. Preserve transparent background. No branding or watermark. No photorealism or detailed scenery. All subjects complete inside frame with generous clear space. This is conceptual illustration. Replace surrounding cartons, certificate and tag with an annotated catalog product diagram. One central peach product carton, surrounded by six short charcoal leader lines terminating in tidy attribute callout panels. Panels depict name as gray strokes, SKU as barcode, price as coin, dimensions as ruler, variant as sage/peach swatches, material as leaf. No invented certification checks. No readable letters, words or numbers. Clear product anatomy/catalog record metaphor. 2:1 wide.",
+      "referenceImages": [
+        "green-loom-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Home Depot — UX MEOW",
+      "key": "home-depot-design-leadership",
+      "role": "thumbnail",
+      "file": "home-depot-design-leadership-thumbnail-v2.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "home-depot-design-leadership-thumbnail-v2.png",
+      "concept": "Three participants collaborate on a software prototype.",
+      "prompt": "Use case: illustration-story. Edit the supplied illustration in its existing friendly cartoon style: thick charcoal outlines, warm flat fills, minimal cel shading, simple large readable shapes. Preserve transparent background. No branding or watermark. No photorealism or detailed scenery. All subjects complete inside frame with generous clear space. This is conceptual illustration. Replace the cardboard building with a SOFTWARE prototype: a single large tablet showing simple wireframe rectangles, navigation blocks and a button, no readable text. Three diverse hands collaborate: one uses stylus to sketch the screen, one places a sticky-note UI sketch next to it, one points to a component. Preserve hand style and sage/mustard/orange sleeves. No buildings, model houses, construction props. 2:1 wide.",
+      "referenceImages": [
+        "home-depot-design-leadership-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Amazon — A-to-z First Claim",
+      "key": "a-to-z-first-claim",
+      "role": "thumbnail",
+      "file": "a-to-z-first-claim-thumbnail-v2.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "a-to-z-first-claim-thumbnail-v2.png",
+      "concept": "A digital claim notification introduces next-step guidance beside a parcel.",
+      "prompt": "Use case: illustration-story. Edit the supplied illustration in its existing friendly cartoon style: thick charcoal outlines, warm flat fills, minimal cel shading, simple large readable shapes. Preserve transparent background. No branding or watermark. No photorealism or detailed scenery. All subjects complete inside frame with generous clear space. This is conceptual illustration. Replace folded paper brochure with an upright tablet displaying a digital claim notification: prominent amber bell and alert-dot symbol in a notification card, short gray message bars, below it a small next-step guidance card with parcel icon and arrow. Keep the kraft shipping carton alongside. Clearly a digital notification on a device, not a printed brochure. No words, numbers, brands or readable UI. 2:1 wide.",
+      "referenceImages": [
+        "a-to-z-first-claim-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Many Hats",
+      "key": "many-hats",
+      "role": "thumbnail",
+      "file": "many-hats-thumbnail-v2.webp",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sourcePNG": "many-hats-thumbnail-v2.png",
+      "concept": "Specialist AI agents contribute design, systems and code to shared software work.",
+      "prompt": "Use case: illustration-story. Edit the supplied illustration in its existing friendly cartoon style: thick charcoal outlines, warm flat fills, minimal cel shading, simple large readable shapes. Preserve transparent background. No branding or watermark. No photorealism or detailed scenery. All subjects complete inside frame with generous clear space. This is conceptual illustration. Replace the lamps and cardboard object completely. Illustrate a compact AI SOFTWARE TEAM: three friendly small digital agent avatars inside separate floating rounded-square panels, each with a distinct role symbol (product flow nodes, interface layout grid, code angle brackets). Connect the three panels to ONE shared central software window with wireframe blocks using a few simple lines. Avatars are clearly virtual assistants, with identical simple eye style, graphite outlines and restrained sage, mustard and orange accents. No physical workshop, lamps, houses or mechanical tools. No readable labels, text or branding. 2:1 wide.",
+      "referenceImages": [
+        "many-hats-thumbnail-v1.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Indeed — Job Refresh",
+      "key": "indeed-job-refresh",
+      "role": "hero",
+      "file": "indeed-job-refresh-hero-v2.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "indeed-job-refresh-hero-v2.png",
+      "concept": "A fresh job post is placed over the old one while neighboring posts remain visible.",
+      "prompt": "Use case: illustration-story. Create a revised companion hero in the SAME simple friendly cartoon illustration style as the references: bold charcoal outlines, warm flat fills, restrained cel shading, transparent background. Image 1 is the old hero whose story must be corrected; Image 2 is the revised thumbnail providing the new concept and object styling. Wide 2.5:1 canvas target 2400x960. All subjects complete inside frame with breathing room. No readable words, letters, numbers, brands or watermarks; interfaces use simple schematic shapes only. Show TWO hands placing an entire fresh, crisp new job notice directly OVER the aged central job notice on the corkboard. The old notice's ragged yellowed bottom and curled side must remain visible UNDER the new full-sheet notice, clearly two separate sheets. Keep neighboring fresh posts partly visible to situate the scene. The new notice repeats blue header and people icon. This is replacement by overlaying a complete new posting, NOT a patch or paper strip on the old one.",
+      "referenceImages": [
+        "indeed-job-refresh-hero-v1.png",
+        "indeed-job-refresh-thumbnail-v2.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Home Depot — Curbside Pickup",
+      "key": "curbside-pickup",
+      "role": "hero",
+      "file": "curbside-pickup-hero-v3.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "curbside-pickup-hero-v3.png",
+      "concept": "The associate arrives with the order at an empty car as the customer heads inside.",
+      "prompt": "Use case: illustration-story. Create a revised companion hero in the SAME simple friendly cartoon illustration style as the references: bold charcoal outlines, warm flat fills, restrained cel shading, transparent background. Image 1 is the old hero whose story must be corrected; Image 2 is the revised thumbnail providing the new concept and object styling. Wide 2.5:1 canvas target 2400x960. All subjects complete inside frame with breathing room. No readable words, letters, numbers, brands or watermarks; interfaces use simple schematic shapes only. Expand the revised thumbnail's MISSED CONNECTION: left parked gray car with an empty driver's seat; associate in orange apron has reached the car with a rolling cart holding paint cans and tool carton, looking puzzled into the car with one palm up. To right the customer in yellow is walking away toward the store door, back to associate. Clearly associate AT CAR, customer AT DOOR. Do not place associate on far side of doorway. Keep minimal environment.",
+      "referenceImages": [
+        "curbside-pickup-hero-v2.png",
+        "curbside-pickup-thumbnail-v2.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Green Loom",
+      "key": "green-loom",
+      "role": "hero",
+      "file": "green-loom-hero-v2.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "green-loom-hero-v2.png",
+      "concept": "Product attributes connect to distinct store-offer, stock and evidence records.",
+      "prompt": "Use case: illustration-story. Create a revised companion hero in the SAME simple friendly cartoon illustration style as the references: bold charcoal outlines, warm flat fills, restrained cel shading, transparent background. Image 1 is the old hero whose story must be corrected; Image 2 is the revised thumbnail providing the new concept and object styling. Wide 2.5:1 canvas target 2400x960. All subjects complete inside frame with breathing room. No readable words, letters, numbers, brands or watermarks; interfaces use simple schematic shapes only. Replace the person and counter scene with an expanded catalog data illustration. Central peach product carton shown as an annotated product record with simple leader-line attribute panels (barcode, ruler, swatches, leaf, coin). Around it, three related schematic panels depict a store offer/tag, stock carton, and supporting lab-document record with neutral graph marks. A few simple connecting lines link records to product, no approval seals or certification claims. Show product attributes and relationships, not warehouse operations. No person.",
+      "referenceImages": [
+        "green-loom-hero-v1.png",
+        "green-loom-thumbnail-v2.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Home Depot — UX MEOW",
+      "key": "home-depot-design-leadership",
+      "role": "hero",
+      "file": "home-depot-design-leadership-hero-v2.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "home-depot-design-leadership-hero-v2.png",
+      "concept": "Interns prototype software while a designer mentors, with consistent character styling.",
+      "prompt": "Use case: illustration-story. Create a revised companion hero in the SAME simple friendly cartoon illustration style as the references: bold charcoal outlines, warm flat fills, restrained cel shading, transparent background. Image 1 is the old hero whose story must be corrected; Image 2 is the revised thumbnail providing the new concept and object styling. Wide 2.5:1 canvas target 2400x960. All subjects complete inside frame with breathing room. No readable words, letters, numbers, brands or watermarks; interfaces use simple schematic shapes only. Keep two interns and a mentor collaborating but replace ALL cardboard houses, construction model and house sketches with SOFTWARE prototyping: tablet with simple wireframe, laptop showing connected screen blocks, upright board with three UI screen sketches. Intern uses stylus, another points to screen, mentor guides. Correct every character's eyes to ONE consistent eye rendering: white oval sclera, round dark pupil, simple black upper lid; same eye construction on all three, no solid-dot eyes or closed arc eyes. No physical building models. Characters remain diverse; mentor can keep glasses. All hands plausible.",
+      "referenceImages": [
+        "home-depot-design-leadership-hero-v1.png",
+        "home-depot-design-leadership-thumbnail-v2.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Amazon — A-to-z First Claim",
+      "key": "a-to-z-first-claim",
+      "role": "hero",
+      "file": "a-to-z-first-claim-hero-v2.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "a-to-z-first-claim-hero-v2.png",
+      "concept": "A seller receives a digital first-claim notification with next-step guidance.",
+      "prompt": "Use case: illustration-story. Create a revised companion hero in the SAME simple friendly cartoon illustration style as the references: bold charcoal outlines, warm flat fills, restrained cel shading, transparent background. Image 1 is the old hero whose story must be corrected; Image 2 is the revised thumbnail providing the new concept and object styling. Wide 2.5:1 canvas target 2400x960. All subjects complete inside frame with breathing room. No readable words, letters, numbers, brands or watermarks; interfaces use simple schematic shapes only. Seller packing workspace with kraft carton and tape. Replace paper brochure entirely with a clearly digital notification on an upright tablet: amber notification bell, short gray message bars, small next-step guidance card with parcel and arrow. Seller pauses to look at notification and understand next action. Use an anonymous clean-shaven seller with short black hair and sage shirt, not the brown-haired bearded portfolio avatar. No paper instruction booklet.",
+      "referenceImages": [
+        "a-to-z-first-claim-hero-v1.png",
+        "a-to-z-first-claim-thumbnail-v2.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    },
+    {
+      "project": "Many Hats",
+      "key": "many-hats",
+      "role": "hero",
+      "file": "many-hats-hero-v2.webp",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sourcePNG": "many-hats-hero-v2.png",
+      "concept": "Specialist AI agents coordinate design, systems, engineering and review under human ownership.",
+      "prompt": "Use case: illustration-story. Create a revised companion hero in the SAME simple friendly cartoon illustration style as the references: bold charcoal outlines, warm flat fills, restrained cel shading, transparent background. Image 1 is the old hero whose story must be corrected; Image 2 is the revised thumbnail providing the new concept and object styling. Wide 2.5:1 canvas target 2400x960. All subjects complete inside frame with breathing room. No readable words, letters, numbers, brands or watermarks; interfaces use simple schematic shapes only. Replace physical workbench completely. Show a small coordinated team of FIVE distinct AI agent panels surrounding ONE shared software product workspace. Each digital assistant avatar has same simple face style plus different role icon: scope/compass, object-relationship nodes, interface grid, code brackets, review magnifier. Simple connecting lines feed a central software window with wireframe and component/code blocks. A human hand controls the central cursor, showing human product ownership. Agent panels are virtual software collaborators, not physical robots or human employees. Warm sage/mustard/orange accents, graphite outlines. No lamps, buildings, cardboard, hats-as-construction-metaphors. This illustrates specialist agents sharing project knowledge for designing and building software.",
+      "referenceImages": [
+        "many-hats-hero-v1.png",
+        "many-hats-thumbnail-v2.png"
+      ],
+      "provenance": "AI-generated conceptual illustration, not project evidence. Generated using built-in image_gen; lossless WebP export for the website."
+    }
+  ]
+}
