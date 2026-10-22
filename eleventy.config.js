@@ -64,6 +64,9 @@ function calendarParts(value) {
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
+  // Publish the standalone portfolio at /newsite/ without processing its HTML.
+  eleventyConfig.addPassthroughCopy({ newsite: "newsite" });
+
   const pug = require('pug');
   const portfolioData = require('./lib/portfolio-data');
   const sharedFile = path.join(PROJECT_ROOT, 'src/includes/folio-shared.pug');
