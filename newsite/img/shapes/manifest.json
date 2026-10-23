@@ -1,0 +1,21 @@
+{
+  "project": "Shapes",
+  "status": "In development; illustrative proposals, not measured outcomes",
+  "generation_tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "sage-mug-v1.png",
+      "role": "Fictional retail product photo for native diagrams",
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a product photo cutout reused in three illustrative retail interfaces on a product-design case study. Primary request: one elegant everyday ceramic mug, muted sage-green glaze with a warm cream unglazed foot, no markings, broad rounded handle on the right. Style: realistic studio product photography, tactile slightly speckled ceramic, restrained editorial quality. Composition: single mug centered fully visible, three-quarter front view, generous padding on all sides, square image. Lighting: soft natural studio light, gentle shading on the object. Background: genuinely transparent, no floor, no scene. No steam, coffee, props, logos, text, labels, or watermark. This is an illustrative fictional retail product, not an existing brand."
+    },
+    {
+      "file": "shapes-connections-v1.png",
+      "role": "Conceptual portfolio illustration",
+      "transparent": true,
+      "style_reference": "newsite/img/work/illustrated/design-dash-thumbnail-v1.webp",
+      "prompt": "Use case: illustration-story. Asset type: a wide 2:1 portfolio project thumbnail for Shapes, a framework that connects product concepts to interfaces, actions, and flows. Input image 1 is a STYLE REFERENCE ONLY: match its warm hand-drawn editorial illustration style, charcoal outlines, paper texture, cream surfaces, soft dimensional shading, restrained ochre yellow and muted coral accents, transparent background. Create a NEW composition: a central upright cream product-interface card with a small sage-green ceramic mug pictured on it, a few abstract charcoal text strokes, and one muted-coral action shape, with three smaller cream reference sheets fanning outward behind it. Thin charcoal connector lines connect the central card to an outlined cube on one sheet, a small branching flow on another, and a row of tiny UI shapes on the third. A few separate coral circular connection nodes. No people, no pencil, no folders, no scene, no background, no legible text, no logos or watermark. Clear thoughtful connected composition with ample transparent padding, strong silhouette readable at small size. All artwork fits in frame. This is a conceptual AI illustration, not a screenshot."
+    }
+  ],
+  "diagrams": "HTML/CSS/SVG in shapes.html and shapes.css; readable without JavaScript"
+}

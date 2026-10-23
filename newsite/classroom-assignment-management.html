@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who needs my help today? — Aaron Benjamin</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%2710%27 fill=%27%23faf9f5%27/%3E%3Ctext x=%2720%27 y=%2728%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-size=%2727%27 fill=%27%23cf3a4e%27%3Ea%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="How I helped turn a consolidated assignment list into a view that helps teachers identify students needing attention at Renaissance.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="narrative.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#case-content">Skip to case study</a>
+  <header class="case-masthead case-shell"><a href="index.html">Aaron Benjamin</a><a href="index.html#work">← Back to work</a></header>
+  <main id="case-content">
+    <article>
+      <header class="case-hero case-shell" id="overview">
+        <p class="case-eyebrow">Renaissance / Classroom Assignment Management</p>
+        <h1>Who needs <span>my help</span> today?</h1>
+        <p class="case-deck">Teachers could see how many students had finished. Finding out who needed help still meant leaving the page.</p>
+        <p class="case-intro">I challenged our definition of the MVP and helped the team prioritize a view built around teacher attention.</p>
+        <a class="story-text-link" href="#problem">Follow the decisions <span aria-hidden="true">↓</span></a>
+      </header>
+      <figure class="case-cover case-shell">
+        <img src="img/story/classroom-students.webp" width="1100" height="440" alt="An expanded overdue assignment shows student names, working status, and scores, with students who have not started appearing first." fetchpriority="high">
+        <figcaption>The new direction: urgency first, with the students behind the numbers. Illustrative interface with sample student data.</figcaption>
+      </figure>
+      <div class="case-facts case-shell">
+        <dl><div><dt>My contribution</dt><dd>Product direction, interaction design, shared modeling, delivery</dd></div><div><dt>Partners</dt><dd>Product, UX research, engineering, and API owners</dd></div><div><dt>Timeframe</dt><dd>4 weeks research &amp; design<br>2 weeks development</dd></div></dl>
+      </div>
+      <section class="case-chapter case-shell" id="problem" aria-labelledby="problem-title">
+        <div class="case-chapter-label"><p>The gap</p></div>
+        <div class="case-chapter-body">
+          <h2 id="problem-title">One place for assignments.<br><span>Another place for answers.</span></h2>
+          <div class="case-prose"><p>Our first version brought assignments from several Renaissance products into one table. The team, me included, believed sorting and filtering would help teachers find what they needed.</p><p>Early testing and feedback exposed the missing piece. A count like “11/16” showed progress, but teachers had to open a separate product report to see who had finished and decide who needed attention.</p><p>Assignments was the app’s most visited page—and the page losing the most users to individual products. Bringing the apps together had not completed the teacher’s task.</p></div>
+          <figure class="case-evidence case-evidence--detail"><img src="img/story/classroom-counts.png" alt="The original assignment status shows a completion count without identifying the students behind it." loading="lazy"><figcaption>A completion count answered “how many?” Teachers still needed “who?”</figcaption></figure>
+          <details class="case-disclosure"><summary><svg class="case-disclosure-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg>See the original assignment page</summary><figure class="case-evidence"><img src="img/story/classroom-before.png" alt="The original assignment page presents filters and a flat table of assignments with completion counts." loading="lazy"><figcaption>The first version organized products together, but left student identity in separate reports.</figcaption></figure></details>
+        </div>
+      </section>
+      <section class="case-chapter case-shell" id="direction" aria-labelledby="direction-title">
+        <div class="case-chapter-label"><p>The decision</p></div>
+        <div class="case-chapter-body">
+          <h2 id="direction-title">Start with urgency.<br><span>Then show who.</span></h2>
+          <div class="case-prose"><p>I won support to test a different direction. Our UX research partners ran moderated sessions with five current users and five teachers new to the product suite, comparing the existing page with two prototypes.</p><p>Teachers organized their work by urgency. The existing table led with assigned dates. I replaced that flat list with groups: new assignments, overdue, due soon, in progress, and done.</p></div>
+          <div class="case-decision"><p class="case-eyebrow">The design decision</p><p>Help teachers decide <em>where to look</em>, then give them the student detail to decide <em>whom to help</em>.</p></div>
+          <figure class="case-evidence case-evidence--wireframe"><img src="img/story/classroom-wireframe.png" alt="Assignment wireframe exploring grouped assignments and the page layout." loading="lazy"><figcaption>Grouping and student visibility were tested as one connected experience.</figcaption></figure>
+          <div class="case-prose"><p>Teachers described the grouping as consistent with how they expected to review assignments. Their qualitative feedback supported the direction; it did not establish learning outcomes.</p></div>
+        </div>
+      </section>
+      <section class="case-chapter case-shell" id="delivery" aria-labelledby="delivery-title">
+        <div class="case-chapter-label"><p>Making it work</p></div>
+        <div class="case-chapter-body">
+          <h2 id="delivery-title">The interface needed<br><span>more than a new layout.</span></h2>
+          <div class="case-prose"><p>The API returned completion counts. To show students, I worked with engineering and API owners to add student IDs and support a student-level view.</p><p>I also facilitated an object-modeling workshop with product and engineering. We defined shared assignment attributes while preserving outcomes specific to each product, so one interaction could work across assignments stored differently.</p></div>
+          <details class="case-disclosure"><summary><svg class="case-disclosure-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg>Explore the shared assignment model</summary><figure class="case-evidence"><img src="img/story/classroom-model.webp" alt="Assignment object model separates shared assignment attributes from product-specific details." loading="lazy"><figcaption>Illustrative model: shared structure, with room for product-specific outcomes.</figcaption></figure><p>Title, type, assigned date, and due date were shared attributes. Product-specific detail included questions answered or pages read.</p></details>
+          <div class="case-tradeoff"><h3>What shipped—and what waited</h3><div class="case-prose"><p>We prioritized urgency groups and student tables with working status and assignment-specific outcomes. A fuller performance summary waited, keeping the release focused on identifying assignments and students needing attention.</p><p>I co-authored requirements with the product manager and carried the direction through interaction states, engineering sessions, and handoff. Within the React app and Angular shell, timeframe pre-filtering limited how much student-level data the API needed to load.</p></div></div>
+        </div>
+      </section>
+      <section class="case-outcome" id="outcome" aria-labelledby="outcome-title"><div class="case-shell case-outcome-inner">
+        <p class="case-eyebrow">What changed</p>
+        <h2 id="outcome-title">Fewer trips to reports.<br><span>More of the answer in one place.</span></h2>
+        <div class="case-prose"><p>Version 2 shipped after four weeks of research and design and two weeks of development. Over a 60-day measurement period, we observed fewer exits from Assignments to reports in individual products. The initiative met its hub-adoption goal; exact figures are confidential.</p><p class="case-limit">This measures hub adoption. Research supported the interface direction. Neither result measures a change in student learning.</p></div>
+        <div class="case-reflection"><p class="case-eyebrow">What I took forward</p><p>Completeness depended on whether teachers could answer their primary question. Consolidating products was a start. Making the next action clear made the hub useful.</p></div>
+      </div></section>
+      <aside class="case-next case-shell" aria-labelledby="next-title"><div><p class="case-eyebrow">Another question, another context</p><h2 id="next-title">Why were curbside customers going inside?</h2><a class="story-text-link" href="https://www.aaronbenjamin.design/curbside-pickup.html">Explore curbside pickup <span aria-hidden="true">→</span></a></div><a class="case-next-image" href="https://www.aaronbenjamin.design/curbside-pickup.html" aria-label="Read the Curbside Pickup case study"><img src="img/work/illustrated/curbside-pickup-thumbnail-v2.webp" width="1774" height="887" alt="Illustration of a curbside pickup experience" loading="lazy"></a></aside>
+    </article>
+  </main>
+  <footer class="story-footer"><a href="index.html">Aaron Benjamin</a><nav aria-label="Explore the portfolio"><a href="work.html">All work</a><a href="mailto:hello@aaronbenjamin.design">Let’s talk</a><a href="#overview">Back to top ↑</a></nav></footer>
+</body>
+</html>
