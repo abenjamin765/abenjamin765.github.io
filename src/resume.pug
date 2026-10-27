@@ -20,20 +20,29 @@ include includes/folio-shared.pug
 doctype html
 html(lang="en")
     head
-        +folioHead('Aaron Benjamin | Résumé', 'Aaron Benjamin is a product designer who leads complex UX work across marketplaces, education, commerce, and internal tools.', '/resume.html')
-        link(rel="stylesheet", href="/assets/style/resume.css")
-    body.folio.folio--resume
-        a.visually-hidden(href="#main") Skip to content
-        +folioHeader('resume', 'Selected work', '/#work', {label: 'Download PDF', href: '/assets/Aaron-Benjamin-Resume.pdf', download: true})
+        +folioHead('Aaron Benjamin | Résumé', 'Aaron Benjamin is a product designer who leads complex UX work across marketplaces, education, commerce, and internal tools.', '/resume.html', 'resume')
+        link(rel="stylesheet", href="/style.css", media="screen")
+        link(rel="stylesheet", href="/narrative.css", media="screen")
+    body.folio--resume
+        a.skip-link.no-print(href="#main") Skip to content
+        header.portfolio-header.no-print
+            a(href="/") Aaron Benjamin
+            nav.portfolio-links(aria-label="Main navigation")
+                a(href="/work.html") Work
+                a(href="/resume.html", aria-current="page") Résumé
+                a(href="mailto:" + portfolioSite.email) Contact
 
         main#wrapper
-            .resume-main#main
+            .resume-main#main(tabindex="-1")
                 header.resume-intro
                     if identity.headline
                         p.resume-kicker= identity.headline.text
                     h1= identity.name
                     if identity.summary
                         p.resume-summary= identity.summary.text
+                    .resume-actions.no-print
+                        a.intro-button.intro-button--primary.resume-download(href="/assets/Aaron-Benjamin-Resume.pdf", download="Aaron-Benjamin-Resume.pdf") Download résumé (PDF)
+                        a.resume-work-link(href="/work.html") Explore my work
 
                 section#workExperience(aria-labelledby="experience-title")
                     h2#experience-title Experience
@@ -41,7 +50,8 @@ html(lang="en")
                         article.work-experience-milestone
                             h3
                                 span= role.title
-                                span.light= ' / ' + role.company
+                                span.resume-role-separator= ' / '
+                                span.light= role.company
                             p.work-experience-date-range= [formatDates(role), role.location].filter(Boolean).join(' · ')
                             if role.summary
                                 p.resume-earlier= role.summary.text
@@ -86,5 +96,10 @@ html(lang="en")
                         h2#earlier-title Earlier roles
                         p= earlierRoles.join(' · ')
 
-        .resume-bottom.no-print
-            +folioFooter(false)
+        footer.story-footer.no-print
+            a(href="/") Aaron Benjamin
+            nav(aria-label="Explore the portfolio")
+                a(href="/work.html") Work
+                a(href="/writing.html") Writing
+                a(href="mailto:" + portfolioSite.email) Let’s talk
+                a(href="#main") Back to top ↑

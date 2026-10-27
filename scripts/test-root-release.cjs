@@ -32,7 +32,7 @@ const results = {routes:[], mobile:[], failures:[]};
         assert.equal(response.status(),200,route);
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth+1),`${route} overflow at ${width}`);
         assert.equal(await page.$$eval('h1',ns => ns.length),1,route);
-        if (width === 390 && pages.some(p => route === '/' || route === '/'+p)) {
+        if (width === 390 && (route === '/resume.html' || pages.some(p => route === '/' || route === '/'+p))) {
           await page.keyboard.press('Tab');
           assert.match(await page.evaluate(() => document.activeElement.getAttribute('href')), /^#(main|case-content)$/);
           const contact = await page.$eval('.portfolio-links a[href^="mailto:"]',n => ({y:n.getBoundingClientRect().bottom,display:getComputedStyle(n).display}));
@@ -44,7 +44,7 @@ const results = {routes:[], mobile:[], failures:[]};
           await page.addScriptTag({path:require.resolve('axe-core')});
           const violations = await page.evaluate(async () => (await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v => ({id:v.id,nodes:v.nodes.map(n => n.target)})));
           assert.deepEqual(violations,[],`${route} accessibility at ${width}`);
-          if (['/','/work.html','/classroom-assignment-management.html','/indeed-job-refresh.html','/curbside-pickup.html'].includes(route)) {
+          if (['/','/work.html','/resume.html','/classroom-assignment-management.html','/indeed-job-refresh.html','/curbside-pickup.html'].includes(route)) {
             await page.screenshot({path:path.join(output,(route==='/'?'home':route.slice(1,-5))+'-'+width+'.png'),fullPage:true});
             await page.screenshot({path:path.join(output,(route==='/'?'home':route.slice(1,-5))+'-opening-'+width+'.png')});
           }
@@ -87,7 +87,22 @@ const results = {routes:[], mobile:[], failures:[]};
         assert(await page.$eval('main',n => n.innerText.length > 300),`${route} no-JS story`);
         await page.setJavaScriptEnabled(true);
       }
-      if (route === '/' || pages.includes(route.slice(1))) {
+      if (route === '/resume.html') {
+        const resume = JSON.parse(fs.readFileSync(path.join(__dirname,'../resume/exports/public-portfolio/resume.json')));
+        const text = await page.$eval('#wrapper', n => n.textContent);
+        for (const role of resume.experience) {
+          assert(text.includes(role.company) && text.includes(role.title),'Résumé role content preserved');
+          for (const bullet of role.bullets) assert(text.includes(bullet.text),'Résumé bullet content preserved');
+        }
+        assert.equal(await page.$eval('.resume-download', n => n.getAttribute('href')), '/assets/Aaron-Benjamin-Resume.pdf');
+        await page.emulateMediaType('print');
+        assert.equal(await page.$eval('.portfolio-header', n => getComputedStyle(n).display),'none');
+        assert.equal(await page.$eval('.resume-actions', n => getComputedStyle(n).display),'none');
+        assert.equal(await page.$$eval('.work-experience-milestone', ns => ns.filter(n => getComputedStyle(n).display !== 'none').length),5);
+        assert.equal(await page.$eval('.resume-early-print', n => getComputedStyle(n).display),'block');
+        await page.emulateMediaType('screen');
+      }
+      if (route === '/' || route === '/resume.html' || pages.includes(route.slice(1))) {
         await page.setViewport({width:320,height:900});
         await page.reload({waitUntil:'load'});
         await page.evaluate(() => {
