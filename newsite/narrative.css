@@ -221,6 +221,7 @@ html { scroll-behavior: auto; }
  .model-relationship--order > img { left:calc(50% - 126.5px - 18.5px); }
  .model-relationship--coffee > img { left:calc(50% - 126.5px + 18.5px); }
  .model-relationship > p { position:absolute; top:76px; left:50%; margin:0; transform:translateX(-50%); }
+ .model-relationship > p { display:block; max-width:226px; white-space:normal; text-align:center; line-height:1.4; }
  .model-relationship--coffee > p { top:168px; }
  .process-layer-caption { padding:8px 16px; gap:10px; border-radius:16px; flex-direction:column; text-align:center; }
  .process-layer-caption p { font-size:15px; }
@@ -241,3 +242,43 @@ html { scroll-behavior: auto; }
  }
 @media (max-width:374px) { .coffee-model-stage { padding-inline:16px; } .coffee-representation-stage { padding-inline:16px; } .representation-label .model-field-visual { padding-inline:10px; } }
 @media print { .coffee-product { box-shadow:none; } }
+
+/* Home: concise project evidence and mentorship alongside restored career and process sections. */
+.contact-section.panel { min-height: 0; }
+.selected-work { position: relative; isolation: isolate; overflow: hidden; background: var(--story-paper); color: var(--story-ink); }
+.project-spotlight--opening .project-context, .selected-work .project-context, .experience-leadership .project-context { margin: 0 0 16px; color: var(--story-muted); font-size: 13px; font-weight: 500; line-height: 1.5; }
+.project-outcome { position: relative; z-index: 1; max-width: 640px; margin: 28px auto 0; padding-inline: 16px; color: var(--story-muted); font-size: 16px; line-height: 1.6; text-align: center; text-wrap: pretty; }
+.experience-leadership .practice-feature-copy > .project-context { margin-top: 0; }
+.experience-leadership .story-text-link { margin-top: 16px; }
+
+/* Browser review: quiet image slots and consistent section typography. */
+.experience-header { max-width: 760px; }
+.experience-header h2 { font-size: clamp(32px, 4vw, 50px); font-weight: 500; line-height: 1.16; letter-spacing: -.04em; text-wrap: balance; }
+.asset-preview { width: min(960px, 100%); margin: 0 auto; }
+.asset-browser-frame { -webkit-backdrop-filter: var(--glass-filter); backdrop-filter: var(--glass-filter); }
+.asset-placeholder { display: block; width: 100%; height: auto; border-radius: 10px; }
+
+@media (min-width: 640px) and (max-width: 900px) { .experience-header h2 { font-size: 40px; } }
+@media (max-width: 639px) { .experience-header h2 { font-size: 32px; } }
+
+/* Keep the closing invitation and temporary Curbside artwork compact. */
+#contact { min-height: 0; height: auto; padding-block: 48px; }
+#curbside .asset-preview { width: min(640px, 100%); }
+#curbside .asset-placeholder { max-width: 100%; }
+@media (max-width: 639px) { #contact { padding-block: 40px; } }
+
+/* Case invitations respond to their available column, including the leadership split. */
+.intro-case-study, .case-invitation { container-type:inline-size; }
+.intro-case-study-link { box-sizing:border-box; display:inline-grid; grid-template-columns:auto minmax(0,1fr) auto; flex-wrap:nowrap; width:max-content; max-width:100%; text-align:left; }
+.intro-case-study-title { min-width:0; text-align:left; text-wrap:pretty; }
+.intro-case-study-label, .intro-case-study-action { white-space:nowrap; }
+.intro-case-study-action { display:inline-flex; align-items:center; gap:6px; }
+.intro-case-study-action svg { flex-shrink:0; width:16px; height:16px; }
+.intro-case-study-link:focus-visible { outline:3px solid var(--story-accent); outline-offset:4px; }
+@container (max-width:680px) {
+ .intro-case-study-link { width:100%; grid-template-columns:minmax(0,1fr); justify-items:start; gap:12px; padding:20px; border-radius:16px; font-size:16px; line-height:1.45; }
+ .intro-case-study-label { padding:0; border-radius:0; background:none; color:var(--story-muted); font-size:12px; }
+ .intro-case-study-title { font-size:18px; }
+ .intro-case-study-action { font-size:14px; text-decoration:underline; text-underline-offset:3px; }
+}
+.experience-header h2 { overflow-wrap:anywhere; }

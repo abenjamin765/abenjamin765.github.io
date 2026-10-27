@@ -1,0 +1,39 @@
+/* Responsive HTML presentation of the historical pickup email and its design decisions. */
+.pickup-email-board { margin:32px 0; padding:clamp(20px,3.5vw,44px); border:1px solid #e3e2df; border-radius:16px; background:#f5f5f3; color:#202329; }
+.pickup-email-board > h3 { margin:0 0 32px; font-size:clamp(30px,4vw,48px); font-weight:700; line-height:1.12; letter-spacing:-.04em; text-wrap:balance; }
+.pickup-email-board > h3 span { color:#b54600; }
+.pickup-email-board__layout { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:clamp(24px,4vw,56px); align-items:stretch; }
+.pickup-email { min-width:0; padding:24px; border:1px solid #dedfe2; border-radius:6px; background:#fff; box-shadow:0 4px 18px #2023290a; font-family:Arial,Helvetica,sans-serif; }
+.pickup-email__brand { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-bottom:16px; border-bottom:1px solid #dedfe2; }
+.pickup-email__brand > div { display:flex; align-items:center; gap:8px; }
+.pickup-email .pickup-email__brand img { width:46px; height:46px; border-radius:0; }
+.pickup-email__brand strong { font-size:11px; line-height:1.15; }
+.pickup-email__language { color:#145ea8; font-size:11px; text-decoration:underline; text-underline-offset:2px; }
+.pickup-email__message { text-align:center; }
+.pickup-email__car { display:block; width:140px; height:auto; margin:16px auto 12px; max-width:100%; }
+.pickup-email h4 { margin:0 0 12px; font-size:23px; line-height:1.2; letter-spacing:-.025em; }
+.pickup-email p { margin:0 0 12px; font-size:15px; line-height:1.5; }
+.pickup-email__store { color:#145ea8; }
+.pickup-email__arrival { margin-top:16px; padding:16px; border:1px solid #dedfe2; border-radius:4px; }
+.pickup-email h5 { margin:0 0 8px; font-size:15px; font-weight:700; line-height:1.3; }
+.pickup-email__arrival ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; list-style:none; margin:0; padding:0; }
+.pickup-email__arrival li { padding:8px; border:1px solid #cfd1d5; border-radius:3px; color:#a84000; text-align:center; font-size:14px; font-weight:700; }
+.pickup-email .pickup-email__here { margin:8px 0 0; padding:8px; border-radius:3px; background:#b54600; color:#fff; text-align:center; font-weight:700; }
+.pickup-email__location { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid #dedfe2; }
+.pickup-email__location p { font-size:13px; }
+.pickup-email__map { position:relative; overflow:hidden; height:86px; background:repeating-linear-gradient(110deg,transparent 0 32px,#dce0dd 33px 35px,transparent 36px 64px),#eef0ed; }
+.pickup-email__road { position:absolute; display:block; }
+.pickup-email__road--one { width:140%; height:8px; left:-20%; top:55%; transform:rotate(-10deg); background:#f8e4a0; border-block:2px solid #fff; }
+.pickup-email__road--two { width:8px; height:180%; left:32%; top:-40%; transform:rotate(30deg); background:#52ae81; border-inline:2px solid #fff; }
+.pickup-email__road--three { width:140%; height:6px; left:-10%; top:15%; transform:rotate(18deg); background:#fff; }
+.pickup-email__map-pin { position:absolute; left:63%; top:28%; width:13px; height:16px; border-radius:6px 6px 6px 0; transform:rotate(-45deg); background:#27679b; border:2px solid #fff; }
+.pickup-email__help { align-self:center; padding-left:12px; border-left:1px solid #dedfe2; text-align:center; }
+.pickup-email__homer { display:block; width:72px; height:auto; max-width:100%; margin:0 auto 8px; }
+.pickup-email__help h5 { margin-bottom:2px; }
+.pickup-email-points { display:flex; flex-direction:column; justify-content:space-evenly; gap:32px; list-style:none; margin:0; padding:0; }
+.pickup-email-points li { display:flex; align-items:flex-start; gap:16px; }
+.pickup-email-points li > span { display:grid; place-items:center; flex:0 0 38px; height:38px; border-radius:50%; background:#b54600; color:#fff; font-size:17px; font-weight:600; }
+.pickup-email-points h4 { margin:2px 0 10px; font-size:clamp(21px,2.2vw,28px); font-weight:600; line-height:1.2; letter-spacing:-.03em; }
+.pickup-email-points p { margin:0; font-size:18px; line-height:1.5; }
+@media(max-width:760px) { .pickup-email-board__layout { grid-template-columns:minmax(0,1fr); } .pickup-email { width:100%; max-width:520px; margin-inline:auto; } .pickup-email-points { gap:24px; } }
+@media(max-width:420px) { .pickup-email-board { padding:16px; } .pickup-email { padding:16px; } .pickup-email__brand { align-items:flex-start; flex-wrap:wrap; gap:8px; } .pickup-email__location { grid-template-columns:minmax(0,1fr); } .pickup-email__help { border-left:0; border-top:1px solid #dedfe2; padding:12px 0 0; } .pickup-email-points li { gap:12px; } .pickup-email-points p { font-size:16px; } }

@@ -45,14 +45,16 @@
 .sh-full-figure { margin:44px 0 36px; }
 .sh-full-figure > figcaption { font-size:12px; }
 .sh-representations { padding:52px 24px 24px; }
-.sh-product-source { display:flex; align-items:center; justify-content:center; gap:10px; width:fit-content; margin:0 auto 36px; padding:12px 20px; border:1px dashed #cf3a4e; border-radius:12px; background:#faf2f1; }
+.sh-product-source { position:relative; display:flex; align-items:center; justify-content:center; gap:10px; width:fit-content; margin:0 auto 36px; padding:12px 20px; border:1px dashed #cf3a4e; border-radius:12px; background:#faf2f1; }
 .sh-product-source strong { display:block; font-size:15px; font-weight:500; }
 .sh-product-source > span > span { display:block; margin-top:2px; color:var(--story-muted); font-size:11px; }
-.sh-representation-grid { position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
-.sh-representation-grid::before { content:""; position:absolute; left:16.66%; right:16.66%; top:-18px; height:1px; background:#aaa; }
+.sh-representation-grid { --representation-gap:16px; position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--representation-gap); }
+/* Card centers account for both grid gaps. All branches share the same bus. */
+.sh-product-source::after { content:""; position:absolute; left:calc(50% - .5px); bottom:-19px; width:1px; height:19px; background:#aaa; }
+.sh-representation-grid::before { content:""; position:absolute; left:calc((100% - 2 * var(--representation-gap)) / 6 - .5px); right:calc((100% - 2 * var(--representation-gap)) / 6 - .5px); top:-18px; height:1px; background:#aaa; }
 .sh-representation { position:relative; display:flex; flex-direction:column; padding:16px; border-radius:12px; background:#fff; box-shadow:0 2px 2px rgb(0 0 0 / .08); }
-.sh-representation::before { content:""; position:absolute; bottom:100%; left:50%; height:18px; width:1px; background:#aaa; }
-.sh-representation:nth-child(2)::before { height:36px; }
+.sh-representation::before { content:""; position:absolute; bottom:calc(100% - 1px); left:calc(50% - .5px); height:19px; width:1px; background:#aaa; }
+.sh-representation > .sh-mini-label { text-align:center; }
 .sh-representation .sh-sample-title { margin:0; font-size:15px; font-weight:500; line-height:1.3; letter-spacing:-.015em; }
 .sh-mini-product img { display:block; width:100%; height:110px; padding:8px; margin-bottom:12px; border-radius:6px; object-fit:contain; background:#f4f4ef; }
 .sh-price { margin:6px 0 14px; font-size:15px; }
@@ -137,7 +139,7 @@
  .sh-representation > .sh-mini-label { grid-column:1/-1; margin-bottom:16px; }
  .sh-representation-purpose { align-self:center; padding:0; }
  .sh-representation > .sh-sample-outline { grid-column:1; }
- .sh-representation-grid::before,.sh-representation::before { display:none; }
+ .sh-product-source::after,.sh-representation-grid::before,.sh-representation::before { display:none; }
  .sh-representation .sh-representation-purpose { grid-column:2; grid-row:2/5; }
  .sh-product-source { margin-bottom:24px; }
  .sh-reference-list { grid-template-columns:1fr; }

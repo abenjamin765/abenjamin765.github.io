@@ -39,6 +39,8 @@ async function main() {
         preferCSSPageSize: true,
       });
       console.log(`Generated ${outputPath}`);
+      const previewPdf = path.join(distPath, 'newsite/assets/Aaron-Benjamin-Resume.pdf');
+      if (fs.existsSync(path.dirname(previewPdf))) fs.copyFileSync(outputPath, previewPdf);
 
       const atsPage = await browser.newPage();
       await atsPage.setContent(fs.readFileSync(atsSource, "utf8"), { waitUntil: "load" });

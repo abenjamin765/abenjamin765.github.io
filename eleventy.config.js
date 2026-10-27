@@ -64,8 +64,8 @@ function calendarParts(value) {
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
-  // Publish the standalone portfolio at /newsite/ without processing its HTML.
-  eleventyConfig.addPassthroughCopy({ newsite: "newsite" });
+  // Overlay the public portfolio after legacy résumé, writing and blog generation.
+  eleventyConfig.on("eleventy.after", () => require('./lib/root-release').publishRootRelease(PROJECT_ROOT));
 
   const pug = require('pug');
   const portfolioData = require('./lib/portfolio-data');
