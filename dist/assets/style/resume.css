@@ -374,3 +374,210 @@ body.folio--resume a:focus-visible {
     text-decoration: none !important;
   }
 }
+@media screen {
+  body.folio--resume {
+    margin: 0;
+    background: var(--story-paper, #faf9f5);
+    color: var(--story-ink, #333);
+    text-transform: none;
+  }
+  .folio--resume #wrapper {
+    width: min(1096px, 100% - 64px);
+    grid-template-columns: minmax(0, 1fr) 256px;
+    gap: 80px;
+    margin: 0 auto;
+    padding: 72px 0 96px;
+    background: transparent;
+    border-radius: 0;
+  }
+  .folio--resume .resume-intro h1 {
+    font-size: clamp(44px, 5.4vw, 72px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    overflow-wrap: anywhere;
+  }
+  .folio--resume .resume-kicker {
+    margin-bottom: 16px;
+    color: var(--story-muted);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .folio--resume .resume-summary {
+    max-width: 60ch;
+    margin-top: 28px;
+    font-size: 20px;
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+  .resume-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 24px;
+    margin-top: 28px;
+  }
+  body.folio--resume a.resume-download {
+    color: #fff;
+  }
+  .folio--resume .resume-work-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  .folio--resume .portfolio-links a {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  .folio--resume .portfolio-links [aria-current=page] {
+    text-decoration-thickness: 2px;
+  }
+  body.folio--resume a:focus-visible {
+    outline: 3px solid #a72b3d;
+    outline-offset: 5px;
+  }
+  .folio--resume .story-footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  .folio--resume #workExperience {
+    margin-top: 64px;
+  }
+  .folio--resume #wrapper h2 {
+    margin-bottom: 24px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+    text-transform: none;
+  }
+  .folio--resume .work-experience-milestone {
+    margin: 0;
+    padding-block: 32px;
+    border-top: 1px solid var(--story-border);
+  }
+  .folio--resume .work-experience-milestone h3 {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    overflow-wrap: anywhere;
+  }
+  .folio--resume .resume-role-separator {
+    display: none;
+  }
+  .folio--resume .light {
+    display: block;
+    margin-top: 6px;
+    color: var(--story-muted);
+    font-size: 17px;
+    letter-spacing: 0;
+  }
+  .folio--resume .work-experience-date-range {
+    margin: 12px 0 18px;
+    color: var(--story-muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .folio--resume .work-experience-accomplishments li,
+  .folio--resume .resume-earlier {
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.65;
+    text-wrap: pretty;
+    overflow-wrap: anywhere;
+  }
+  .folio--resume .work-experience-accomplishments {
+    padding-left: 20px;
+  }
+  .folio--resume .work-experience-accomplishments li::marker {
+    color: var(--story-muted);
+  }
+  .folio--resume .work-experience-accomplishments li:last-child {
+    margin-bottom: 0;
+  }
+  .folio--resume .resume-aside {
+    padding-top: 4px;
+  }
+  .folio--resume .resume-aside section + section {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--story-border);
+  }
+  .folio--resume #wrapper .resume-aside h2 {
+    margin-bottom: 16px;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+  }
+  .folio--resume #contact a,
+  .folio--resume #contact p,
+  .folio--resume .resume-aside p,
+  .folio--resume .resume-list li {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .folio--resume #contact a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .folio--resume #contact a:hover {
+    color: #a72b3d;
+  }
+  .folio--resume #contact #location {
+    margin-top: 8px;
+    color: var(--story-muted);
+  }
+  .folio--resume .resume-list {
+    padding: 0;
+    list-style: none;
+  }
+  .folio--resume .resume-list li + li {
+    margin-top: 10px;
+  }
+  .folio--resume .story-footer {
+    border-top: 1px solid var(--story-border);
+  }
+}
+@media screen and (max-width: 900px) {
+  .folio--resume #wrapper {
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .folio--resume #wrapper {
+    width: calc(100% - 48px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+    padding-block: 48px 64px;
+  }
+  .folio--resume .resume-summary {
+    font-size: 18px;
+  }
+  .folio--resume #workExperience {
+    margin-top: 48px;
+  }
+  .folio--resume .resume-aside {
+    padding-top: 32px;
+    border-top: 1px solid var(--story-border);
+  }
+  .folio--resume .resume-aside section + section {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .folio--resume .resume-aside {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .folio--resume .resume-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

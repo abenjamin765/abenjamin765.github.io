@@ -1,0 +1,17 @@
+/* Scoped presentation for independent project explanations and preserved prototype. */
+.independent-page .case-hero h1 span { white-space:normal; }
+.independent-page .ind-diagram { margin:32px 0; padding:28px; border:1px solid var(--case-rule); border-radius:16px; background:#f4f3ed; }
+.independent-page .ind-diagram > h3,.independent-page .ind-prototype > h3 { margin:0 0 24px; font-size:24px; font-weight:500; line-height:1.3; letter-spacing:-.025em; }
+.independent-page .ind-steps { margin:0; padding:0 0 0 24px; }
+.independent-page .ind-steps li { padding:0 0 20px 8px; font-size:17px; line-height:1.5; }
+.independent-page .ind-steps li:last-child { padding-bottom:0; }
+.independent-page .ind-steps p { margin:6px 0 0; color:var(--story-muted); font-size:15px; line-height:1.6; }
+.independent-page .ind-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.independent-page .ind-cards section { min-width:0; border-top:1px solid var(--case-rule); padding-top:16px; }
+.independent-page .ind-cards h4 { margin:0 0 8px; font-size:18px; font-weight:500; }
+.independent-page .ind-cards p { margin:0; font-size:15px; line-height:1.65; }
+.independent-page .ind-prototype { margin:40px 0; }
+.independent-page .ind-prototype iframe { display:block; width:100%; height:700px; margin-top:24px; border:1px solid var(--case-rule); border-radius:12px; background:white; }
+.independent-page .ind-note { color:var(--story-muted); font-size:14px; line-height:1.6; }
+.independent-page a { overflow-wrap:anywhere; }
+@media(max-width:639px) { .independent-page .ind-diagram { padding:20px; }.independent-page .ind-cards { grid-template-columns:1fr; }.independent-page .ind-prototype iframe { height:640px; } }

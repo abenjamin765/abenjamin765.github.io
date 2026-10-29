@@ -1,5 +1,7 @@
 # Portfolio research library
 
+For case-study evaluation and revision, use the [case-study rubric](case-study-rubric.md). Its weights and readiness threshold are project editorial decisions, with links back to the research notes and their limits.
+
 This folder is a lookup library for the in-progress portfolio in `newsite/`. It breaks source documents into short notes so a designer can find one decision without rereading a source.
 
 It is not a product direction, a hiring plan, or a claim that any pattern gets someone hired. The first two sources review curated portfolios. Neither interviewed hiring managers. The third source is a design-system specification, not a portfolio sample.

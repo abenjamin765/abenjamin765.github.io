@@ -1,0 +1,48 @@
+standard: portable-agent-skills/0.1
+version: 0.1.0
+contract:
+  inputs:
+    - "A diagram question or an existing diagram to refine"
+    - "The relevant product model and local visual references"
+  outputs:
+    - "A readable diagram and a bounded verification record"
+  preconditions:
+    - "The user question and the meaning of the nodes and edges can be determined"
+  invariants:
+    - "Preserve the underlying domain meaning and the user's scope"
+    - "Visible connectors meet actual nodes or declared ports"
+    - "Local portfolio preferences remain explicitly scoped"
+    - "Never equate a render check with validation of the product model"
+  success_criteria:
+    - "The diagram explains the named question"
+    - "Peer roles are aligned and readable at representative widths"
+    - "Connector continuity is verified where geometry is checked"
+    - "Verification limits are reported accurately"
+  failure_modes:
+    - "Missing product meaning requires focused clarification rather than invented relationships"
+    - "Unavailable browser tools require authorized fallback or an explicit verification limit"
+capabilities:
+  tools: []
+  filesystem: declared-paths
+  network: none
+  side_effects:
+    - "May edit authorized diagram source and save local render evidence"
+safety:
+  confirmation_gates:
+    - "Follow existing user authorization for external actions; skill use alone grants none"
+  sensitive_data: "Keep private source material out of unrequested exports or upstream contributions."
+  untrusted_content: isolate
+compatibility:
+  hosts:
+    - "Claude Code"
+    - "Codex"
+    - "Cursor"
+    - "GitHub Copilot"
+    - "Windsurf"
+    - "Generic Agent Skills host"
+  runtimes:
+    - "Node.js for the optional checker"
+  dependencies:
+    - "The project's existing Puppeteer installation for render checks"
+evaluation:
+  suite: evals/cases.jsonl

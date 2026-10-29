@@ -1,0 +1,106 @@
+{
+  "root": ".diagram",
+  "widths": [
+    1440,
+    949,
+    768,
+    390,
+    320
+  ],
+  "tolerance": 1.25,
+  "nodes": {
+    "source": ".source",
+    "bus": {
+      "selector": ".cards",
+      "pseudo": "::before"
+    },
+    "source-stem": {
+      "selector": ".source",
+      "pseudo": "::after"
+    },
+    "card-1": ".card:nth-child(1)",
+    "stem-1": {
+      "selector": ".card:nth-child(1)",
+      "pseudo": "::before"
+    },
+    "card-2": ".card:nth-child(2)",
+    "stem-2": {
+      "selector": ".card:nth-child(2)",
+      "pseudo": "::before"
+    },
+    "card-3": ".card:nth-child(3)",
+    "stem-3": {
+      "selector": ".card:nth-child(3)",
+      "pseudo": "::before"
+    }
+  },
+  "labels": [
+    {
+      "selector": ".context",
+      "align": "center",
+      "singleLineMinWidth": 901
+    }
+  ],
+  "connections": [
+    {
+      "name": "source to bus",
+      "from": {
+        "node": "source",
+        "anchor": "bottom"
+      },
+      "to": {
+        "node": "bus",
+        "anchor": "center"
+      },
+      "segments": [
+        "source-stem"
+      ],
+      "minWidth": 901
+    },
+    {
+      "name": "bus to card 1",
+      "from": {
+        "node": "bus",
+        "anchor": "left"
+      },
+      "to": {
+        "node": "card-1",
+        "anchor": "top"
+      },
+      "segments": [
+        "stem-1"
+      ],
+      "minWidth": 901
+    },
+    {
+      "name": "bus to card 2",
+      "from": {
+        "node": "bus",
+        "anchor": "center"
+      },
+      "to": {
+        "node": "card-2",
+        "anchor": "top"
+      },
+      "segments": [
+        "stem-2"
+      ],
+      "minWidth": 901
+    },
+    {
+      "name": "bus to card 3",
+      "from": {
+        "node": "bus",
+        "anchor": "right"
+      },
+      "to": {
+        "node": "card-3",
+        "anchor": "top"
+      },
+      "segments": [
+        "stem-3"
+      ],
+      "minWidth": 901
+    }
+  ]
+}

@@ -1,1 +1,11 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display:block" width="21" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#146EB3"><path opacity=".4" d="M7.5 0v18h9v3h-9v3h12c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5v-3.127A2.256 2.256 0 0 0 21 15.75V2.25A2.25 2.25 0 0 0 18.75 0H7.5Z"/><path d="M7.5 0h-3A4.501 4.501 0 0 0 0 4.5v15C0 21.984 2.016 24 4.5 24h3v-3h-3c-.83 0-1.5-.67-1.5-1.5S3.67 18 4.5 18h3V0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h21v24H0z"/></clipPath></defs></svg>
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="book-spine" clip-path="url(#clip0_0_207)">
+<path id="Secondary" opacity="0.4" d="M7.5 0V18H16.5V21H7.5V24H19.5C20.3297 24 21 23.3297 21 22.5C21 21.6703 20.3297 21 19.5 21V17.8734C20.3719 17.5641 21 16.7297 21 15.75V2.25C21 1.00781 19.9922 0 18.75 0H7.5Z" fill="#146EB3"/>
+<path id="Primary" d="M7.5 0H4.5C2.01562 0 0 2.01562 0 4.5V19.5C0 21.9844 2.01562 24 4.5 24H7.5V21H4.5C3.67031 21 3 20.3297 3 19.5C3 18.6703 3.67031 18 4.5 18H7.5V0Z" fill="#146EB3"/>
+</g>
+<defs>
+<clipPath id="clip0_0_207">
+<rect width="21" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

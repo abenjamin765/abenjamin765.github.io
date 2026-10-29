@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="DataBar">
+<g id="Vector">
+<path d="M12 3C11.4477 3 11 3.44772 11 4V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V4C13 3.44772 12.5523 3 12 3Z" fill="#2D2D2D"/>
+<path d="M6 9C6 8.44772 6.44772 8 7 8C7.55228 8 8 8.44772 8 9V20C8 20.5523 7.55228 21 7 21C6.44772 21 6 20.5523 6 20V9Z" fill="#2D2D2D"/>
+<path d="M16 13C16 12.4477 16.4477 12 17 12C17.5523 12 18 12.4477 18 13V20C18 20.5523 17.5523 21 17 21C16.4477 21 16 20.5523 16 20V13Z" fill="#2D2D2D"/>
+</g>
+</g>
+</svg>

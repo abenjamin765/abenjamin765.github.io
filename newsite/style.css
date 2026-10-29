@@ -98,7 +98,7 @@ body {
   margin: 0 auto;
 }
 
-/* Hero: reference composition in document flow, with decorative art behind the glass. */
+/* Hero: reference composition in document flow, with a ripple of lines behind the glass. */
 #intro {
   position: relative;
   isolation: isolate;
@@ -132,21 +132,97 @@ body {
 .intro-button:active { transform: translateY(1px); }
 #intro .employer-strip { position: relative; z-index: 1; width: min(1064px, calc(100% - 48px)); margin: 72px auto 39px; color: #64675c; }
 .intro-preview { position: relative; width: min(960px, calc(100% - 32px)); margin-inline: auto; }
-.intro-brushstroke { position: absolute; z-index: -1; pointer-events: none; width: 207.1875%; height: 236.6667%; object-fit: cover; max-width: none; left: -37.5%; top: -65.1667%; }
+.intro-aurora { position: absolute; z-index: -1; pointer-events: none; overflow: hidden; left: 50%; top: -42%; bottom: -42%; width: 100vw; translate: -50% 0; }
+.intro-ripple-field { position: absolute; inset: 0; }
+.intro-ripple-shift { position: absolute; top: 0; bottom: 0; left: 0; width: 200%; height: 100%; }
+.intro-ripple-band { position: absolute; inset: 0; transform-origin: 50% 50%; }
+.intro-ripple {
+  display: block;
+  width: 100%;
+  height: 100%;
+  --indeed-tide: #6fb8c2;
+  --indeed-mist: #8eb4e8;
+  --indeed-blue: #2557a7;
+  --indeed-navy: #003a9b;
+  --indeed-indigo: #5448a8;
+}
+.intro-ripple path {
+  fill: none;
+  stroke-opacity: var(--fade);
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+.intro-ripple--tide path { stroke: color-mix(in oklab, var(--indeed-tide), var(--indeed-mist) calc(var(--t) * 100%)); }
+.intro-ripple--blue path { stroke: color-mix(in oklab, var(--indeed-blue), var(--indeed-navy) calc(var(--t) * 100%)); }
+.intro-ripple--indigo path { stroke: color-mix(in oklab, var(--indeed-navy), var(--indeed-indigo) calc(var(--t) * 100%)); }
+@media (prefers-reduced-motion: no-preference) {
+  .intro-ripple-shift--tide { animation: intro-ripple-scroll 22s linear infinite; }
+  .intro-ripple-shift--blue { animation: intro-ripple-scroll 18s linear infinite; }
+  .intro-ripple-shift--indigo { animation: intro-ripple-scroll 15s linear infinite; }
+  .intro-ripple-band { animation: intro-ripple-roll 14s ease-in-out infinite alternate; }
+  .intro-ripple-band--blue { animation-duration: 17s; animation-delay: -6s; }
+  .intro-ripple-band--indigo { animation-duration: 12s; animation-delay: -9s; }
+}
+@keyframes intro-ripple-scroll { to { translate: -50% 0; } }
+@keyframes intro-ripple-roll { from { transform: scaleY(1); } to { transform: scaleY(-1); } }
 .intro-browser { position: relative; display: flex; aspect-ratio: 8 / 5; padding: 32px 16px 16px; border-radius: 16px; background: linear-gradient(to bottom, rgb(127 127 127 / .13), rgb(186 186 186 / .5)), var(--glass-background); -webkit-backdrop-filter: var(--glass-filter); backdrop-filter: var(--glass-filter); box-shadow: var(--glass-highlight), 0 13px 31px rgb(0 0 0 / .16); }
 .intro-browser-dots { position: absolute; top: 10px; left: 13px; }
 .intro-browser-content { position: relative; min-width: 0; width: 100%; overflow: hidden; border-radius: 16px; background: #fff; }
-.intro-screen { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
-.intro-quote { position: relative; display: flex; align-items: center; gap: 16px; margin: 0; padding: 16px 24px 16px 16px; border-radius: 16px; background: #fff; box-shadow: 0 0 16px rgb(0 0 0 / .08), 0 0 4px rgb(0 0 0 / .16); }
+.indeed-stage { position: absolute; inset: 0; overflow: hidden; container-type: inline-size; background: #fff; }
+.indeed-app { position: relative; width: 928px; height: 552px; overflow: hidden; transform-origin: top left; transform: scale(calc(100cqi / 928px)); background: #fff; color: #2d2d2d; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; text-transform: none; }
+.indeed-camera { position: relative; display: grid; grid-template-columns: 60px minmax(0, 1fr); grid-template-rows: 64px minmax(0, 1fr); width: 100%; height: 100%; transform-origin: 50% 50%; }
+.indeed-rail { grid-row: 1 / -1; display: flex; flex-direction: column; gap: 4px; align-items: center; padding: 8px; border-right: 1px solid #d4d2d0; }
+.indeed-rail__item { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; }
+.indeed-plus { position: relative; }
+.indeed-plus-pulse { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border: 2px solid #2557a7; border-radius: 50%; opacity: 0; pointer-events: none; }
+.indeed-cursor { position: absolute; z-index: 5; top: 0; left: 0; width: 22px; height: auto; margin: -3px 0 0 -7px; transform-origin: 7px 3px; filter: drop-shadow(0 0 0.5px #111) drop-shadow(0.6px 0.6px 0 #111) drop-shadow(0 1px 1.5px rgb(0 0 0 / .28)); opacity: 0; pointer-events: none; }
+[data-indeed-date] { display: inline-block; }
+.indeed-job--duplicate[hidden] { display: none; }
+.indeed-rail__item--current { background: #2d2d2d; }
+.indeed-topbar { display: flex; align-items: center; justify-content: space-between; min-width: 0; padding: 0 16px; border-bottom: 1px solid #d4d2d0; }
+.indeed-utilities { display: flex; align-items: center; gap: 16px; height: 100%; min-width: 0; }
+.indeed-utility, .indeed-account, .indeed-menu, .indeed-menu__label, .indeed-status, .indeed-status__label { display: inline-flex; align-items: center; }
+.indeed-utility, .indeed-account { gap: 4px; font-size: 14px; font-weight: 500; white-space: nowrap; }
+.indeed-account { gap: 4px; height: 100%; margin-left: 0; padding-left: 16px; border-left: 1px solid #d4d2d0; }
+.indeed-main { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; padding: 28px 24px 0; }
+.indeed-heading { margin: 0 0 20px; font-size: 20px; font-weight: 700; line-height: 1.5; }
+.indeed-tabs { display: flex; align-items: stretch; margin-bottom: 20px; }
+.indeed-tab { display: inline-flex; align-items: center; padding: 8px 16px; border: 1px solid #2d2d2d; font-size: 16px; font-weight: 700; line-height: 1.5; white-space: nowrap; }
+.indeed-tab--current { border-right: 0; border-radius: 8px 0 0 8px; background: #2d2d2d; color: #fff; }
+.indeed-open-count { display: inline-block; }
+.indeed-tab:not(.indeed-tab--current) { border-radius: 0 8px 8px 0; }
+.indeed-filters { display: flex; gap: 8px; margin-bottom: 8px; }
+.indeed-menu { justify-content: space-between; gap: 8px; min-width: 0; height: 40px; padding: 8px; border: 1px solid #2d2d2d; border-radius: 8px; font-size: 16px; font-weight: 400; white-space: nowrap; }
+.indeed-menu--filter { flex: 1 1 auto; }
+.indeed-filters .indeed-menu:not(.indeed-menu--filter) { flex: 0 0 208px; }
+.indeed-menu b { font-weight: 700; }
+.indeed-menu__label { gap: 10px; }
+.indeed-jobs-pane { flex: 1; min-height: 0; overflow: hidden auto; scrollbar-width: none; }
+.indeed-jobs-pane::-webkit-scrollbar { display: none; }
+.indeed-jobs { margin: 16px 0 0; padding: 0; list-style: none; }
+.indeed-job { display: flex; align-items: center; gap: 24px; padding: 18px 16px; border-bottom: 1px solid #d4d2d0; }
+.indeed-check { flex: 0 0 20px; width: 20px; height: 20px; border: 1px solid #2d2d2d; border-radius: 4px; }
+.indeed-job__identity { display: flex; flex: 0 0 200px; flex-direction: column; gap: 4px; width: 200px; }
+.indeed-job__title { font-size: 14px; font-weight: 700; line-height: 1.5; text-decoration: underline; text-underline-offset: 2px; }
+.indeed-job__meta { color: #595959; font-size: 14px; font-weight: 400; line-height: 1.5; }
+.indeed-count { display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 700; line-height: 1.5; }
+.indeed-count span { text-decoration: underline; text-underline-offset: 2px; }
+.indeed-pipeline { display: flex; flex: 0 0 285px; gap: 32px; align-items: center; width: 285px; padding: 16px 24px; border-radius: 8px; background: #f3f2f1; }
+.indeed-status { flex: 0 0 120px; justify-content: space-between; width: 120px; padding: 8px 8px 8px 16px; border: 1px solid #2d2d2d; border-radius: 8px; font-size: 16px; font-weight: 400; }
+.indeed-status__label { gap: 10px; }
+.indeed-more { flex: 0 0 auto; }
+.intro-quote { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; margin: 0; padding: 16px 24px 16px 16px; border-radius: 16px; background: #fff; box-shadow: 0 0 16px rgb(0 0 0 / .08), 0 0 4px rgb(0 0 0 / .16); opacity: 0; transform: scale(.96); transform-origin: center; transition: opacity 280ms cubic-bezier(0.23, 1, 0.32, 1), transform 280ms cubic-bezier(0.23, 1, 0.32, 1); }
 .intro-quote img { flex: 0 0 64px; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
-.intro-quote blockquote { margin: 0; font-size: 19px; font-weight: 500; line-height: 1.4; }
-.intro-browser-toggle { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; border-radius: inherit; background: transparent; cursor: pointer; }
-.intro-browser-toggle[hidden] { display: none; }
-.intro-browser-toggle:focus-visible { outline-offset: -4px; }
-.intro-quote-overlay { position: absolute; z-index: 1; inset: 0; display: grid; place-items: center; padding: 16px; background: rgb(255 255 255 / .8); -webkit-backdrop-filter: blur(12.5px); backdrop-filter: blur(12.5px); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 180ms ease, visibility 180ms ease; }
-.intro-browser-content.is-quote-visible .intro-quote-overlay { opacity: 1; visibility: visible; }
+.intro-quote blockquote { margin: 0; min-width: 0; font-size: 19px; font-weight: 500; line-height: 1.4; }
+.intro-quote-overlay { position: absolute; z-index: 6; inset: 0; display: grid; place-items: center; padding: 16px; visibility: hidden; pointer-events: none; transition: visibility 0s 500ms; }
+.intro-quote-overlay::before { content: ""; position: absolute; inset: 0; background: rgb(255 255 255 / .8); -webkit-backdrop-filter: blur(12.5px); backdrop-filter: blur(12.5px); opacity: 0; transition: opacity 360ms cubic-bezier(0.23, 1, 0.32, 1) 140ms; }
 .intro-quote-overlay .intro-quote { max-width: 100%; }
-.intro-quote blockquote { min-width: 0; }
+.intro-browser-content.is-quote-visible .intro-quote-overlay { visibility: visible; transition: visibility 0s; }
+.intro-browser-content.is-quote-visible .intro-quote-overlay::before { opacity: 1; transition-delay: 0s; }
+.intro-browser-content.is-quote-visible .intro-quote { opacity: 1; transform: scale(1); transition-delay: 140ms; }
+@media (prefers-reduced-motion: reduce) {
+  .intro-quote, .intro-quote-overlay::before { transition: none; }
+}
 .intro-case-study { position: relative; z-index: 1; display: flex; justify-content: center; margin: 56px 16px 0; }
 .intro-case-study-link { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 44px; padding: 4px 18px 4px 4px; border-radius: 30px; background: #f0f0f0; color: #333; font-size: 16px; font-weight: 500; line-height: 1.5; text-decoration: none; }
 .intro-case-study-label { flex-shrink: 0; padding: 6px 12px; border-radius: 30px; background: #cf3a4e; color: #fff; }

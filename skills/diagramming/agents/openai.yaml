@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagramming"
+  short_description: "Build clear, connected, responsive product diagrams"
+  default_prompt: "Use $diagramming to build or refine a diagram that explains this product idea and verify its connectors and responsive layout."
